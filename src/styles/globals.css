@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@200;400;700;900&family=Libre+Baskerville:ital@0;1&family=Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
+
+@font-face {
+  font-family: "Kola-Regular";
+  src: url("../assets/fonts/Kola-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Kola-Regular.woff") format("woff"),
+    url("../assets/fonts/Kola-Regular.ttf") format("truetype");
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f3f4f6;
+    --color-bg-tertiary: #e5e7eb;
+    --color-text-primary: #111827;
+    --color-text-secondary: #333333;
+    --color-accent-primary: #f9fafb;
+    --color-accent-secondary: #e5e7eb;
+    --color-border-primary: #e5e7eb;
+  }
+
+  .dark {
+    --color-bg-primary: #14191e;
+    --color-bg-secondary: #1f2429;
+    --color-bg-tertiary: #1d1f20;
+    --color-text-primary: #ededed;
+    --color-text-secondary: #9ca3af;
+    --color-accent-primary: #1f2429;
+    --color-accent-secondary: #2b3034;
+    --color-border-primary: #1f2937;
+  }
+  .light {
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f3f4f6;
+    --color-bg-tertiary: #e5e7eb;
+    --color-text-primary: #111827;
+    --color-text-secondary: #6b7280;
+    --color-border-primary: #e5e7eb;
+  }
+}
+
+:root {
+  scroll-behavior: smooth;
+  font-family: "League Spartan", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
