@@ -1,10 +1,11 @@
-import React from "react";
-import {
-  RiCss3Line,
-  RiReactjsLine,
-  RiCodeSSlashLine,
-  RiHtml5Line,
-} from "react-icons/ri";
+import { ReactComponent as CodeFellows } from "./img/CodeFellows.svg";
+import { ReactComponent as ExcelsiorUniversity } from "./img/ExcelsiorUniversity.svg";
+import { ReactComponent as SpecialForcesBadge } from "./img/SpecialForcesBadge.svg";
+import { ReactComponent as SpecialForces } from "./img/SpecialForces.svg";
+import { ReactComponent as UnitedStatesArmy } from "./img/UnitedStatesArmy.svg";
+import { ReactComponent as Group } from "./img/7THSFG.svg";
+import { ReactComponent as JFKSWCS } from "./img/JFKSWCS.svg";
+
 import {
   SiJavascrip,
   SiMongodb,
@@ -43,6 +44,12 @@ import {
   SiSiteground,
   SiApple,
   SiLinux,
+  SiGooglechrome,
+  SiGoogleanalytics,
+  SiGoogletagmanager,
+  SiGooglesearchconsole,
+  SiGitkraken,
+  SiNextdotjs,
 } from "react-icons/si";
 
 const data = {
@@ -257,14 +264,14 @@ const data = {
       bullets: [
         "6 month program covering full-stack JavaScript development, including HTML, CSS, JavaScript, React, Redux, Node, Express, SQL, and MongoDB.",
       ],
-      schoolIcon: <SiCodecademy className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      schoolIcon: <CodeFellows className={BOOTSTRAP_FOR_SKILL_ICON} />,
       date: "2021 - 2022",
     },
     {
       title: "Bachelor of Science Liberal Arts",
       school: "Excelsior College",
       bullets: ["Graduated with a 4.0 GPA"],
-      schoolIcon: <SiCodecademy className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      schoolIcon: <ExcelsiorUniversity className={BOOTSTRAP_FOR_SKILL_ICON} />,
       date: "2020 - 2022",
     },
     {
@@ -276,7 +283,7 @@ const data = {
         "Developed the ability to work effectively as a team member and team leader, including the ability to build and maintain a cohesive team, and the ability to effectively communicate orally and in writing.",
         "Learned to operate and maintain a wide variety of communications equipment, including high-frequency radios, satellite communications, and secure tactical communications.",
       ],
-      schoolIcon: <SiCodecademy className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      schoolIcon: <JFKSWCS className={BOOTSTRAP_FOR_SKILL_ICON} />,
       date: "2012 - 2014",
     },
     {
@@ -288,7 +295,7 @@ const data = {
         "Learned laboratory procedures, including the ability to perform basic laboratory procedures, including blood draws, urinalysis, and basic microbiology.",
         "Learned human perfomance and injury prevention, including the ability to provide basic human performance and injury prevention services, including physical therapy, nutrition, and strength and conditioning.",
       ],
-      schoolIcon: <SiCodecademy className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      schoolIcon: <JFKSWCS className={BOOTSTRAP_FOR_SKILL_ICON} />,
       date: "2011 - 2012",
     },
   ],
@@ -300,7 +307,12 @@ const data = {
         "Effectively deployed technology in persistent surveillance, secure tactical communications, and cybersecurity solutions to real-world operations.",
         "Leader at special assignment duty supporting a classified national mission.",
       ],
-      employerIcon: <SiCodecademy className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      employerIcon: [
+        <Group className={BOOTSTRAP_FOR_SKILL_ICON} />,
+        <SpecialForces className={BOOTSTRAP_FOR_SKILL_ICON} />,
+        <SpecialForcesBadge className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      ],
+
       date: "2014 - 2022",
     },
     {
@@ -309,7 +321,7 @@ const data = {
       bullets: [
         "Provided medical care to patients in a variety of settings, including hospitals, clinics, and out-patient facilities.",
       ],
-      employerIcon: <SiCodecademy className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      employerIcon: <UnitedStatesArmy className={BOOTSTRAP_FOR_SKILL_ICON} />,
       date: "2008 - 2011",
     },
   ],
