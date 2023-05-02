@@ -1,68 +1,114 @@
-/* @import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@200;400;700;900&family=Libre+Baskerville:ital@0;1&family=Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
-
-@font-face {
-  font-family: "Kola-Regular";
-  src: url("../assets/fonts/Kola-Regular.woff2") format("woff2"),
-    url("../assets/fonts/Kola-Regular.woff") format("woff"),
-    url("../assets/fonts/Kola-Regular.ttf") format("truetype");
-} */
-
 @tailwind base;
 @tailwind components;
+
+/* @import "utility-classes.css"; */
+
 @tailwind utilities;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-bg-primary: #121212;
-    --color-bg-secondary: #18181b;
-    --color-bg-tertiary: #1d1f20;
-    --color-text-primary: #ededed;
-    --color-text-secondary: #9ca3af;
-    --color-accent-primary: #1f2429;
-    --color-accent-secondary: #f53d00;
-    --color-border-primary: #1f2937;
-  }
-  [theme="dark"] {
-    --color-bg-primary: #14191e;
-    --color-bg-secondary: #1f2429;
-    --color-bg-tertiary: #1d1f20;
-    --color-text-primary: #ededed;
-    --color-text-secondary: #9ca3af;
-    --color-accent-primary: #1f2429;
-    --color-accent-secondary: #2b3034;
-    --color-border-primary: #1f2937;
-  }
-  [theme="light"] {
-    --color-bg-primary: #ffffff;
-    --color-bg-secondary: #f3f4f6;
-    --color-bg-tertiary: #e5e7eb;
-    --color-text-primary: #111827;
-    --color-text-secondary: #6b7280;
-    --color-border-primary: #e5e7eb;
-  }
+@font-face {
+  font-family: "JosefinSans-Regular";
+  src: local("JosefinSans-Regular"),
+    url("./fonts/JosefinSans-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "JosefinSans-Bold";
+  src: local("JosefinSans-Bold"),
+    url("./fonts/JosefinSans-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "LeagueSpartan-Bold";
+  src: local("LeagueSpartan-Bold"),
+    url("./fonts/LeagueSpartan-Bold.otf") format("otf");
 }
 
 :root {
+  --max-width: 1200px;
+  --border-radius: 12px;
+
   scroll-behavior: smooth;
-  font-family: "League Spartan", sans-serif;
-  background-color: #121212;
+
+  --font-josefin-sans-bold: "JosefinSans-Bold", sans-serif;
+  --font-josefine-sans-regular: "JosefinSans-Regular", sans-serif;
+  --font-kola-bold: "Kola-Bold", sans-serif;
+  --font-league-spartan-bold: "LeagueSpartan-Bold", sans-serif;
+
+  --bg-primary: #f6f6f6;
+  --bg-secondary: #eeeeee;
+  --bg-tertiary: #f4f0f0;
+  --text-primary: #1a1a1a;
+  --text-secondary: #121212;
+  --accent-primary: #03d1ba;
+  --accent-secondary: #eb7341;
+  --border-primary: #1f2937;
+  --border-secondary: #282c33;
+
+  --dark-bg-primary: #151515;
+  --dark-bg-secondary: #1a1a1a;
+  --dark-bg-tertiary: #1e1e1e;
+  --dark-text-primary: #f6f6f6;
+  --dark-text-secondary: #eeeeee;
+  --dark-accent-primary: #8ac185;
+  --dark-accent-secondary: #f53d00;
+  --dark-border-primary: #1f2937;
+  --dark-border-secondary: #1f2937;
+
+  --dark-100: #252525;
+  --dark-200: #232323;
+  --dark-300: #202020;
+  --dark-400: #1d1d1d;
+  --dark-500: #1a1a1a;
+  --dark-600: #181818;
+  --dark-700: #151515;
+  --dark-800: #1d1d1d;
+  --dark-900: #121212;
+  --dark-1000: #1d1f20;
 }
+/* --color-text: hsl(222deg, 22%, 5%);
+  --color-background: hsl(0deg, 0%, 100%);
+  --color-blurred-background: hsla(0deg, 0%, 100%, 0.85);
+  --color-primary: hsl(245deg, 100%, 60%);
+  --color-secondary: hsl(333deg, 100%, 45%);
+  --color-tertiary: hsl(255deg, 85%, 30%);
+  --color-decorative: hsl(200deg, 75%, 65%);
+  --color-muted: hsl(210deg, 55%, 92%);
+  --color-info: hsl(245deg, 100%, 60%);
+  --color-success: hsl(160deg, 100%, 40%);
+  --color-success-background: hsla(160deg, 100%, 40%, 0.1);
+  --color-error: hsl(340deg, 95%, 50%);
+  --color-error-background: hsla(340deg, 95%, 43%, 0.1);
+  --color-alert: hsl(37deg, 100%, 50%);
+  --color-alert-background: hsla(52deg, 100%, 50%, 0.25);
+  --color-subtle-background: hsl(225deg, 25%, 95%);
+  --color-subtle-floating: hsl(0deg, 0%, 100%);
+  --color-homepage-light: hsl(204deg, 67%, 85%);
+  --color-homepage-dark: hsl(202deg, 71%, 90%);
+  --color-homepage-bg: hsl(204deg, 67%, 85%);
+  --color-gray-100: hsl(225deg, 25%, 95%);
+  --color-gray-200: hsl(225deg, 16%, 90%);
+  --color-gray-300: hsl(225deg, 8%, 80%);
+  --color-gray-400: hsl(225deg, 8%, 70%);
+  --color-gray-500: hsl(225deg, 7%, 60%);
+  --color-gray-600: hsl(225deg, 15%, 50%);
+  --color-gray-700: hsl(225deg, 12%, 40%);
+  --color-gray-900: hsl(225deg, 25%, 20%);
+  --color-gray-1000: hsl(225deg, 15%, 15%);
+} */
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #252525;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #1d1d1d;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #232323;
 }

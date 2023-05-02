@@ -1,12 +1,12 @@
-import TypeA from "./components/Sidebar/";
+import Sidebar from "./components/Sidebar/";
 
 import Home from "./components/Home";
 
 function App() {
   return (
-    <div className=" flex h-screen bg-white p-6 dark:bg-[#121212]">
+    <div className="flex flex-row p-8 dark:bg-darkPrimary">
       <Sidebar />
-      <main className=" ml-16 flex  md:ml-36">
+      <main className="">
         <Home />
       </main>
     </div>

@@ -1,16 +1,20 @@
-import ScrollDown from "./scrolldown";
+import CardHoverImg from "../Card/CardHoverImg";
+2;
 
 const Home = () => {
   return (
-    <section className="dark:bg-[#121212] dark:text-white">
-      <div>
-        <img />
-        <h1>Jeremy Cleland</h1>
-        <span>Software Developer</span>
+    <div className="group relative m-32 mx-auto flex w-4/5 flex-col text-center text-textPrimary dark:text-darkTextPrimary">
+      <h1 className="stext-center text-textPrimary dark:text-darkPrimary">
+        Home
+      </h1>
+      <div
+        className="flex flex-col gap-20
+      "
+      >
+        <CardHoverImg />
+        <CardHoverImg />
       </div>
-
-      <ScrollDown />
-    </section>
+    </div>
   );
 };
 export default Home;
