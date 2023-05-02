@@ -1,5 +1,4 @@
 import CardHoverImg from "../Card/CardHoverImg";
-2;
 
 const Home = () => {
   return (
@@ -7,13 +6,6 @@ const Home = () => {
       <h1 className="stext-center text-textPrimary dark:text-darkPrimary">
         Home
       </h1>
-      <div
-        className="flex flex-col gap-20
-      "
-      >
-        <CardHoverImg />
-        <CardHoverImg />
-      </div>
     </div>
   );
 };
