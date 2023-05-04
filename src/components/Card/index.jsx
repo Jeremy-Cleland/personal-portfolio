@@ -1,13 +1,13 @@
 export const CardModern = () => {
   return (
-    <article className="flex bg-white transition hover:shadow-xl dark:bg-gray-900 dark:shadow-gray-800/25">
+    <article className="bg-white dark:bg-gray-900 dark:shadow-gray-800/25 flex transition hover:shadow-xl">
       <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
         <time
           datetime="2022-10-10"
-          className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900 dark:text-white"
+          className="text-gray-900 flex items-center justify-between gap-4 text-xs font-bold uppercase dark:text-ocean-300"
         >
           <span>2022</span>
-          <span className="w-px flex-1 bg-gray-900/10 dark:bg-white/10"></span>
+          <span className="bg-gray-900/10 dark:bg-white/10 w-px flex-1"></span>
           <span>Oct 10</span>
         </time>
       </div>
@@ -21,14 +21,14 @@ export const CardModern = () => {
       </div>
 
       <div className="flex flex-1 flex-col justify-between">
-        <div className="border-s border-gray-900/10 p-4 dark:border-white/10 sm:!border-l-transparent sm:p-6">
+        <div className="border-gray-900/10 dark:border-white/10 sm:!border-l-transparent border-s p-4 sm:p-6">
           <a href="#">
-            <h3 className="font-bold uppercase text-gray-900 dark:text-white">
+            <h3 className="text-gray-900 font-bold uppercase dark:text-ocean-300">
               Finding the right guitar for your style - 5 tips
             </h3>
           </a>
 
-          <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 dark:text-gray-200">
+          <p className="text-gray-700 dark:text-gray-200 mt-2 line-clamp-3 text-sm/relaxed">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
             dolores, possimus pariatur animi temporibus nesciunt praesentium
             dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque
@@ -40,7 +40,7 @@ export const CardModern = () => {
         <div className="sm:flex sm:items-end sm:justify-end">
           <a
             href="#"
-            className="block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-500"
+            className="bg-yellow-400 text-gray-900 hover:bg-yellow-500 block px-5 py-3 text-center text-xs font-bold uppercase transition"
           >
             Read Blog
           </a>
@@ -52,27 +52,27 @@ export const CardModern = () => {
 
 export const GradientCard = () => {
   return (
-    <article className="animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-0.5 shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25">
-      <div className="rounded-[10px] bg-white p-4 !pt-20 dark:bg-gray-900 sm:p-6">
+    <article className="animate-background from-green-300 via-blue-500 to-purple-600 dark:shadow-gray-700/25 rounded-xl bg-gradient-to-r bg-[length:400%_400%] p-0.5 shadow-xl transition [animation-duration:_6s] hover:shadow-sm">
+      <div className="bg-white dark:bg-gray-900 rounded-[10px] p-4 !pt-20 sm:p-6">
         <time
           datetime="2022-10-10"
-          className="block text-xs text-gray-500 dark:text-gray-400"
+          className="text-gray-500 block text-xs dark:text-ocean-300"
         >
           10th Oct 2022
         </time>
 
         <a href="#">
-          <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white">
+          <h3 className="text-gray-900 mt-0.5 text-lg font-medium dark:text-ocean-300">
             How to center an element using JavaScript and jQuery
           </h3>
         </a>
 
         <div className="mt-4 flex flex-wrap gap-1">
-          <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100">
+          <span className="bg-purple-100 text-purple-600 dark:bg-purple-600 dark:text-purple-100 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs">
             Snippet
           </span>
 
-          <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100">
+          <span className="bg-purple-100 text-purple-600 dark:bg-purple-600 dark:text-purple-100 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs">
             JavaScript
           </span>
         </div>
@@ -83,27 +83,27 @@ export const GradientCard = () => {
 
 export const GradientHoverCard = () => {
   return (
-    <article className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
-      <div className="rounded-[10px] bg-white p-4 !pt-20 dark:bg-gray-900 sm:p-6">
+    <article className="hover:animate-background from-green-300 via-blue-500 to-purple-600 dark:shadow-gray-700/25 rounded-xl bg-gradient-to-r p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
+      <div className="bg-white dark:bg-gray-900 rounded-[10px] p-4 !pt-20 sm:p-6">
         <time
           datetime="2022-10-10"
-          className="block text-xs text-gray-500 dark:text-gray-400"
+          className="text-gray-500 block text-xs dark:text-ocean-300"
         >
           10th Oct 2022
         </time>
 
         <a href="#">
-          <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-white">
+          <h3 className="text-gray-900 mt-0.5 text-lg font-medium dark:text-ocean-300">
             How to center an element using JavaScript and jQuery
           </h3>
         </a>
 
         <div className="mt-4 flex flex-wrap gap-1">
-          <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100">
+          <span className="bg-purple-100 text-purple-600 dark:bg-purple-600 dark:text-purple-100 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs">
             Snippet
           </span>
 
-          <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100">
+          <span className="bg-purple-100 text-purple-600 dark:bg-purple-600 dark:text-purple-100 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs">
             JavaScript
           </span>
         </div>
@@ -118,17 +118,17 @@ export const CardFloating = () => {
       <img
         alt="Lava"
         src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-        className="h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%] dark:shadow-gray-700/25"
+        className="dark:shadow-gray-700/25 h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
       />
 
       <div className="p-4">
         <a href="#">
-          <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+          <h3 className="text-gray-900 text-lg font-medium dark:text-ocean-300">
             Finding the Journey to Mordor
           </h3>
         </a>
 
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
+        <p className="text-gray-500 mt-2 line-clamp-3 text-sm/relaxed dark:text-ocean-300">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
           dolores, possimus pariatur animi temporibus nesciunt praesentium
           dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus
@@ -142,28 +142,28 @@ export const CardFloating = () => {
 
 export const CardSimple = () => {
   return (
-    <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg dark:shadow-gray-700/25">
+    <article className="dark:shadow-gray-700/25 overflow-hidden rounded-lg shadow transition hover:shadow-lg">
       <img
         alt="Office"
         src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
         className="h-56 w-full object-cover"
       />
 
-      <div className="bg-white p-4 dark:bg-gray-900 sm:p-6">
+      <div className="bg-white dark:bg-gray-900 p-4 sm:p-6">
         <time
           datetime="2022-10-10"
-          className="block text-xs text-gray-500 dark:text-gray-400"
+          className="text-gray-500 block text-xs dark:text-ocean-300"
         >
           10th Oct 2022
         </time>
 
         <a href="#">
-          <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
+          <h3 className="text-gray-900 mt-0.5 text-lg dark:text-ocean-300">
             How to position your furniture for positivity
           </h3>
         </a>
 
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
+        <p className="text-gray-500 mt-2 line-clamp-3 text-sm/relaxed dark:text-ocean-300">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
           dolores, possimus pariatur animi temporibus nesciunt praesentium
           dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus
@@ -187,7 +187,7 @@ export const CardImgContent = () => {
       <div className="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
         <strong className="font-medium">Company Name</strong>
 
-        <span className="hidden sm:block sm:h-px sm:w-8 sm:bg-yellow-500"></span>
+        <span className="sm:bg-yellow-500 hidden sm:block sm:h-px sm:w-8"></span>
 
         <p className="mt-0.5 opacity-50 sm:mt-0">Branding / Signage</p>
       </div>
@@ -197,7 +197,7 @@ export const CardImgContent = () => {
 
 export const CardImgContentHover = () => {
   return (
-    <a href="#" className="group relative block bg-black">
+    <a href="#" className="bg-black group relative block">
       <img
         alt="Developer"
         src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
@@ -205,15 +205,15 @@ export const CardImgContentHover = () => {
       />
 
       <div className="relative p-4 sm:p-6 lg:p-8">
-        <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+        <p className="text-pink-500 text-sm font-medium uppercase tracking-widest">
           Developer
         </p>
 
-        <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+        <p className="text-white text-xl font-bold sm:text-2xl">Tony Wayne</p>
 
         <div className="mt-32 sm:mt-48 lg:mt-64">
           <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-            <p className="text-sm text-white">
+            <p className="text-white text-sm">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
               perferendis hic asperiores quibusdam quidem voluptates doloremque
               reiciendis nostrum harum. Repudiandae?

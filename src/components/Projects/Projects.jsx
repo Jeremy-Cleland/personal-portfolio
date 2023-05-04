@@ -9,9 +9,11 @@ const Projects = ({ projects }) => {
         <hr className="mx-auto mt-4 w-1/2 rounded-full border-2 dark:border-darkAccent" />
         <hr className="border-pink-500 mx-auto mt-4 w-1/4 rounded-full border-2 dark:border-darkAccent" />
       </h1>
-      {projects.map((project) => (
-        <ProjectCard project={project} />
-      ))}
+      <div className="flex flex-row text-center">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </div>
     </div>
   );
 };

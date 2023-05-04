@@ -8,49 +8,58 @@
 @font-face {
   font-family: "JosefinSans-Regular";
   src: local("JosefinSans-Regular"),
-    url("./fonts/JosefinSans-Regular.ttf") format("ttf");
+    url("../../public/JosefinSans-Regular.ttf") format("ttf");
 }
 @font-face {
   font-family: "JosefinSans-Bold";
   src: local("JosefinSans-Bold"),
-    url("./fonts/JosefinSans-Bold.ttf") format("ttf");
+    url("../../public/JosefinSans-Bold.ttf") format("ttf");
 }
 @font-face {
   font-family: "LeagueSpartan-Bold";
   src: local("LeagueSpartan-Bold"),
-    url("./fonts/LeagueSpartan-Bold.otf") format("otf");
+    url("../../public/LeagueSpartan-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Fira Code VF";
+  src: url("../../public/FiraCode-VF.ttf") format("ttf-variations"),
+    url("../../public/FiraCode-VF.woff2") format("woff2-variations"),
+    url("../../public/fonts/FiraCode-VF.woff") format("woff-variations");
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("../../public/fonts/firacode.ttf") format("ttf");
+}
+@font-face {
+  font-family: "JetBrains Mono ExtraBold";
+  src: url("../../public/fonts/JetBrains-Mono-NL-ExtraBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "JetBrains Mono Bold Italic";
+  src: url("./fonts/JetBrains-Mono-NL-Bold-Italic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "VictorMono-Bold";
+  src: url("../../public/Victor-Mono-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "VictorMono-Bold";
+  src: url("../../public/Victor-Mono-Regular.ttf") format("ttf");
 }
 
 :root {
-  --max-width: 1200px;
-  --border-radius: 12px;
-
   scroll-behavior: smooth;
-
   --font-josefin-sans-bold: "JosefinSans-Bold", sans-serif;
   --font-josefine-sans-regular: "JosefinSans-Regular", sans-serif;
-  --font-kola-bold: "Kola-Bold", sans-serif;
-  --font-league-spartan-bold: "LeagueSpartan-Bold", sans-serif;
-
-  --bg-primary: #f6f6f6;
-  --bg-secondary: #eeeeee;
-  --bg-tertiary: #f4f0f0;
-  --text-primary: #1a1a1a;
-  --text-secondary: #121212;
-  --accent-primary: #03d1ba;
-  --accent-secondary: #eb7341;
-  --border-primary: #1f2937;
-  --border-secondary: #282c33;
-
-  --dark-bg-primary: #151515;
-  --dark-bg-secondary: #1a1a1a;
-  --dark-bg-tertiary: #1e1e1e;
-  --dark-text-primary: #f6f6f6;
-  --dark-text-secondary: #eeeeee;
-  --dark-accent-primary: #8ac185;
-  --dark-accent-secondary: #f53d00;
-  --dark-border-primary: #1f2937;
-  --dark-border-secondary: #1f2937;
+  --firacode: "Fira Code VF", monospace;
+  --FiraCode: "Fira Code", monospace;
+  --JetBrainsMono: "JetBrains Mono ExtraBold", monospace;
+  --JetBrainsMonoBoldItalic: "JetBrains Mono Bold Italic", monospace;
+  --VictorMono: "VictorMono-Bold", monospace;
+  --VictorMonoRegular: "VictorMono-Regular", monospace;
 
   --dark-100: #252525;
   --dark-200: #232323;
@@ -61,8 +70,32 @@
   --dark-700: #151515;
   --dark-800: #1d1d1d;
   --dark-900: #121212;
-  --dark-1000: #1d1f20;
+
+  --deep-50: #f6f7f7;
+  --deep-100: #e2e5e5;
+  --deep-200: #c5c9ca;
+  --deep-300: #a0a6a8;
+  --deep-400: #7c8385;
+  --deep-500: #61686b;
+  --deep-600: #4d5254;
+  --deep-700: #3f4546;
+  --deep-800: #35393a;
+  --deep-900: #2f3132;
+  --deep-950: #1d1f20;
+
+  --midnight-100: #e3e7ea;
+  --midnight-200: #cad1d7;
+  --midnight-300: #a5b1bb;
+  --midnight-50: #f4f6f7;
+  --midnight-400: #788898;
+  --midnight-500: #5d6d7d;
+  --midnight-600: #505c6a;
+  --midnight-700: #454e59;
+  --midnight-800: #3e444c;
+  --midnight-900: #373b42;
+  --midnight-950: #282c33;
 }
+
 /* --color-text: hsl(222deg, 22%, 5%);
   --color-background: hsl(0deg, 0%, 100%);
   --color-blurred-background: hsla(0deg, 0%, 100%, 0.85);

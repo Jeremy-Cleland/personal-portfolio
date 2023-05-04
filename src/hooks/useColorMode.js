@@ -3,7 +3,7 @@ import useLocalStorage from "./useLocalStorage";
 
 const useColorMode = () => {
   // Use the useLocalStorage hook to get the stored color mode or set it to "light" if not present
-  const [colorMode, setColorMode] = useLocalStorage("color-theme", "dark");
+  const [colorMode, setColorMode] = useLocalStorage("theme", "dark");
 
   useEffect(() => {
     const className = "dark";

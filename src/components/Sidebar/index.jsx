@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import image from "../../assets/img/profilePic.png";
+
 import useColorMode from "../../hooks/useColorMode.js";
 import {
   RiBriefcase3Line,
@@ -11,126 +14,174 @@ import {
   RiLayout3Line,
   RiGithubLine,
   RiLinkedinBoxLine,
-  RiArrowLeftSFill,
-  RiArrowRightSFill,
+  RiSearchLine,
+  RiMenu4Line,
+  RiCloseLine,
 } from "react-icons/ri";
 
-const Sidebar = () => {
-  const [sidebarShow, setSidebarShow] = useState(true);
+const Navbar = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [colorMode, setColorMode] = useColorMode();
 
   const toggleColorMode = () => {
     setColorMode(colorMode === "light" ? "dark" : "light");
   };
-
-  const toggleSidebar = () => {
-    setSidebarShow(!sidebarShow);
-  };
-
-  const colapsedSidebarDefault =
-    "absolute px-0.5 py-3 bg-primary dark:bg-darkTertiary dark:text-darkAccent cursor-pointer ";
-
-  const fullSidebarDefault =
-    "text-textPrimary group-hover:textPrimary dark:group-hover:text-darkPrimary dark:text-darkTextPrimary ml-4 font-josefinRegular";
-  const renderListItem = (Icon, text) => (
-    <div className=" group flex cursor-default items-center rounded-xl p-2 font-josefinRegular text-base hover:bg-[#A161D2] ">
-      <Icon className="dark:group-hover:primary group-hover:textPrimary text-2xl text-textPrimary dark:text-darkAccent" />
-      <h1 className={sidebarShow ? fullSidebarDefault : "hidden"}>{text}</h1>
-    </div>
-  );
   return (
     <>
-      <div
-        className={
-          sidebarShow
-            ? "shadow-gray-900 shadow-2xl h-screen w-[12rem] rounded-xl bg-[#e2e2e2] text-textPrimary drop-shadow-xl selection:duration-200 dark:bg-darkSecondary dark:text-darkAccent"
-            : "h-screen w-24 rounded-xl bg-[#e2e2e2] text-textPrimary shadow-lg drop-shadow-xl duration-200 dark:bg-darkSecondary dark:text-darkTextPrimary"
-        }
+      <button
+        className="flex flex-row p-3 text-midnight-900 dark:text-ocean-100 md:hidden"
+        onClick={() => setIsNavOpen(!isNavOpen)}
       >
-        <div className="flex items-center space-x-2 p-2">
-          <span className="h-2 w-2 rounded-full bg-[#ee6a5e]" />
-          <span className="h-2 w-2 rounded-full bg-[#f4bd4f]" />
-          <span className="h-2 w-2 rounded-full bg-[#60c455]" />
+        {isNavOpen ? <RiCloseLine size={24} /> : <RiMenu4Line size={30} />}
+      </button>
+      <div
+        className={`${
+          isNavOpen || "hidden"
+        } w-full p-3 font-mono text-midnight-900 drop-shadow-md dark:bg-ocean-900 dark:text-ocean-300 md:flex md:w-1/4 md:flex-col md:p-2`}
+      >
+        <div className="h-full space-y-5">
+          <div className="flex items-center justify-between">
+            <h2 className="text-md text-xl font-bold tracking-widest">
+              Jeremy Cleland
+            </h2>
+            <button className="p-2">
+              <RiSearchLine>
+                <rect width="352" height="32" x="80" y="96"></rect>
+                <rect width="352" height="32" x="80" y="240"></rect>
+                <rect width="352" height="32" x="80" y="384"></rect>
+              </RiSearchLine>
+            </button>
+          </div>
+          <div className="relative">
+            <span className="absolute inset-y-0 left-0 flex items-center py-4">
+              <button
+                type="submit"
+                className="p-2 focus:outline-none focus:ring"
+              >
+                <RiSearchLine className="h-5 w-5 dark:text-ocean-300" />
+              </button>
+            </span>
+            <input
+              type="search"
+              name="Search"
+              placeholder="Search..."
+              className=" w-full rounded-md py-2 pl-10 text-sm focus:outline-none dark:border-midnight-50 dark:bg-deep-900 dark:text-ocean-300"
+            />
+          </div>
+
+          <div className="flex-1">
+            <ul className="space-y-1 pb-4 pt-2 text-sm">
+              <li className="hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="flex items-center space-x-3 rounded-md p-2"
+                >
+                  <RiHome3Line className="fill-current h-5 w-5 dark:text-ocean-300" />
+                  <span>Home</span>
+                </a>
+              </li>
+              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="flex items-center space-x-3 rounded-md p-2"
+                >
+                  <RiUser3Line className="fill-current h-5 w-5 dark:text-ocean-300" />
+                  <span>Profile</span>
+                </a>
+              </li>
+              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="flex items-center space-x-3 rounded-md p-2"
+                >
+                  <RiBriefcase3Line />
+                  <span>Projects</span>
+                </a>
+              </li>
+              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="flex items-center space-x-3 rounded-md p-2"
+                >
+                  <RiFilePaper2Line className="fill-current h-5 w-5 dark:text-ocean-300" />
+
+                  <span>Resume</span>
+                </a>
+              </li>
+              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="flex items-center space-x-3 rounded-md p-2"
+                >
+                  <RiLayout3Line className="fill-current h-5 w-5 dark:text-ocean-300" />
+                  <span>Blog</span>
+                </a>
+              </li>
+              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="flex items-center space-x-3 rounded-md p-2"
+                >
+                  <RiChat3Line className="fill-current h-5 w-5 dark:text-ocean-300" />
+                  <span>Chat</span>
+                </a>
+              </li>
+
+              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default items-center space-x-3 rounded-xl p-2 dark:text-ocean-300">
+                {colorMode === "light" ? (
+                  <RiMoonLine
+                    onClick={toggleColorMode}
+                    className="fill-current h-5 w-5 dark:text-ocean-300"
+                  />
+                ) : (
+                  <RiSunLine
+                    onClick={toggleColorMode}
+                    className="fill-current h-5 w-5 dark:text-ocean-300"
+                  />
+                )}
+                <span>Change Theme</span>
+              </li>
+              <li className="dark:bg-gray-800 dark:text-gray-50 rounded-sm"></li>
+            </ul>
+          </div>
         </div>
-        <div className="space-y-6 p-5">
-          <div className="relative flex items-center">
-            <div className="bg-transparentflex w-fit items-center justify-center rounded-xl border-2 border-borderPrimary p-1  dark:border-darkAccent dark:bg-darkPrimary">
-              <img
-                className="h-12 w-12 rounded-full object-contain"
-                alt="avatar img"
-              />
-            </div>
-            <div className={sidebarShow ? "relative ml-4" : "hidden"}>
-              <h2 className="font-LeagueSpartanBold text-base text-textPrimary dark:text-darkTextPrimary">
-                Jeremy
-              </h2>
-            </div>
-            <div
-              onClick={toggleSidebar}
-              className={
-                sidebarShow
-                  ? colapsedSidebarDefault + "  -right-5 rounded-l-lg"
-                  : colapsedSidebarDefault + "-right-10  rounded-r-lg"
-              }
-            >
-              {sidebarShow ? <RiArrowLeftSFill /> : <RiArrowRightSFill />}
-            </div>
-          </div>
-          <div className="px-1">
-            <div>
-              <hr className="my-4 md:min-w-full" />
-              {renderListItem(RiHome3Line, "Home")}
-              {renderListItem(RiUser3Line, "About Me")}
-              {renderListItem(RiBriefcase3Line, "Projects")}
-              {renderListItem(RiFilePaper2Line, "Resume")}
-              {renderListItem(RiLayout3Line, "Blog")}
-              {renderListItem(RiChat3Line, "Contact")}
-            </div>
-          </div>
-          <div className="group flex cursor-default items-center rounded-xl p-3 text-textPrimary hover:bg-[#A161D2] dark:text-darkTextPrimary">
-            {colorMode === "dark" ? (
-              <RiMoonLine
-                className="group-hover:text-white text-center text-2xl text-textPrimary dark:text-darkTextPrimary"
-                onClick={toggleColorMode}
-              />
-            ) : (
-              <RiSunLine
-                className="group-hover:text-white text-center text-2xl text-textPrimary dark:text-darkTextPrimary"
-                onClick={toggleColorMode}
-              />
-            )}
-          </div>
-          <hr className="my-1 md:min-w-full" />
-          <div
-            className={
-              sidebarShow
-                ? "container bottom-0 mx-auto flex flex-row items-center justify-center "
-                : "absolute bottom-0 flex flex-col items-center  justify-center"
-            }
-          >
-            <div className="rounded-xl p-2 hover:bg-[#A161D2]  dark:text-darkTextPrimary">
+        <div className="mt-12 flex items-center space-x-4 justify-self-end p-2">
+          <img
+            src={image}
+            alt=""
+            className="h-12 w-12 rounded-lg dark:bg-swell-950"
+          />
+          <div className="flex flex-col">
+            <h2 className="text-md mb-3">Jeremy Cleland</h2>
+            <span className="flex items-center space-x-1">
               <a
                 href="https://www.linkedin.com/in/jeremy-cleland/"
                 target="_blank"
+                className="text-xs hover:underline dark:text-ocean-300"
                 rel="noopener noreferrer"
               >
-                <RiLinkedinBoxLine className="text-gray-600 hover:text-white text-2xl  dark:text-darkTextPrimary" />
+                <RiLinkedinBoxLine className=" fill-current h-6 w-6 dark:text-ocean-300" />
               </a>
-            </div>
-            <div className="rounded-xl p-2 hover:bg-[#A161D2]  dark:text-darkTextPrimary">
               <a
                 href="https://github.com/jeremy-cleland"
                 target="_blank"
+                className="text-xs hover:underline dark:text-ocean-300"
                 rel="noopener noreferrer"
               >
-                <RiGithubLine className="hover:text-white text-2xl text-textPrimary dark:text-darkTextPrimary" />
+                <RiGithubLine className=" fill-current h-6 w-6 dark:text-ocean-300" />
               </a>
-            </div>
+            </span>
           </div>
         </div>
+        <hr className="border-white border-y-4" />
       </div>
     </>
   );
 };
-
-export default Sidebar;
+export default Navbar;

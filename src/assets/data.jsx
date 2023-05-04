@@ -1,13 +1,13 @@
-import { ReactComponent as CodeFellows } from "./img/CodeFellows.svg";
-import { ReactComponent as ExcelsiorUniversity } from "./img/ExcelsiorUniversity.svg";
-import { ReactComponent as SpecialForcesBadge } from "./img/SpecialForcesBadge.svg";
-import { ReactComponent as SpecialForces } from "./img/SpecialForces.svg";
-import { ReactComponent as UnitedStatesArmy } from "./img/UnitedStatesArmy.svg";
-import { ReactComponent as Group } from "./img/7THSFG.svg";
-import { ReactComponent as JFKSWCS } from "./img/JFKSWCS.svg";
+import { ReactComponent as CodeFellows } from "./logos/CodeFellows.svg";
+import { ReactComponent as ExcelsiorUniversity } from "./logos/ExcelsiorUniversity.svg";
+import { ReactComponent as SpecialForcesBadge } from "./logos/SpecialForcesBadge.svg";
+import { ReactComponent as SpecialForces } from "./logos/SpecialForces.svg";
+import { ReactComponent as UnitedStatesArmy } from "./logos/UnitedStatesArmy.svg";
+import { ReactComponent as Group } from "./logos/7THSFG.svg";
+import { ReactComponent as JFKSWCS } from "./logos/JFKSWCS.svg";
 
 import {
-  SiJavascrip,
+  SiJavascript,
   SiMongodb,
   SiExpress,
   SiTailwindcss,
@@ -15,7 +15,6 @@ import {
   SiReact,
   SiCss3,
   SiNodedotjs,
-  SiBootstrap,
   SiOpenai,
   SiPython,
   SiSwift,
@@ -23,10 +22,8 @@ import {
   SiSocketdotio,
   SiSass,
   SiStyledcomponents,
-  SiMaterialUi,
-  SiMantine,
+  SiMui,
   SiChakraui,
-  SiReactbootstrap,
   SiPostgresql,
   SiMysql,
   SiAmazonaws,
@@ -40,8 +37,6 @@ import {
   SiHeroku,
   SiNetlify,
   SiRender,
-  SiHostinger,
-  SiSiteground,
   SiApple,
   SiLinux,
   SiGooglechrome,
@@ -52,6 +47,8 @@ import {
   SiNextdotjs,
 } from "react-icons/si";
 
+import { TbBrandMantine } from "react-icons/tb";
+const iconStyle = "text-4xl mx-auto inline-block";
 const data = {
   name: "Jeremy Cleland",
   title: "Full Stack Javascript Developer",
@@ -68,193 +65,192 @@ const data = {
   languages: [
     {
       languageName: "Javascript",
-      languageIcon: <SiJavascrip className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      languageIcon: <SiJavascript className={iconStyle} />,
     },
     {
       languageName: "HTML5",
-      languageIcon: <SiHtml5 className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      languageIcon: <SiHtml5 className={iconStyle} />,
     },
     {
       languageName: "CSS3",
-      languageIcon: <SiCss3 className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      languageIcon: <SiCss3 className={iconStyle} />,
     },
     {
       languageName: "Python",
-      languageIcon: <SiPython className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      languageIcon: <SiPython className={iconStyle} />,
     },
     {
       languageName: "Swift",
-      languageIcon: <SiSwift className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      languageIcon: <SiSwift className={iconStyle} />,
     },
   ],
   skills: [
     {
       skillName: "ReactJS",
-      skillIcon: <SiReact className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiReact className={iconStyle} />,
     },
     {
       skillName: "NodeJS",
-      skillIcon: <SiNodedotjs className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiNodedotjs className={iconStyle} />,
     },
     {
       skillName: "ExpressJS",
-      skillIcon: <SiExpress className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiExpress className={iconStyle} />,
     },
     {
       skillNameL: "NextJS",
-      skillIcon: <SiNextdotjs className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiNextdotjs className={iconStyle} />,
     },
     {
       skillName: "Redux",
-      skillIcon: <SiRedux className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiRedux className={iconStyle} />,
     },
     {
       skillName: "Socket.io",
-      skillIcon: <SiSocketdotio className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiSocketdotio className={iconStyle} />,
     },
     {
       skillName: "Sass",
-      slillIcone: <SiSass className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      slillIcone: <SiSass className={iconStyle} />,
     },
     {
       skillName: "Styled-Components",
-      skillIcon: <SiStyledcomponents className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiStyledcomponents className={iconStyle} />,
     },
     {
       skillName: "TailwindCSS",
-      skillIcon: <SiTailwindcss className={BOOTSTRAP_FOR_SKILL_ICON} />,
-    },
-    {
-      skillName: "Bootstrap",
-      skillIcon: <SiBootstrap className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiTailwindcss className={iconStyle} />,
     },
     {
       skillName: "Material-UI",
-      skillIcon: <SiMaterialUi className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiMui className={iconStyle} />,
     },
     {
       skillName: "Mantine",
-      skillIcon: <SiMantine className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <TbBrandMantine className={iconStyle} />,
     },
     {
       skillName: "Chakra-UI",
-      skillIcon: <SiChakraui className={BOOTSTRAP_FOR_SKILL_ICON} />,
-    },
-    {
-      skillName: "React-Bootstrap",
-      skillIcon: <SiReactbootstrap className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiChakraui className={iconStyle} />,
     },
     {
       skillName: "MongoDB",
-      skillIcon: <SiMongodb className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiMongodb className={iconStyle} />,
     },
     {
       skillName: "PostgreSQL",
-      skillIcon: <SiPostgresql className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiPostgresql className={iconStyle} />,
     },
     {
       skillName: "MySQL",
-      skillIcon: <SiMysql className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiMysql className={iconStyle} />,
     },
     {
       skillName: "Amazon Web Services",
-      skillIcon: <SiAmazonaws className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiAmazonaws className={iconStyle} />,
     },
     {
       skillName: "Firebase",
-      skillIcon: <SiFirebase className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiFirebase className={iconStyle} />,
     },
-
     {
       skillName: "Git",
-      skillIcon: <SiGit className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiGit className={iconStyle} />,
     },
     {
       skillName: "Github",
-      skillIcon: <SiGithub className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiGithub className={iconStyle} />,
     },
     {
       skillName: "VS Code",
-      skillIcon: <SiVisualstudiocode className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiVisualstudiocode className={iconStyle} />,
     },
     {
       skillName: "Postman",
-      skillIcone: <SiPostman className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcone: <SiPostman className={iconStyle} />,
     },
     {
       skillName: "Insomnia",
-      skillIcon: <SiInsomnia className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiInsomnia className={iconStyle} />,
     },
     {
       skillName: "GitKranken",
-      skillIcon: <SiGitkraken className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiGitkraken className={iconStyle} />,
     },
     {
       skillName: "Google Developer Tools",
-      skillIcon: <SiGooglechrome className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiGooglechrome className={iconStyle} />,
     },
     {
       skillName: "Google Analytics",
-      skillIcon: <SiGoogleanalytics className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiGoogleanalytics className={iconStyle} />,
     },
     {
       skillName: "Google Tag Manager",
-      skillIcon: <SiGoogletagmanager className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiGoogletagmanager className={iconStyle} />,
     },
     {
       skillName: "Google Search Console",
-      skillIcon: <SiGooglesearchconsole className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiGooglesearchconsole className={iconStyle} />,
     },
     {
       skillName: "OpenAI GPT-4",
-      skillIcon: <SiOpenai className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiOpenai className={iconStyle} />,
     },
     {
       skillName: "Figma",
-      skillIcon: <SiFigma className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiFigma className={iconStyle} />,
     },
     {
       skillName: "Heroku",
-      skillIcon: <SiHeroku className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiHeroku className={iconStyle} />,
     },
     {
       skillName: "Netlify",
-      skillIcon: <SiNetlify className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiNetlify className={iconStyle} />,
     },
     {
       skillName: "Render",
-      skillIcon: <SiRender className={BOOTSTRAP_FOR_SKILL_ICON} />,
-    },
-    {
-      skillName: "Hostinger",
-      skillIcon: <SiHostinger className={BOOTSTRAP_FOR_SKILL_ICON} />,
-    },
-    {
-      skillName: "Siteground",
-      skillIcon: <SiSiteground className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiRender className={iconStyle} />,
     },
     {
       skillName: "MacOS",
-      skillIcon: <SiApple className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiApple className={iconStyle} />,
     },
     {
       skillName: "Linux",
-      skillIcon: <SiLinux className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      skillIcon: <SiLinux className={iconStyle} />,
     },
   ],
   projects: [
     {
-      title: "React tailwind portfolio",
-      description:
-        "👨‍🎨 An open-source portfolio template built with React and Tailwind.",
-      tags: ["template", "portfolio", "reactjs", "tailwindcss"],
-      link: "https://github.com/braydentw/react-tailwind-portfolio",
+      title: "RESTy",
+      repositoryDescription:
+        "RESTy is a web application that allows you to make HTTP requests to a REST API and view the results. It was built using ReactJS, and utilizes the useState and useEffect hooks to manage state and side effects respectively. It also utilizes the Axios library to make the HTTP requests to the API.",
+      image: "../../assests/img/RESTy-1.png",
+      languages: ["ReactJS", "Axios", "JavaScript", "HTML5", "CSS3"],
+      topics: ["Rest", "Axios"],
+      repo: "github.com/jeremy-cleland/resty",
+      demo: "https://cleland-resty.netlify.app/",
     },
     {
-      title: "My personal website",
-      description: "⚡ My portfolio built with NextJS and TailwindCSS.",
-      tags: ["website", "portfolio", "nextjs", "tailwindcss"],
-      link: "https://github.com/braydentW/braydentw",
+      title: "Horned Beast",
+      repositoryDescription:
+        "Introducing Horned Beasts! A React application that displays a gallery of horned animals, along with their information. With Horned Beasts, you can easily browse through images of different animals and mark your favorites. You can also filter the gallery based on the number of horns the animals have, making it easy to find the ones you're interested in.",
+      images: "./img/HornedBeast.png",
+      languages: ["ReactJS", "Axios", "JavaScript", "HTML5", "CSS3"],
+      topics: ["ReactJS", "Axios"],
+      repo: "github.com/jeremy-cleland/horned-beast",
+      demo: "https://horned-beast-jeremy-cleland.netlify.app/",
+    },
+    {
+      title: "",
+      repositoryDescription: "",
+      images: ["./img/"],
+      languages: ["ReactJS", "Axios", "JavaScript", "HTML5", "CSS3"],
+      topics: ["ReactJS"],
+      repo: "github.com/jeremy-cleland/",
+      demo: "",
     },
   ],
   education: [
@@ -264,14 +260,14 @@ const data = {
       bullets: [
         "6 month program covering full-stack JavaScript development, including HTML, CSS, JavaScript, React, Redux, Node, Express, SQL, and MongoDB.",
       ],
-      schoolIcon: <CodeFellows className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      schoolIcon: <CodeFellows className={iconStyle} />,
       date: "2021 - 2022",
     },
     {
       title: "Bachelor of Science Liberal Arts",
       school: "Excelsior College",
       bullets: ["Graduated with a 4.0 GPA"],
-      schoolIcon: <ExcelsiorUniversity className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      schoolIcon: <ExcelsiorUniversity className={iconStyle} />,
       date: "2020 - 2022",
     },
     {
@@ -283,7 +279,7 @@ const data = {
         "Developed the ability to work effectively as a team member and team leader, including the ability to build and maintain a cohesive team, and the ability to effectively communicate orally and in writing.",
         "Learned to operate and maintain a wide variety of communications equipment, including high-frequency radios, satellite communications, and secure tactical communications.",
       ],
-      schoolIcon: <JFKSWCS className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      schoolIcon: <JFKSWCS className={iconStyle} />,
       date: "2012 - 2014",
     },
     {
@@ -295,7 +291,7 @@ const data = {
         "Learned laboratory procedures, including the ability to perform basic laboratory procedures, including blood draws, urinalysis, and basic microbiology.",
         "Learned human perfomance and injury prevention, including the ability to provide basic human performance and injury prevention services, including physical therapy, nutrition, and strength and conditioning.",
       ],
-      schoolIcon: <JFKSWCS className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      schoolIcon: <JFKSWCS className={iconStyle} />,
       date: "2011 - 2012",
     },
   ],
@@ -308,9 +304,9 @@ const data = {
         "Leader at special assignment duty supporting a classified national mission.",
       ],
       employerIcon: [
-        <Group className={BOOTSTRAP_FOR_SKILL_ICON} />,
-        <SpecialForces className={BOOTSTRAP_FOR_SKILL_ICON} />,
-        <SpecialForcesBadge className={BOOTSTRAP_FOR_SKILL_ICON} />,
+        <Group className={iconStyle} />,
+        <SpecialForces className={iconStyle} />,
+        <SpecialForcesBadge className={iconStyle} />,
       ],
 
       date: "2014 - 2022",
@@ -321,7 +317,7 @@ const data = {
       bullets: [
         "Provided medical care to patients in a variety of settings, including hospitals, clinics, and out-patient facilities.",
       ],
-      employerIcon: <UnitedStatesArmy className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      employerIcon: <UnitedStatesArmy className={iconStyle} />,
       date: "2008 - 2011",
     },
   ],
