@@ -101,6 +101,6 @@ export default {
         "5xl": "0 75px 75px rgba(0, 0, 0, 0.3)",
       },
     },
-    plugins: [],
+    plugins: [require("prettier-plugin-tailwindcss")],
   },
 };

@@ -37,20 +37,26 @@ const Navbar = () => {
       <div
         className={`${
           isNavOpen || "hidden"
-        } w-full p-3 font-mono text-midnight-900 drop-shadow-md dark:bg-ocean-900 dark:text-ocean-300 md:flex md:w-1/4 md:flex-col md:p-2`}
+        } shadow-xlg w-full p-3 font-mono text-midnight-900 drop-shadow-lg dark:bg-ocean-900 dark:text-ocean-300 md:flex md:w-1/4 md:flex-col md:p-2`}
       >
         <div className="h-full space-y-5">
           <div className="flex items-center justify-between">
-            <h2 className="text-md text-xl font-bold tracking-widest">
+            <h2 className="text-md text-xl font-bold tracking-widest ">
               Jeremy Cleland
             </h2>
-            <button className="p-2">
-              <RiSearchLine>
-                <rect width="352" height="32" x="80" y="96"></rect>
-                <rect width="352" height="32" x="80" y="240"></rect>
-                <rect width="352" height="32" x="80" y="384"></rect>
-              </RiSearchLine>
-            </button>
+            <div className="p-2">
+              {colorMode === "light" ? (
+                <RiMoonLine
+                  onClick={toggleColorMode}
+                  className="fill-current h-5 w-5 dark:text-ocean-300 dark:hover:text-midnight-100"
+                />
+              ) : (
+                <RiSunLine
+                  onClick={toggleColorMode}
+                  className="fill-current h-5 w-5 dark:text-ocean-300 dark:hover:text-midnight-100"
+                />
+              )}
+            </div>
           </div>
           <div className="relative">
             <span className="absolute inset-y-0 left-0 flex items-center py-4">
@@ -65,7 +71,7 @@ const Navbar = () => {
               type="search"
               name="Search"
               placeholder="Search..."
-              className=" w-full rounded-md py-2 pl-10 text-sm focus:outline-none dark:border-midnight-50 dark:bg-deep-900 dark:text-ocean-300"
+              className="w-full rounded-lg py-2 pl-10 text-sm drop-shadow-lg focus:outline-none dark:border-midnight-50 dark:bg-deep-900 dark:text-ocean-300"
             />
           </div>
 
@@ -81,7 +87,7 @@ const Navbar = () => {
                   <span>Home</span>
                 </a>
               </li>
-              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+              <li className="hover:bg-darkAccent group flex cursor-default rounded-xl p-2 text-midnight-900 dark:text-ocean-300">
                 <a
                   rel="noopener noreferrer"
                   href="#"
@@ -91,7 +97,7 @@ const Navbar = () => {
                   <span>Profile</span>
                 </a>
               </li>
-              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+              <li className="hover:bg-darkAccent group flex cursor-default rounded-xl p-2 text-midnight-900 dark:text-ocean-300">
                 <a
                   rel="noopener noreferrer"
                   href="#"
@@ -101,7 +107,7 @@ const Navbar = () => {
                   <span>Projects</span>
                 </a>
               </li>
-              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+              <li className="hover:bg-darkAccent group flex cursor-default rounded-xl p-2 text-midnight-900 dark:text-ocean-300">
                 <a
                   rel="noopener noreferrer"
                   href="#"
@@ -112,7 +118,7 @@ const Navbar = () => {
                   <span>Resume</span>
                 </a>
               </li>
-              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+              <li className="hover:bg-darkAccent group flex cursor-default rounded-xl p-2 text-midnight-900 dark:text-ocean-300">
                 <a
                   rel="noopener noreferrer"
                   href="#"
@@ -122,7 +128,7 @@ const Navbar = () => {
                   <span>Blog</span>
                 </a>
               </li>
-              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default rounded-xl p-2 dark:text-ocean-300">
+              <li className="hover:bg-darkAccent group flex cursor-default rounded-xl p-2 text-midnight-900 dark:text-ocean-300">
                 <a
                   rel="noopener noreferrer"
                   href="#"
@@ -132,41 +138,21 @@ const Navbar = () => {
                   <span>Chat</span>
                 </a>
               </li>
-
-              <li className="text-textPrimary hover:bg-darkAccent group flex cursor-default items-center space-x-3 rounded-xl p-2 dark:text-ocean-300">
-                {colorMode === "light" ? (
-                  <RiMoonLine
-                    onClick={toggleColorMode}
-                    className="fill-current h-5 w-5 dark:text-ocean-300"
-                  />
-                ) : (
-                  <RiSunLine
-                    onClick={toggleColorMode}
-                    className="fill-current h-5 w-5 dark:text-ocean-300"
-                  />
-                )}
-                <span>Change Theme</span>
-              </li>
-              <li className="dark:bg-gray-800 dark:text-gray-50 rounded-sm"></li>
             </ul>
           </div>
         </div>
-        <div className="mt-12 flex items-center space-x-4 justify-self-end p-2">
-          <img
-            src={image}
-            alt=""
-            className="h-12 w-12 rounded-lg dark:bg-swell-950"
-          />
+        <div className="mb-0 flex w-full flex-row items-center justify-evenly justify-self-end">
+          <img src={image} alt="" className="h-1/3 drop-shadow-lg" />
           <div className="flex flex-col">
-            <h2 className="text-md mb-3">Jeremy Cleland</h2>
-            <span className="flex items-center space-x-1">
+            <h2 className="text-md mb-4">Jeremy Cleland</h2>
+            <span className="mb-0 flex items-center">
               <a
                 href="https://www.linkedin.com/in/jeremy-cleland/"
                 target="_blank"
-                className="text-xs hover:underline dark:text-ocean-300"
+                className="text-sm hover:underline dark:text-ocean-300"
                 rel="noopener noreferrer"
               >
-                <RiLinkedinBoxLine className=" fill-current h-6 w-6 dark:text-ocean-300" />
+                <RiLinkedinBoxLine className="fill-current h-6 w-6 dark:text-ocean-300" />
               </a>
               <a
                 href="https://github.com/jeremy-cleland"
@@ -174,12 +160,11 @@ const Navbar = () => {
                 className="text-xs hover:underline dark:text-ocean-300"
                 rel="noopener noreferrer"
               >
-                <RiGithubLine className=" fill-current h-6 w-6 dark:text-ocean-300" />
+                <RiGithubLine className="fill-current h-6 w-6 dark:text-ocean-300" />
               </a>
             </span>
           </div>
         </div>
-        <hr className="border-white border-y-4" />
       </div>
     </>
   );

@@ -3,6 +3,10 @@ playground-temp/
 dist/
 temp/
 LICENSE.md
+tests/fixtures
+.github/
+dist/
+README.md
 pnpm-lock.yaml
 pnpm-workspace.yaml
 playground/tsconfig-json-load-error/has-error/tsconfig.json

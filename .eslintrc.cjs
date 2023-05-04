@@ -13,7 +13,7 @@ module.exports = {
     sourceType: "module",
     ecmaFeatures: { jsx: true },
   },
-  settings: { react: { version: "18.2" } },
+  settings: { react: { version: "detect" } },
 
   plugins: ["react-refresh", "react", "import", "jsx-a11y"],
   rules: {
