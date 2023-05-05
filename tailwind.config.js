@@ -1,14 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  mode: "jit",
+  purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      mono: ["JetBrains Mono", "monospace"],
-      sans: ["var)--font-josefin-sans-regular"],
-      sansBold: ["var(--font-josefin-sans-bold)"],
-      fira: ["var(-fira)"],
-      FiraCode: ["var(--FiraCode)"],
+      Roboto: ["Roboto", "sans-serif"],
+      SourceCodePro: ["Source Code Pro", "monospace"],
+      Knewave: ["Knewave", "cursive"],
+      Quicksand: ["Quicksand", "sans-serif"],
+      Righteous: ["Righteous", "cursive"],
+      Raleway: ["Raleway", "sans-serif"],
+      Fira: ["Fira Code", "monospace"],
     },
     colors: {
       deep: {
@@ -76,29 +79,26 @@ export default {
         900: "#22252a",
         950: "#16181d",
       },
+      acccent: {
+        50: "#9D4EDD",
+        100: "#30D5C8",
+        200: "#9D4EDD",
+      },
     },
-    // boxShadow: {
-    //   xs: "rgba(17, 17, 26, 0.1) 0px 0px 16px;",
-    //   sm: "rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;",
-    //   default: "rgba(0, 0, 0, 0.08) 0px 4px 12px;",
-    //   md: "rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;",
-    //   lg: "0.6px 1.1px 1.1px hsl(0deg 0% 0% / 0.48);",
-    //   xl: "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
-    //   xxl: "8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);",
-    //   "3xl":
-    //     "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
-    //   inner: " 1px 2px 2px hsl(var(--shadow-color) / 0.333),",
-    //   outline:
-    //     "box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;",
-    //   outlineDark:
-    //     "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
-    //   none: "none",
-    // },
     extend: {
       dropShadow: {
         "3xxl": "0 35px 35px rgba(0, 0, 0, 0.3)",
         "4xl": "0 50px 50px rgba(0, 0, 0, 0.3)",
         "5xl": "0 75px 75px rgba(0, 0, 0, 0.3)",
+      },
+      boxShadow: {
+        neon: "0px 1px 2px 0px rgba(0,255,255,0.07),1px 2px 4px 0px rgba(0,255,255,0.07), 2px 4px 8px 0px rgba(0,255,255,0.07), 2px 4px 16px 0px rgba(0,255,255,0.07)",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+        "5xl": "3rem",
+        "6xl": "4rem",
+        "50%": "50%",
       },
     },
     plugins: [require("prettier-plugin-tailwindcss")],

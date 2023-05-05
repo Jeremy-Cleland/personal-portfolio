@@ -1,17 +1,12 @@
 import { RiExternalLinkLine } from "react-icons/ri";
-import { ReactComponent as profileImage } from "../../assets/logos/profile.svg";
 
 const ProjectCard = ({
   project: { title, demo, repositoryDescription, repo, languages, image },
 }) => {
   return (
-    <div className="w-full">
+    <div className="h-auto w-96">
       <div href={demo} className="group relative mt-12 flex flex-col">
-        <img
-          alt={title}
-          src={profileImage}
-          className="absolute inset-0 mx-auto h-full w-full object-cover opacity-75 shadow-lg transition-opacity group-hover:opacity-30"
-        />
+        <img className="m-4 " alt={title} src={image} />
         <div className="relative p-4 sm:p-6 lg:p-8">
           <h1
             href={repo}
@@ -33,13 +28,13 @@ const ProjectCard = ({
                 {repositoryDescription} <a href={repo}>View on Github</a>
               </p>
               <a href={repo} className="text-white text-sm dark:text-ocean-300">
-                {repo}
+                {repo} {image}
               </a>
             </div>
           </div>
         </div>
       </div>
-      <article className="group">
+      {/* <article className="group">
         <img
           alt="Lava"
           src={image}
@@ -48,12 +43,12 @@ const ProjectCard = ({
 
         <div className="p-4">
           <a href="#">
-            <h3 className="text-gray-900 text-lg font-medium dark:text-ocean-300">
+            <h3 className="text-lg font-medium text-gray-900 dark:text-ocean-300">
               Finding the Journey to Mordor
             </h3>
           </a>
 
-          <p className="text-gray-500 mt-2 line-clamp-3 text-sm/relaxed dark:text-ocean-300">
+          <p className="mt-2 text-gray-500 line-clamp-3 text-sm/relaxed dark:text-ocean-300">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
             dolores, possimus pariatur animi temporibus nesciunt praesentium
             dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque
@@ -61,7 +56,7 @@ const ProjectCard = ({
             atque dignissimos. Molestias explicabo corporis voluptatem?
           </p>
         </div>
-      </article>
+      </article> */}
     </div>
   );
 };

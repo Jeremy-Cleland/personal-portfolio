@@ -1,5 +1,5 @@
 import React from "react";
-// import profile from "../images/profile.png";
+import image from "../../assets/img/profilePic.png";
 import { FaGithub } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -10,11 +10,11 @@ function Card({ name, title, social: { github, dribbble, twitter, email } }) {
     <div className="w-full">
       <div className="bg-white mx-auto flex max-w-xs flex-col justify-center rounded-xl p-5 shadow-xl">
         <div className="">
-          {/* <img
+          <img
             className="mx-auto w-32 rounded-full shadow-xl"
-            src={profile}
+            src={image}
             alt="Profile face"
-          /> */}
+          />
         </div>
         <div className="mt-5 text-center">
           <p className="text-gray-900 text-xl font-semibold sm:text-2xl">
