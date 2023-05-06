@@ -1,13 +1,11 @@
 @tailwind base;
 @tailwind components;
-
-/* @import "utility-classes.css"; */
-
 @tailwind utilities;
 
 html,
 body {
   scroll-behavior: smooth;
+  background-color: #1d1d1d;
 }
 ::-webkit-scrollbar {
   width: 4px;

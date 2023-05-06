@@ -6,18 +6,22 @@ const Gallery = () => {
           <img
             className="aspect-square w-full object-cover dark:bg-swell-950"
             src="https://source.unsplash.com/random/300x300/?1"
+            alt="shit"
           />
           <img
             className="aspect-square w-full object-cover dark:bg-swell-950"
             src="https://source.unsplash.com/random/300x300/?2"
+            alt="shit"
           />
           <img
             className="aspect-square w-full object-cover dark:bg-swell-950"
             src="https://source.unsplash.com/random/300x300/?3"
+            alt="shit"
           />
           <img
             className="aspect-square w-full object-cover dark:bg-swell-950"
             src="https://source.unsplash.com/random/300x300/?4"
+            alt="shit"
           />
         </div>
       </div>

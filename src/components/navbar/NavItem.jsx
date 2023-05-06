@@ -9,7 +9,7 @@ const NavItem = ({ icon: Icon, label, href }) => (
     <a
       rel="noopener noreferrer"
       href={href}
-      className="flex items-center p-2 space-x-3 rounded-md"
+      className="flex items-center space-x-3 rounded-md p-2"
     >
       <Icon size={22} />
       <span>{label}</span>

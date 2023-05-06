@@ -1,4 +1,4 @@
-import CardHoverImg from "../Card/CardHoverImg";
+import CardHoverImg from "../card/CardHoverImg.jsx";
 
 const Home = () => {
   return (
@@ -6,6 +6,7 @@ const Home = () => {
       <h1 className="stext-center dark:text-darkPrimary text-midnight-900">
         Home
       </h1>
+      <CardHoverImg />
     </div>
   );
 };

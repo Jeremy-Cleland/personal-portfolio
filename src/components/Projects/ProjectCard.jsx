@@ -5,6 +5,7 @@ const ProjectCard = ({
 }) => {
   return (
     <div className="h-auto w-96">
+      s
       <div href={demo} className="group relative mt-12 flex flex-col">
         <img className="m-4 " alt={title} src={image} />
         <div className="relative p-4 sm:p-6 lg:p-8">
@@ -17,8 +18,11 @@ const ProjectCard = ({
           </h1>
           <div className="mt-32 sm:mt-48 lg:mt-64">
             <div className="mb-8 mt-4 flex flex-wrap items-center justify-center gap-2">
-              {languages.map((language) => (
-                <div className="rounded-full border-2 px-4 py-1 dark:text-ocean-300">
+              {languages.map((language, index) => (
+                <div
+                  key={index}
+                  className="rounded-full border-2 px-4 py-1 dark:text-ocean-300"
+                >
                   {language}
                 </div>
               ))}
