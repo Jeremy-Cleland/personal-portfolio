@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
-  mode: "jit",
-  purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
       Roboto: ["Roboto", "sans-serif"],
@@ -65,6 +64,16 @@ export default {
         800: "#3e424c",
         900: "#383b43",
         950: "#292c33",
+        1000: "#1e2025",
+        1050: "#141519",
+        1100: "#0a0b0d",
+        1200: "#000000",
+        1300: "#1c1e23",
+        1400: "#16181c",
+        1500: "#0f1012",
+        1600: "#080809",
+        1700: "#232529",
+        1800: "#1d1f23",
       },
       ocean: {
         50: "#f5f7f8",

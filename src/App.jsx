@@ -6,9 +6,9 @@ import Projects from "./components/projects/Projects";
 
 function App() {
   return (
-    <div className="flex min-h-screen text-midnight-100 dark:bg-swell-950 dark:text-ocean-300">
+    <div className="flex min-h-screen text-midnight-100 dark:text-ocean-300">
       <Navbar />
-      <main className="m-auto flex min-h-screen w-full justify-center bg-deep-100 dark:bg-swell-950 dark:text-ocean-300">
+      <main className="flex justify-center w-full min-h-screen m-auto bg-deep-100 dark:bg-swell-1200 dark:text-ocean-300">
         <Projects projects={data.projects} />
       </main>
     </div>

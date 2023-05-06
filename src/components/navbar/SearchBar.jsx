@@ -13,7 +13,7 @@ const SearchBar = () => (
       name="Search"
       placeholder="Search..."
       className={clsx(
-        "w-full rounded-md py-2 pl-10 text-sm outline-0  dark:bg-deep-900 dark:text-ocean-300"
+        "w-full rounded-md py-2 pl-10 text-sm outline-0 dark:bg-swell-1100 dark:text-ocean-300"
       )}
     />
   </div>
