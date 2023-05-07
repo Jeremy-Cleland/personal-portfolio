@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { RiSearchLine } from "react-icons/ri";
 
 const SearchBar = () => (
@@ -12,9 +11,9 @@ const SearchBar = () => (
       type="search"
       name="Search"
       placeholder="Search..."
-      className={clsx(
+      className={
         "w-full rounded-md py-2 pl-10 text-sm outline-0 dark:bg-swell-1100 dark:text-ocean-300"
-      )}
+      }
     />
   </div>
 );
