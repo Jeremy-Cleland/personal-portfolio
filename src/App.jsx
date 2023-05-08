@@ -25,7 +25,7 @@ function App() {
         <main
           className={clsx(
             "w-screen bg-deep-100 dark:bg-swell-1200 dark:text-ocean-300",
-            isSidebarOpen ? "ml-1/6" : "ml-1/5"
+            isSidebarOpen ? "ml-1/8" : "ml-1/5"
           )}
         >
           <Routes>

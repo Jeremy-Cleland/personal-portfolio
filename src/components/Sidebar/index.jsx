@@ -41,16 +41,16 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
           <img
             src={eclipse3}
             alt="enter full screen button"
-            className="top-0 pl-2 transition-all duration-200"
+            className="top-0 transition-all duration-200"
           />
         )}
       </BaseButton>
       <div
         className={clsx(
-          "fixed bottom-0 top-0 p-3 font-Quicksand text-sm tracking-wide text-midnight-900  transition-all duration-200 dark:bg-swell-1100 dark:text-ocean-300",
+          "fixed bottom-0 top-0 p-3 font-Quicksand text-sm tracking-wide text-midnight-900 transition-all duration-200 dark:bg-swell-1200 dark:text-ocean-300",
           isSidebarOpen
-            ? "md:flex md:w-1/6 md:flex-col md:p-2"
-            : "md:flex md:w-20  md:flex-col md:p-3"
+            ? "md:w-1/8 md:flex md:flex-col md:p-2"
+            : "md:flex md:w-20 md:flex-col md:p-3"
         )}
       >
         <div className="flex h-full flex-col justify-between">
@@ -69,6 +69,16 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               />
             </div>
             <div className="mx-auto mt-4 flex-1">
+              <img
+                src={image}
+                alt="author"
+                className={clsx(
+                  "drop-shadow-sm",
+                  isSidebarOpen
+                    ? " mx-auto block w-1/2 max-w-[100px]"
+                    : "mx-auto pt-16"
+                )}
+              />
               <ul className="mx-auto space-y-5 pb-4 pt-2 text-sm">
                 <NavItem
                   isSidebarOpen={isSidebarOpen}
@@ -109,34 +119,25 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               </ul>
             </div>
           </div>
-
-          <div className="mb-0 flex w-full flex-row items-center justify-evenly justify-self-end">
-            <hr className="border-gray-300 dark:border-ocean-300" />
-            <img src={image} alt="author" className="h-1/3 drop-shadow-sm" />
-            <div className="flex flex-col">
-              {isSidebarOpen && (
-                <h2 className="text-md mb-4 font-Knewave tracking-widest underline underline-offset-4">
-                  Jeremy Cleland
-                </h2>
-              )}
-              <span
-                className={clsx(
-                  !isSidebarOpen && "hidden",
-                  "mb-0 flex items-center justify-center"
-                )}
-              >
-                <SocialLink
-                  icon={RiLinkedinBoxLine}
-                  href="https://www.linkedin.com/in/jeremy-cleland/"
-                  isSidebarOpen={isSidebarOpen}
-                />
-                <SocialLink
-                  icon={RiGithubLine}
-                  href="https://www.github.com/jeremy-cleland"
-                  isSidebarOpen={isSidebarOpen}
-                />
-              </span>
-            </div>
+          <div
+            className={clsx(
+              "mb-0 flex w-full",
+              isSidebarOpen ? "flex-row" : "flex-col",
+              isSidebarOpen
+                ? "mx-auto"
+                : "items-center justify-evenly justify-self-end"
+            )}
+          >
+            <SocialLink
+              icon={RiLinkedinBoxLine}
+              href="https://www.linkedin.com/in/jeremy-cleland/"
+              isSidebarOpen={isSidebarOpen}
+            />
+            <SocialLink
+              icon={RiGithubLine}
+              href="https://www.github.com/jeremy-cleland"
+              isSidebarOpen={isSidebarOpen}
+            />
           </div>
         </div>
       </div>
