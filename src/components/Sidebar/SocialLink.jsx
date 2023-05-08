@@ -1,4 +1,4 @@
-import React from "react";
+// import PropTypes from "prop-types";
 import clsx from "clsx";
 
 const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
@@ -7,15 +7,20 @@ const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
     target="_blank"
     rel="noopener noreferrer"
     className={clsx(
-      "shadow-[inset_6px_20px_10px_6px_rgba(0,0,0,0.2), inset_-6px_-20px_-10px_6px_rgba(255,255,255,0.5)] group flex items-center space-x-3 rounded-md p-2 transition-all duration-200 hover:dark:text-acccent-100",
-      isSidebarOpen
-        ? "mx-3 hover:underline"
-        : "hover:dark:text-accent-100 my-3 ml-3 text-midnight-900 hover:shadow-lg dark:text-ocean-300 hover:dark:bg-swell-1050"
+      "group mt-2 flex cursor-default rounded-xl p-4 text-midnight-900 transition-all duration-150 hover:shadow-lg active:-translate-y-1 active:shadow-md dark:text-ocean-300 hover:dark:bg-swell-1000 hover:dark:text-acccent-200",
+      isSidebarOpen ? "mx-3 hover:underline" : "mx-auto justify-center"
     )}
   >
-    <Icon size={22} />
-    {isSidebarOpen && <span className="ml-2" />}
+    <div className="flex items-center justify-center">
+      <Icon size={22} />
+    </div>
   </a>
 );
+
+// SocialLink.propTypes = {
+//   icon: PropTypes.elementType.isRequired,
+//   href: PropTypes.string.isRequired,
+//   isSidebarOpen: PropTypes.bool.isRequired,
+// };
 
 export default SocialLink;

@@ -91,7 +91,7 @@ export default {
       acccent: {
         50: "#9D4EDD",
         100: "#30D5C8",
-        200: "#9D4EDD",
+        200: "#BB7CD7",
       },
     },
     extend: {
@@ -99,9 +99,6 @@ export default {
         "3xxl": "0 35px 35px rgba(0, 0, 0, 0.3)",
         "4xl": "0 50px 50px rgba(0, 0, 0, 0.3)",
         "5xl": "0 75px 75px rgba(0, 0, 0, 0.3)",
-      },
-      boxShadow: {
-        neon: "0px 1px 2px 0px rgba(0,255,255,0.07),1px 2px 4px 0px rgba(0,255,255,0.07), 2px 4px 8px 0px rgba(0,255,255,0.07), 2px 4px 16px 0px rgba(0,255,255,0.07)",
       },
       borderRadius: {
         "4xl": "2rem",

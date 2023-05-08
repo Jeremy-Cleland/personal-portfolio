@@ -10,7 +10,7 @@ const BaseButton = ({
 }) => {
   const baseClasses = clsx(
     "transition duration-200 ease-in-out",
-    "rounded-md",
+    "rounded-xl",
     "p-2",
     "cursor-pointer",
     className

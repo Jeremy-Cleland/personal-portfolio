@@ -41,13 +41,13 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
           <img
             src={eclipse3}
             alt="enter full screen button"
-            className="top-0 transition-all duration-200"
+            className="top-0 pl-2 transition-all duration-200"
           />
         )}
       </BaseButton>
       <div
         className={clsx(
-          "fixed bottom-0 top-0 p-3 font-Quicksand text-sm tracking-wide text-midnight-900 transition-all duration-200 dark:bg-swell-1200 dark:text-ocean-300",
+          "fixed bottom-0 top-0 p-3 font-Quicksand text-sm tracking-wide text-midnight-900 transition-all duration-200 dark:bg-swell-1200 dark:text-[#6ED691]",
           isSidebarOpen
             ? "md:w-1/8 md:flex md:flex-col md:p-2"
             : "md:flex md:w-20 md:flex-col md:p-3"
@@ -62,12 +62,8 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
                   <img src={eclipse3} alt=" enter full screen button" />
                 </div>
               )}
-              <ColorModeToggle
-                colorMode={colorMode}
-                setColorMode={setColorMode}
-                isSidebarOpen={isSidebarOpen}
-              />
             </div>
+
             <div className="mx-auto mt-4 flex-1">
               <img
                 src={image}
@@ -124,7 +120,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               "mb-0 flex w-full",
               isSidebarOpen ? "flex-row" : "flex-col",
               isSidebarOpen
-                ? "mx-auto"
+                ? "mx-auto "
                 : "items-center justify-evenly justify-self-end"
             )}
           >
@@ -136,6 +132,11 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             <SocialLink
               icon={RiGithubLine}
               href="https://www.github.com/jeremy-cleland"
+              isSidebarOpen={isSidebarOpen}
+            />
+            <ColorModeToggle
+              colorMode={colorMode}
+              setColorMode={setColorMode}
               isSidebarOpen={isSidebarOpen}
             />
           </div>

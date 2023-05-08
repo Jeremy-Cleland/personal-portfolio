@@ -7,23 +7,42 @@ const ColorModeToggle = ({ colorMode, setColorMode, isSidebarOpen }) => {
     setColorMode(colorMode === "light" ? "dark" : "light");
   }, [colorMode, setColorMode]);
 
+  const handleKeyDown = useCallback(
+    (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleColorMode();
+      }
+    },
+    [toggleColorMode]
+  );
+
   return (
-    <div className={clsx(!isSidebarOpen && "hidden", "p-2")}>
-      {colorMode === "light" ? (
-        <RiMoonLine
-          onClick={toggleColorMode}
-          className={`fill-current h-5 w-5 cursor-pointer transition-all duration-200 dark:text-ocean-300 dark:hover:text-midnight-100`}
-        />
-      ) : (
-        <RiSunLine
-          onClick={toggleColorMode}
-          className={clsx(
-            `fill-current h-5 w-5 cursor-pointer transition-all duration-200 dark:text-ocean-300 dark:hover:text-midnight-100`
-          )}
-        />
+    <div
+      className={clsx(
+        " group mt-2 flex cursor-default rounded-xl p-4 text-midnight-900 transition-all duration-150 hover:shadow-lg active:-translate-y-1 active:shadow-md dark:text-ocean-300 hover:dark:bg-swell-1000 hover:dark:text-acccent-200",
+        isSidebarOpen ? "mx-3 hover:underline" : ""
       )}
+      onClick={toggleColorMode}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="button"
+    >
+      <div className="flex items-center justify-center">
+        {colorMode === "light" ? (
+          <RiMoonLine
+            className={`fill-current h-5 w-5 cursor-pointer transition-all duration-200`}
+            size={22}
+          />
+        ) : (
+          <RiSunLine
+            className={clsx(
+              `fill-current h-5 w-5 cursor-pointer transition-all duration-200`
+            )}
+            size={22}
+          />
+        )}
+      </div>
     </div>
   );
 };
-
-export default ColorModeToggle;
