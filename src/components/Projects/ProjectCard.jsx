@@ -4,8 +4,7 @@ const ProjectCard = ({
   project: { title, demo, repositoryDescription, repo, languages, image },
 }) => {
   return (
-    <div className="h-auto w-96">
-      s
+    <div className="max-h-fit w-96">
       <div href={demo} className="group relative mt-12 flex flex-col">
         <img className="m-4 " alt={title} src={image} />
         <div className="relative p-4 sm:p-6 lg:p-8">
@@ -38,29 +37,6 @@ const ProjectCard = ({
           </div>
         </div>
       </div>
-      {/* <article className="group">
-        <img
-          alt="Lava"
-          src={image}
-          className="dark:shadow-gray-700/25 h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
-        />
-
-        <div className="p-4">
-          <a href="#">
-            <h3 className="text-lg font-medium text-gray-900 dark:text-ocean-300">
-              Finding the Journey to Mordor
-            </h3>
-          </a>
-
-          <p className="mt-2 text-gray-500 line-clamp-3 text-sm/relaxed dark:text-ocean-300">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium
-            dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque
-            minus soluta, voluptates neque explicabo tempora nisi culpa eius
-            atque dignissimos. Molestias explicabo corporis voluptatem?
-          </p>
-        </div>
-      </article> */}
     </div>
   );
 };

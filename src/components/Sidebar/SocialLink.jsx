@@ -1,14 +1,14 @@
 import React from "react";
 
-const SocialLink = ({ icon: Icon, href, isNavOpen }) => (
+const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
   <a
     href={href}
     target="_blank"
     className="mx-3 hover:underline"
     rel="noopener noreferrer"
     style={{
-      display: isNavOpen ? "inline-block" : "block",
-      margin: isNavOpen ? "0 3px" : "3px 0",
+      display: isSidebarOpen ? "inline-block" : "block",
+      margin: isSidebarOpen ? "0 3px" : "3px 0",
     }}
   >
     <Icon size={24} />

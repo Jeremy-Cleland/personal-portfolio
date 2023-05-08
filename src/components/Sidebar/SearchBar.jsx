@@ -1,18 +1,19 @@
 import { RiSearchLine } from "react-icons/ri";
+import BaseButton from "../base/BaseButton.jsx";
 
 const SearchBar = () => (
-  <div className="relative mt-4">
+  <div className="relative mt-8">
     <span className="absolute inset-y-0 left-0 flex items-center py-4">
-      <button type="submit" className="p-2 focus:outline-none focus:ring">
+      <BaseButton type="submit" className="p-2 focus:outline-none focus:ring">
         <RiSearchLine size={22} />
-      </button>
+      </BaseButton>
     </span>
     <input
       type="search"
       name="Search"
       placeholder="Search..."
       className={
-        "w-full rounded-md py-2 pl-10 text-sm outline-0 dark:bg-swell-1100 dark:text-ocean-300"
+        "group mt-8 flex cursor-default rounded-xl p-2 text-midnight-900 hover:shadow-lg dark:text-ocean-300 hover:dark:bg-swell-1050 hover:dark:text-acccent-100"
       }
     />
   </div>

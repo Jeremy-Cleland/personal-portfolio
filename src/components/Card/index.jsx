@@ -224,3 +224,29 @@ export const CardImgContentHover = () => {
     </a>
   );
 };
+
+export const ProjectCard = () => {
+  <article className="group">
+    <img
+      alt="Lava"
+      src={image}
+      className="dark:shadow-gray-700/25 h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
+    />
+
+    <div className="p-4">
+      <a href="#">
+        <h3 className="text-gray-900 text-lg font-medium dark:text-ocean-300">
+          Finding the Journey to Mordor
+        </h3>
+      </a>
+
+      <p className="text-gray-500 mt-2 line-clamp-3 text-sm/relaxed dark:text-ocean-300">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+        dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+        sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+        voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+        Molestias explicabo corporis voluptatem?
+      </p>
+    </div>
+  </article>;
+};

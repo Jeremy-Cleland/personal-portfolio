@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import clsx from "clsx";
 import image from "../../assets/img/profilePic.png";
 import eclipse1 from "../../assets/img/Eclipse-1.png";
@@ -17,46 +17,46 @@ import {
   RiLinkedinBoxLine,
 } from "react-icons/ri";
 
+import BaseButton from "../base/BaseButton.jsx";
 import ColorModeToggle from "./ColorModeToggle.jsx";
-import SearchBar from "./SearchBar.jsx";
 import NavItem from "./NavItem.jsx";
 import SocialLink from "./SocialLink.jsx";
 
-const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
     <>
-      <button
-        className={clsx(
-          "fixed left-2 top-2 z-10 flex h-6 flex-row p-1 text-midnight-900",
-          isNavOpen ? "left-2" : "left-5"
-        )}
-        onClick={() => setIsNavOpen(!isNavOpen)}
+      <BaseButton
+        className="fixed left-2 top-1 z-10 flex h-6 flex-row p-1 text-midnight-900"
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
-        {isNavOpen ? (
+        {isSidebarOpen ? (
           <img
             src={eclipse1}
             alt=" close button"
-            className="sticky top-2 transition-all duration-200"
+            className="sticky left-5 top-5 transition-all duration-200"
           />
         ) : (
-          <img src={eclipse3} alt="enter full screen button" />
+          <img
+            src={eclipse3}
+            alt="enter full screen button"
+            className="top-0 pl-2 transition-all duration-200"
+          />
         )}
-      </button>
+      </BaseButton>
       <div
-        className={
-          (" fixed bottom-0 top-0 p-3 font-Quicksand text-sm tracking-wide text-midnight-900 transition-all duration-200 dark:bg-swell-1200 dark:text-ocean-300",
-          isNavOpen
-            ? "md:flex md:w-1/5 md:flex-col md:p-2"
-            : "md:flex md:w-20 md:flex-col md:p-3")
-        }
+        className={clsx(
+          "fixed bottom-0 top-0 p-3 font-Quicksand text-sm tracking-wide text-midnight-900  transition-all duration-200 dark:bg-swell-1100 dark:text-ocean-300",
+          isSidebarOpen
+            ? "md:flex md:w-1/6 md:flex-col md:p-2"
+            : "md:flex md:w-20  md:flex-col md:p-3"
+        )}
       >
         <div className="flex h-full flex-col justify-between">
           <div>
             <div className="flex items-center justify-between">
-              {isNavOpen && (
+              {isSidebarOpen && (
                 <div className="flex flex-row pl-8">
                   <img src={eclipse2} alt=" minimize button" />
                   <img src={eclipse3} alt=" enter full screen button" />
@@ -65,82 +65,75 @@ const Navbar = () => {
               <ColorModeToggle
                 colorMode={colorMode}
                 setColorMode={setColorMode}
-                isNavOpen={isNavOpen}
+                isSidebarOpen={isSidebarOpen}
               />
-            </div>
-            {isNavOpen && (
-              <h2 className="font-Knewave text-lg tracking-widest">
-                Jeremy Cleland
-              </h2>
-            )}
-            <div className={clsx(!isNavOpen && "hidden", "mt-4")}>
-              <SearchBar />
             </div>
             <div className="mx-auto mt-4 flex-1">
               <ul className="mx-auto space-y-5 pb-4 pt-2 text-sm">
                 <NavItem
-                  isNavOpen={isNavOpen}
+                  isSidebarOpen={isSidebarOpen}
                   icon={RiHome3Line}
-                  label="Home"
-                  href="#"
+                  text="Home"
+                  path="#"
                 />
                 <NavItem
-                  isNavOpen={isNavOpen}
+                  isSidebarOpen={isSidebarOpen}
                   icon={RiUser3Line}
-                  label="Profile"
-                  href="#"
+                  text="Profile"
+                  path="/profile"
                 />
                 <NavItem
-                  isNavOpen={isNavOpen}
+                  isSidebarOpen={isSidebarOpen}
                   icon={RiBriefcase3Line}
-                  label="Projects"
-                  href="#"
+                  text="Portfolio"
+                  path="/portfolio"
                 />
                 <NavItem
-                  isNavOpen={isNavOpen}
+                  isSidebarOpen={isSidebarOpen}
                   icon={RiFilePaper2Line}
-                  label="Resume"
-                  href="#"
+                  text="Resume"
+                  path="/resume"
                 />
                 <NavItem
-                  isNavOpen={isNavOpen}
+                  isSidebarOpen={isSidebarOpen}
                   icon={RiLayout3Line}
-                  label="Blog"
-                  href="#"
+                  text="Blog"
+                  path="/blog"
                 />
                 <NavItem
-                  isNavOpen={isNavOpen}
+                  isSidebarOpen={isSidebarOpen}
                   icon={RiChat3Line}
-                  label="Contact"
-                  href="#"
+                  text="Contact"
+                  path="/contact"
                 />
               </ul>
             </div>
           </div>
+
           <div className="mb-0 flex w-full flex-row items-center justify-evenly justify-self-end">
-            <img src={image} alt="" className="h-1/3 drop-shadow-sm" />
+            <hr className="border-gray-300 dark:border-ocean-300" />
+            <img src={image} alt="author" className="h-1/3 drop-shadow-sm" />
             <div className="flex flex-col">
-              {isNavOpen && (
+              {isSidebarOpen && (
                 <h2 className="text-md mb-4 font-Knewave tracking-widest underline underline-offset-4">
                   Jeremy Cleland
                 </h2>
               )}
-              {/* SocialLink */}
               <span
                 className={clsx(
-                  !isNavOpen && "hidden",
+                  !isSidebarOpen && "hidden",
                   "mb-0 flex items-center justify-center"
                 )}
               >
                 <SocialLink
                   icon={RiLinkedinBoxLine}
                   href="https://www.linkedin.com/in/jeremy-cleland/"
-                  isNavOpen={isNavOpen}
+                  isSidebarOpen={isSidebarOpen}
                 />
                 <SocialLink
                   icon={RiGithubLine}
                   href="https://www.github.com/jeremy-cleland"
-                  isNavOpen={isNavOpen}
+                  isSidebarOpen={isSidebarOpen}
                 />
               </span>
             </div>
@@ -151,4 +144,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Sidebar;
