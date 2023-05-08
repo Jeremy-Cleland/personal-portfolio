@@ -7,7 +7,7 @@ const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
     target="_blank"
     rel="noopener noreferrer"
     className={clsx(
-      "group flex items-center space-x-3 rounded-md p-2 transition-all duration-200 hover:dark:text-acccent-100",
+      "shadow-[inset_6px_20px_10px_6px_rgba(0,0,0,0.2), inset_-6px_-20px_-10px_6px_rgba(255,255,255,0.5)] group flex items-center space-x-3 rounded-md p-2 transition-all duration-200 hover:dark:text-acccent-100",
       isSidebarOpen
         ? "mx-3 hover:underline"
         : "hover:dark:text-accent-100 my-3 ml-3 text-midnight-900 hover:shadow-lg dark:text-ocean-300 hover:dark:bg-swell-1050"
