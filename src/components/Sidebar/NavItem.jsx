@@ -1,29 +1,26 @@
-// import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+
+import clsx from "clsx";
 
 const NavItem = ({ isSidebarOpen, icon: Icon, text, path }) => {
   return (
     <li
       className={
-        " group mt-8 flex cursor-default rounded-xl text-midnight-900 dark:text-ocean-300 hover:dark:bg-swell-1000 hover:dark:text-acccent-200"
+        "group mt-8 flex cursor-default rounded-xl font-SourceCodePro font-bold tracking-widest text-midnight-900 transition-all duration-150 hover:scale-110 hover:shadow-lg active:translate-y-1 active:scale-90 active:shadow-lg dark:text-ocean-300 hover:dark:bg-dark-700 hover:dark:text-[#fff]"
       }
     >
       <Link
         to={path}
-        className="flex items-center justify-center space-x-3 rounded-md p-4 transition-all duration-150 hover:shadow-lg active:-translate-y-1 active:shadow-md"
+        className="flex items-center justify-center space-x-3 p-4"
       >
-        <Icon size={22} />
+        <Icon
+          size={22}
+          className={clsx("h-5 w-5", isSidebarOpen ? "mx-2.5" : "")}
+        />
         {isSidebarOpen && <span className="ml-2">{text}</span>}
       </Link>
     </li>
   );
 };
-
-// NavItem.propTypes = {
-//   isSidebarOpen: PropTypes.bool.isRequired,
-//   icon: PropTypes.elementType.isRequired,
-//   text: PropTypes.string.isRequired,
-//   path: PropTypes.string.isRequired,
-// };
 
 export default NavItem;

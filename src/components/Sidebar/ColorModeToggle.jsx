@@ -20,7 +20,7 @@ const ColorModeToggle = ({ colorMode, setColorMode, isSidebarOpen }) => {
   return (
     <div
       className={clsx(
-        " group mt-2 flex cursor-default rounded-xl p-4 text-midnight-900 transition-all duration-150 hover:shadow-lg active:-translate-y-1 active:shadow-md dark:text-ocean-300 hover:dark:bg-swell-1000 hover:dark:text-acccent-200",
+        "group mt-2 flex cursor-default rounded-xl p-4 text-midnight-900 transition-all duration-150 hover:scale-110 hover:shadow-lg active:translate-y-1 active:scale-90 active:shadow-md dark:text-ocean-300 hover:dark:bg-dark-700 hover:dark:text-[#fff]",
         isSidebarOpen ? "mx-3 hover:underline" : ""
       )}
       onClick={toggleColorMode}
@@ -46,3 +46,5 @@ const ColorModeToggle = ({ colorMode, setColorMode, isSidebarOpen }) => {
     </div>
   );
 };
+
+export default ColorModeToggle;

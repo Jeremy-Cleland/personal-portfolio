@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import clsx from "clsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -24,13 +23,13 @@ function App() {
         </div>
         <main
           className={clsx(
-            "shadow-gray-500/80 w-screen bg-deep-100 shadow-inner dark:bg-swell-1400 dark:text-ocean-300",
-            isSidebarOpen ? "ml-1/8" : "ml-1/5"
+            "shadow-gray-500/80 w-screen bg-deep-100 shadow-inner dark:bg-darkTheme-400 dark:text-ocean-300",
+            isSidebarOpen ? "ml-1/8 pl-16" : "ml-1/5 pl-16"
           )}
         >
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<About />} />
+            <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/blog" element={<Blog />} />
@@ -43,3 +42,9 @@ function App() {
 }
 
 export default App;
+
+// <main
+//   className={clsx(
+//     "shadow-gray-500/80 w-screen bg-deep-100 shadow-inner dark:bg-swell-1800 dark:text-ocean-300",
+//     isSidebarOpen ? "ml-1/8 pl-16" : "ml-1/5 pl-16"
+//   )}
