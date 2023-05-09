@@ -13,7 +13,7 @@ const SearchBar = () => (
       name="Search"
       placeholder="Search..."
       className={
-        "group mt-8 flex cursor-default rounded-xl p-2 text-midnight-900 hover:shadow-lg dark:text-ocean-300 hover:dark:bg-dark-700 hover:dark:text-acccent-100"
+        "group mt-8 flex cursor-default rounded-xl p-2 text-gray-600 hover:shadow-lg dark:text-ocean-300 hover:dark:bg-dark-700 hover:dark:text-acccent-100"
       }
     />
   </div>

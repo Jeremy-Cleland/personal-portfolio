@@ -1,10 +1,10 @@
-import { ReactComponent as CodeFellows } from "./logos/CodeFellows.svg";
-import { ReactComponent as ExcelsiorUniversity } from "./logos/ExcelsiorUniversity.svg";
-import { ReactComponent as SpecialForcesBadge } from "./logos/SpecialForcesBadge.svg";
-import { ReactComponent as SpecialForces } from "./logos/SpecialForces.svg";
-import { ReactComponent as UnitedStatesArmy } from "./logos/UnitedStatesArmy.svg";
-import { ReactComponent as Group } from "./logos/7THSFG.svg";
-import { ReactComponent as JFKSWCS } from "./logos/JFKSWCS.svg";
+import { ReactComponent as CodeFellows } from "../assets/logos/CodeFellows.svg";
+import { ReactComponent as ExcelsiorUniversity } from "../assets/logos/ExcelsiorUniversity.svg";
+import { ReactComponent as SpecialForcesBadge } from "../assets/logos/SpecialForcesBadge.svg";
+import { ReactComponent as SpecialForces } from "../assets/logos/SpecialForces.svg";
+import { ReactComponent as UnitedStatesArmy } from "../assets/logos/UnitedStatesArmy.svg";
+import { ReactComponent as Group } from "../assets/logos/7THSFG.svg";
+import { ReactComponent as JFKSWCS } from "../assets/logos/JFKSWCS.svg";
 
 import {
   SiJavascript,
@@ -349,5 +349,44 @@ const data = {
     description:
       "I am currently looking for new opportunities. If you have any questions, please feel free to email me at jeremy@clelandco.com",
   },
+  skillbadge: [
+    {
+      name: "ReactJS",
+      icon: <SiReact className={iconStyle} />,
+    },
+    {
+      name: "Javascript",
+      icon: <SiJavascript className={iconStyle} />,
+    },
+    {
+      name: "HTML5",
+      icon: <SiHtml5 className={iconStyle} />,
+    },
+    {
+      name: "CSS3",
+      icon: <SiCss3 className={iconStyle} />,
+    },
+    {
+      name: "NodeJS",
+      icon: <SiNodedotjs className={iconStyle} />,
+    },
+    {
+      name: "ExpressJS",
+      icon: <SiExpress className={iconStyle} />,
+    },
+    {
+      name: "Redux",
+      icon: <SiRedux className={iconStyle} />,
+    },
+    {
+      name: "TailwindCSS",
+      icon: <SiTailwindcss className={iconStyle} />,
+    },
+    {
+      name: "Sass",
+      icon: <SiSass className={iconStyle} />,
+    },
+  ],
 };
+
 export default data;

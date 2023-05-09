@@ -5,56 +5,17 @@
 html,
 body {
   scroll-behavior: smooth;
-  background-color: #1d1d1d;
-}
-::-webkit-scrollbar {
-  width: 4px;
-  height: 8px;
+  background-color: #202020;
+  width: 100vw;
+  height: 100vh;
 }
 
-::-webkit-scrollbar-track {
-  border-radius: 8px;
-  background-color: #252525;
+@media (max-width: 640px) {
+  .sidebar {
+    display: none;
+  }
 }
-
-::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background-color: #1d1d1d;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #232323;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background-color: #1d1d1d;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: #252525;
-}
-
-::-webkit-scrollbar-resizer {
-  background-color: #252525;
-}
-
-::-webkit-scrollbar-button {
-  display: none;
-}
-
-::-webkit-scrollbar-button:start:decrement,
-::-webkit-scrollbar-button:end:increment {
-  display: block;
-  height: 8px;
-  width: 8px;
-  background-color: #252525;
-}
-
-.custom-sidebar-shadow {
-  box-shadow: 2px 0 10px rgba(1, 0, 0, 0.7);
-}
-
-.shadow-lg {
+.shadow-new1 {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
     0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
@@ -62,13 +23,13 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-sm {
+.shadow-new2 {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-xl {
+.shadow-new3 {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),

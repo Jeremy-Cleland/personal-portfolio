@@ -6,11 +6,11 @@ const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
     target="_blank"
     rel="noopener noreferrer"
     className={clsx(
-      "group mt-2 flex cursor-default rounded-xl p-4 text-midnight-900 transition-all duration-150 hover:scale-110 hover:shadow-lg active:translate-y-1 active:scale-90 active:shadow-md dark:text-ocean-300 hover:dark:bg-dark-700 hover:dark:text-[#fff]",
+      "group mt-8 flex cursor-default rounded-xl font-SourceCodePro font-bold tracking-widest text-gray-600 transition-all duration-100 hover:bg-dark-50 hover:shadow-lg active:shadow-lg dark:text-ocean-300  hover:dark:bg-dark-800 hover:dark:text-dark-50",
       isSidebarOpen ? "mx-3 hover:underline" : "mx-auto justify-center"
     )}
   >
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center p-4">
       <Icon size={22} />
     </div>
   </a>
