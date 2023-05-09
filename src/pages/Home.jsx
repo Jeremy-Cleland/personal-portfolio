@@ -7,13 +7,14 @@ import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";
 const Home = () => {
   return (
     <div className="flex min-h-screen w-full items-center justify-center">
-      <div className="bg-white mx-auto flex flex-col items-center justify-center rounded-xl p-5 dark:bg-darkTheme-700 dark:text-ocean-300">
+      <div className="bg-white mx-auto flex w-4/6 flex-col items-center justify-center rounded-xl p-5 font-SourceCodePro text-sm shadow-2xl dark:bg-darkTheme-700 dark:text-ocean-200">
         <div>
           <img
-            className="mx-auto w-32 rounded-full shadow-xl"
+            className="mx-auto w-32 rounded-full"
             src={image}
             alt="Profile face"
           />
+          s
         </div>
         <div className="mt-5 text-center">
           <h1 className="text-gray-900 text-2xl font-semibold sm:text-3xl ">

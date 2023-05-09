@@ -42,9 +42,3 @@ function App() {
 }
 
 export default App;
-
-// <main
-//   className={clsx(
-//     "shadow-gray-500/80 w-screen bg-deep-100 shadow-inner dark:bg-swell-1800 dark:text-ocean-300",
-//     isSidebarOpen ? "ml-1/8 pl-16" : "ml-1/5 pl-16"
-//   )}

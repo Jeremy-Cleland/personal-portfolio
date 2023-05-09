@@ -68,7 +68,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
                 alt="author"
                 className={clsx(
                   "mx-auto drop-shadow-sm hover:scale-110",
-                  isSidebarOpen ? "w-1/2 max-w-[200px]" : "w-full"
+                  isSidebarOpen ? "w-1/2 max-w-[200px]" : "w-full max-w-[100px]"
                 )}
               />
             </div>
