@@ -23,7 +23,7 @@ function App() {
         </div>
         <main
           className={clsx(
-            " bg-dark-50 text-ocean-900 dark:bg-dark-400 dark:text-ocean-50",
+            "main bg-dark-50 text-ocean-900 dark:bg-dark-400 dark:text-ocean-50",
             isSidebarOpen ? "ml-1/8 pl-16" : "ml-1/5 pl-16"
           )}
         >

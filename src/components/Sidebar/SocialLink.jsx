@@ -10,7 +10,7 @@ const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
       isSidebarOpen ? "mx-3 hover:underline" : "mx-auto justify-center"
     )}
   >
-    <div className="flex items-center justify-center p-4">
+    <div className="flex items-center justify-center p-2">
       <Icon size={22} />
     </div>
   </a>

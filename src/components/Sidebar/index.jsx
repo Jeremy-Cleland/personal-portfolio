@@ -15,7 +15,8 @@ import {
 import ColorModeToggle from "./ColorModeToggle.jsx";
 import NavItem from "./NavItem.jsx";
 import SocialLink from "./SocialLink.jsx";
-import SidebarSizeToggle from "./SidebarSizeToggle.jsx";
+// import SidebarSizeToggle from "./SidebarSizeToggle.jsx";
+import TrafficLightToggle from "./TrafficLightToggle.jsx";
 import image from "../../assets/img/profilePic.png";
 
 const SIDEBAR_WIDTH_OPEN = "md:w-1/8";
@@ -30,10 +31,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
 
   return (
     <>
-      <SidebarSizeToggle
-        isSidebarOpen={isSidebarOpen}
-        toggleSidebar={toggleSidebar}
-      />
+      <TrafficLightToggle toggleSidebar={toggleSidebar} />
 
       <div
         className={clsx(
