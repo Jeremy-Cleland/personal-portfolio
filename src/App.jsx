@@ -14,8 +14,8 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <Router>
-      <div className="fixed flex min-h-screen ">
-        <div className="sidebar z-10">
+      <div className="flex min-h-screen ">
+        <div className="sidebar fixed z-10">
           <Sidebar
             isSidebarOpen={isSidebarOpen}
             setIsSidebarOpen={setIsSidebarOpen}
@@ -23,7 +23,7 @@ function App() {
         </div>
         <main
           className={clsx(
-            "main bg-dark-50 text-ocean-900 dark:bg-dark-400 dark:text-ocean-50",
+            "main lg:p-15 mx-auto w-screen justify-center bg-dark-50 text-ocean-900 dark:bg-dark-400 dark:text-ocean-50",
             isSidebarOpen ? "ml-1/8 pl-16" : "ml-1/5 pl-16"
           )}
         >

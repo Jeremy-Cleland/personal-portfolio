@@ -227,7 +227,7 @@ const data = {
       title: "RESTy",
       repositoryDescription:
         "RESTy is a web application that allows you to make HTTP requests to a REST API and view the results. It was built using ReactJS, and utilizes the useState and useEffect hooks to manage state and side effects respectively. It also utilizes the Axios library to make the HTTP requests to the API.",
-      image: "./img/resty1.png",
+      image: "./img/resty1.jpg",
       // image: "../../public/img/resty1.png",
       languages: ["ReactJS", "Axios", "JavaScript", "HTML5", "CSS3"],
       topics: ["Rest", "Axios"],
@@ -238,8 +238,41 @@ const data = {
       title: "Horned Beast",
       repositoryDescription:
         "Introducing Horned Beasts! A React application that displays a gallery of horned animals, along with their information. With Horned Beasts, you can easily browse through images of different animals and mark your favorites. You can also filter the gallery based on the number of horns the animals have, making it easy to find the ones you're interested in.",
-      image: "./img/hornedBeast.png",
-      // image: "../../public/img/hornedBeast.png",
+      // image: "./img/hornedBeast.png",
+      image: "../../public/img/hornedBeast.png",
+      languages: ["ReactJS", "Axios", "JavaScript", "HTML5", "CSS3"],
+      topics: ["ReactJS", "Axios"],
+      repo: "github.com/jeremy-cleland/horned-beast",
+      demo: "https://horned-beast-jeremy-cleland.netlify.app/",
+    },
+    {
+      title: "Horned Beast",
+      repositoryDescription:
+        "Introducing Horned Beasts! A React application that displays a gallery of horned animals, along with their information. With Horned Beasts, you can easily browse through images of different animals and mark your favorites. You can also filter the gallery based on the number of horns the animals have, making it easy to find the ones you're interested in.",
+      // image: "./img/hornedBeast.png",
+      image: "../../public/img/hornedBeast.png",
+      languages: ["ReactJS", "Axios", "JavaScript", "HTML5", "CSS3"],
+      topics: ["ReactJS", "Axios"],
+      repo: "github.com/jeremy-cleland/horned-beast",
+      demo: "https://horned-beast-jeremy-cleland.netlify.app/",
+    },
+    {
+      title: "Horned Beast",
+      repositoryDescription:
+        "Introducing Horned Beasts! A React application that displays a gallery of horned animals, along with their information. With Horned Beasts, you can easily browse through images of different animals and mark your favorites. You can also filter the gallery based on the number of horns the animals have, making it easy to find the ones you're interested in.",
+      // image: "./img/hornedBeast.png",
+      image: "../../public/img/hornedBeast.png",
+      languages: ["ReactJS", "Axios", "JavaScript", "HTML5", "CSS3"],
+      topics: ["ReactJS", "Axios"],
+      repo: "github.com/jeremy-cleland/horned-beast",
+      demo: "https://horned-beast-jeremy-cleland.netlify.app/",
+    },
+    {
+      title: "Horned Beast",
+      repositoryDescription:
+        "Introducing Horned Beasts! A React application that displays a gallery of horned animals, along with their information. With Horned Beasts, you can easily browse through images of different animals and mark your favorites. You can also filter the gallery based on the number of horns the animals have, making it easy to find the ones you're interested in.",
+      // image: "./img/hornedBeast.png",
+      image: "../../public/img/hornedBeast.png",
       languages: ["ReactJS", "Axios", "JavaScript", "HTML5", "CSS3"],
       topics: ["ReactJS", "Axios"],
       repo: "github.com/jeremy-cleland/horned-beast",

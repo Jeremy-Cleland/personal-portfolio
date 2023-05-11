@@ -1,12 +1,14 @@
-import React from "react";
 import data from "../data/data.jsx";
-import image from "../assets/img/profilePic.png";
+// import image from "../assets/img/profilePic.png";
 import SocialLink from "../components/sidebar/SocialLink.jsx";
 import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";
 
 const Contact = () => {
   return (
-    <div className="flex min-h-screen w-full items-center justify-center font-SourceCodePro">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center font-SourceCodePro">
+      <span className="select-none flex-col pb-10 font-SourceCodePro text-3xl font-black tracking-widest text-purple-600">
+        Contact
+      </span>
       <div className="group relative mx-auto flex w-[50%] items-center justify-center ">
         <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-75 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
         <div className="relative flex items-center rounded-lg bg-gray-200 px-7 py-4 dark:bg-swell-1050">
@@ -23,7 +25,9 @@ const Contact = () => {
               complex challenges.
             </p>
             <div>
-              <h2 className="text-md my-8 font-semibold">Languages & Skills</h2>
+              <h2 className="text-md my-8 font-semibold dark:text-dark-50">
+                Languages & Skills
+              </h2>
               <div className="mx-auto grid grid-cols-3 grid-rows-3 justify-center ">
                 {data.skillbadge.map((skills, index) => (
                   <div
