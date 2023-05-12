@@ -6,6 +6,7 @@ import Sidebar from "./components/sidebar/index.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
+import ProjectSingle from "./pages/ProjectSingle.jsx";
 import Resume from "./pages/Resume.jsx";
 import Blog from "./pages/Blog.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -15,7 +16,7 @@ function App() {
   return (
     <Router>
       <div className="flex min-h-screen ">
-        <div className="sidebar fixed z-10">
+        <div className="fixed z-10 sidebar">
           <Sidebar
             isSidebarOpen={isSidebarOpen}
             setIsSidebarOpen={setIsSidebarOpen}
@@ -31,6 +32,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:slug" element={<ProjectSingle />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />

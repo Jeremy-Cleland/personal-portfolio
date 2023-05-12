@@ -5,44 +5,46 @@ import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";
 
 const Resume = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center font-SourceCodePro">
-      <span className="select-none flex-col pb-10 font-SourceCodePro text-3xl font-black tracking-widest text-purple-600">
-        Resume
-      </span>
-      <div className="group relative mx-auto flex w-[50%] items-center justify-center ">
+    <div className="flex flex-col items-center justify-center w-full min-h-screen font-SourceCodePro">
+      <div>
+        <h3 className="pb-4 mt-10 mb-3 font-black text-center border-b-4 text-md border-violet-400 font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-16 sm:text-xl">
+          Resume
+        </h3>
+      </div>
+      <div className="group relative mx-auto mt-10 flex w-[50%] items-center justify-center ">
         <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-75 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-        <div className="relative flex items-center rounded-lg bg-gray-200 px-7 py-4 dark:bg-swell-1050">
+        <div className="relative flex items-center py-4 bg-gray-200 rounded-lg px-7 dark:bg-swell-1050">
           <div className="mt-5 text-center">
             <h1 className="text-2xl font-semibold text-indigo-400 sm:text-3xl">
               {data.name}
             </h1>
-            <h2 className="text-lg text-gray-600 dark:text-dark-50 sm:text-lg">
+            <h2 className="text-lg text-gray-900 dark:text-dark-50 sm:text-lg">
               {data.title}
             </h2>
-            <p className="mt-2 px-2 text-sm text-gray-600 dark:text-dark-50 sm:text-base">
+            <p className="px-2 mt-2 text-sm text-gray-900 dark:text-dark-50 sm:text-base">
               From Special Forces Medic to Software Developer, my unique
               background enables me to deliver innovative solutions and tackle
               complex challenges.
             </p>
             <div>
-              <h2 className="text-md my-8 font-semibold dark:text-dark-50">
+              <h2 className="my-8 font-semibold text-md dark:text-dark-50">
                 Languages & Skills
               </h2>
-              <div className="mx-auto grid grid-cols-3 grid-rows-3 justify-center ">
+              <div className="grid justify-center grid-cols-3 grid-rows-3 mx-auto ">
                 {data.skillbadge.map((skills, index) => (
                   <div
                     key={index}
-                    className="mx-auto grid h-20 w-20 flex-col dark:text-gray-200"
+                    className="grid flex-col w-20 h-20 mx-auto dark:text-gray-200"
                   >
                     {skills.icon}
-                    <p className="text-center text-xs text-indigo-400">
+                    <p className="text-xs text-center text-indigo-400">
                       {skills.name}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="align-center mx-auto flex w-32 justify-center text-sm ">
+            <div className="flex justify-center w-32 mx-auto text-sm align-center ">
               <SocialLink
                 icon={RiLinkedinBoxLine}
                 href={data.social.linkedin}

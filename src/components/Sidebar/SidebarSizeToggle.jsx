@@ -8,7 +8,7 @@ const SidebarSizeToggle = ({ isSidebarOpen, toggleSidebar }) => {
   return (
     <button
       className={clsx(
-        "fixed top-0 z-10 flex flex-row text-gray-600 ",
+        "fixed top-0 z-10 flex flex-row text-gray-900 ",
         isSidebarOpen ? "mx-auto justify-center" : "mx-auto justify-center"
       )}
       onClick={toggleSidebar}

@@ -4,7 +4,7 @@ export const CardModern = () => {
       <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
         <time
           dateTime="2022-10-10"
-          className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-600 first-line:dark:text-ocean-300"
+          className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900 first-line:dark:text-ocean-300"
         >
           <span>2022</span>
           <span className="w-px flex-1 bg-gray-900/10 dark:bg-white/10"></span>
@@ -23,12 +23,12 @@ export const CardModern = () => {
       <div className="flex flex-1 flex-col justify-between">
         <div className="border-s border-gray-900/10 p-4 dark:border-white/10 sm:!border-l-transparent sm:p-6">
           <a href="#/shit">
-            <h3 className="font-bold uppercase text-gray-600 dark:text-ocean-300">
+            <h3 className="font-bold uppercase text-gray-900 dark:text-ocean-300">
               Finding the right guitar for your style - 5 tips
             </h3>
           </a>
 
-          <p className="text-sm/relaxedtext-gray-600 mt-2 line-clamp-3 dark:text-gray-200">
+          <p className="text-sm/relaxedtext-gray-900 mt-2 line-clamp-3 dark:text-gray-200">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
             dolores, possimus pariatur animi temporibus nesciunt praesentium
             dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque
@@ -40,7 +40,7 @@ export const CardModern = () => {
         <div className="sm:flex sm:items-end sm:justify-end">
           <a
             href="#"
-            className="block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-600 transition hover:bg-yellow-500"
+            className="block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-500"
           >
             Read Blog
           </a>
@@ -56,13 +56,13 @@ export const GradientCard = () => {
       <div className="rounded-[10px] bg-white p-4 !pt-20 dark:bg-gray-900 sm:p-6">
         <time
           dateTime="2022-10-10"
-          className="block text-xs text-gray-600 dark:text-ocean-300"
+          className="block text-xs text-gray-900 dark:text-ocean-300"
         >
           10th Oct 2022
         </time>
 
         <a href="#">
-          <h3 className="mt-0.5 text-lg font-medium text-gray-600 dark:text-ocean-300">
+          <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-ocean-300">
             How to center an element using JavaScript and jQuery
           </h3>
         </a>
@@ -83,17 +83,17 @@ export const GradientCard = () => {
 
 export const GradientHoverCard = () => {
   return (
-    <article className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
+    <article className="rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
       <div className="rounded-[10px] bg-white p-4 !pt-20 dark:bg-gray-900 sm:p-6">
         <time
           dateTime="2022-10-10"
-          className="text-xstext-gray-600 block dark:text-ocean-300"
+          className="text-xstext-gray-900 block dark:text-ocean-300"
         >
           10th Oct 2022
         </time>
 
         <a href="#">
-          <h3 className="mt-0.5 text-lg font-medium text-gray-600 dark:text-ocean-300">
+          <h3 className="mt-0.5 text-lg font-medium text-gray-900 dark:text-ocean-300">
             How to center an element using JavaScript and jQuery
           </h3>
         </a>
@@ -123,12 +123,12 @@ export const CardFloating = () => {
 
       <div className="p-4">
         <a href="#">
-          <h3 className="text-lg font-medium text-gray-600 dark:text-ocean-300">
+          <h3 className="text-lg font-medium text-gray-900 dark:text-ocean-300">
             Finding the Journey to Mordor
           </h3>
         </a>
 
-        <p className="text-sm/relaxedtext-gray-600 mt-2 line-clamp-3 dark:text-ocean-300">
+        <p className="text-sm/relaxedtext-gray-900 mt-2 line-clamp-3 dark:text-ocean-300">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
           dolores, possimus pariatur animi temporibus nesciunt praesentium
           dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus
@@ -152,18 +152,18 @@ export const CardSimple = () => {
       <div className="bg-white p-4 dark:bg-gray-900 sm:p-6">
         <time
           dateTime="2022-10-10"
-          className="text-xstext-gray-600 block dark:text-ocean-300"
+          className="text-xstext-gray-900 block dark:text-ocean-300"
         >
           10th Oct 2022
         </time>
 
         <a href="#">
-          <h3 className="text-lgtext-gray-600 mt-0.5 dark:text-ocean-300">
+          <h3 className="text-lgtext-gray-900 mt-0.5 dark:text-ocean-300">
             How to position your furniture for positivity
           </h3>
         </a>
 
-        <p className="text-sm/relaxedtext-gray-600 mt-2 line-clamp-3 dark:text-ocean-300">
+        <p className="text-sm/relaxedtext-gray-900 mt-2 line-clamp-3 dark:text-ocean-300">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
           dolores, possimus pariatur animi temporibus nesciunt praesentium
           dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus
@@ -235,12 +235,12 @@ export const ProjectCard = () => {
 
     <div className="p-4">
       <a href="#">
-        <h3 className="font-mediumtext-gray-600 text-lg dark:text-ocean-300">
+        <h3 className="font-mediumtext-gray-900 text-lg dark:text-ocean-300">
           Finding the Journey to Mordor
         </h3>
       </a>
 
-      <p className="text-sm/relaxedtext-gray-600 mt-2 line-clamp-3 dark:text-ocean-300">
+      <p className="text-sm/relaxedtext-gray-900 mt-2 line-clamp-3 dark:text-ocean-300">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
         dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
         sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,

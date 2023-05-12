@@ -6,12 +6,12 @@ const NavItem = ({ isSidebarOpen, icon: Icon, text, path }) => {
   return (
     <li
       className={
-        "group mt-8 flex cursor-default rounded-xl font-SourceCodePro font-bold tracking-widest text-gray-600 transition-all duration-100 hover:bg-dark-50 hover:text-dark-900 hover:shadow-lg active:shadow-lg dark:text-ocean-300 hover:dark:bg-dark-800 hover:dark:text-dark-50"
+        "group mt-8 flex cursor-default rounded-xl font-SourceCodePro font-bold tracking-widest text-gray-900 transition-all duration-100 hover:bg-dark-50 hover:text-dark-900 hover:shadow-lg active:shadow-lg dark:text-ocean-300 hover:dark:bg-dark-800 hover:dark:text-dark-50"
       }
     >
       <Link
         to={path}
-        className="flex items-center justify-center space-x-3 p-4"
+        className="flex items-center justify-center p-4 space-x-3"
       >
         <Icon className={clsx("h-5 w-5", isSidebarOpen ? "mx-2.5" : "")} />
         {isSidebarOpen && <span className="ml-2">{text}</span>}

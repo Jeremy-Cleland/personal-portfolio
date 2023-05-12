@@ -16,7 +16,9 @@ module.exports = {
     extend: {
       animation: {
         tilt: "tilt 10s infinite linear",
+        background: "background ease infinite",
       },
+
       keyframes: {
         tilt: {
           "0%, 50%, 100%": {
@@ -28,6 +30,10 @@ module.exports = {
           "75%": {
             transform: "rotate(-0.5deg)",
           },
+        },
+        background: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
         },
       },
       colors: {

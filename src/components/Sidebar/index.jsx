@@ -17,7 +17,7 @@ import NavItem from "./NavItem.jsx";
 import SocialLink from "./SocialLink.jsx";
 // import SidebarSizeToggle from "./SidebarSizeToggle.jsx";
 import TrafficLightToggle from "./TrafficLightToggle.jsx";
-import image from "../../assets/img/profilePic.png";
+import image from "../../assets/images/profilePic.png";
 
 const SIDEBAR_WIDTH_OPEN = "md:w-1/8";
 const SIDEBAR_WIDTH_CLOSED = "md:w-20";
@@ -35,7 +35,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
 
       <div
         className={clsx(
-          "dropShadow-3xl fixed bottom-0 top-0 bg-gray-200 p-3 font-Quicksand text-sm tracking-wide text-gray-600 transition-all duration-200 dark:bg-darkTheme-300",
+          "dropShadow-3xl fixed bottom-0 top-0 bg-gray-200 p-3 font-Quicksand text-sm tracking-wide text-gray-900 transition-all duration-200 dark:bg-darkTheme-300",
           isSidebarOpen ? SIDEBAR_WIDTH_OPEN : SIDEBAR_WIDTH_CLOSED,
           "md:flex md:flex-col md:p-3"
         )}
