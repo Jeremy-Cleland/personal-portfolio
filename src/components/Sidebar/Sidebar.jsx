@@ -22,7 +22,7 @@ import image from "../../assets/images/profilePic.png";
 const SIDEBAR_WIDTH_OPEN = "md:w-1/8";
 const SIDEBAR_WIDTH_CLOSED = "md:w-20";
 
-const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
+export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const [colorMode, setColorMode] = useColorMode();
 
   const toggleSidebar = () => {
@@ -127,5 +127,3 @@ Sidebar.propTypes = {
   isSidebarOpen: PropTypes.bool.isRequired,
   setIsSidebarOpen: PropTypes.func.isRequired,
 };
-
-export default Sidebar;

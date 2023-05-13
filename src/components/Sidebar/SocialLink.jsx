@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
+export const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
   <a
     href={href}
     target="_blank"
@@ -15,5 +15,3 @@ const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
     </div>
   </a>
 );
-
-export default SocialLink;

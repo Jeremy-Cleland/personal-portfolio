@@ -1,7 +1,7 @@
 import { useState } from "react";
 import clsx from "clsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/sidebar/index.jsx";
+import Sidebar from "./components/sidebar/Sidebar.jsx";
 
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <div className="flex min-h-screen ">
-        <div className="fixed z-10 sidebar">
+        <div className="sidebar fixed z-10">
           <Sidebar
             isSidebarOpen={isSidebarOpen}
             setIsSidebarOpen={setIsSidebarOpen}

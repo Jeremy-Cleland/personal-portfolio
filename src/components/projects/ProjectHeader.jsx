@@ -12,11 +12,11 @@ const ProjectHeader = () => {
       <p className="">{projectData.ProjectHeader.title}</p>
       <div className="flex">
         <div className="flex items-center">
-          <RiPriceTag3Line className="w-6 h-6" />
+          <RiPriceTag3Line className="h-6 w-6" />
           <span>{projectData.ProjectHeader.tags}</span>
         </div>
         <div className="flex items-center">
-          <RiCalendar2Line className="w-6 h-6" />
+          <RiCalendar2Line className="h-6 w-6" />
           <span>{projectData.ProjectHeader.date}</span>
         </div>
       </div>

@@ -13,4 +13,4 @@ const Box = ({ children, className }) => {
   );
 };
 
-module.exports = { Box };
+export default Box;
