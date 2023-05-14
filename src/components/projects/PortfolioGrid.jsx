@@ -57,14 +57,14 @@ const PortfolioGrid = () => {
       <div className="mt-10 sm:mt-16">
         <div className="flex justify-between gap-3 pb-3">
           <div className="flex justify-between gap-2">
-            <span className="hidden cursor-pointer rounded-xl bg-gray-200 p-2.5 shadow-sm dark:bg-swell-1400 sm:block">
-              <RiSearch2Line className="h-5 w-5 text-violet-400 dark:text-violet-400"></RiSearch2Line>
+            <span className="group cursor-pointer rounded-xl bg-gray-200 p-4 text-violet-400 shadow-lg dark:bg-[#141414] dark:text-violet-400 hover:dark:bg-violet-400  hover:dark:text-dark-300 sm:block">
+              <RiSearch2Line className="group h-5 w-5"></RiSearch2Line>
             </span>
             <input
               onChange={(e) => {
                 setSearchPortfolioProject(e.target.value);
               }}
-              className="sm:text-md rounded-lg border border-gray-200 py-2 pl-3 pr-1 font-SourceCodePro text-sm font-bold text-dark-900 dark:border-swell-1000 dark:border-violet-400 dark:bg-darkTheme-300 dark:font-medium dark:text-gray-200 sm:px-4 "
+              className="sm:text-md rounded-lg border border-gray-200 py-2 pl-3 pr-1 font-SourceCodePro text-sm font-bold text-dark-900 dark:border-violet-400 dark:bg-darkTheme-100 dark:font-medium dark:text-gray-200 sm:px-4 "
               id="name"
               name="name"
               type="search"
@@ -78,7 +78,7 @@ const PortfolioGrid = () => {
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
+      <div className="my-10 grid auto-cols-max grid-cols-1 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
         {renderProjects()}
       </div>
     </section>

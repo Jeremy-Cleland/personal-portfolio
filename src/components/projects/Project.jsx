@@ -13,15 +13,15 @@ const Project = ({ title, category, image }) => {
       }}
     >
       <Link to="/projects/single-project}" aria-label="Single Project">
-        <div className="text-cener mb-10 rounded-xl font-SourceCodePro shadow-xl hover:shadow-xl dark:bg-darkTheme-300 dark:text-gray-200 sm:mb-0">
+        <div className="rounded-xl py-5 text-center font-SourceCodePro shadow-xl hover:shadow-xl dark:bg-darkTheme-600 dark:text-gray-200 sm:mb-0">
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-4 py-6 text-center">
+            <div className="px-4 text-center ">
               <img src={image} alt={title} />
-              <h2 className="p-4">{title}</h2>
-              <span className="p-4 ">{category}</span>
+              <h2 className="font-bold leading-loose">{title}</h2>
+              <span className="text-sm leading-loose">{category}</span>
             </div>
           </motion.div>
         </div>
