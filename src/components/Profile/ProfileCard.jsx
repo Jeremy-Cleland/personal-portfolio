@@ -17,15 +17,15 @@ function Card({ name, title, social: { github, dribbble, twitter, email } }) {
           />
         </div>
         <div className="mt-5 text-center">
-          <p className="text-xl font-semibold text-gray-900 sm:text-2xl">
+          <p className="text-xl font-semibold text-dark-900 sm:text-2xl">
             {name}
           </p>
-          <p className="inline-block w-auto border-b-2 px-5 pb-4 pt-2 text-xs text-gray-900 sm:text-base">
+          <p className="inline-block w-auto border-b-2 px-5 pb-4 pt-2 text-xs text-dark-900 sm:text-base">
             {title}
           </p>
           <div className="align-center mt-4 flex justify-center">
             <a
-              className="m-1 rounded-full p-1 text-xl text-gray-900 transition-colors duration-300 hover:bg-gray-800 hover:text-white sm:m-2 sm:p-2"
+              className="m-1 rounded-full p-1 text-xl text-dark-900 transition-colors duration-300 hover:bg-gray-800 hover:text-white sm:m-2 sm:p-2"
               href={github}
             >
               <FaGithub />

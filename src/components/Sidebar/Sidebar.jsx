@@ -19,7 +19,7 @@ import SocialLink from "./SocialLink.jsx";
 import TrafficLightToggle from "./TrafficLightToggle.jsx";
 import image from "../../assets/images/profilePic.png";
 
-const SIDEBAR_WIDTH_OPEN = "md:w-1/8";
+const SIDEBAR_WIDTH_OPEN = "md:w-60";
 const SIDEBAR_WIDTH_CLOSED = "md:w-20";
 const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const [colorMode, setColorMode] = useColorMode();
@@ -34,7 +34,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
 
       <div
         className={clsx(
-          "dropShadow-3xl fixed bottom-0 top-0 bg-gray-200 p-3 font-Quicksand text-sm tracking-wide text-gray-900 transition-all duration-200 dark:bg-darkTheme-300",
+          "dropShadow-3xl fixed bottom-0 top-0 bg-dark-100 p-3 font-Quicksand text-sm tracking-wide text-dark-900 transition-all duration-200 dark:bg-dark-500",
           isSidebarOpen ? SIDEBAR_WIDTH_OPEN : SIDEBAR_WIDTH_CLOSED,
           "md:flex md:flex-col md:p-3"
         )}

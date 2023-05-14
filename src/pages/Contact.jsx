@@ -5,23 +5,23 @@ import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";
 
 const Contact = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center font-SourceCodePro">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center ">
       <div>
-        <h3 className="text-md mb-3 mt-10 border-b-4 border-violet-400 pb-4 text-center font-SourceCodePro font-black text-dark-900 dark:text-gray-200 sm:mt-16 sm:text-xl">
+        <h3 className="text-md mb-3 mt-10 border-b-4 border-violet-400 pb-4 text-center  font-black text-dark-900 dark:text-gray-200 sm:mt-16 sm:text-xl">
           Contact Me
         </h3>
       </div>
       <div className=" group relative mx-auto mt-10 flex w-[50%] items-center justify-center ">
         <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-75 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-        <div className="relative flex items-center rounded-lg bg-gray-200 px-7 py-4 dark:bg-swell-1050">
+        <div className="relative flex items-center rounded-lg bg-dark-100 px-7 py-4 dark:bg-dark-900">
           <div className="mt-5 text-center">
             <h1 className="text-2xl font-semibold text-indigo-400 sm:text-3xl">
               {data.name}
             </h1>
-            <h2 className="text-lg text-gray-900 dark:text-dark-50 sm:text-lg">
+            <h2 className="text-lg text-dark-900 dark:text-dark-50 sm:text-lg">
               {data.title}
             </h2>
-            <p className="mt-2 px-2 text-sm text-gray-900 dark:text-dark-50 sm:text-base">
+            <p className="mt-2 px-2 text-sm text-dark-900 dark:text-dark-50 sm:text-base">
               From Special Forces Medic to Software Developer, my unique
               background enables me to deliver innovative solutions and tackle
               complex challenges.

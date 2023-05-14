@@ -5,41 +5,41 @@ import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";
 
 const About = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center font-SourceCodePro">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center ">
       <div>
-        <h3 className="text-md mb-3 mt-10 border-b-4 border-violet-400 pb-4 text-center font-SourceCodePro font-black text-dark-900 dark:text-gray-200 sm:mt-16 sm:text-xl">
+        <h3 className="text-md mb-3 mt-10 border-b-4 border-violet-400 pb-4 text-center  font-black text-dark-900 dark:text-gray-200 sm:mt-16 sm:text-xl">
           About Me
         </h3>
       </div>
       <div className="group relative mx-auto mt-10 flex w-[50%] items-center justify-center">
         <div className="absolute -inset-0.5 animate-tilt rounded-2xl bg-gradient-to-r from-[#5DD9C1] to-[#A986C7] opacity-60 blur transition duration-200 group-hover:opacity-100 group-hover:duration-200"></div>
-        <div className="relative flex items-center rounded-2xl bg-gray-200 px-7 py-4 dark:bg-swell-1050">
+        <div className="relative flex items-center rounded-2xl bg-dark-100 px-7 py-4 dark:bg-dark-900">
           <div className="mt-5 text-center">
             <h1 className="text-2xl font-semibold text-indigo-400 sm:text-3xl">
               {data.name}
             </h1>
-            <h2 className="text-lg text-gray-900 dark:text-dark-50 sm:text-lg">
+            <h2 className="text-lg text-dark-900 dark:text-dark-50 sm:text-lg">
               {data.title}
             </h2>
-            <p className="mt-2 px-2 text-sm text-gray-900 dark:text-dark-50 sm:text-base">
+            <p className="mt-2 px-2 text-sm text-dark-900 dark:text-dark-50 sm:text-base">
               From Special Forces Medic to Software Developer, my unique
               background enables me to deliver innovative solutions and tackle
               complex challenges.
             </p>
             <div>
-              <h2 className="my-8 text-base font-semibold text-gray-900 dark:text-dark-50">
+              <h2 className="my-8 text-base font-semibold text-dark-900 dark:text-dark-50">
                 Languages & Skills
               </h2>
               <div className="mx-auto grid grid-cols-3 grid-rows-3 justify-center">
                 {data.skillbadge.map((skills, index) => (
                   <div
                     key={index}
-                    className="mx-auto grid h-20 w-20 flex-col text-gray-900 dark:text-gray-200"
+                    className="mx-auto grid h-20 w-20 flex-col text-dark-900 dark:text-gray-200"
                   >
                     <div className="transition-all duration-100 hover:text-indigo-400">
                       {skills.icon}
                     </div>
-                    <p className="text-center text-xs text-gray-900 dark:text-gray-200">
+                    <p className="text-center text-xs text-dark-900 dark:text-gray-200">
                       {skills.name}
                     </p>
                   </div>
