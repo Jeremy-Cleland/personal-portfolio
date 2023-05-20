@@ -49,7 +49,7 @@ const PortfolioGrid = () => {
   return (
     <section>
       <div>
-        <h3 className="mb-3 mt-10 border-b-4 border-violet-400 pb-4 text-center text-9xl font-black leading-4 tracking-widest text-dark-900 dark:text-gray-200 sm:mt-16 sm:text-xl">
+        <h3 className="mb-3 mt-10 border-b-4 border-violet-400 pb-4 text-center text-xl font-black leading-4 tracking-widest text-dark-900 dark:text-gray-200 sm:mt-16 md:text-3xl">
           Search Portfolio
         </h3>
       </div>

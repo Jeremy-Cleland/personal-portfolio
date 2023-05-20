@@ -19,7 +19,11 @@ const Project = ({ title, category, image }) => {
             transition={{ duration: 0.3 }}
           >
             <div className="px-4 text-center ">
-              <img src={image} alt={title} />
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src={image}
+                alt={title}
+              />
               <h2 className="font-bold leading-loose">{title}</h2>
               <span className="text-sm leading-loose">{category}</span>
             </div>

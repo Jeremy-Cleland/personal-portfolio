@@ -1,13 +1,18 @@
 import { useContext } from "react";
+
 import { ProjectContext } from "../../context/ProjectContext.jsx";
 
 const PortfolioGallery = () => {
   const { projectData } = useContext(ProjectContext);
   return (
-    <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 sm:gap-10">
+    <div className="grid grid-cols-2 gap-12 md:grid-cols-3">
       {projectData.ProjectImages.map((project) => (
-        <div key={project.id}>
-          <img src={project.image} alt={project.title} />
+        <div className="h-[100px]" key={project.id}>
+          <img
+            className="h-full max-w-full rounded-lg "
+            src={project.image}
+            alt={project.title}
+          />
         </div>
       ))}
     </div>

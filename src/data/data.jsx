@@ -76,14 +76,6 @@ const data = {
       languageName: "CSS3",
       languageIcon: <SiCss3 className={iconStyle} />,
     },
-    {
-      languageName: "Python",
-      languageIcon: <SiPython className={iconStyle} />,
-    },
-    {
-      languageName: "Swift",
-      languageIcon: <SiSwift className={iconStyle} />,
-    },
   ],
   skills: [
     {
@@ -306,7 +298,8 @@ const data = {
     title4: "Adaptable and Resilient: Jeremy's Journey to Software Development",
     subtitle4: "Leveraging Special Forces Skills in the Tech World",
 
-    title5: "Your Name: A Unique Fusion of Battlefield and Coding Expertise",
+    title5:
+      "Jeremy Cleland: A Unique Fusion of Battlefield and Coding Expertise",
     subtitle5: "Special Forces Medic Turned Software Developer",
 
     title6: "Tactical Precision Meets Technical Excellence",
