@@ -7,11 +7,11 @@ const About = () => {
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center ">
       <div>
-        <h3 className="text-md mb-3 mt-10 border-b-4 border-violet-400 pb-4 text-center  font-black text-dark-900 dark:text-gray-200 sm:mt-16 sm:text-xl">
+        <h3 className="text-md mb-3 mt-10 border-b-4 border-violet-400 pb-4 text-center font-black text-dark-900 dark:text-gray-200 sm:mt-16 sm:text-xl">
           About Me
         </h3>
       </div>
-      <div className="group relative mx-auto mt-10 flex w-[50%] items-center justify-center">
+      <div className="group relative mx-auto mt-10 flex items-center justify-center md:w-[50%]">
         <div className="absolute -inset-0.5 animate-tilt rounded-2xl bg-gradient-to-r from-[#5DD9C1] to-[#A986C7] opacity-60 blur transition duration-200 group-hover:opacity-100 group-hover:duration-200"></div>
         <div className="relative flex items-center rounded-2xl bg-dark-100 px-7 py-4 dark:bg-dark-900">
           <div className="mt-5 text-center">

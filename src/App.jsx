@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <div className="flex min-h-screen ">
-        <div className="sidebar fixed z-10">
+        <div className="fixed z-10">
           <Sidebar
             isSidebarOpen={isSidebarOpen}
             setIsSidebarOpen={setIsSidebarOpen}

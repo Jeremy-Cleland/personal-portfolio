@@ -57,7 +57,7 @@ const PortfolioGrid = () => {
       <div className="mt-10 sm:mt-16">
         <div className="flex justify-between gap-3 pb-3">
           <div className="flex justify-between gap-2">
-            <span className="group cursor-pointer rounded-xl bg-dark-100 p-4 text-violet-400 shadow-lg dark:bg-dark-900 dark:text-violet-400 hover:dark:bg-violet-400  hover:dark:text-dark-300 sm:block">
+            <span className="group cursor-pointer rounded-xl bg-dark-100 p-4 text-violet-400 shadow-lg dark:bg-dark-900 dark:text-violet-400 hover:dark:bg-violet-400  hover:dark:text-dark-300 ">
               <RiSearch2Line className="group h-5 w-5"></RiSearch2Line>
             </span>
             <input

@@ -1,7 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import useColorMode from "../../hooks/useColorMode.js";
+import { FiMenu } from "react-icons/fi";
 import {
   RiBriefcase3Line,
   RiChat3Line,
@@ -11,7 +13,10 @@ import {
   RiLayout3Line,
   RiGithubLine,
   RiLinkedinBoxLine,
+  RiMenu2Line,
+  RiCloseCircleLine,
 } from "react-icons/ri";
+import { IoClose } from "react-icons/io5";
 import ColorModeToggle from "./ColorModeToggle.jsx";
 import NavItem from "./NavItem.jsx";
 import SocialLink from "./SocialLink.jsx";
@@ -23,23 +28,28 @@ const SIDEBAR_WIDTH_OPEN = "md:w-60";
 const SIDEBAR_WIDTH_CLOSED = "md:w-20";
 const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const [colorMode, setColorMode] = useColorMode();
+  const [nav, setNav] = useState(false);
 
+  const toggleNav = () => {
+    setNav((prev) => {
+      return !prev;
+    });
+  };
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
     <>
-      <TrafficLightToggle toggleSidebar={toggleSidebar} />
-
       <div
         className={clsx(
-          "dropShadow-3xl fixed bottom-0 top-0 bg-dark-100 p-3 font-Quicksand text-sm tracking-wide text-dark-900 transition-all duration-200 dark:bg-dark-500",
+          "h-screen bg-white text-dark-900 dark:bg-dark-900",
           isSidebarOpen ? SIDEBAR_WIDTH_OPEN : SIDEBAR_WIDTH_CLOSED,
-          "md:flex md:flex-col md:p-3"
+          " hidden md:flex md:flex-col md:p-3"
         )}
       >
-        <div className="flex h-full flex-col justify-between">
+        <TrafficLightToggle toggleSidebar={toggleSidebar} />
+        <div className=" flex h-full flex-col justify-between">
           <div className="pt-16">
             <img
               src={image}
@@ -90,7 +100,6 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               />
             </ul>
           </div>
-
           <div
             className={clsx(
               "mb-0 flex w-full",
@@ -100,6 +109,83 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
                 : "items-center justify-evenly justify-self-end"
             )}
           >
+            <SocialLink
+              icon={RiLinkedinBoxLine}
+              href="https://www.linkedin.com/in/jeremy-cleland/"
+              isSidebarOpen={isSidebarOpen}
+            />
+            <SocialLink
+              icon={RiGithubLine}
+              href="https://www.github.com/jeremy-cleland"
+              isSidebarOpen={isSidebarOpen}
+            />
+            <ColorModeToggle
+              colorMode={colorMode}
+              setColorMode={setColorMode}
+              isSidebarOpen={isSidebarOpen}
+            />
+          </div>
+        </div>
+      </div>
+
+      <button
+        className=" p-3 text-dark-900 dark:text-white md:hidden"
+        onClick={toggleNav}
+      >
+        {nav ? <RiCloseCircleLine size={28} /> : <RiMenu2Line size={28} />}
+      </button>
+      <div
+        className={clsx(
+          "absolute top-10 h-screen w-screen rounded-xl bg-white/90 px-20 py-5 text-left text-white dark:bg-black/90",
+          nav ? "" : "hidden"
+        )}
+      >
+        <div className="flex flex-col">
+          {/* Menu */}
+
+          <div className=" flex-1 pt-4" onClick={toggleNav}>
+            <ul className="space-y-3">
+              <NavItem
+                isSidebarOpen={true}
+                icon={RiHome3Line}
+                text="Home"
+                path="/"
+              />
+              <NavItem
+                isSidebarOpen={true}
+                icon={RiUser3Line}
+                text="About"
+                path="/about"
+              />
+              <NavItem
+                isSidebarOpen={true}
+                icon={RiBriefcase3Line}
+                text="Portfolio"
+                path="/portfolio"
+              />
+              <NavItem
+                isSidebarOpen={true}
+                icon={RiFilePaper2Line}
+                text="Resume"
+                path="/resume"
+              />
+              <NavItem
+                isSidebarOpen={true}
+                icon={RiLayout3Line}
+                text="Blog"
+                path="/blog"
+                onClick={toggleNav}
+              />
+              <NavItem
+                isSidebarOpen={true}
+                icon={RiChat3Line}
+                text="Contact"
+                path="/contact"
+              />
+            </ul>
+          </div>
+          {/* Buttons */}
+          <div className=" flex flex-row">
             <SocialLink
               icon={RiLinkedinBoxLine}
               href="https://www.linkedin.com/in/jeremy-cleland/"

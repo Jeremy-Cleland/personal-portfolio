@@ -6,7 +6,7 @@ const PortfolioFilter = ({ setSelectFilterProject }) => {
       onChange={(e) => {
         setSelectFilterProject(e.target.value);
       }}
-      className="sm:text-md rounded-lg border bg-dark-100 px-4 py-2 text-sm text-dark-900 dark:border-violet-400 dark:bg-dark-600 dark:font-medium dark:text-gray-200 sm:px-6"
+      className=" rounded-lg border bg-dark-100 px-4 py-2 text-sm text-dark-900 dark:border-violet-400 dark:bg-dark-600 dark:font-medium dark:text-gray-200"
     >
       <option className="sm:text-md text-sm">All Projects</option>
       {filterOptions.map((option) => (
