@@ -136,14 +136,14 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
       </button>
       <div
         className={clsx(
-          "absolute top-10 h-screen w-screen rounded-xl bg-white/90 px-20 py-5 text-left text-white dark:bg-black/90",
+          " absolute mx-[5vw] my-[5vh] h-[80vh] w-[90vw] rounded-xl bg-dark-100 px-10 py-10 text-center text-dark-100 dark:bg-black/90",
           nav ? "" : "hidden"
         )}
       >
         <div className="flex flex-col">
           {/* Menu */}
 
-          <div className=" flex-1 pt-4" onClick={toggleNav}>
+          <div className="flex-1 pt-4" onClick={toggleNav}>
             <ul className="space-y-3">
               <NavItem
                 isSidebarOpen={true}
