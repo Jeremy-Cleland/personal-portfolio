@@ -55,13 +55,13 @@ const PortfolioGrid = () => {
       </div>
 
       <div className="my-2 flex flex-wrap justify-between gap-5 sm:my-2.5 md:my-10 md:gap-20 ">
-        <div className="group flex grow rounded-lg border-2 border-gray-200 pl-2 dark:border-violet-400 dark:bg-dark-600">
+        <div className="group flex grow rounded-lg border-2 border-gray-200 bg-dark-100 pl-2 dark:border-violet-400 dark:bg-dark-600">
           <RiSearch2Line className="my-auto mr-2 h-5 w-5" />
           <input
             onChange={(e) => {
               setSearchPortfolioProject(e.target.value);
             }}
-            className="sm:text-md grow appearance-none rounded-lg py-2 text-sm font-bold text-dark-900 placeholder:text-dark-100 focus:outline-none dark:bg-dark-600 dark:font-medium dark:text-gray-100 "
+            className="sm:text-md grow appearance-none rounded-lg bg-dark-100 py-2 text-sm font-bold text-dark-900 placeholder:text-dark-900 focus:outline-none dark:bg-dark-600 dark:font-medium dark:text-gray-100 dark:placeholder:text-dark-100 "
             id="name"
             name="name"
             type="search"

@@ -29,7 +29,7 @@ const ProjectOverview = () => {
         >
           {Heading}
         </m.h3>
-        <p className="mb-2 text-sm leading-6">{Overview}</p>
+        <p className="mb-2 text-sm font-medium leading-6">{Overview}</p>
       </div>
       <div className="mb-7 grow">
         <m.h3

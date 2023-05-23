@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/img/profilePic.png";
+import image from "../../assets/images/profilePic.png";
 import { FaGithub } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";

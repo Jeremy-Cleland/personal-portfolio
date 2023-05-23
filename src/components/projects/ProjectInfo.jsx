@@ -34,7 +34,7 @@ const ProjectInfo = () => {
       </div>
       <div className="flex w-full flex-row text-dark-900 dark:text-dark-100">
         <div className="flex basis-1/2 text-left">
-          <span className="text-sm md:font-bold  lg:text-base">{tags}</span>
+          <span className="text-sm md:font-bold lg:text-base">{tags}</span>
         </div>
         <div className="basis-1/2 text-right">
           <span className="text-sm md:font-bold lg:text-base">{date}</span>

@@ -51,12 +51,6 @@ module.exports = {
           950: "#121212",
           1000: "#0d0d0d",
         },
-
-        acccent: {
-          50: "#9D4EDD",
-          100: "#30D5C8",
-          200: "#BB7CD7",
-        },
         traffic: {
           closeRed: "#ff6159",
           closeRedActive: "#bf4942",
