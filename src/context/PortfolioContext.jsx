@@ -1,5 +1,5 @@
 import { useState, useMemo, createContext } from "react";
-import { portfolioData } from "../data/portfolioData.js";
+import { portfolioData } from "../data/portfolioData.jsx";
 
 export const PortfolioContext = createContext();
 
@@ -8,7 +8,6 @@ export const PortfolioProvider = (props) => {
   const [searchPortfolioProject, setSearchPortfolioProject] = useState("");
   const [selectFilterProject, setSelectFilterProject] = useState("");
 
-  // Memoized filtered projects by project title
   const searchPortfolioByTitle = useMemo(() => {
     return portfolioProject.filter((item) => {
       const result = item.title

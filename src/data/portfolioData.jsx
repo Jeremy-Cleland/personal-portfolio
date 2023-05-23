@@ -27,4 +27,22 @@ export const portfolioData = [
     category: "UI/UX Design",
     img: image3,
   },
+  {
+    id: 4,
+    title: "Project 4",
+    category: "UI/UX Design",
+    img: image3,
+  },
+  {
+    id: 5,
+    title: "Project 5",
+    category: "UI/UX Design",
+    img: image3,
+  },
+  {
+    id: 6,
+    title: "Project 6",
+    category: "Web Application",
+    img: image3,
+  },
 ];

@@ -16,8 +16,7 @@ import {
   SiCss3,
   SiNodedotjs,
   SiOpenai,
-  SiPython,
-  SiSwift,
+  SiAxios,
   SiRedux,
   SiSocketdotio,
   SiSass,
@@ -113,6 +112,10 @@ const data = {
     {
       skillName: "TailwindCSS",
       skillIcon: <SiTailwindcss className={iconStyle} />,
+    },
+    {
+      skillName: "Axios",
+      skillIcon: <SiAxios className={iconStyle} />,
     },
     {
       skillName: "Material-UI",

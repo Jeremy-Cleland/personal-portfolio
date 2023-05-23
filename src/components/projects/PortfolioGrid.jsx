@@ -47,38 +47,33 @@ const PortfolioGrid = () => {
   };
 
   return (
-    <section>
+    <section className="my-2.5 md:mx-10">
       <div>
-        <h3 className="mb-3 mt-10 border-b-4 border-violet-400 pb-4 text-center text-xl font-black leading-4 tracking-widest text-dark-900 dark:text-gray-200 sm:mt-16 md:text-3xl">
+        <h3 className="my-5 border-b-4 border-violet-400 py-5 text-center text-xl font-black leading-4 tracking-widest text-dark-900 dark:text-gray-200 md:my-10 md:text-2xl">
           Search Portfolio
         </h3>
       </div>
 
-      <div className="mt-10 sm:mt-16">
-        <div className="flex justify-between gap-3 pb-3">
-          <div className="flex justify-between gap-2">
-            <span className="group cursor-pointer rounded-xl bg-dark-100 p-4 text-violet-400 shadow-lg dark:bg-dark-900 dark:text-violet-400 hover:dark:bg-violet-400  hover:dark:text-dark-300 ">
-              <RiSearch2Line className="group h-5 w-5"></RiSearch2Line>
-            </span>
-            <input
-              onChange={(e) => {
-                setSearchPortfolioProject(e.target.value);
-              }}
-              className="sm:text-md rounded-lg border border-gray-200 py-2 pl-3 pr-1  text-sm font-bold text-dark-900 dark:border-violet-400 dark:bg-dark-600 dark:font-medium dark:text-gray-200 sm:px-4 "
-              id="name"
-              name="name"
-              type="search"
-              required=""
-              placeholder="Search Projects"
-              aria-label="Name"
-            />
-          </div>
-
-          <PortfolioFilter setSelectFilterProject={setSelectFilterProject} />
+      <div className="my-2 flex flex-wrap justify-between gap-5 sm:my-2.5 md:my-10 md:gap-20 ">
+        <div className="group flex grow rounded-lg border-2 border-gray-200 pl-2 dark:border-violet-400 dark:bg-dark-600">
+          <RiSearch2Line className="my-auto mr-2 h-5 w-5" />
+          <input
+            onChange={(e) => {
+              setSearchPortfolioProject(e.target.value);
+            }}
+            className="sm:text-md grow appearance-none rounded-lg py-2 text-sm font-bold text-dark-900 placeholder:text-dark-100 focus:outline-none dark:bg-dark-600 dark:font-medium dark:text-gray-100 "
+            id="name"
+            name="name"
+            type="search"
+            required=""
+            placeholder="Search Projects"
+            aria-label="Name"
+          />
         </div>
+        <PortfolioFilter setSelectFilterProject={setSelectFilterProject} />
       </div>
 
-      <div className="my-10 grid auto-cols-max grid-cols-1 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
+      <div className="grid auto-cols-max grid-cols-1 gap-10 lg:grid-cols-2 xl:grid-cols-3">
         {renderProjects()}
       </div>
     </section>

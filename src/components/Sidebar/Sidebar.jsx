@@ -3,7 +3,6 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import useColorMode from "../../hooks/useColorMode.js";
-import { FiMenu } from "react-icons/fi";
 import {
   RiBriefcase3Line,
   RiChat3Line,
@@ -16,24 +15,21 @@ import {
   RiMenu2Line,
   RiCloseCircleLine,
 } from "react-icons/ri";
-import { IoClose } from "react-icons/io5";
 import ColorModeToggle from "./ColorModeToggle.jsx";
 import NavItem from "./NavItem.jsx";
 import SocialLink from "./SocialLink.jsx";
-// import SidebarSizeToggle from "./SidebarSizeToggle.jsx";
 import TrafficLightToggle from "./TrafficLightToggle.jsx";
 import image from "../../assets/images/profilePic.png";
 
-const SIDEBAR_WIDTH_OPEN = "md:w-60";
-const SIDEBAR_WIDTH_CLOSED = "md:w-20";
 const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const [colorMode, setColorMode] = useColorMode();
-  const [nav, setNav] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const SIDEBAR_WIDTH_OPEN = "md:w-60";
+  const SIDEBAR_WIDTH_CLOSED = "md:w-20";
 
   const toggleNav = () => {
-    setNav((prev) => {
-      return !prev;
-    });
+    setIsNavOpen(!isNavOpen);
   };
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -129,15 +125,19 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
       </div>
 
       <button
-        className=" p-3 text-dark-900 dark:text-white md:hidden"
+        className=" p-3 text-dark-900 dark:text-dark-100 md:hidden"
         onClick={toggleNav}
       >
-        {nav ? <RiCloseCircleLine size={28} /> : <RiMenu2Line size={28} />}
+        {isNavOpen ? (
+          <RiCloseCircleLine size={32} />
+        ) : (
+          <RiMenu2Line size={28} />
+        )}
       </button>
       <div
         className={clsx(
-          " absolute mx-[5vw] my-[5vh] h-[80vh] w-[90vw] rounded-xl bg-dark-100 px-10 py-10 text-center text-dark-100 dark:bg-black/90",
-          nav ? "" : "hidden"
+          "absolute mx-[5vw] my-[5vh] h-[80vh] w-[90vw] rounded-xl bg-dark-100 px-[22.5vw] py-10 text-center text-dark-100 dark:bg-black/90",
+          isNavOpen ? "" : "hidden"
         )}
       >
         <div className="flex flex-col">
@@ -185,7 +185,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             </ul>
           </div>
           {/* Buttons */}
-          <div className=" flex flex-row">
+          <div className="flex flex-row">
             <SocialLink
               icon={RiLinkedinBoxLine}
               href="https://www.linkedin.com/in/jeremy-cleland/"

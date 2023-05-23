@@ -1,12 +1,10 @@
 import { useState, createContext } from "react";
-
 import { projectData as projectDataJson } from "../data/projectData.jsx";
 
-const ProjectContext = createContext();
+export const ProjectContext = createContext();
 
-export const ProjectProvider = ({ children }) => {
+const ProjectContextProvider = ({ children }) => {
   const [projectData, setProjectData] = useState(projectDataJson);
-
   return (
     <ProjectContext.Provider value={{ projectData, setProjectData }}>
       {children}
@@ -14,4 +12,4 @@ export const ProjectProvider = ({ children }) => {
   );
 };
 
-export default ProjectContext;
+export default ProjectContextProvider;
