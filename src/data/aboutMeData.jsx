@@ -1,10 +1,3 @@
-import { ReactComponent as ExcelsiorUniversity } from "../assets/logos/ExcelsiorUniversity.svg";
-import { ReactComponent as SpecialForcesBadge } from "../assets/logos/SpecialForcesBadge.svg";
-import { ReactComponent as SpecialForces } from "../assets/logos/SpecialForces.svg";
-import { ReactComponent as UnitedStatesArmy } from "../assets/logos/UnitedStatesArmy.svg";
-import { ReactComponent as Group } from "../assets/logos/7THSFG.svg";
-import { ReactComponent as JFKSWCS } from "../assets/logos/JFKSWCS.svg";
-
 export const aboutMeData = {
   title: "About Me",
   bio: [
@@ -32,42 +25,4 @@ export const aboutMeData = {
     "Today, as a developer, I harness my unique background, disciplined training, and academic insights to create innovative software solutions. I'm eager to bring these strengths to a forward-thinking team dedicated to delivering the best for its stakeholders.",
     "In essence, I'm a former Green Beret medic turned coding enthusiast, fortified by a formal education. I'm just as dedicated to protecting the integrity of a codebase as I once was to safeguarding the well-being of my team.",
   ],
-  logos: {
-    excelsior: {
-      id: 1,
-      svg: <ExcelsiorUniversity />,
-      alt: "Excelsior University",
-      link: "https://www.excelsior.edu/",
-    },
-    specialForcesBadge: {
-      id: 2,
-      svg: <SpecialForcesBadge />,
-      alt: "Special Forces Badge",
-      link: "https://arsof-history.org/articles/v3n3_sf_patches_page_1.html",
-    },
-    specialForces: {
-      id: 3,
-      svg: <SpecialForces />,
-      alt: "Special Forces",
-      link: "https://www.soc.mil/USASFC/SFhistory.htmll",
-    },
-    unitedStatesArmy: {
-      id: 4,
-      svg: <UnitedStatesArmy />,
-      alt: "United States Army",
-      link: "https://www.army.mil/",
-    },
-    group: {
-      id: 5,
-      svg: <Group />,
-      alt: "7th Special Forces Group",
-      link: "https://www.soc.mil/USASFC/Groups/7th/7thSFGHistory.html",
-    },
-    JFKSWCS: {
-      id: 6,
-      svg: <JFKSWCS />,
-      alt: "JFK Special Warfare Center and School",
-      link: "https://home.army.mil/swcs",
-    },
-  },
 };

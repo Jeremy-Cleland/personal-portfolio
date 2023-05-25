@@ -1,5 +1,4 @@
 import data from "../data/data.jsx";
-import image from "../assets/images/portfolio/project-1/1.jpg";
 
 import SocialLink from "../components/sidebar/SocialLink.jsx";
 import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";

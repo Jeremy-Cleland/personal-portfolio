@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 
-const AboutHeader = () => {
+const ContactHeader = () => {
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -14,10 +14,10 @@ const AboutHeader = () => {
     >
       <div className="mb-24 mt-10">
         <h3 className="my-5 border-b-4 border-violet-400 py-5 text-center text-xl font-black leading-4 tracking-widest text-dark-900 dark:text-gray-200 md:my-10 md:text-2xl">
-          ABOUT ME
+          CONTACT ME
         </h3>
       </div>
     </m.div>
   );
 };
-export default AboutHeader;
+export default ContactHeader;
