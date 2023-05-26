@@ -16,7 +16,7 @@ const Project = ({ title, category, image }) => {
         <m.div
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="rounded-lg text-center shadow-lg hover:shadow-xl dark:bg-neutral-800 dark:text-dark-100"
+          className="rounded-2xl text-center shadow-lg hover:shadow-xl dark:bg-neutral-800 dark:text-dark-100"
         >
           <div className="text-center ">
             <img
@@ -37,7 +37,7 @@ const Project = ({ title, category, image }) => {
               <m.div
                 whileHover={{ scale: 0.99 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-lg text-center dark:text-dark-100"
+                className="rounded-2xl text-center dark:text-dark-100"
               >
                 <div className="text-center ">
                   <img

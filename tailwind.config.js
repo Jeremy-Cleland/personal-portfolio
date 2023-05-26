@@ -68,7 +68,8 @@ module.exports = {
       },
       dropShadow: {
         "3xxl": "0 35px 35px rgba(0, 0, 0, 0.3)",
-        "4xl": "0 50px 50px rgba(0, 0, 0, 0.3)",
+        "1xxl": "0 35px 35px rgba(234, 34, 3, 1)",
+        // "4xl": "0 50px 50px rgba(0, 0, 0, 0.3)",
         "5xl": "0 75px 75px rgba(0, 0, 0, 0.3)",
       },
       borderRadius: {

@@ -7,8 +7,8 @@ const Blog = () => {
   return (
     <div className="flex min-h-screen w-full items-center justify-center ">
       <div className="group relative mx-auto flex items-center justify-center md:w-[50%] ">
-        <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-75 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-        <div className="relative flex items-center rounded-lg bg-dark-100 px-7 py-4 dark:bg-dark-900">
+        <div className="absolute -inset-0.5 animate-tilt rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 opacity-75 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+        <div className="relative flex items-center rounded-2xl bg-dark-100 px-7 py-4 dark:bg-dark-900">
           <div className="mt-5 text-center">
             <h1 className="text-2xl font-semibold text-indigo-400 sm:text-3xl">
               {data.name}

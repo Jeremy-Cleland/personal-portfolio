@@ -85,10 +85,10 @@ const ContactForm = () => {
       className="mx-auto"
     >
       <div className="group relative mx-auto flex items-center justify-center">
-        <div className="absolute -inset-[.05px] mx-auto w-[80vw] animate-tilt rounded-2xl bg-gradient-to-r from-violet-300 to-violet-900 opacity-40 blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-20 md:w-[50vw] lg:w-[40vw]  "></div>
-        <div className="relative flex h-full w-[80vw] items-center rounded-2xl bg-dark-100 dark:bg-dark-900 md:w-[50vw] lg:w-[40vw]">
+        <div className=" absolute -inset-[.05px] mx-auto w-[80vw] animate-tilt rounded-2xl bg-gradient-to-r from-violet-300 to-violet-900 opacity-40 blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-20 dark:group-hover:opacity-50  lg:w-[40vw]  "></div>
+        <div className="relative flex h-full w-[80vw] items-center rounded-2xl bg-dark-50 dark:bg-dark-900  lg:w-[40vw]">
           {/* Contact form */}
-          <form onSubmit={handleSubmit} className="m-10">
+          <form onSubmit={handleSubmit} className="mx-auto my-10">
             <p className="mb-8 text-2xl text-dark-900 dark:text-dark-100">
               Contact Form
             </p>
@@ -135,13 +135,13 @@ const ContactForm = () => {
 
             <div className="mt-6">
               <label
-                className="mb-2 block text-lg text-dark-900 dark:text-dark-900"
+                className="mb-2 block text-lg text-dark-900 dark:text-dark-100"
                 htmlFor="message"
               >
                 Message
               </label>
               <textarea
-                className="text-md w-full rounded-2xl border border-gray-300 border-opacity-50 bg-dark-100 px-5 py-2 text-dark-900 shadow-sm dark:border-violet-400 dark:bg-dark-900 dark:text-dark-100"
+                className="text-md w-full rounded-2xl border border-gray-300 border-opacity-50 bg-dark-100 px-5 py-2 text-dark-900 shadow-sm dark:border-violet-400 dark:bg-dark-400 dark:text-dark-100"
                 id="message"
                 name="message"
                 cols="14"
@@ -156,14 +156,25 @@ const ContactForm = () => {
               )}
             </div>
 
-            <div className="mt-6 rounded-lg bg-dark-100 px-4 py-2.5 text-center tracking-wider text-dark-900 duration-500 hover:bg-dark-50 focus:ring-1 focus:ring-violet-400">
+            <div className="mx-auto my-6 text-center">
               {/* Submit button */}
-              <button
+              {/* <button
+                className="mx-auto w-60 rounded-2xl bg-dark-100 p-3 text-center font-bold tracking-widest text-dark-900 hover:bg-dark-50 focus:ring-1 focus:ring-violet-400 dark:bg-violet-400 dark:text-dark-900"
                 type="submit"
                 aria-label="Send Message"
                 onClick={validateForm}
               >
                 Send Message
+              </button> */}
+              <button
+                className="inline-block w-48 rounded-full bg-gradient-to-r from-violet-900 to-violet-400 p-[1px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
+                type="submit"
+                aria-label="Send Message"
+                onClick={validateForm}
+              >
+                <span className="block rounded-full bg-dark-100 px-8 py-3 text-sm font-medium hover:bg-transparent dark:bg-dark-400 dark:hover:bg-transparent">
+                  Send Message
+                </span>
               </button>
             </div>
           </form>
