@@ -1,4 +1,4 @@
-const BlogHeader = () => {
+const BlogGrid = () => {
   return (
     <div className="mb-24 mt-10">
       <div className="my-5 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 md:my-10 ">
@@ -11,4 +11,4 @@ const BlogHeader = () => {
     </div>
   );
 };
-export default BlogHeader;
+export default BlogGrid;

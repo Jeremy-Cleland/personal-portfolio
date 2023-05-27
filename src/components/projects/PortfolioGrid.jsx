@@ -48,18 +48,6 @@ const PortfolioGrid = () => {
 
   return (
     <section className="mb-24 mt-10">
-      <div className="mb-24 mt-10">
-        <div className="my-5 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 md:my-10 ">
-          <h2 className="text-2xl font-black uppercase md:text-3xl">
-            Jeremy's Portfolio: Creativity Meets Coding
-          </h2>
-          <p className="pt-3 font-SourceCodePro tracking-tight">
-            Showcasing my growth as a developer and the Impact of Military
-            Precision in Software Development
-          </p>
-        </div>
-      </div>
-
       <div className="my-2 flex flex-wrap justify-between gap-5 sm:my-2.5 md:my-10 md:gap-20 ">
         <div className="group flex grow rounded-2xl border-2 border-gray-200 bg-dark-100 pl-2 dark:border-violet-400 dark:bg-dark-600">
           <RiSearch2Line className="my-auto mr-2 h-5 w-5" />

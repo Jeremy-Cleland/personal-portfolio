@@ -21,7 +21,7 @@ const Home = () => {
           animate={{ y: 0 }}
           initial={{ y: "100%" }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right xl:text-5xl"
+          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right"
         >
           Jeremy Cleland
         </m.h1>

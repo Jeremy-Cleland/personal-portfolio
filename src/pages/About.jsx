@@ -1,5 +1,5 @@
 import { motion as m } from "framer-motion";
-import AboutHeader from "../components/about/AboutHeader.jsx";
+
 import AboutBio from "../components/about/AboutBio.jsx";
 
 const About = () => {
@@ -9,12 +9,30 @@ const About = () => {
       animate={{ opacity: 1, delay: 1 }}
       transition={{
         ease: "easeInOut",
-        duration: 0.3,
+        duration: 0.7,
         delay: 0.15,
       }}
-      className="container mx-auto mt-5 md:mt-10"
+      className="container mx-auto"
     >
-      <AboutHeader />
+      <div className="my-5 mt-10 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
+        <m.h1
+          animate={{ y: 0 }}
+          initial={{ y: "100%" }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right 
+          "
+        >
+          About Me
+        </m.h1>
+        <m.h2
+          animate={{ y: 0 }}
+          initial={{ y: "100%" }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="pt-3 text-right font-SourceCodePro tracking-tight"
+        >
+          A Mission to Innovate: From Green Beret to Software Developer
+        </m.h2>
+      </div>
       <AboutBio />
     </m.div>
   );
