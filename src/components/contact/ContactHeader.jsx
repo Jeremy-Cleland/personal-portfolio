@@ -13,9 +13,15 @@ const ContactHeader = () => {
       className="container mx-auto"
     >
       <div className="mb-24 mt-10">
-        <h3 className="my-5 border-b-4 border-violet-400 py-5 text-center text-xl font-black leading-4 tracking-widest text-dark-900 dark:text-gray-200 md:my-10 md:text-2xl">
-          CONTACT ME
-        </h3>
+        <div className="my-5 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro font-black text-dark-900 dark:text-gray-200 md:my-10 ">
+          <h2 className="text-2xl font-black uppercase md:text-3xl">
+            Connect with Jeremy: Let's Code the Future Together
+          </h2>
+          <p className="pt-3 font-SourceCodePro tracking-tight">
+            Open to opportunities and collaborations that foster growth and
+            impact
+          </p>
+        </div>
       </div>
     </m.div>
   );

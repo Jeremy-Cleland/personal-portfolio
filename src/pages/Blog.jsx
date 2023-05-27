@@ -1,62 +1,36 @@
-import data from "../data/data.jsx";
-
-import SocialLink from "../components/sidebar/SocialLink.jsx";
-import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";
+import { motion as m } from "framer-motion";
 
 const Blog = () => {
   return (
-    <div className="flex min-h-screen w-full items-center justify-center ">
-      <div className="group relative mx-auto flex items-center justify-center md:w-[50%] ">
-        <div className="absolute -inset-0.5 animate-tilt rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 opacity-75 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-        <div className="relative flex items-center rounded-2xl bg-dark-100 px-7 py-4 dark:bg-dark-900">
-          <div className="mt-5 text-center">
-            <h1 className="text-2xl font-semibold text-indigo-400 sm:text-3xl">
-              {data.name}
-            </h1>
-            <h2 className="text-lg text-dark-900 dark:text-dark-50 sm:text-lg">
-              {data.title}
-            </h2>
-            <p className="mt-2 px-2 text-sm text-dark-900 dark:text-dark-50 sm:text-base">
-              From Special Forces Medic to Software Developer, my unique
-              background enables me to deliver innovative solutions and tackle
-              complex challenges.
-            </p>
-            <div>
-              <h2 className="text-md my-8 font-semibold">Languages & Skills</h2>
-              <div className="mx-auto grid grid-cols-3 grid-rows-3 justify-center ">
-                {data.skillbadge.map((skills, index) => (
-                  <div
-                    key={index}
-                    className="mx-auto grid h-20 w-20 flex-col dark:text-gray-200"
-                  >
-                    {skills.icon}
-                    <p className="text-center text-xs text-indigo-400">
-                      {skills.name}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="align-center mx-auto flex w-32 justify-center text-sm ">
-              <SocialLink
-                icon={RiLinkedinBoxLine}
-                href={data.social.linkedin}
-              />
-              <SocialLink
-                size="w-8 h-8"
-                icon={RiGithubLine}
-                href={data.social.github}
-              />
-              <SocialLink
-                icon={RiMailLine}
-                href={`"https://mail.google.com/mail/?view=cm&fs=1&to=" + ${data.social.email}`}
-              />
-              <span className="sr-only">Email</span>
-            </div>
-          </div>
-        </div>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, delay: 1 }}
+      transition={{
+        ease: "easeInOut",
+        duration: 0.7,
+        delay: 0.15,
+      }}
+      className="container mx-auto"
+    >
+      <div className="mt-10 sm:mt-20 xl:mt-36 2xl:mt-48">
+        <m.h1
+          animate={{ y: 0 }}
+          initial={{ y: "100%" }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right xl:text-5xl"
+        >
+          Jeremy Cleland
+        </m.h1>
+        <m.h2
+          animate={{ y: 0 }}
+          initial={{ y: "100%" }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-center font-Fira text-2xl tracking-wide md:text-right"
+        >
+          Software Developer
+        </m.h2>
       </div>
-    </div>
+    </m.div>
   );
 };
 

@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { RiSearch2Line } from "react-icons/ri";
 import { PortfolioContext } from "../../context/PortfolioContext.jsx";
 import PortfolioFilter from "./PortfolioFilter.jsx";
-import Project from "./Project.jsx";
+import ProjectCard from "./ProjectCard.jsx";
 
-const PortfolioGrid = () => {
+const PortfolioSection = () => {
   const {
     portfolioProject,
     searchPortfolioProject,
@@ -17,45 +17,54 @@ const PortfolioGrid = () => {
 
   const renderProjects = () => {
     if (selectFilterProject) {
-      return selectProjectsByCategory.map((project) => (
-        <Project
-          title={project.title}
-          category={project.category}
-          image={project.img}
-          key={project.id}
-        />
-      ));
+      return selectProjectsByCategory
+        .slice(0, 4)
+        .map((project) => (
+          <ProjectCard
+            title={project.title}
+            category={project.category}
+            description={project.description}
+            image={project.cardimg}
+            key={project.id}
+          />
+        ));
     }
     if (searchPortfolioProject) {
-      return searchPortfolioByTitle.map((project) => (
-        <Project
+      return searchPortfolioByTitle
+        .slice(0, 4)
+        .map((project) => (
+          <ProjectCard
+            title={project.title}
+            category={project.category}
+            description={project.description}
+            image={project.cardimg}
+            key={project.id}
+          />
+        ));
+    }
+    return portfolioProject
+      .slice(0, 4)
+      .map((project) => (
+        <ProjectCard
           title={project.title}
           category={project.category}
-          image={project.img}
+          description={project.description}
+          image={project.cardimg}
           key={project.id}
         />
       ));
-    }
-    return portfolioProject.map((project) => (
-      <Project
-        title={project.title}
-        category={project.category}
-        image={project.img}
-        key={project.id}
-      />
-    ));
   };
 
   return (
     <section className="mb-24 mt-10">
       <div className="mb-24 mt-10">
-        <div className="my-5 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 md:my-10 ">
+        <div className="my-5 border-b-4 border-violet-400 py-5 text-center text-dark-900 dark:text-gray-200 md:my-10 ">
           <h2 className="text-2xl font-black uppercase md:text-3xl">
-            Jeremy's Portfolio: Creativity Meets Coding
+            Building the Future, One Line of Code at a Time
           </h2>
           <p className="pt-3 font-SourceCodePro tracking-tight">
-            Showcasing my growth as a developer and the Impact of Military
-            Precision in Software Development
+            Showcasing my growth as a developer and the versatility of my
+            problem-solving skills
           </p>
         </div>
       </div>
@@ -67,7 +76,7 @@ const PortfolioGrid = () => {
             onChange={(e) => {
               setSearchPortfolioProject(e.target.value);
             }}
-            className="sm:text-md grow appearance-none rounded-2xl bg-dark-100 py-2 font-SourceCodePro text-sm font-bold text-dark-900 placeholder:text-dark-900 focus:outline-none dark:bg-dark-600 dark:text-gray-100 dark:placeholder:text-dark-100 "
+            className="sm:text-md grow appearance-none rounded-2xl bg-dark-100 py-2 font-SourceCodePro text-sm font-bold  text-dark-900 placeholder:text-dark-900 focus:outline-none dark:bg-dark-600 dark:text-gray-100 dark:placeholder:text-dark-100 "
             id="name"
             name="name"
             type="search"
@@ -78,12 +87,11 @@ const PortfolioGrid = () => {
         </div>
         <PortfolioFilter setSelectFilterProject={setSelectFilterProject} />
       </div>
-
-      <div className="grid auto-cols-max grid-cols-1 gap-10 lg:grid-cols-2">
+      <div className="grid auto-cols-max grid-cols-1 gap-10 xl:grid-cols-2">
         {renderProjects()}
       </div>
     </section>
   );
 };
 
-export default PortfolioGrid;
+export default PortfolioSection;
