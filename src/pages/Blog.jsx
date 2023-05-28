@@ -15,7 +15,7 @@ const Blog = () => {
       <div className="my-5 mt-10 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
         <m.h1
           animate={{ y: 0 }}
-          initial={{ y: "100%" }}
+          initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
           className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right"
         >
@@ -23,12 +23,11 @@ const Blog = () => {
         </m.h1>
         <m.h2
           animate={{ y: 0 }}
-          initial={{ y: "100%" }}
+          initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
           className="pt-3 text-right font-SourceCodePro tracking-tight"
         >
-          Keep up with the latest thoughts, tips, and tutorials from a developer
-          with a unique perspective
+          Coming Soon
         </m.h2>
       </div>
     </m.div>
@@ -36,3 +35,33 @@ const Blog = () => {
 };
 
 export default Blog;
+
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+
+// const Blog = () => {
+//   const [posts, setPosts] = useState([]);
+
+//   useEffect(() => {
+//     axios.get("https://yourdomain.com/wp-json/wp/v2/posts")
+//       .then(response => {
+//         setPosts(response.data);
+//       })
+//       .catch(error => {
+//         console.error("Error fetching posts", error);
+//       });
+//   }, []);
+
+//   return (
+//     <div>
+//       {posts.map(post => (
+//         <div key={post.id}>
+//           <h2 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+//           <p dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default Blog;

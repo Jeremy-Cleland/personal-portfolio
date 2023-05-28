@@ -2,7 +2,7 @@
 module.exports = {
   darkMode: "class",
   mode: "jit",
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
       Roboto: ["Roboto", "sans-serif"],

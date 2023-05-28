@@ -87,8 +87,8 @@ const ContactForm = () => {
       className="container mx-auto"
     >
       <div className="group relative mx-auto flex items-center justify-center">
-        <div className="absolute -inset-0.5 mx-auto w-[80vw] animate-tilt rounded-2xl bg-gradient-to-t from-neutral-200 to-neutral-500 opacity-40 blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-10 dark:group-hover:opacity-30 lg:w-[45vw]"></div>
-        <div className="relative flex h-full w-[80vw] items-center rounded-2xl bg-dark-50 dark:bg-dark-900 lg:w-[45vw]">
+        <div className="absolute -inset-0.5 mx-auto w-[80vw] max-w-4xl animate-tilt rounded-2xl bg-gradient-to-t from-neutral-200 to-neutral-500 opacity-40 blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-10 dark:group-hover:opacity-30 lg:w-[55vw]"></div>
+        <div className="relative flex h-full w-[80vw] max-w-4xl items-center rounded-2xl bg-dark-50 dark:bg-dark-900 lg:w-[55vw]">
           {/* Contact form */}
           <form onSubmit={handleSubmit} className="mx-auto my-10">
             <p className="mb-8 text-2xl text-dark-900 dark:text-dark-100">

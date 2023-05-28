@@ -16,7 +16,7 @@ const Contact = () => {
       <div className="my-5 mt-10 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
         <m.h1
           animate={{ y: 0 }}
-          initial={{ y: "100%" }}
+          initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
           className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right"
         >
@@ -24,7 +24,7 @@ const Contact = () => {
         </m.h1>
         <m.h2
           animate={{ y: 0 }}
-          initial={{ y: "100%" }}
+          initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
           className="pt-3 text-right font-SourceCodePro tracking-tight"
         >

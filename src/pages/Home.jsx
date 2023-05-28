@@ -3,6 +3,7 @@ import { motion as m } from "framer-motion";
 
 import PortfolioSection from "../components/projects/PortfolioSection.jsx";
 import { PortfolioProvider } from "../context/PortfolioContext.jsx";
+import TypewriterText from "../components/reusable/TypewriterText.jsx";
 
 const Home = () => {
   return (
@@ -17,22 +18,12 @@ const Home = () => {
       className="container mx-auto"
     >
       <div className="mt-10 sm:mt-20 xl:mt-36 2xl:mt-48">
-        <m.h1
-          animate={{ y: 0 }}
-          initial={{ y: "100%" }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right"
-        >
-          Jeremy Cleland
-        </m.h1>
-        <m.h2
-          animate={{ y: 0 }}
-          initial={{ y: "100%" }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-Fira text-2xl tracking-wide md:text-right"
-        >
-          Software Developer
-        </m.h2>
+        <h1 className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right">
+          <TypewriterText text="Jeremy Cleland" tag="h1" />
+        </h1>
+        <h2 className="text-center font-Fira text-2xl tracking-wide md:text-right">
+          <TypewriterText text="Software Developer" tag="h2" delay={1000} />
+        </h2>
       </div>
       <PortfolioProvider>
         <PortfolioSection />

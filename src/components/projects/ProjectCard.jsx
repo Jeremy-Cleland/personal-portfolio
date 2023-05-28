@@ -1,7 +1,7 @@
 import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const ProjectCardShaped = ({ title, category, image }) => {
+const ProjectCard = ({ title, category, image }) => {
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -41,4 +41,4 @@ const ProjectCardShaped = ({ title, category, image }) => {
     </m.div>
   );
 };
-export default ProjectCardShaped;
+export default ProjectCard;

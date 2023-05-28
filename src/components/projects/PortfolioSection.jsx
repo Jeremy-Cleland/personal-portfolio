@@ -57,8 +57,8 @@ const PortfolioSection = () => {
 
   return (
     <section className="mb-24 mt-10">
-      <div className="mb-24 mt-10">
-        <div className="my-5 border-b-4 border-violet-400 py-5 text-center text-dark-900 dark:text-gray-200 md:my-10 ">
+      <div className=" mt-10">
+        <div className="text-center text-dark-900 dark:text-gray-200 md:my-10 ">
           <h2 className="text-xl font-black uppercase">Explore My Projects</h2>
         </div>
       </div>
