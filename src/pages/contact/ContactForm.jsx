@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion as m } from "framer-motion";
 import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";
 import data from "../../data/data.jsx";
-import SocialLink from "../sidebar/SocialLink.jsx";
+import SocialLink from "../../components/sidebar/SocialLink.jsx";
 import FormInput from "./FormInput.jsx";
 
 const ContactForm = () => {

@@ -1,7 +1,7 @@
-import ProjectGrid from "../components/projects/ProjectGrid.jsx";
-import ProjectInfo from "../components/projects/ProjectInfo.jsx";
-import ProjectOverview from "../components/projects/ProjectOverview.jsx";
-import { ProjectProvider } from "../context/ProjectContext.jsx";
+import ProjectGrid from "./ProjectGrid.jsx";
+import ProjectInfo from "./ProjectInfo.jsx";
+import ProjectOverview from "./ProjectOverview.jsx";
+import { ProjectProvider } from "../../context/ProjectContext.jsx";
 import { motion as m } from "framer-motion";
 
 const ProjectSingle = () => {

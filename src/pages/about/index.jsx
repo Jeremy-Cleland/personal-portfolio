@@ -1,9 +1,8 @@
 import { motion as m } from "framer-motion";
 
-import PortfolioGrid from "../components/projects/PortfolioGrid.jsx";
-import { PortfolioProvider } from "../context/PortfolioContext.jsx";
+import AboutBio from "./AboutBio.jsx";
 
-const Portfolio = () => {
+const About = () => {
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -20,10 +19,10 @@ const Portfolio = () => {
           animate={{ y: 0 }}
           initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right
+          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right 
           "
         >
-          Jeremy's Portfolio
+          About Me
         </m.h1>
         <m.h2
           animate={{ y: 0 }}
@@ -31,15 +30,12 @@ const Portfolio = () => {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="pt-3 text-right font-SourceCodePro tracking-tight"
         >
-          Showcasing my growth as a developer and the Impact of Military
-          Precision in Software Development
+          A Mission to Innovate: From Green Beret to Software Developer
         </m.h2>
       </div>
-      <PortfolioProvider>
-        <PortfolioGrid />
-      </PortfolioProvider>
+      <AboutBio />
     </m.div>
   );
 };
 
-export default Portfolio;
+export default About;

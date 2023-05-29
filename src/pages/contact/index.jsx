@@ -1,8 +1,7 @@
 import { motion as m } from "framer-motion";
+import ContactForm from "./ContactForm.jsx";
 
-import AboutBio from "../components/about/AboutBio.jsx";
-
-const About = () => {
+const Contact = () => {
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -19,10 +18,9 @@ const About = () => {
           animate={{ y: 0 }}
           initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right 
-          "
+          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right"
         >
-          About Me
+          Connect with Jeremy
         </m.h1>
         <m.h2
           animate={{ y: 0 }}
@@ -30,12 +28,12 @@ const About = () => {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="pt-3 text-right font-SourceCodePro tracking-tight"
         >
-          A Mission to Innovate: From Green Beret to Software Developer
+          Open to opportunities and collaborations that foster growth and impact
         </m.h2>
       </div>
-      <AboutBio />
+      <ContactForm />
     </m.div>
   );
 };
 
-export default About;
+export default Contact;

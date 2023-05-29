@@ -1,9 +1,9 @@
-import data from "../data/data.jsx";
+import data from "../../data/data.jsx";
 import { motion as m } from "framer-motion";
 
-import PortfolioSection from "../components/projects/PortfolioSection.jsx";
-import { PortfolioProvider } from "../context/PortfolioContext.jsx";
-import TypewriterText from "../components/reusable/TypewriterText.jsx";
+import PortfolioSection from "./PortfolioSection.jsx";
+import { PortfolioProvider } from "../../context/PortfolioContext.jsx";
+import TypewriterText from "../../components/reusable/TypewriterText.jsx";
 
 const Home = () => {
   return (

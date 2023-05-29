@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { RiSearch2Line } from "react-icons/ri";
 import { PortfolioContext } from "../../context/PortfolioContext.jsx";
-import PortfolioFilter from "./PortfolioFilter.jsx";
+import PortfolioFilter from "../portfolio/PortfolioFilter.jsx";
 import ProjectCard from "./ProjectCard.jsx";
 
 const PortfolioSection = () => {

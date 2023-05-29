@@ -3,13 +3,13 @@ import clsx from "clsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/sidebar/Sidebar.jsx";
 
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Portfolio from "./pages/Portfolio.jsx";
-import ProjectSingle from "./pages/ProjectSingle.jsx";
-import Resume from "./pages/Resume.jsx";
-import Blog from "./pages/Blog.jsx";
-import Contact from "./pages/Contact.jsx";
+import Home from "./pages/home/index.jsx";
+import About from "./pages/about/index.jsx";
+import Portfolio from "./pages/portfolio/index.jsx";
+import ProjectSingle from "./pages/project/index.jsx";
+import Resume from "./pages/resume/index.jsx";
+import Blog from "./pages/blog/index.jsx";
+import Contact from "./pages/contact/index.jsx";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
