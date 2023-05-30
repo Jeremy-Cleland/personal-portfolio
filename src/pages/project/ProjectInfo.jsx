@@ -27,17 +27,21 @@ const ProjectInfo = () => {
             delay: 0.2,
             duration: 1,
           }}
-          className="my-5 border-b-4 border-violet-400 py-5 text-center text-xl font-black leading-4 tracking-widest text-dark-900 dark:text-dark-100 md:my-10 md:text-2xl"
+          className=" my-5 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-xl font-bold leading-4 tracking-wide text-dark-900 dark:text-dark-100 md:my-10 md:text-2xl"
         >
           {title}
         </m.h1>
       </div>
       <div className="flex w-full flex-row text-dark-900 dark:text-dark-100">
         <div className="flex basis-1/2 text-left">
-          <span className="text-sm md:font-bold lg:text-base">{tags}</span>
+          <span className=" font-Fira text-sm tracking-tight lg:text-base">
+            {tags}
+          </span>
         </div>
         <div className="basis-1/2 text-right">
-          <span className="text-sm md:font-bold lg:text-base">{date}</span>
+          <span className="font-Fira text-sm tracking-tight lg:text-base">
+            {date}
+          </span>
         </div>
       </div>
     </m.section>

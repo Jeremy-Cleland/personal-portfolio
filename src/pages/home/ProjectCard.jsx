@@ -27,7 +27,7 @@ const ProjectCard = ({ title, category, image }) => {
           />
         </div>
         <div className="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
-          <strong className="font-SourceCodePro tracking-tight text-dark-900 dark:text-dark-50">
+          <strong className="font-SourceCodePro tracking-wide text-dark-900 dark:text-dark-50">
             {title}
           </strong>
 

@@ -19,7 +19,7 @@ const Resume = () => {
           animate={{ y: 0 }}
           initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right"
+          className="text-center font-SourceCodePro text-4xl font-bold tracking-wide md:text-right"
         >
           <TypewriterText text="Jeremy Cleland" tag="h1" />
         </m.h1>
@@ -27,7 +27,7 @@ const Resume = () => {
           animate={{ y: 0 }}
           initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-Fira text-2xl tracking-wide md:text-right"
+          className="text-center font-Fira text-2xl tracking-tight tracking-wide md:text-right"
         >
           <TypewriterText text="Software Developer" tag="h2" delay={1000} />
         </m.h2>

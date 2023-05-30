@@ -19,7 +19,7 @@ const About = () => {
           animate={{ y: 0 }}
           initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-SourceCodePro text-4xl font-black tracking-wide md:text-right 
+          className="text-center font-SourceCodePro text-4xl font-bold tracking-wide md:text-right 
           "
         >
           About Me
@@ -28,7 +28,7 @@ const About = () => {
           animate={{ y: 0 }}
           initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="pt-3 text-right font-SourceCodePro tracking-tight"
+          className="pt-3 text-right font-SourceCodePro tracking-wide"
         >
           A Mission to Innovate: From Green Beret to Software Developer
         </m.h2>

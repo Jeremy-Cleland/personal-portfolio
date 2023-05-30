@@ -8,7 +8,7 @@ const PortfolioFilter = ({ setSelectFilterProject }) => {
       }}
       className="grow rounded-2xl border-2 bg-dark-100 px-8 py-2 font-SourceCodePro text-sm font-bold text-dark-900 focus:outline-none dark:border-violet-400 dark:bg-dark-600 dark:text-gray-100"
     >
-      <option className="sm:text-md text-sm">All Projects</option>
+      <option className="sm:text-md text-sm ">All Projects</option>
       {filterOptions.map((option) => (
         <option key={option}>{option}</option>
       ))}
