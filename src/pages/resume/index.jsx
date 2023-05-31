@@ -27,7 +27,7 @@ const Resume = () => {
           animate={{ y: 0 }}
           initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-Fira text-2xl tracking-tight tracking-wide md:text-right"
+          className="= text-center font-Fira text-2xl tracking-tight md:text-right"
         >
           <TypewriterText text="Software Developer" tag="h2" delay={1000} />
         </m.h2>

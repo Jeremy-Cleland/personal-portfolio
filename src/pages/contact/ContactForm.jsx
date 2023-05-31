@@ -4,6 +4,7 @@ import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";
 import data from "../../data/data.jsx";
 import SocialLink from "../../components/sidebar/SocialLink.jsx";
 import FormInput from "./FormInput.jsx";
+import { slideInVariant } from "../../utils/variants.js";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -77,13 +78,9 @@ const ContactForm = () => {
 
   return (
     <m.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        ease: "easeIn",
-        duration: 1,
-        delay: 0.3,
-      }}
+      variants={slideInVariant("left")}
+      initial="hidden"
+      animate="show"
       className="container mx-auto"
     >
       <div className="group relative mx-auto flex items-center justify-center">
