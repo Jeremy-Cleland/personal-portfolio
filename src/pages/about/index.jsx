@@ -1,6 +1,7 @@
 import { motion as m } from "framer-motion";
 
 import AboutBio from "./AboutBio.jsx";
+import SkillSection from "./SkillSection.jsx";
 
 const About = () => {
   return (
@@ -34,6 +35,7 @@ const About = () => {
         </m.h2>
       </div>
       <AboutBio />
+      <SkillSection />
     </m.div>
   );
 };
