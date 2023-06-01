@@ -2,6 +2,7 @@ import data from "../../data/data.jsx";
 import { motion as m } from "framer-motion";
 
 import PortfolioSection from "./PortfolioSection.jsx";
+import SkillSection from "../about/SkillSection.jsx";
 import { PortfolioProvider } from "../../context/PortfolioContext.jsx";
 import TypewriterText from "../../components/reusable/TypewriterText.jsx";
 
@@ -37,27 +38,7 @@ const Home = () => {
       <PortfolioProvider>
         <PortfolioSection />
       </PortfolioProvider>
-
-      <div>
-        <div className="my-5 mt-10 max-w-7xl border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
-          <h4 className="text-center font-Fira text-lg tracking-tight md:text-left ">
-            <span className="text-base text-violet-400"> {">"} </span> Languages
-            & Tools
-          </h4>
-        </div>
-
-        <div className="mx-auto flex max-w-5xl flex-row ">
-          {data.skillbadge.map((skills, index) => (
-            <div
-              key={index}
-              className="mx-auto grid h-20 w-20 flex-col dark:text-dark-100"
-            >
-              {skills.icon}
-              <p className="text-x text-center">{skills.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <SkillSection />
     </m.div>
   );
 };

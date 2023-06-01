@@ -29,10 +29,11 @@ const SkillsSection = () => {
   ];
 
   return (
-    <div className="mx-auto max-w-5xl">
-      <div className="my-5 mt-10 max-w-7xl border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
+    <div className="mx-auto max-w-7xl">
+      <div className="my-5 mt-10 border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
         <h4 className="text-center font-Fira text-lg tracking-tight md:text-left ">
-          <span className="text-base text-violet-400"> {">"} </span> My Skills
+          <span className="text-base text-violet-400"> {">"} </span> Languages &
+          Tools
         </h4>
       </div>
       <motion.ul
