@@ -5,13 +5,14 @@ module.exports = {
   purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      Roboto: ["Roboto", "sans-serif"],
       SourceCodePro: ["Source Code Pro", "monospace"],
-      Knewave: ["Knewave", "cursive"],
-      Quicksand: ["Quicksand", "sans-serif"],
-      Righteous: ["Righteous", "cursive"],
-      Raleway: ["Raleway", "sans-serif"],
       Fira: ["Fira Code", "monospace"],
+      ChillaxExtraLight: ["Chillax-ExtraLight", "sans-serif"],
+      ChillaxLight: ["Chillax-Light", "sans-serif"],
+      ChillaxRegular: ["Chillax-Regular", "sans-serif"],
+      ChillaxMedium: ["Chillax-Medium", "sans-serif"],
+      ChillaxSemiBold: ["Chillax-SemiBold", "sans-serif"],
+      ChillaxBold: ["Chillax-Bold", "sans-serif"],
     },
     extend: {
       animation: {
@@ -66,19 +67,7 @@ module.exports = {
           maximizeGreenIconActive: "#003200",
         },
       },
-      dropShadow: {
-        "3xxl": "0 35px 35px rgba(0, 0, 0, 0.3)",
-        "1xxl": "0 35px 35px rgba(234, 34, 3, 1)",
-        // "4xl": "0 50px 50px rgba(0, 0, 0, 0.3)",
-        "5xl": "0 75px 75px rgba(0, 0, 0, 0.3)",
-      },
-      borderRadius: {
-        "4xl": "2rem",
-        "5xl": "3rem",
-        "6xl": "4rem",
-        "50%": "50%",
-      },
     },
+    plugins: [],
   },
-  plugins: [],
 };

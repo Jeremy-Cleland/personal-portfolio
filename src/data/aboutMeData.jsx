@@ -2,9 +2,8 @@ export const aboutMeData = {
   title: "About Me",
 
   bio: [
-    "Hi, I'm Jeremy — a seasoned Special Forces Medic turned full-stack JavaScript Developer with a recent degree from Excelsior University. I'm based in Michigan and bring a unique blend of disciplined military training, cutting-edge software development expertise, and a global perspective to my work.",
+    "Hi, I'm Jeremy — a seasoned Special Forces Medic turned full-stack JavaScript Developer. I'm based in Michigan and bring a unique blend of disciplined military training, cutting-edge software development expertise, and a global perspective to my work.",
     "My journey has been both diverse and challenging. I served in the U.S. Army Special Forces, specifically with the 7th Special Forces Group. My service took me from the remote regions of South America to the rugged terrain of Afghanistan, deploying my leadership and adaptability skills in high-stress environments.",
-
     "In August 2022, I retired from my military career and set my sights on a new mission in the tech industry. I honed my skills in an  Advanced Software Development in Full-Stack JavaScript through an intensive 6-month bootcamp, applying the same discipline and problem-solving mindset I nurtured on the battlefield to the realm of coding.",
     "Eager to expand my knowledge further, I graduated from Excelsior University this year, equipping me with the latest academic insights to deliver market-competitive software solutions.",
     "Software development captivates me with its constant innovation, growth, and the opportunity to apply the principles I lived by in the military. Every detail counts, and success depends on each individual's commitment and contribution.",

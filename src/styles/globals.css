@@ -1,7 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "Chillax-Extralight";
+  src: url("../assets/fonts/chillax/Chillax-Extralight.woff2") format("woff2");
+  src: url("../assets/fonts/chillax/Chillax-Extralight.woff") format("woff");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Chillax-Light";
+  src: url("../assets/fonts/chillax/Chillax-Light.woff2") format("woff2");
+  src: url("../assets/fonts/chillax/Chillax-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chillax-Regular";
+  src: url("../assets/fonts/chillax/Chillax-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/chillax/Chillax-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chillax-Medium";
+  src: url("../assets/fonts/chillax/Chillax-Medium.woff2") format("woff2");
+  src: url("../assets/fonts/chillax/Chillax-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chillax-Semibold";
+  src: url("../assets/fonts/chillax/Chillax-Semibold.woff2") format("woff2");
+  src: url("../assets/fonts/chillax/Chillax-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chillax-Bold";
+  src: url("../assets/fonts/chillax/Chillax-Bold.woff2") format("woff2");
+  src: url("../assets/fonts/chillax/Chillax-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 html,
 body {
   scroll-behavior: smooth;
@@ -13,27 +65,4 @@ body {
 .main {
   width: 100%;
   margin: auto;
-}
-
-.shadow-new1 {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
-    0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.shadow-new2 {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.shadow-new3 {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
-    0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }

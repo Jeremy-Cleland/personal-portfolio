@@ -1,10 +1,10 @@
-import { ReactComponent as CodeFellows } from "../assets/logos/CodeFellows.svg";
-import { ReactComponent as ExcelsiorUniversity } from "../assets/logos/ExcelsiorUniversity.svg";
-import { ReactComponent as SpecialForcesBadge } from "../assets/logos/SpecialForcesBadge.svg";
-import { ReactComponent as SpecialForces } from "../assets/logos/SpecialForces.svg";
-import { ReactComponent as UnitedStatesArmy } from "../assets/logos/UnitedStatesArmy.svg";
-import { ReactComponent as Group } from "../assets/logos/7THSFG.svg";
-import { ReactComponent as JFKSWCS } from "../assets/logos/JFKSWCS.svg";
+// import { ReactComponent as CodeFellows } from "../assets/logos/CodeFellows.svg";
+// import { ReactComponent as ExcelsiorUniversity } from "../assets/logos/ExcelsiorUniversity.svg";
+// import { ReactComponent as SpecialForcesBadge } from "../assets/logos/SpecialForcesBadge.svg";
+// import { ReactComponent as SpecialForces } from "../assets/logos/SpecialForces.svg";
+// import { ReactComponent as UnitedStatesArmy } from "../assets/logos/UnitedStatesArmy.svg";
+// import { ReactComponent as Group } from "../assets/logos/7THSFG.svg";
+// import { ReactComponent as JFKSWCS } from "../assets/logos/JFKSWCS.svg";
 
 import {
   SiJavascript,
@@ -227,14 +227,14 @@ const data = {
       bullets: [
         "6 month program covering full-stack JavaScript development, including HTML, CSS, JavaScript, React, Redux, Node, Express, SQL, and MongoDB.",
       ],
-      schoolIcon: <CodeFellows className={iconStyle} />,
+      // schoolIcon: <CodeFellows className={iconStyle} />,
       date: "2021 - 2022",
     },
     {
       title: "Bachelor of Science Liberal Arts",
       school: "Excelsior College",
       bullets: ["Graduated with a 4.0 GPA"],
-      schoolIcon: <ExcelsiorUniversity className={iconStyle} />,
+      // schoolIcon: <ExcelsiorUniversity className={iconStyle} />,
       date: "2020 - 2022",
     },
     {
@@ -246,7 +246,7 @@ const data = {
         "Developed the ability to work effectively as a team member and team leader, including the ability to build and maintain a cohesive team, and the ability to effectively communicate orally and in writing.",
         "Learned to operate and maintain a wide variety of communications equipment, including high-frequency radios, satellite communications, and secure tactical communications.",
       ],
-      schoolIcon: <JFKSWCS className={iconStyle} />,
+      // schoolIcon: <JFKSWCS className={iconStyle} />,
       date: "2012 - 2014",
     },
     {
@@ -258,7 +258,7 @@ const data = {
         "Learned laboratory procedures, including the ability to perform basic laboratory procedures, including blood draws, urinalysis, and basic microbiology.",
         "Learned human perfomance and injury prevention, including the ability to provide basic human performance and injury prevention services, including physical therapy, nutrition, and strength and conditioning.",
       ],
-      schoolIcon: <JFKSWCS className={iconStyle} />,
+      // schoolIcon: <JFKSWCS className={iconStyle} />,
       date: "2011 - 2012",
     },
   ],
@@ -270,11 +270,11 @@ const data = {
         "Effectively deployed technology in persistent surveillance, secure tactical communications, and cybersecurity solutions to real-world operations.",
         "Leader at special assignment duty supporting a classified national mission.",
       ],
-      employerIcon: [
-        <Group key={Group} className={iconStyle} />,
-        <SpecialForces key={SpecialForces} className={iconStyle} />,
-        <SpecialForcesBadge key={SpecialForcesBadge} className={iconStyle} />,
-      ],
+      // employerIcon: [
+      //   <Group key={Group} className={iconStyle} />,
+      //   <SpecialForces key={SpecialForces} className={iconStyle} />,
+      //   <SpecialForcesBadge key={SpecialForcesBadge} className={iconStyle} />,
+      // ],
 
       date: "2014 - 2022",
     },
@@ -284,7 +284,7 @@ const data = {
       bullets: [
         "Provided medical care to patients in a variety of settings, including hospitals, clinics, and out-patient facilities.",
       ],
-      employerIcon: <UnitedStatesArmy className={iconStyle} />,
+      // employerIcon: <UnitedStatesArmy className={iconStyle} />,
       date: "2008 - 2011",
     },
   ],
