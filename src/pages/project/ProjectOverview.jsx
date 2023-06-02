@@ -25,11 +25,13 @@ const ProjectOverview = () => {
             duration: 0.6,
             delay: 0.5,
           }}
-          className="text-md my-5 border-b-2 border-violet-400 py-5 text-center font-black leading-4 tracking-widest text-dark-900 dark:border-dark-100 dark:text-dark-100 "
+          className="text-md my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
         >
           {Heading}
         </m.h3>
-        <p className="mb-2 text-sm leading-6">{Overview}</p>
+        <p className="mb-2 font-Fira text-sm font-medium leading-6 ">
+          {Overview}
+        </p>
       </div>
       <div className="mb-7 grow">
         <m.h3
@@ -40,19 +42,20 @@ const ProjectOverview = () => {
             duration: 0.6,
             delay: 0.5,
           }}
-          className="text-md my-5 border-b-2 border-violet-400 py-5 text-center font-black leading-4 tracking-widest text-dark-900 dark:border-dark-100 dark:text-dark-100 "
+          className="text-md my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
         >
           {Technologies.title}
         </m.h3>
-        <div className="flex w-full flex-row gap-10 text-center text-dark-900 dark:text-dark-100">
+        <div className="flex w-full flex-row gap-10 text-center font-SourceCodePro text-dark-900 dark:text-dark-100">
           {Technologies.techs.map((tech) => (
             <m.div
               whileHover={{ scale: 1.05, color: "#A38CF3" }}
               transition={{ duration: 0.3 }}
-              className="mx-auto flex flex-col items-center justify-center"
+              className="mx-auto flex flex-col items-center justify-center gap-5"
               key={tech.id}
             >
               {tech.icon}
+              {tech.name}
             </m.div>
           ))}
         </div>

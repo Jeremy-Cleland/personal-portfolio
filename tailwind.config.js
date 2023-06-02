@@ -2,7 +2,7 @@
 module.exports = {
   darkMode: "class",
   mode: "jit",
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
       Roboto: ["Roboto", "sans-serif"],
@@ -51,12 +51,6 @@ module.exports = {
           950: "#121212",
           1000: "#0d0d0d",
         },
-
-        acccent: {
-          50: "#9D4EDD",
-          100: "#30D5C8",
-          200: "#BB7CD7",
-        },
         traffic: {
           closeRed: "#ff6159",
           closeRedActive: "#bf4942",
@@ -74,7 +68,8 @@ module.exports = {
       },
       dropShadow: {
         "3xxl": "0 35px 35px rgba(0, 0, 0, 0.3)",
-        "4xl": "0 50px 50px rgba(0, 0, 0, 0.3)",
+        "1xxl": "0 35px 35px rgba(234, 34, 3, 1)",
+        // "4xl": "0 50px 50px rgba(0, 0, 0, 0.3)",
         "5xl": "0 75px 75px rgba(0, 0, 0, 0.3)",
       },
       borderRadius: {

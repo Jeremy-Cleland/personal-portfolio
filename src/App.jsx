@@ -3,19 +3,19 @@ import clsx from "clsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/sidebar/Sidebar.jsx";
 
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Portfolio from "./pages/Portfolio.jsx";
-import ProjectSingle from "./pages/ProjectSingle.jsx";
-import Resume from "./pages/Resume.jsx";
-import Blog from "./pages/Blog.jsx";
-import Contact from "./pages/Contact.jsx";
+import Home from "./pages/home/index.jsx";
+import About from "./pages/about/index.jsx";
+import Portfolio from "./pages/portfolio/index.jsx";
+import ProjectSingle from "./pages/project/index.jsx";
+import Resume from "./pages/resume/index.jsx";
+import Blog from "./pages/blog/index.jsx";
+import Contact from "./pages/contact/index.jsx";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <Router>
-      <div className="flex min-h-screen ">
+      <div className="flex min-h-screen">
         <div className="fixed z-10">
           <Sidebar
             isSidebarOpen={isSidebarOpen}
@@ -24,7 +24,7 @@ function App() {
         </div>
         <main
           className={clsx(
-            "lg:p-15 mx-auto w-screen justify-center bg-dark-50 p-10 text-dark-900 dark:bg-dark-800 dark:text-dark-100 sm:m-0",
+            "mx-auto w-screen justify-center bg-dark-50 p-10 text-dark-900 dark:bg-dark-800 dark:text-dark-100 sm:m-0",
             isSidebarOpen ? "md:ml-60" : "md:ml-20"
           )}
         >

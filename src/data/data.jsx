@@ -52,6 +52,7 @@ const iconStyle = "text-4xl mx-auto inline-block";
 const data = {
   name: "Jeremy Cleland",
   title: "Full Stack Javascript Developer",
+  profileImage: "../assets/images/profilePic.png",
   social: {
     github: "https://github.com/jeremy-cleland",
     linkedin: "https://www.linkedin.com/in/jeremy-cleland/",
