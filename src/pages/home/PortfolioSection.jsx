@@ -56,22 +56,22 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section className="mb-24 mt-10">
-      <div className="my-5 mt-10 max-w-7xl border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
-        <h4 className="text-center font-Fira text-lg tracking-tight md:text-left ">
+    <section className="my-10">
+      <div className="mx-auto my-5 max-w-7xl border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
+        <h4 className="text-md text-left font-Fira tracking-tight md:text-lg ">
           <span className="text-base text-violet-400"> {">"} </span> Explore My
           Projects
         </h4>
       </div>
 
-      <div className="mx-auto my-2 flex max-w-7xl flex-wrap justify-between gap-5 sm:my-2.5 md:my-10 md:gap-20 ">
-        <div className="group flex w-96 rounded-xl border-[1px] border-gray-200 bg-dark-100 pl-2 dark:border-violet-400/60 dark:bg-dark-600">
+      <div className="mx-auto my-2 grid max-w-7xl grid-rows-2 justify-between gap-5 sm:my-2.5 md:my-10 md:flex ">
+        <div className="group flex w-[80vw] rounded-xl border-[1px] border-gray-200 bg-dark-100 pl-2  dark:border-violet-400/60 dark:bg-dark-600 md:w-72">
           <RiSearch2Line className="my-auto mr-2 h-5 w-5" />
           <input
             onChange={(e) => {
               setSearchPortfolioProject(e.target.value);
             }}
-            className="sm:text-md grow appearance-none rounded-xl bg-dark-100 py-2 font-SourceCodePro text-sm text-dark-900 placeholder:text-dark-900 focus:outline-none dark:bg-dark-600 dark:text-gray-100 dark:placeholder:text-dark-100 "
+            className="sm:text-md appearance-none rounded-xl bg-dark-100 py-2 font-SourceCodePro text-sm text-dark-900 placeholder:text-dark-900 focus:outline-none dark:bg-dark-600 dark:text-gray-100 dark:placeholder:text-dark-100 "
             id="name"
             name="name"
             type="search"
@@ -80,7 +80,7 @@ const PortfolioSection = () => {
             aria-label="Name"
           />
         </div>
-        <div className="w-72">
+        <div>
           <PortfolioFilter setSelectFilterProject={setSelectFilterProject} />
         </div>
       </div>

@@ -1,5 +1,5 @@
 import Skill from "./Skill.jsx";
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
 import { staggerContainerVariant } from "../../utils/variants.js";
 import {
   SiJavascript,
@@ -26,31 +26,28 @@ const SkillsSection = () => {
     { name: "PostgreSQL", icon: <SiPostgresql />, delay: 0.1 },
     { name: "MySQL", icon: <SiMysql />, delay: 0.1 },
     { name: "MongoDB", icon: <SiMongodb />, delay: 0.1 },
+    { name: "MySQL", icon: <SiMysql />, delay: 0.1 },
+    { name: "MongoDB", icon: <SiMongodb />, delay: 0.1 },
   ];
 
   return (
-    <div className="mx-auto max-w-7xl">
-      <div className="my-5 mt-10 border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
+    <div className="mx-auto my-10 max-w-7xl">
+      <div className="my-5 border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200">
         <h4 className="text-center font-Fira text-lg tracking-tight md:text-left ">
           <span className="text-base text-violet-400"> {">"} </span> Languages &
           Tools
         </h4>
       </div>
-      <motion.ul
+      <m.ul
         variants={staggerContainerVariant}
         initial="hidden"
         animate="show"
-        className="mx-auto grid grid-cols-2 gap-10 md:grid-cols-5"
+        className="sm-grid-cols-4 mx-auto grid max-w-6xl grid-cols-3 gap-5 md:grid-cols-4"
       >
         {skills.map((skill, index) => (
-          <Skill
-            key={index}
-            name={skill.name}
-            icon={skill.icon}
-            delay={skill.delay}
-          />
+          <Skill key={index} icon={skill.icon} delay={skill.delay} />
         ))}
-      </motion.ul>
+      </m.ul>
     </div>
   );
 };

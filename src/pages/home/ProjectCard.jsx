@@ -11,19 +11,19 @@ const ProjectCard = ({ title, category, image }) => {
         duration: 0.7,
         delay: 0.15,
       }}
-      className="container mx-auto"
+      className="container mx-auto "
     >
       <Link
         to="/portfolio/project"
         aria-label="Indvidual Project"
         className="mt-10 block"
       >
-        <div className="group relative mx-auto mt-10 flex items-center justify-center">
-          <div className="absolute -inset-0.5 animate-tilt rounded-xl bg-gradient-to-t from-neutral-200 to-neutral-500 opacity-40 blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-10 dark:group-hover:opacity-20 "></div>
+        <div className=" group relative mx-auto mt-10 flex items-center justify-center shadow-lg">
+          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-dark-1000 to-dark-700 opacity-40 shadow-lg blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-70 dark:group-hover:opacity-100 "></div>
           <img
             alt={title}
             src={image}
-            className="relative h-52 w-full rounded-xl object-cover sm:h-64 lg:h-96 xl:h-80"
+            className="relative h-52 w-full rounded-lg object-cover sm:h-64 lg:h-96 xl:h-80"
           />
         </div>
         <div className="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
