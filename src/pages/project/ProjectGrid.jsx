@@ -20,7 +20,7 @@ const ProjectGrid = () => {
           <m.img
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            className="h-auto max-w-full rounded-2xl"
+            className="h-auto max-w-full rounded-lg"
             src={project.img}
             alt={project.title}
           />

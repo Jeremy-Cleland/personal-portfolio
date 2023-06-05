@@ -13,7 +13,7 @@ const FormInput = ({
     <div className="mx-auto mb-4">
       {/* Label for the input field */}
       <label
-        className="text-md mb-2 block w-full text-dark-900 dark:text-dark-100"
+        className="mb-2 block w-full text-sm text-dark-900 dark:text-dark-100"
         htmlFor={htmlFor}
       >
         {inputLabel}

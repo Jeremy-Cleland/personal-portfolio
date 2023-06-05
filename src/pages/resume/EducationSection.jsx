@@ -18,10 +18,10 @@ const EducationSection = () => {
         {resume.education.map((school, index) => (
           <li key={index}>
             <div className="grid max-w-6xl overflow-hidden rounded-lg p-4 hover:bg-violet-400/50 hover:dark:bg-violet-400/20  md:grid-cols-5 lg:p-6 xl:grid-cols-12">
-              <h3 className="text-md  my-2 font-SourceCodePro font-bold underline underline-offset-4 md:col-span-4 md:col-start-2 md:ml-0 xl:col-span-9 xl:col-start-3">
+              <h3 className="my-2  font-SourceCodePro text-sm font-bold underline underline-offset-4 md:col-span-4 md:col-start-2 md:ml-0 xl:col-span-9 xl:col-start-3">
                 {school.institution} - {school.location}
               </h3>
-              <h3 className="text-md  my-2 font-SourceCodePro font-bold md:col-span-4 md:col-start-2 md:ml-0 xl:col-span-9 xl:col-start-3">
+              <h3 className="my-2  font-SourceCodePro text-sm font-bold md:col-span-4 md:col-start-2 md:ml-0 xl:col-span-9 xl:col-start-3">
                 {school.degree}
               </h3>
               <time

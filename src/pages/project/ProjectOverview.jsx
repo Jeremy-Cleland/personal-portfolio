@@ -25,7 +25,7 @@ const ProjectOverview = () => {
             duration: 0.6,
             delay: 0.5,
           }}
-          className="text-md my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
+          className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
         >
           {Heading}
         </m.h3>
@@ -42,7 +42,7 @@ const ProjectOverview = () => {
             duration: 0.6,
             delay: 0.5,
           }}
-          className="text-md my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
+          className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
         >
           {Technologies.title}
         </m.h3>
