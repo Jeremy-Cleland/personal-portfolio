@@ -1,5 +1,5 @@
 import { motion as m } from "framer-motion";
-// import { motion as m, useScroll, useSpring } from "framer-motion";
+import { AboutMeProvider } from "../../context/AboutMeContext.jsx";
 
 import ProfileCard from "./ProfileCard.jsx";
 import SkillSection from "../../components/reusable/SkillSection.jsx";
@@ -23,7 +23,7 @@ const About = () => (
         animate={{ y: 0 }}
         initial={{ y: "3vh" }}
         transition={{ delay: 0.5, duration: 0.5 }}
-        className="text-right font-SourceCodePro text-4xl font-bold tracking-wide 
+        className="text-right font-ChillaxBold text-4xl font-bold tracking-wide 
           "
       >
         About Me
@@ -37,9 +37,11 @@ const About = () => (
         A Mission to Innovate: From Green Beret to Software Developer
       </m.h2>
     </div>
-    <ProfileCard />
-    <Timeline />
-    <SkillSection />
+    <AboutMeProvider>
+      <ProfileCard />
+      <Timeline />
+      <SkillSection />
+    </AboutMeProvider>
   </m.div>
 );
 

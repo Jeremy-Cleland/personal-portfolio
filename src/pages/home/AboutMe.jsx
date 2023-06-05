@@ -1,12 +1,13 @@
+import { useContext } from "react";
 import { motion as m } from "framer-motion";
-import profilePic from "../../assets/images/profilePic.png";
-import Card from "../../components/reusable/Card.jsx";
-import { slideInVariant, zoomInVariant } from "../../utils/variants.js";
-import { aboutMeData } from "../../data/aboutMeData.jsx";
 import Button from "../../components/reusable/Button.jsx";
+import Card from "../../components/reusable/Card.jsx";
+import profilePic from "../../assets/images/profilePic.png";
+import { AboutMeContext } from "../../context/AboutMeContext.jsx";
+import { slideInVariant } from "../../utils/variants.js";
 
 const AboutMe = () => {
-  const { bio } = aboutMeData;
+  const { aboutMe } = useContext(AboutMeContext);
   return (
     <Card>
       <m.div
@@ -25,7 +26,7 @@ const AboutMe = () => {
           alt="Profile"
           className="mx-auto mb-4 h-32 w-32 rounded-full"
         />
-        {bio.slice(0, 1).map((para, index) => (
+        {aboutMe.bio.slice(0, 1).map((para, index) => (
           <p
             key={index}
             className="mx-10 my-4 max-w-5xl font-Fira text-sm leading-9 text-dark-900 dark:text-dark-100"

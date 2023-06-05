@@ -1,10 +1,5 @@
 import { useState } from "react";
-import { motion as m } from "framer-motion";
-import { RiGithubLine, RiLinkedinBoxLine, RiMailLine } from "react-icons/ri";
-import data from "../../data/data.jsx";
-import SocialLink from "../../components/sidebar/SocialLink.jsx";
 import FormInput from "./FormInput.jsx";
-import { slideInVariant } from "../../utils/variants.js";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -77,18 +72,12 @@ const ContactForm = () => {
   };
 
   return (
-    <m.div
-      variants={slideInVariant("left")}
-      initial="hidden"
-      animate="show"
-      className="container mx-auto"
-    >
-      <div className="group relative mx-auto flex items-center justify-center">
-        <div className="absolute -inset-0.5 mx-auto w-[80vw] max-w-4xl animate-tilt rounded-2xl bg-gradient-to-t from-black to-dark-900 opacity-20 blur transition duration-200 group-hover:opacity-40 group-hover:duration-200 dark:opacity-10 dark:group-hover:opacity-30 lg:w-[55vw]"></div>
-        <div className="relative flex h-full w-[80vw] max-w-4xl items-center rounded-2xl bg-dark-50 dark:bg-dark-600 lg:w-[55vw]">
+    <div className="container mx-auto">
+      <div className="mx-auto flex items-center justify-center font-Fira text-dark-900 dark:text-dark-100">
+        <div className="rounded-lg bg-dark-100 p-10 dark:bg-dark-900">
           {/* Contact form */}
           <form onSubmit={handleSubmit} className="mx-auto my-10">
-            <p className="mb-8 text-2xl text-dark-600 dark:text-dark-100">
+            <p className="mb-8 font-Fira text-2xl text-dark-600 dark:text-dark-100">
               Contact Form
             </p>
             {/* Form input fields */}
@@ -151,7 +140,7 @@ const ContactForm = () => {
                 required
               ></textarea>
               {errors.message && (
-                <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                <p className="mt-1 text-sm text-red-400">{errors.message}</p>
               )}
             </div>
 
@@ -167,27 +156,10 @@ const ContactForm = () => {
                 </span>
               </button>
             </div>
-            <div className="align-center mx-auto flex w-72 justify-center text-sm ">
-              <SocialLink
-                icon={RiLinkedinBoxLine}
-                href={data.social.linkedin}
-                className="hover:bg-dark-100"
-              />
-              <SocialLink
-                size="w-8 h-8"
-                icon={RiGithubLine}
-                href={data.social.github}
-              />
-              <SocialLink
-                icon={RiMailLine}
-                href={`"https://mail.google.com/mail/?view=cm&fs=1&to=" + ${data.social.email}`}
-              />
-              <span className="sr-only">Email</span>
-            </div>
           </form>
         </div>
       </div>
-    </m.div>
+    </div>
   );
 };
 export default ContactForm;

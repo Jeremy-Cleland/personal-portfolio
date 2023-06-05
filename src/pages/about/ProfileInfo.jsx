@@ -1,10 +1,12 @@
 import { motion as m } from "framer-motion";
-import { aboutMeData } from "../../data/aboutMeData.jsx";
+import { useContext } from "react";
 import SocialMedia from "./SocialMedia.jsx";
 import { slideInVariant } from "../../utils/variants.js";
+import { AboutMeContext } from "../../context/AboutMeContext.jsx";
 
 const ProfileInfo = () => {
-  const { bio } = aboutMeData;
+  // const { bio } = aboutMeData;
+  const { aboutMe } = useContext(AboutMeContext);
 
   return (
     <m.div
@@ -20,10 +22,10 @@ const ProfileInfo = () => {
         <span className="text-base text-violet-400"> {">"} </span>
         Full Stack Developer
       </p>
-      {bio.map((para, index) => (
+      {aboutMe.bio.map((para, index) => (
         <p
           key={index}
-          className="mx-10 my-4 max-w-5xl font-Fira text-sm leading-9 text-dark-900 dark:text-dark-100"
+          className="mx-10 my-6 max-w-5xl font-Fira text-sm leading-9 text-dark-900 dark:text-dark-100"
         >
           {para}
         </p>

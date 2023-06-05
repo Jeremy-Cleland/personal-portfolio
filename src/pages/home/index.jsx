@@ -5,6 +5,7 @@ import SkillSection from "../../components/reusable/SkillSection.jsx";
 import { PortfolioProvider } from "../../context/PortfolioContext.jsx";
 import TypewriterText from "../../components/reusable/TypewriterText.jsx";
 import AboutMe from "./AboutMe.jsx";
+import { AboutMeProvider } from "../../context/AboutMeContext.jsx";
 import ScrollProgress from "../../components/reusable/ScrollProgress.jsx";
 
 const Home = () => {
@@ -36,7 +37,10 @@ const Home = () => {
           <TypewriterText text="> Software Developer" tag="h2" delay={1000} />
         </div>
       </div>
-      <AboutMe />
+      <AboutMeProvider>
+        <AboutMe />
+      </AboutMeProvider>
+
       <PortfolioProvider>
         <PortfolioSection />
       </PortfolioProvider>
