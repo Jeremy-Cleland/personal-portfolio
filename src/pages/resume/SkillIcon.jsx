@@ -1,12 +1,23 @@
+import { useState } from "react";
 import { motion as m } from "framer-motion";
 import Card from "../../components/reusable/Card.jsx";
-import { useState } from "react";
 
 const SkillIcon = ({ icon, name, delay }) => {
   const [showTooltip, setShowTooltip] = useState(false);
   const textVariants = {
-    hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0 },
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 10,
+        stiffness: 100,
+      },
+    },
   };
 
   return (
@@ -20,14 +31,20 @@ const SkillIcon = ({ icon, name, delay }) => {
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
-        <div className="p-3 text-[2rem] text-dark-900 dark:text-dark-100 hover:dark:text-violet-400 ">
+        <m.div
+          className="text-[3rem] text-dark-900 dark:text-dark-100 hover:dark:text-violet-400 "
+          whileHover={{ scale: 0.8 }}
+        >
           {icon}
           {showTooltip && (
-            <div className="absolute bottom-full left-1/2 w-24 -translate-x-1/2 transform rounded-lg bg-dark-100 p-2 text-center text-sm text-dark-900 dark:bg-dark-700 dark:text-dark-100">
+            <m.p
+              variants={textVariants}
+              className="absolute bottom-full left-1/2 w-24 -translate-x-1/2 transform rounded-lg bg-dark-100 p-2 text-center text-sm text-dark-900 shadow-lg dark:bg-violet-400 "
+            >
               {name}
-            </div>
+            </m.p>
           )}
-        </div>
+        </m.div>
       </m.li>
     </Card>
   );

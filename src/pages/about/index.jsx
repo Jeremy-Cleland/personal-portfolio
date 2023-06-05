@@ -2,7 +2,7 @@ import { motion as m } from "framer-motion";
 import { AboutMeProvider } from "../../context/AboutMeContext.jsx";
 
 import ProfileCard from "./ProfileCard.jsx";
-import SkillSection from "../../components/reusable/SkillSection.jsx";
+import SkillCloud from "../../components/reusable/SkillCloud.jsx";
 import Timeline from "./Timeline.jsx";
 import ScrollProgress from "../../components/reusable/ScrollProgress.jsx";
 import Header from "../../components/reusable/Header.jsx";
@@ -26,7 +26,7 @@ const About = () => (
     <AboutMeProvider>
       <ProfileCard />
       <Timeline />
-      <SkillSection />
+      <SkillCloud />
     </AboutMeProvider>
   </m.div>
 );

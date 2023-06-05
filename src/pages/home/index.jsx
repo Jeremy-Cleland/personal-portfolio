@@ -1,7 +1,7 @@
 import { motion as m } from "framer-motion";
 
 import PortfolioSection from "./PortfolioSection.jsx";
-import SkillSection from "../../components/reusable/SkillSection.jsx";
+import SkillCloud from "../../components/reusable/SkillCloud.jsx";
 import { PortfolioProvider } from "../../context/PortfolioContext.jsx";
 import TypewriterText from "../../components/reusable/TypewriterText.jsx";
 import AboutMe from "./AboutMe.jsx";
@@ -44,7 +44,7 @@ const Home = () => {
       <PortfolioProvider>
         <PortfolioSection />
       </PortfolioProvider>
-      <SkillSection />
+      <SkillCloud />
     </m.div>
   );
 };
