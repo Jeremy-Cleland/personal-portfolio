@@ -1,26 +1,32 @@
 import { motion as m } from "framer-motion";
-import { slideInVariant } from "../../utils/variants";
 
 const ContactHeader = () => {
   return (
-    <m.div
-      variants={slideInVariant("right")}
-      initial="hidden"
-      animate="show"
-      className="container mx-auto"
-    >
+    <div className="container mx-auto">
       <div className="mb-24 mt-10">
-        <div className="my-5 mt-10 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
-          <h2 className="text-center font-SourceCodePro text-4xl font-bold tracking-wide md:text-right">
+        <div className="my-5 mt-10 border-b-4 border-violet-400 py-5 text-center font-ChillaxSemiBold text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
+          <m.h1
+            animate={{ y: 0 }}
+            initial={{ y: "3vh" }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="text-right font-ChillaxBold text-4xl font-bold tracking-wide 
+          "
+          >
             Contact Me
-          </h2>
-          <p className="text center pt-3 font-SourceCodePro text-xs tracking-wide md:text-right md:text-sm">
+          </m.h1>
+          <m.h2
+            animate={{ y: 0 }}
+            initial={{ y: "3vh" }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="text-right font-SourceCodePro text-sm font-bold tracking-wide 
+          "
+          >
             Open to opportunities and collaborations that foster growth and
             impact
-          </p>
+          </m.h2>
         </div>
       </div>
-    </m.div>
+    </div>
   );
 };
 export default ContactHeader;

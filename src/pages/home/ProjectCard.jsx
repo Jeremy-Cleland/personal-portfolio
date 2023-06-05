@@ -18,8 +18,8 @@ const ProjectCard = ({ title, category, image }) => {
         aria-label="Indvidual Project"
         className="mt-10 block"
       >
-        <div className=" group relative mx-auto mt-10 flex items-center justify-center shadow-lg">
-          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-dark-1000 to-dark-700 opacity-40 shadow-lg blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-70 dark:group-hover:opacity-100 "></div>
+        <div className="group relative mx-auto mt-10 flex items-center justify-center  ">
+          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-black to-dark-900 opacity-40 shadow-lg blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-70 dark:group-hover:opacity-100 "></div>
           <img
             alt={title}
             src={image}

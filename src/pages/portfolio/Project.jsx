@@ -15,17 +15,17 @@ const Project = ({ title, category, image }) => {
     >
       <div className="flex">
         <div className="group relative mx-auto mt-10 flex items-center justify-center">
-          <div className="absolute -inset-0.5 animate-tilt rounded-xl bg-gradient-to-t from-neutral-200 to-neutral-500 opacity-40 blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-10 dark:group-hover:opacity-20 "></div>
-          <div className="relative flex rounded-xl bg-dark-100 pb-5 dark:bg-dark-600">
+          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-black to-dark-900  opacity-20 blur transition duration-200 group-hover:opacity-40 group-hover:duration-200 dark:opacity-10 dark:group-hover:opacity-20 "></div>
+          <div className="relative flex rounded-lg bg-dark-100 pb-5 dark:bg-dark-600">
             <Link to="/portfolio/project" aria-label="Indvidual Project">
               <m.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-xl text-center dark:text-dark-100"
+                className="rounded-lg text-center dark:text-dark-100"
               >
                 <div className="text-center">
                   <img
-                    className=" group h-auto w-full rounded-t-xl border-b-2 font-SourceCodePro group-hover:border-b-violet-400/90"
+                    className=" group h-auto w-full rounded-t-lg border-b-2 font-SourceCodePro group-hover:border-b-violet-400/90"
                     src={image}
                     alt={title}
                   />

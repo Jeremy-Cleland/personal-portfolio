@@ -1,38 +1,34 @@
-import TypewriterText from "../../components/reusable/TypewriterText.jsx";
-
+import { AboutMeProvider } from "../../context/AboutMeContext.jsx";
 import { motion as m } from "framer-motion";
+import ResumeHeader from "./ResumeHeader.jsx";
+import ExperienceSection from "./ExperienceSection.jsx";
+import EducationSection from "./EducationSection.jsx";
+import SkillsSection from "./SkillSection.jsx";
+import ProjectsSection from "./ProjectsSection.jsx";
+import ScrollProgress from "../../components/reusable/ScrollProgress.jsx";
 
 const Resume = () => {
   return (
-    <m.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, delay: 1 }}
-      transition={{
-        ease: "easeInOut",
-        duration: 0.7,
-        delay: 0.15,
-      }}
-      className="container mx-auto"
-    >
-      <div className="mt-10 sm:mt-20 xl:mt-36 2xl:mt-48">
-        <m.h1
-          animate={{ y: 0 }}
-          initial={{ y: "10vh" }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-SourceCodePro text-4xl font-bold tracking-wide md:text-right"
-        >
-          <TypewriterText text="Jeremy Cleland" tag="h1" />
-        </m.h1>
-        <m.h2
-          animate={{ y: 0 }}
-          initial={{ y: "10vh" }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="= text-center font-Fira text-2xl tracking-tight md:text-right"
-        >
-          <TypewriterText text="Software Developer" tag="h2" delay={1000} />
-        </m.h2>
-      </div>
-    </m.div>
+    <AboutMeProvider>
+      <m.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, delay: 1 }}
+        transition={{
+          ease: "easeInOut",
+          duration: 0.7,
+          delay: 0.15,
+        }}
+        className="container mx-auto"
+      >
+        <ScrollProgress position="top-0 sticky" />
+
+        <ResumeHeader />
+        <ExperienceSection />
+        <EducationSection />
+        <SkillsSection />
+        <ProjectsSection />
+      </m.div>
+    </AboutMeProvider>
   );
 };
 export default Resume;

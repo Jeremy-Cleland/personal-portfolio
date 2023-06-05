@@ -17,7 +17,7 @@ const Blog = () => {
           animate={{ y: 0 }}
           initial={{ y: "10vh" }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center font-SourceCodePro text-4xl font-bold tracking-wide md:text-right"
+          className="text-center font-ChillaxBold text-4xl font-bold tracking-wide md:text-right"
         >
           Blog
         </m.h1>
