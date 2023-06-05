@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion as m } from "framer-motion";
 import Card from "../../components/reusable/Card.jsx";
 
-const Skill = ({ icon, name, delay }) => {
+const SkillIcon = ({ icon, name, delay }) => {
   const [showTooltip, setShowTooltip] = useState(false);
   const textVariants = {
     hidden: {
@@ -50,4 +50,4 @@ const Skill = ({ icon, name, delay }) => {
   );
 };
 
-export default Skill;
+export default SkillIcon;

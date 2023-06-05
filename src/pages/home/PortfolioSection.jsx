@@ -6,6 +6,7 @@ import ProjectCard from "./ProjectCard.jsx";
 import { motion as m } from "framer-motion";
 import { fadeInVariant } from "../../utils/variants.js";
 import Card from "../../components/reusable/Card.jsx";
+import Button from "../../components/reusable/Button.jsx";
 
 const PortfolioSection = () => {
   const {
@@ -67,7 +68,7 @@ const PortfolioSection = () => {
         className="my-10"
       >
         <div className="mx-auto my-2 max-w-7xl border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10">
-          <h4 className="text-md text-left font-Fira tracking-tight md:text-lg ">
+          <h4 className="text-left font-Fira text-sm tracking-tight md:text-lg ">
             <span className="text-base text-violet-400"> {">"} </span> Explore
             My Projects
           </h4>
@@ -80,7 +81,7 @@ const PortfolioSection = () => {
               onChange={(e) => {
                 setSearchPortfolioProject(e.target.value);
               }}
-              className="sm:text-md appearance-none rounded-xl bg-dark-100 py-2 font-SourceCodePro text-sm text-dark-900 placeholder:text-dark-900 focus:outline-none dark:bg-dark-600 dark:text-gray-100 dark:placeholder:text-dark-100 "
+              className="appearance-none rounded-xl bg-dark-100 py-2 font-SourceCodePro text-sm text-dark-900 placeholder:text-dark-900 focus:outline-none dark:bg-dark-600 dark:text-gray-100 dark:placeholder:text-dark-100 sm:text-sm "
               id="name"
               name="name"
               type="search"

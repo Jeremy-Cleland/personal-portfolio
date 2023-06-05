@@ -11,38 +11,34 @@ const Project = ({ title, category, image }) => {
         duration: 0.7,
         delay: 0.15,
       }}
-      className="container mx-auto"
+      className="container mx-auto "
     >
-      <div className="flex">
+      <Link
+        to="/portfolio/project"
+        aria-label="Indvidual Project"
+        className="mt-10 block"
+      >
         <div className="group relative mx-auto mt-10 flex items-center justify-center">
-          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-black to-dark-900  opacity-20 blur transition duration-200 group-hover:opacity-40 group-hover:duration-200 dark:opacity-10 dark:group-hover:opacity-20 "></div>
-          <div className="relative flex rounded-lg bg-dark-100 pb-5 dark:bg-dark-600">
-            <Link to="/portfolio/project" aria-label="Indvidual Project">
-              <m.div
-                whileHover={{ scale: 1.01 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-lg text-center dark:text-dark-100"
-              >
-                <div className="text-center">
-                  <img
-                    className=" group h-auto w-full rounded-t-lg border-b-2 font-SourceCodePro group-hover:border-b-violet-400/90"
-                    src={image}
-                    alt={title}
-                  />
-                  <h2 className="font-SourceCodePro font-bold leading-10 tracking-wide ">
-                    {title}
-                  </h2>
-                  <span className="font-Fira text-sm leading-10 tracking-tight">
-                    {category}
-                  </span>
-                </div>
-              </m.div>
-            </Link>
-          </div>
+          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-black to-dark-900 opacity-40 shadow-lg blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-70 dark:group-hover:opacity-100 "></div>
+          <img
+            alt={title}
+            src={image}
+            className="relative h-52 w-full rounded-lg object-cover sm:h-64 lg:h-96 xl:h-80"
+          />
         </div>
-      </div>
+        <div className="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
+          <strong className="relative font-SourceCodePro tracking-wide text-dark-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-violet-400 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100 dark:text-dark-50">
+            {title}
+          </strong>
+
+          <span className="hidden sm:block sm:h-px sm:w-8 sm:bg-violet-400"></span>
+
+          <p className="mt-0.5 font-Fira tracking-tight opacity-50 sm:mt-0">
+            {category}
+          </p>
+        </div>
+      </Link>
     </m.div>
   );
 };
-
 export default Project;

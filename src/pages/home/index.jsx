@@ -1,7 +1,7 @@
 import { motion as m } from "framer-motion";
 
 import PortfolioSection from "./PortfolioSection.jsx";
-import SkillSection from "../../components/reusable/SkillSection.jsx";
+import SkillCloud from "../../components/reusable/SkillCloud.jsx";
 import { PortfolioProvider } from "../../context/PortfolioContext.jsx";
 import TypewriterText from "../../components/reusable/TypewriterText.jsx";
 import AboutMe from "./AboutMe.jsx";
@@ -22,7 +22,7 @@ const Home = () => {
     >
       <ScrollProgress position="top-0 sticky" />
       <div className="my-10 sm:my-20 xl:my-36 2xl:my-48">
-        <div className="text-md text-left font-ChillaxLight tracking-tight md:text-lg">
+        <div className="text-left font-ChillaxLight text-sm tracking-tight md:text-lg">
           <TypewriterText text="Hi, I am" tag="p" delay={0} speed={60} />
         </div>
         <div className="py-3 text-left font-ChillaxBold text-4xl md:text-5xl">
@@ -44,7 +44,7 @@ const Home = () => {
       <PortfolioProvider>
         <PortfolioSection />
       </PortfolioProvider>
-      <SkillSection />
+      <SkillCloud />
     </m.div>
   );
 };

@@ -17,7 +17,7 @@ const AboutMe = () => {
         className="mx-auto max-w-7xl"
       >
         <div className="my-5 border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200">
-          <h4 className="text-md text-left font-Fira tracking-tight md:text-lg">
+          <h4 className="text-left font-Fira text-sm tracking-tight md:text-lg">
             <span className="text-base text-violet-400"> {">"} </span> About Me
           </h4>
         </div>

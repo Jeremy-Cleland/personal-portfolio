@@ -129,7 +129,7 @@ const ContactForm = () => {
                 Message
               </label>
               <textarea
-                className="text-md w-full rounded-2xl border border-gray-300 border-opacity-50 bg-dark-100 px-5 py-2 text-dark-900 shadow-sm dark:border-violet-400 dark:bg-dark-400 dark:text-dark-100"
+                className="w-full rounded-2xl border border-gray-300 border-opacity-50 bg-dark-100 px-5 py-2 text-sm text-dark-900 shadow-sm dark:border-violet-400 dark:bg-dark-400 dark:text-dark-100"
                 id="message"
                 name="message"
                 cols="14"

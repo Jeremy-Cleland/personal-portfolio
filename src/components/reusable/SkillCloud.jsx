@@ -1,12 +1,9 @@
+import Skill from "./Skill.jsx";
 import { staggerContainerVariant } from "../../utils/variants.js";
-import { useContext } from "react";
-import { AboutMeContext } from "../../context/AboutMeContext.jsx";
+import { resumeData } from "../../data/resumeData.jsx";
 import { motion as m } from "framer-motion";
-import Skill from "../../components/reusable/Skill.jsx";
 
-const SkillsSection = () => {
-  const { resume } = useContext(AboutMeContext);
-
+const SkillCloud = () => {
   return (
     <div>
       <div className="mx-auto my-10 max-w-7xl">
@@ -21,19 +18,9 @@ const SkillsSection = () => {
           variants={staggerContainerVariant}
           initial="hidden"
           animate="show"
-          className="mx-auto grid max-w-6xl grid-cols-3 gap-5 md:grid-cols-6"
+          className="sm-grid-cols-4 mx-auto grid max-w-6xl grid-cols-3 gap-5 md:grid-cols-4"
         >
-          {resume.technicalSkills.languages.map((skill, index) => (
-            <Skill key={index} icon={skill.icon} name={skill.name} />
-          ))}
-        </m.ul>
-        <m.ul
-          variants={staggerContainerVariant}
-          initial="hidden"
-          animate="show"
-          className="mx-auto grid max-w-6xl grid-cols-3 gap-5 md:grid-cols-6"
-        >
-          {resume.technicalSkills.skillsAndTools.map((skill, index) => (
+          {resumeData.techSkills.map((skill, index) => (
             <Skill key={index} icon={skill.icon} name={skill.name} />
           ))}
         </m.ul>
@@ -42,4 +29,4 @@ const SkillsSection = () => {
   );
 };
 
-export default SkillsSection;
+export default SkillCloud;

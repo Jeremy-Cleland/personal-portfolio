@@ -1,6 +1,5 @@
 export const aboutMeData = {
   title: "About Me",
-
   bio: [
     "Hi, I'm Jeremy — a seasoned Special Forces Medic turned full-stack JavaScript Developer. I'm based in Michigan and bring a unique blend of disciplined military training, cutting-edge software development expertise, and a global perspective to my work.",
     "My journey has been both diverse and challenging. I served in the U.S. Army Special Forces, specifically with the 7th Special Forces Group. My service took me from the remote regions of South America to the rugged terrain of Afghanistan, deploying my leadership and adaptability skills in high-stress environments.",

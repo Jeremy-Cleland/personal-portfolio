@@ -1,11 +1,12 @@
 import { AboutMeProvider } from "../../context/AboutMeContext.jsx";
 import { motion as m } from "framer-motion";
-import ResumeHeader from "./ResumeHeader.jsx";
+
 import ExperienceSection from "./ExperienceSection.jsx";
 import EducationSection from "./EducationSection.jsx";
 import SkillsSection from "./SkillSection.jsx";
-import ProjectsSection from "./ProjectsSection.jsx";
+// import ProjectsSection from "./ProjectsSection.jsx";
 import ScrollProgress from "../../components/reusable/ScrollProgress.jsx";
+import Header from "../../components/reusable/Header.jsx";
 
 const Resume = () => {
   return (
@@ -22,11 +23,11 @@ const Resume = () => {
       >
         <ScrollProgress position="top-0 sticky" />
 
-        <ResumeHeader />
+        <Header title="Resume" />
         <ExperienceSection />
         <EducationSection />
         <SkillsSection />
-        <ProjectsSection />
+        {/* <ProjectsSection /> */}
       </m.div>
     </AboutMeProvider>
   );

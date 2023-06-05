@@ -37,6 +37,7 @@ module.exports = {
           "50%": { backgroundPosition: "100% 50%" },
         },
       },
+
       colors: {
         dark: {
           50: "#f4f6f7",
