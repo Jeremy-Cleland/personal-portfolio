@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home/index.jsx";
-import Sidebar from "./components/sidebar/Sidebar.jsx";
+import Sidebar from "./components/Sidebar/index.jsx";
 import About from "./pages/about/index.jsx";
 import Portfolio from "./pages/portfolio/index.jsx";
 import ProjectSingle from "./pages/project/index.jsx";
