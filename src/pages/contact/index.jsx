@@ -3,6 +3,8 @@ import ContactForm from "./ContactForm.jsx";
 
 import Header from "../../components/reusable/Header.jsx";
 
+// import FormikForm from "./FormikForm.jsx";
+
 const Contact = () => {
   return (
     <m.div
@@ -21,6 +23,7 @@ const Contact = () => {
             impact"
       />
       <ContactForm />
+      {/* <FormikForm /> */}
     </m.div>
   );
 };
