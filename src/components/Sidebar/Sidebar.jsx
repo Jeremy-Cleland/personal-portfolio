@@ -136,7 +136,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
       </button>
       <div
         className={clsx(
-          "absolute mx-[5vw] my-[5vh] h-[80vh] w-[90vw] rounded-2xl bg-dark-100 px-[22.5vw] py-10 text-center text-dark-100 dark:bg-black/90",
+          "absolute mx-[5vw] my-[5vh] h-[80vh] w-[90vw] rounded-lg bg-dark-100 px-[22.5vw] py-10 text-center text-dark-100 dark:bg-black/90",
           isNavOpen ? "" : "hidden"
         )}
       >

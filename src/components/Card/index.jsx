@@ -52,7 +52,7 @@ export const CardModern = () => {
 
 export const GradientCard = () => {
   return (
-    <article className="animate-background rounded-2xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-0.5 shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25">
+    <article className="animate-background rounded-lg bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-0.5 shadow-xl transition [animation-duration:_6s] hover:shadow-sm dark:shadow-gray-700/25">
       <div className="rounded-[10px] bg-white p-4 !pt-20 dark:bg-gray-900 sm:p-6">
         <time
           dateTime="2022-10-10"
@@ -83,7 +83,7 @@ export const GradientCard = () => {
 
 export const GradientHoverCard = () => {
   return (
-    <article className="rounded-2xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
+    <article className="rounded-lg bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
       <div className="rounded-[10px] bg-white p-4 !pt-20 dark:bg-gray-900 sm:p-6">
         <time
           dateTime="2022-10-10"
@@ -118,7 +118,7 @@ export const CardFloating = () => {
       <img
         alt="Lava"
         src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-        className="h-56 w-full rounded-2xl object-cover shadow-xl transition group-hover:grayscale-[50%] dark:shadow-gray-700/25"
+        className="h-56 w-full rounded-lg object-cover shadow-xl transition group-hover:grayscale-[50%] dark:shadow-gray-700/25"
       />
 
       <div className="p-4">
@@ -142,7 +142,7 @@ export const CardFloating = () => {
 
 export const CardSimple = () => {
   return (
-    <article className="overflow-hidden rounded-2xl shadow transition hover:shadow-lg dark:shadow-gray-700/25">
+    <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg dark:shadow-gray-700/25">
       <img
         alt="Office"
         src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
@@ -230,7 +230,7 @@ export const ProjectCard = () => {
     <img
       alt="Lava"
       src={image}
-      className="h-56 w-full rounded-2xl object-cover shadow-xl transition group-hover:grayscale-[50%] dark:shadow-gray-700/25"
+      className="h-56 w-full rounded-lg object-cover shadow-xl transition group-hover:grayscale-[50%] dark:shadow-gray-700/25"
     />
 
     <div className="p-4">

@@ -27,12 +27,12 @@ const SkillIcon = ({ icon, name, delay }) => {
         initial="hidden"
         animate="show"
         transition={{ duration: 0.5, delay }}
-        className="relative flex flex-col items-center"
+        className="group relative flex flex-col items-center"
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
         <m.div
-          className="text-[3rem] text-dark-900 dark:text-dark-100 hover:dark:text-violet-400 "
+          className=" group text-[3rem] text-dark-900 dark:text-dark-100 hover:dark:text-violet-400 "
           whileHover={{ scale: 0.8 }}
         >
           {icon}
