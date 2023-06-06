@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
@@ -143,7 +142,17 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
         <div className="flex flex-col">
           {/* Menu */}
 
-          <div className="flex-1 pt-4" onClick={toggleNav}>
+          <div
+            className="flex-1 pt-4"
+            role="button"
+            onClick={toggleNav}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                toggleNav();
+              }
+            }}
+            tabIndex="0"
+          >
             <ul className="space-y-3">
               <NavItem
                 isSidebarOpen={true}

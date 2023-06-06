@@ -1,8 +1,8 @@
 import { useState } from "react";
 import clsx from "clsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/sidebar/Sidebar.jsx";
 
+import Sidebar from "./components/sidebar/index.jsx";
 import Home from "./pages/home/index.jsx";
 import About from "./pages/about/index.jsx";
 import Portfolio from "./pages/portfolio/index.jsx";
