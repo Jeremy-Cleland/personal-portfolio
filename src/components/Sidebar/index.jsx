@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import PropTypes from "prop-types";
 import clsx from "clsx";
 import useColorMode from "../../hooks/useColorMode.js";
 import {
@@ -215,6 +215,11 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
       </div>
     </>
   );
+};
+
+Sidebar.propTypes = {
+  isSidebarOpen: PropTypes.bool.isRequired,
+  setIsSidebarOpen: PropTypes.func.isRequired,
 };
 
 export default Sidebar;
