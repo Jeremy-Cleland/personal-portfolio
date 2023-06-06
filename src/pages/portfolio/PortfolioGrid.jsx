@@ -66,13 +66,13 @@ const PortfolioGrid = () => {
         </div>
 
         <div className="my-2 grid grid-rows-2 justify-between gap-5 sm:my-2.5 md:flex ">
-          <div className="flex w-[80vw] rounded-xl border-[1px] border-gray-200 bg-dark-100 pl-2 dark:border-violet-400/60 dark:bg-dark-600 md:w-72">
+          <div className="flex w-[80vw] rounded-lg border-[1px] border-gray-200 bg-dark-100 pl-2 dark:border-violet-400/60 dark:bg-dark-600 md:w-72">
             <RiSearch2Line className="my-auto mr-2 h-5 w-5" />
             <input
               onChange={(e) => {
                 setSearchPortfolioProject(e.target.value);
               }}
-              className="appearance-none rounded-xl bg-dark-100 py-2 font-SourceCodePro text-sm text-dark-900 placeholder:text-dark-900 focus:outline-none dark:bg-dark-600 dark:text-gray-100 dark:placeholder:text-dark-100 sm:text-sm "
+              className="appearance-none rounded-lg bg-dark-100 py-2 font-SourceCodePro text-sm text-dark-900 placeholder:text-dark-900 focus:outline-none dark:bg-dark-600 dark:text-gray-100 dark:placeholder:text-dark-100 sm:text-sm "
               id="name"
               name="name"
               type="search"

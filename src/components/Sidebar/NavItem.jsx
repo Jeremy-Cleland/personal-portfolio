@@ -6,7 +6,7 @@ const NavItem = ({ isSidebarOpen, icon: Icon, text, path }) => {
   return (
     <li
       className={
-        "group mt-8 flex cursor-default rounded-2xl font-bold  tracking-widest text-dark-900 transition-all duration-100 hover:bg-dark-50 hover:text-dark-900 hover:shadow-lg active:shadow-lg dark:text-dark-100 hover:dark:bg-dark-800 hover:dark:text-dark-50"
+        "group mt-8 flex cursor-default rounded-lg font-bold  tracking-widest text-dark-900 transition-all duration-100 hover:bg-dark-50 hover:text-dark-900 hover:shadow-lg active:shadow-lg dark:text-dark-100 hover:dark:bg-dark-800 hover:dark:text-dark-50"
       }
     >
       <Link

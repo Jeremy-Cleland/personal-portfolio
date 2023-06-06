@@ -1,7 +1,5 @@
 import { useContext } from "react";
-
 import Card from "../../components/reusable/Card.jsx";
-
 import { AboutMeContext } from "../../context/AboutMeContext.jsx";
 
 const ExperienceSection = () => {

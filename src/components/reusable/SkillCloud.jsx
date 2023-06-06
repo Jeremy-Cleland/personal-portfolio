@@ -18,7 +18,7 @@ const SkillCloud = () => {
           variants={staggerContainerVariant}
           initial="hidden"
           animate="show"
-          className="sm-grid-cols-4 mx-auto grid max-w-6xl grid-cols-3 gap-5 md:grid-cols-4"
+          className="mx-auto grid max-w-6xl grid-cols-3 gap-5 sm:grid-cols-4"
         >
           {resumeData.techSkills.map((skill, index) => (
             <Skill key={index} icon={skill.icon} name={skill.name} />
