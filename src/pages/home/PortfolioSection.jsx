@@ -6,7 +6,6 @@ import ProjectCard from "./ProjectCard.jsx";
 import { motion as m } from "framer-motion";
 import { fadeInVariant } from "../../utils/variants.js";
 import Card from "../../components/reusable/Card.jsx";
-import Button from "../../components/reusable/Button.jsx";
 
 const PortfolioSection = () => {
   const {
