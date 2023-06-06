@@ -18,7 +18,7 @@ import ColorModeToggle from "./ColorModeToggle.jsx";
 import NavItem from "./NavItem.jsx";
 import SocialLink from "./SocialLink.jsx";
 import TrafficLightToggle from "./TrafficLightToggle.jsx";
-import image from "../../assets/images/profilePic.png";
+// import image from "../../assets/images/profilePic.png";
 
 const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const [colorMode, setColorMode] = useColorMode();
@@ -46,14 +46,14 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
         <TrafficLightToggle toggleSidebar={toggleSidebar} />
         <div className=" flex h-full flex-col justify-between">
           <div className="pt-16">
-            <img
+            {/* <img
               src={image}
               alt="author"
               className={clsx(
                 "mx-auto drop-shadow-sm hover:scale-110",
                 isSidebarOpen ? "w-1/2 max-w-[200px]" : "w-full max-w-[100px]"
               )}
-            />
+            /> */}
           </div>
           <div className="mx-auto flex-1 pt-4">
             <ul className="space-y-6">
