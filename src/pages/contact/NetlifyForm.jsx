@@ -3,6 +3,20 @@ import { useState } from "react";
 const NetlifyForm = () => {
   const [submitterName, setSubmitterName] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    setSubmitterName(formData.get("name"));
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <form
       className="mx-auto my-10"
@@ -12,6 +26,7 @@ const NetlifyForm = () => {
       action="contact/?success=true"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
     >
       <input
         className="mx-auto w-[65vw] max-w-xl appearance-none justify-center rounded-lg border border-violet-400 bg-dark-100 px-5 py-2 text-sm text-dark-900 shadow-inner placeholder:text-dark-400 focus:border-violet-900 focus:outline-none focus:ring-1 focus:ring-violet-400 dark:border-violet-400 dark:bg-dark-300 dark:text-dark-100 dark:placeholder:text-dark-100 lg:w-[50vw]"
