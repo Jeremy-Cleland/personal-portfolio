@@ -15,7 +15,7 @@ const Form = () => {
         <input name="bot-field" />
       </div>
 
-      <input type="hidden" name="form-name" value="Contact" />
+      <input type="hidden" name="contact" value="contact" />
       <div>
         <label
           htmlFor="name"
