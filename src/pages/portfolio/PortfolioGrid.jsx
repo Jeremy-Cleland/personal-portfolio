@@ -66,7 +66,7 @@ const PortfolioGrid = () => {
         </div>
 
         <div className="my-2 grid grid-rows-2 justify-between gap-5 sm:my-2.5 md:flex ">
-          <div className="flex w-[80vw] rounded-lg border-[1px] border-gray-200 bg-dark-100 pl-2 dark:border-violet-400/60 dark:bg-dark-600 md:w-72">
+          <div className=" mx-5 flex w-72 rounded-lg border-[1px] border-gray-200 bg-dark-100 px-5 pl-2 dark:border-violet-400/60 dark:bg-dark-600">
             <RiSearch2Line className="my-auto mr-2 h-5 w-5" />
             <input
               onChange={(e) => {

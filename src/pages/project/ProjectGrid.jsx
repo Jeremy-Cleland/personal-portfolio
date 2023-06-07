@@ -13,14 +13,14 @@ const ProjectGrid = () => {
         duration: 1,
         delay: 0.5,
       }}
-      className="grid grid-cols-2 gap-10"
+      className="grid grid-cols-1 gap-10 md:grid-cols-2"
     >
       {projectData.Images.map((project) => (
         <div key={project.id}>
           <m.img
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            className="h-auto max-w-full rounded-lg"
+            className="mx-auto h-auto max-w-full rounded-lg lg:max-w-xl"
             src={project.img}
             alt={project.title}
           />

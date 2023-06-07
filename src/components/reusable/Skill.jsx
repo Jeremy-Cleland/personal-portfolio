@@ -32,7 +32,7 @@ const Skill = ({ icon, name, delay }) => {
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
         >
-          <m.div className="text-4xl duration-200 hover:dark:text-violet-400">
+          <m.div className="my-5 text-4xl duration-200 hover:dark:text-violet-400 ">
             {icon}
             {showTooltip && (
               <m.p

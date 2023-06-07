@@ -29,7 +29,7 @@ const AboutMe = () => {
         {aboutMe.bio.slice(0, 1).map((para, index) => (
           <p
             key={index}
-            className="mx-10 my-4 max-w-5xl font-Fira text-sm leading-9 text-dark-900 dark:text-dark-100"
+            className="mx-5 my-4 max-w-5xl font-Fira text-sm leading-9 text-dark-900 dark:text-dark-100 md:mx-10"
           >
             {para}
           </p>
