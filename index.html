@@ -15,11 +15,15 @@
 </head>
 
 <body>
-<form name="contact" netlify netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-  <textarea name="message"></textarea>
+<form name="contact" data-netlify="true" hidden>
+  <div className="input">
+    <input type="text" id="name" name="name" />
+  </div>
+  <div className="input">
+    <textarea id="message" name="message"></textarea>
+  </div>
 </form>
+
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
