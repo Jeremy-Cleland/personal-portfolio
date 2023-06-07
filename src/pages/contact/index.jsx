@@ -6,9 +6,9 @@ const Contact = () => {
   return (
     <m.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, delay: 1 }}
+      animate={{ opacity: 1 }}
       transition={{
-        ease: "easeInOut",
+        ease: "easeOut",
         duration: 0.7,
         delay: 0.15,
       }}
@@ -18,6 +18,7 @@ const Contact = () => {
         title=" Contact Me"
         subtitle="Open to opportunities and collaborations that foster growth and impact"
       />
+
       <Form />
     </m.div>
   );

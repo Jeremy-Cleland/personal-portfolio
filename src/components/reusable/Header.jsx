@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Header = ({ title, subtitle }) => {
   return (
-    <div className="my-5 mt-10 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
+    <div className="mx-2 my-5 mt-10 border-b-4 border-violet-400 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10 xl:mt-36 2xl:mt-48">
       <m.h1
         animate={{ y: 0 }}
         initial={{ y: "3vh" }}
