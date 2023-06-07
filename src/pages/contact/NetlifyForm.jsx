@@ -8,6 +8,7 @@ const NetlifyForm = () => {
       className="mx-auto my-10"
       method="POST"
       name="contact-form"
+      hidden
       action="contact/?success=true"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
