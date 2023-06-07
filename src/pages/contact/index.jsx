@@ -1,7 +1,8 @@
 import { motion as m } from "framer-motion";
-import ContactForm from "./ContactForm.jsx";
+// import ContactForm from "./ContactForm.jsx";
 
 import Header from "../../components/reusable/Header.jsx";
+import { Form } from "formik";
 
 const Contact = () => {
   return (
@@ -17,10 +18,9 @@ const Contact = () => {
     >
       <Header
         title=" Contact Me"
-        subtitle="Open to opportunities and collaborations that foster growth and
-            impact"
+        subtitle="Open to opportunities and collaborations that foster growth and impact"
       />
-      <ContactForm />
+      <Form />
     </m.div>
   );
 };
