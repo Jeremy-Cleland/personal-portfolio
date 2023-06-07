@@ -1,10 +1,7 @@
 import { motion as m } from "framer-motion";
-// import ContactForm from "./ContactForm.jsx";
-import NetlifyForm from "./NetlifyForm.jsx";
+import ContactForm from "./ContactForm.jsx";
 
 import Header from "../../components/reusable/Header.jsx";
-
-// import FormikForm from "./FormikForm.jsx";
 
 const Contact = () => {
   return (
@@ -23,9 +20,7 @@ const Contact = () => {
         subtitle="Open to opportunities and collaborations that foster growth and
             impact"
       />
-      {/* <ContactForm /> */}
-      <NetlifyForm />
-      {/* <FormikForm /> */}
+      <ContactForm />
     </m.div>
   );
 };
