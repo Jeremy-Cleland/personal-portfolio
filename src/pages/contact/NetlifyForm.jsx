@@ -22,8 +22,6 @@ const NetlifyForm = () => {
       className="mx-auto my-10"
       method="POST"
       name="contact-form"
-      hidden
-      action="contact/?success=true"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
@@ -40,7 +38,7 @@ const NetlifyForm = () => {
         value="contact-form"
         className="mx-auto w-[65vw] max-w-xl appearance-none justify-center rounded-lg border border-violet-400 bg-dark-100 px-5 py-2 text-sm text-dark-900 shadow-inner placeholder:text-dark-400 focus:border-violet-900 focus:outline-none focus:ring-1 focus:ring-violet-400 dark:border-violet-400 dark:bg-dark-300 dark:text-dark-100 dark:placeholder:text-dark-100 lg:w-[50vw]"
       />
-      <p hidden>
+      <p>
         <label>
           Don’t fill this out: <input name="bot-field" />
         </label>
@@ -107,4 +105,5 @@ const NetlifyForm = () => {
     </form>
   );
 };
+
 export default NetlifyForm;
