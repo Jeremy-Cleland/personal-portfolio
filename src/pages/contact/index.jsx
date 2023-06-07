@@ -1,8 +1,6 @@
 import { motion as m } from "framer-motion";
-// import ContactForm from "./ContactForm.jsx";
-
+import Form from "./Form.jsx";
 import Header from "../../components/reusable/Header.jsx";
-import { Form } from "formik";
 
 const Contact = () => {
   return (

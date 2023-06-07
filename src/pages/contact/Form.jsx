@@ -5,11 +5,16 @@ const Form = () => {
       method="post"
       data-netlify="true"
       onSubmit="submit"
+      data-netlify-honeypot="bot-field"
       className="mx-auto my-10"
     >
       <p className="mb-8 font-Fira text-2xl text-dark-600 dark:text-dark-100">
         Contact Form
       </p>
+      <div className="hidden">
+        <input name="bot-field" />
+      </div>
+
       <input type="hidden" name="form-name" value="contact" />
       <div>
         <label
