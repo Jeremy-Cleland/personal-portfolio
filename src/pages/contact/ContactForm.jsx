@@ -76,7 +76,7 @@ const ContactForm = () => {
       <div className="mx-auto flex items-center justify-center font-Fira text-dark-900 dark:text-dark-100">
         <div className="rounded-lg bg-dark-100 p-10 dark:bg-dark-900">
           {/* Contact form */}
-          <form onSubmit={handleSubmit} className="mx-auto my-10">
+          <form type="hidden" onSubmit={handleSubmit} className="mx-auto my-10">
             <p className="mb-8 font-Fira text-2xl text-dark-600 dark:text-dark-100">
               Contact Form
             </p>
