@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Form = () => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   return (
     <div className="container">
@@ -16,6 +17,17 @@ const Form = () => {
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className="input">
+          <label htmlFor="email">email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="input">
