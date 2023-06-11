@@ -123,12 +123,12 @@ export const projectData = [
       {
         id: 1,
         title: "Project 2",
-        img: Image3,
+        img: Image1,
       },
       {
         id: 2,
         title: "Project 2",
-        img: Image4,
+        img: Image1,
       },
     ],
     About: {
@@ -190,12 +190,12 @@ export const projectData = [
       {
         id: 1,
         title: "Project 2",
-        img: Image3,
+        img: Image1,
       },
       {
         id: 2,
         title: "Project 2",
-        img: Image4,
+        img: Image1,
       },
     ],
     About: {
@@ -257,12 +257,12 @@ export const projectData = [
       {
         id: 1,
         title: "Project 2",
-        img: Image3,
+        img: Image1,
       },
       {
         id: 2,
         title: "Project 2",
-        img: Image4,
+        img: Image1,
       },
     ],
     About: {
