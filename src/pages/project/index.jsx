@@ -1,10 +1,16 @@
+import { useParams } from "react-router-dom";
+
 import ProjectGrid from "./ProjectGrid.jsx";
 import ProjectInfo from "./ProjectInfo.jsx";
 import ProjectOverview from "./ProjectOverview.jsx";
 import { ProjectProvider } from "../../context/ProjectContext.jsx";
 import { motion as m } from "framer-motion";
 
-const ProjectSingle = () => {
+const ProjectSingle = ({ projectData }) => {
+  const { id } = useParams();
+
+  // Find the project data that matches the ID
+  const project = projectData.find((project) => project.id === parseInt(id));
   return (
     <m.div
       initial={{ opacity: 0 }}

@@ -43,73 +43,276 @@ import {
 
 const iconStyle = "text-4xl mx-auto inline-block";
 
-export const projectData = {
-  Info: {
-    title: "RESTy API User Interface",
-    date: "Jul 26, 2023",
-    tags: "Web Development",
+export const projectData = [
+  {
+    id: 1,
+    Info: {
+      title: "RESTy API User Interface",
+      date: "Jul 26, 2023",
+      tags: "Web Development",
+    },
+    Images: [
+      {
+        id: 1,
+        title: "RESTy UI",
+        img: Image1,
+      },
+      {
+        id: 2,
+        title: "RESTy UI",
+        img: Image2,
+      },
+    ],
+    About: {
+      Heading: "Overview",
+      Overview:
+        "Web application to fetch data from an API and display it in a user-friendly way by pretty printing the JSON. The application can perform GET, POST, PUT, and DELETE requests to the API. The application also has a history feature that allows the user to view the history of their requests.",
+      Technologies: {
+        title: "Technologies",
+        techs: [
+          {
+            id: 1,
+            name: "ReactJS",
+            icon: <SiReact className={iconStyle} />,
+          },
+          {
+            id: 2,
+            name: "JavaScript",
+            icon: <SiJavascript className={iconStyle} />,
+          },
+          {
+            id: 3,
+            name: "Sass",
+            icon: <SiSass className={iconStyle} />,
+          },
+          {
+            id: 4,
+            name: "CSS",
+            icon: <SiCss3 className={iconStyle} />,
+          },
+          {
+            id: 5,
+            name: "Axios",
+            icon: <SiAxios className={iconStyle} />,
+          },
+        ],
+      },
+    },
+    URL: [
+      {
+        id: 1,
+        title: "Demo",
+        url: "https://cleland-resty.netlify.app/",
+      },
+      {
+        id: 2,
+        title: "Repository",
+        details: "https://github.com/jeremy-cleland/resty",
+      },
+    ],
   },
-  Images: [
-    {
-      id: 1,
-      title: "RESTy UI",
-      img: Image1,
+  //! Project 2
+  {
+    id: 2,
+    Info: {
+      title: "Project 2",
+      date: "Aug 1, 2023",
+      tags: "Web Development",
     },
-    {
-      id: 2,
-      title: "RESTy UI",
-      img: Image2,
+    Images: [
+      {
+        id: 1,
+        title: "Project 2",
+        img: Image3,
+      },
+      {
+        id: 2,
+        title: "Project 2",
+        img: Image4,
+      },
+    ],
+    About: {
+      Heading: "Overview",
+      Overview: "Description of Project 2",
+      Technologies: {
+        title: "Technologies",
+        techs: [
+          {
+            id: 1,
+            name: "ReactJS",
+            icon: <SiReact className={iconStyle} />,
+          },
+          {
+            id: 2,
+            name: "JavaScript",
+            icon: <SiJavascript className={iconStyle} />,
+          },
+          {
+            id: 3,
+            name: "Sass",
+            icon: <SiSass className={iconStyle} />,
+          },
+          {
+            id: 4,
+            name: "CSS",
+            icon: <SiCss3 className={iconStyle} />,
+          },
+          {
+            id: 5,
+            name: "Axios",
+            icon: <SiAxios className={iconStyle} />,
+          },
+        ],
+      },
     },
-  ],
-
-  About: {
-    Heading: "Overview",
-    Overview:
-      "Web application to fetch data from an API and display it in a user-friendly way by pretty printing the JSON. The application can perform GET, POST, PUT, and DELETE requests to the API. The application also has a history feature that allows the user to view the history of their requests.",
-    Technologies: {
-      title: "Technologies",
-      techs: [
-        {
-          id: 1,
-          name: "ReactJS",
-          icon: <SiReact className={iconStyle} />,
-        },
-        {
-          id: 2,
-          name: "JavaScript",
-          icon: <SiJavascript className={iconStyle} />,
-        },
-        {
-          id: 3,
-          name: "Sass",
-          icon: <SiSass className={iconStyle} />,
-        },
-        {
-          id: 4,
-          name: "CSS",
-          icon: <SiCss3 className={iconStyle} />,
-        },
-        {
-          id: 5,
-          name: "Axios",
-          icon: <SiAxios className={iconStyle} />,
-        },
-      ],
-    },
+    URL: [
+      {
+        id: 1,
+        title: "Demo",
+        url: "https://project2.netlify.app/",
+      },
+      {
+        id: 2,
+        title: "Repository",
+        details: "https://github.com/username/project2",
+      },
+    ],
   },
-  URL: [
-    {
-      id: 1,
-      title: "Demo",
-      url: "https://cleland-resty.netlify.app/",
+  //! Project 3
+  {
+    id: 3,
+    Info: {
+      title: "Project 2",
+      date: "Aug 1, 2023",
+      tags: "Web Development",
     },
-    {
-      id: 2,
-      title: "Repository",
-      details: "https://github.com/jeremy-cleland/resty",
+    Images: [
+      {
+        id: 1,
+        title: "Project 2",
+        img: Image3,
+      },
+      {
+        id: 2,
+        title: "Project 2",
+        img: Image4,
+      },
+    ],
+    About: {
+      Heading: "Overview",
+      Overview: "Description of Project 2",
+      Technologies: {
+        title: "Technologies",
+        techs: [
+          {
+            id: 1,
+            name: "ReactJS",
+            icon: <SiReact className={iconStyle} />,
+          },
+          {
+            id: 2,
+            name: "JavaScript",
+            icon: <SiJavascript className={iconStyle} />,
+          },
+          {
+            id: 3,
+            name: "Sass",
+            icon: <SiSass className={iconStyle} />,
+          },
+          {
+            id: 4,
+            name: "CSS",
+            icon: <SiCss3 className={iconStyle} />,
+          },
+          {
+            id: 5,
+            name: "Axios",
+            icon: <SiAxios className={iconStyle} />,
+          },
+        ],
+      },
     },
-  ],
-};
+    URL: [
+      {
+        id: 1,
+        title: "Demo",
+        url: "https://project2.netlify.app/",
+      },
+      {
+        id: 2,
+        title: "Repository",
+        details: "https://github.com/username/project2",
+      },
+    ],
+  },
+  //! Project 4
+  {
+    id: 4,
+    Info: {
+      title: "Project 2",
+      date: "Aug 1, 2023",
+      tags: "Web Development",
+    },
+    Images: [
+      {
+        id: 1,
+        title: "Project 2",
+        img: Image3,
+      },
+      {
+        id: 2,
+        title: "Project 2",
+        img: Image4,
+      },
+    ],
+    About: {
+      Heading: "Overview",
+      Overview: "Description of Project 2",
+      Technologies: {
+        title: "Technologies",
+        techs: [
+          {
+            id: 1,
+            name: "ReactJS",
+            icon: <SiReact className={iconStyle} />,
+          },
+          {
+            id: 2,
+            name: "JavaScript",
+            icon: <SiJavascript className={iconStyle} />,
+          },
+          {
+            id: 3,
+            name: "Sass",
+            icon: <SiSass className={iconStyle} />,
+          },
+          {
+            id: 4,
+            name: "CSS",
+            icon: <SiCss3 className={iconStyle} />,
+          },
+          {
+            id: 5,
+            name: "Axios",
+            icon: <SiAxios className={iconStyle} />,
+          },
+        ],
+      },
+    },
+    URL: [
+      {
+        id: 1,
+        title: "Demo",
+        url: "https://project2.netlify.app/",
+      },
+      {
+        id: 2,
+        title: "Repository",
+        details: "https://github.com/username/project2",
+      },
+    ],
+  },
+];
 
 // SocialShareHeading: "Share",
 // SocialSharing: [

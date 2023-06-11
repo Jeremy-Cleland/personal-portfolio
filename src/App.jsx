@@ -2,6 +2,8 @@ import { useState } from "react";
 import clsx from "clsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import { projectData } from "./data/projectData.jsx";
+
 import Sidebar from "./components/sidebar/index.jsx";
 import Home from "./pages/home/index.jsx";
 import About from "./pages/about/index.jsx";
@@ -33,6 +35,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/portfolio/project" element={<ProjectSingle />} />
+            <Route
+              path="/portfolio/:id"
+              element={<ProjectSingle projectData={projectData} />}
+            />
             <Route path="/resume" element={<Resume />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
