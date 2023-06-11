@@ -6,7 +6,6 @@ import ProjectCard from "./ProjectCard.jsx";
 import { motion as m } from "framer-motion";
 import { fadeInVariant } from "../../utils/variants.js";
 import Card from "../../components/reusable/Card.jsx";
-import Button from "../../components/reusable/Button.jsx";
 
 const PortfolioSection = () => {
   const {
@@ -74,8 +73,8 @@ const PortfolioSection = () => {
           </h4>
         </div>
 
-        <div className="mx-auto my-2 grid max-w-6xl grid-rows-2 justify-between gap-5 sm:my-2.5 md:flex ">
-          <div className="group flex w-[80vw] rounded-lg border-[1px] border-gray-200 bg-dark-100 pl-2  dark:border-violet-400/60 dark:bg-dark-600 md:w-72">
+        <div className="mx-auto my-5 grid max-w-6xl grid-rows-2 justify-between gap-5 sm:my-2.5 md:flex ">
+          <div className="group mx-5 flex w-72 rounded-lg border-[1px] border-gray-200 bg-dark-100 pl-2  dark:border-violet-400/60 dark:bg-dark-600">
             <RiSearch2Line className="my-auto mr-2 h-5 w-5" />
             <input
               onChange={(e) => {

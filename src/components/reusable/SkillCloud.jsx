@@ -6,7 +6,7 @@ import { motion as m } from "framer-motion";
 const SkillCloud = () => {
   return (
     <div>
-      <div className="mx-auto my-10 max-w-7xl">
+      <div className="mx-auto my-10  max-w-7xl">
         <div className="my-5 border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200">
           <h4 className="text-center font-Fira text-lg tracking-tight md:text-left ">
             <span className="text-base text-violet-400"> {">"} </span> Languages

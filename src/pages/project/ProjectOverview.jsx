@@ -14,7 +14,7 @@ const ProjectOverview = () => {
         duration: 1,
         delay: 0.3,
       }}
-      className="mb-16 flex flex-col gap-0 md:flex md:flex-row md:gap-10"
+      className="mb-16 flex flex-col gap-0 md:gap-10 lg:flex-row"
     >
       <div className="mb-7 grow">
         <m.h3
@@ -46,12 +46,12 @@ const ProjectOverview = () => {
         >
           {Technologies.title}
         </m.h3>
-        <div className="flex w-full flex-row gap-10 text-center font-SourceCodePro text-dark-900 dark:text-dark-100">
+        <div className="flex w-full flex-row gap-5 text-center font-SourceCodePro text-dark-900 dark:text-dark-100 lg:gap-10">
           {Technologies.techs.map((tech) => (
             <m.div
               whileHover={{ scale: 1.05, color: "#A38CF3" }}
               transition={{ duration: 0.3 }}
-              className="mx-auto flex flex-col items-center justify-center gap-5"
+              className="mx-auto flex flex-col items-center justify-center gap-1 text-xs lg:text-sm"
               key={tech.id}
             >
               {tech.icon}

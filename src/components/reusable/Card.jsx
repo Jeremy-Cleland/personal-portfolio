@@ -7,7 +7,7 @@ const Card = ({ children, shadow }) => {
     : "";
   return (
     <m.div
-      className={`group mx-auto my-10 max-w-7xl rounded-lg bg-white p-6 dark:bg-dark-900 ${shadowClass}`}
+      className={`group mx-auto my-10 max-w-7xl rounded-lg bg-white px-2 dark:bg-dark-900 md:p-6 ${shadowClass}`}
       variants={cardVariants}
       initial="hidden"
       animate="visible"

@@ -1,6 +1,12 @@
 # Jeremy Cleland's Portfolio
 
-A personal portfolio website showcasing Jeremy Cleland's skills, projects, and accomplishments as a software developer. Built with React.js, Tailwind CSS, and featuring a responsive, user-friendly design.
+A personal portfolio website showcasing Jeremy Cleland's skills, projects, and accomplishments as a software developer. Built with React.js, Tailwind CSS, Framer Motion and Vite and featuring a responsive, user-friendly design.
+
+## Deployed Application
+
+[https://clelandco.com](https://clelandco.com)
+
+
 
 ![Screenshot of the portfolio website](./src/assets/img/screenshot.png)
 
@@ -51,3 +57,11 @@ npm run dev
 ## Usage
 
 Browse the portfolio sections using the sidebar navigation to learn more about Jeremy's skills, experiences, and projects. Toggle between dark and light modes using the button at the bottom of the sidebar.
+
+## License
+
+This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license.
+
+
+
+  

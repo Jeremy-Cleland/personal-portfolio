@@ -97,7 +97,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
           </div>
           <div
             className={clsx(
-              "mb-0 flex w-full",
+              " mb-0 flex w-full",
               isSidebarOpen ? "flex-row" : "flex-col",
               isSidebarOpen
                 ? "mx-auto "

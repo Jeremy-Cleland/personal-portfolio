@@ -14,7 +14,7 @@ const PortfolioFilter = ({ selectFilterProject, setSelectFilterProject }) => {
           e.target.value === "All Projects" ? "" : e.target.value
         );
       }}
-      className="w-[80vw] grow justify-end rounded-lg border-[1px] bg-dark-100 px-8 py-2 font-SourceCodePro text-sm text-dark-900 focus:outline-none  dark:border-violet-400/60 dark:bg-dark-600 dark:text-gray-200 md:w-72 "
+      className="mx-5 w-72 grow justify-end rounded-lg border-[1px] bg-dark-100 px-8 py-2 font-SourceCodePro text-sm text-dark-900 focus:outline-none  dark:border-violet-400/60 dark:bg-dark-600 dark:text-gray-200 "
     >
       {filterOptions.map((option) => (
         <option key={option}>{option}</option>

@@ -15,6 +15,44 @@
 </head>
 
 <body>
+<form name="contact" data-netlify="true" hidden>
+  <div className="input">
+    <input type="text" id="name" name="name" />
+  </div>
+    <div className="input">
+      <input type="email" id="email" name="email" />
+    </div>
+  <div className="input">
+    <textarea id="message" name="message"></textarea>
+  </div>
+</form>
+
+    <!-- <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    
+      <p class="hidden">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+    
+      <p>
+    
+        <input type="text" name="name" />
+      </p>
+    
+      <p>
+    
+        <input type="email" name="email" />
+      </p>
+    
+      <p>
+    
+        <textarea name="message"></textarea>
+    
+      </p>
+    
+      <div data-netlify-recaptcha="true"></div>
+    
+    </form> -->
+
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
