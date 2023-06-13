@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion as m } from "framer-motion";
-import Card from "../../components/reusable/Card.jsx";
+import Card from "./Card.jsx";
 
 const Skill = ({ icon, name, delay }) => {
   const [showTooltip, setShowTooltip] = useState(false);

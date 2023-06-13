@@ -8,12 +8,10 @@ const ScrollProgress = ({ position }) => {
     restDelta: 0.001,
   });
   return (
-    <>
-      <m.div
-        style={{ scaleX }}
-        className={`position-fixed transform-origin-0 left-0 right-0 ${position} top-0  h-5 bg-violet-400`}
-      />
-    </>
+    <m.div
+      style={{ scaleX }}
+      className={`position-fixed transform-origin-0 left-0 right-0 ${position} top-0  h-5 bg-violet-400`}
+    />
   );
 };
 
