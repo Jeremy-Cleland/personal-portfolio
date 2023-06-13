@@ -8,6 +8,7 @@ import card3 from "../assets/images/portfolio/project-2/card-3.jpg";
 export const portfolioData = [
   {
     id: 1,
+    name: "Resty",
     title: "RESTy",
     category: "Web Application",
     description:
@@ -17,6 +18,7 @@ export const portfolioData = [
   },
   {
     id: 2,
+    name: "ProjectTwo",
     title: "Horned Beast",
     category: "Web Application",
     description:
@@ -26,6 +28,7 @@ export const portfolioData = [
   },
   {
     id: 3,
+    name: "ProjectThree",
     title: "Battle of the Minds",
     category: "UI/UX Design",
     description:
@@ -35,6 +38,7 @@ export const portfolioData = [
   },
   {
     id: 4,
+    name: "ProjectFour",
     title: "Project 4",
     category: "UI/UX Design",
     description:
@@ -44,6 +48,7 @@ export const portfolioData = [
   },
   {
     id: 5,
+    name: "ProjectFive",
     title: "Project 5",
     category: "UI/UX Design",
     description:
@@ -53,6 +58,7 @@ export const portfolioData = [
   },
   {
     id: 6,
+    name: "ProjectSix",
     title: "Project 6",
     category: "Web Application",
     description:

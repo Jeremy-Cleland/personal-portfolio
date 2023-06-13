@@ -31,11 +31,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/portfolio/project" element={<ProjectSingle />} />
-            <Route
-              path="/portfolio/:id"
-              element={<ProjectSingle projectData={projectData} />}
-            />
+            <Route path="/portfolio/:projectName" element={<ProjectSingle />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
