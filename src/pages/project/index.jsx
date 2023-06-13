@@ -1,12 +1,10 @@
 import { useParams } from "react-router-dom";
+import { motion as m } from "framer-motion";
 
 import ProjectGrid from "./ProjectGrid.jsx";
 import ProjectInfo from "./ProjectInfo.jsx";
 import ProjectOverview from "./ProjectOverview.jsx";
 
-import { useParams } from "react-router-dom";
-
-import { motion as m } from "framer-motion";
 import { SingleProjectProvider } from "../../context/SingleProjectContext.jsx";
 
 const ProjectSingle = () => {

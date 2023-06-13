@@ -14,7 +14,7 @@ const NavItem = ({ isSidebarOpen, icon: Icon, text, path }) => {
         className="flex items-center justify-center space-x-3 p-4"
       >
         <Icon className={clsx("h-5 w-5", isSidebarOpen ? "mx-2.5" : "")} />
-        {isSidebarOpen && <span className="ml-2">{text}</span>}
+        {isSidebarOpen ? <span className="ml-2">{text}</span> : ""}
       </Link>
     </li>
   );
