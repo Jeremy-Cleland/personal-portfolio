@@ -1,7 +1,6 @@
 import { useState } from "react";
 import clsx from "clsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import Home from "./pages/home/index.jsx";
 import Sidebar from "./components/Sidebar/index.jsx";
 import About from "./pages/about/index.jsx";

@@ -1,3 +1,5 @@
+import { useParams } from "react-router-dom";
+
 import ProjectGrid from "./ProjectGrid.jsx";
 import ProjectInfo from "./ProjectInfo.jsx";
 import ProjectOverview from "./ProjectOverview.jsx";
@@ -9,7 +11,6 @@ import { SingleProjectProvider } from "../../context/SingleProjectContext.jsx";
 
 const ProjectSingle = () => {
   let { projectName } = useParams();
-
   return (
     <m.div
       initial={{ opacity: 0 }}

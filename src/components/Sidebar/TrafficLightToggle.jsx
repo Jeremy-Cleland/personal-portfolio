@@ -1,7 +1,4 @@
 import { useState } from "react";
-// import Close from "../../assets/icons/ui/close.svg";
-// import Min from "../../assets/icons/ui/min.svg";
-// import Max from "../../assets/icons/ui/max.svg";
 import { Max, Min, Close } from "../../assets/icons/ui";
 
 const TrafficLightToggle = ({ toggleSidebar }) => {
