@@ -5,7 +5,7 @@ import { ProjectFour as ProjectFourJson } from "../data/ProjectFour.jsx";
 import { ProjectFive as ProjectFiveJson } from "../data/ProjectFive.jsx";
 import { ProjectSix as ProjectSixJson } from "../data/ProjectSix.jsx";
 
-export const projectsDataList = [
+const projectsDataList = [
   ProjectTwoJson,
   ProjectThreeJson,
   ProjectFourJson,
@@ -15,7 +15,6 @@ export const projectsDataList = [
 ];
 
 import { useState, createContext } from "react";
-import { projectsDataList } from "./projectsData";
 
 export const SingleProjectContext = createContext();
 
