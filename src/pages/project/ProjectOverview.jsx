@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { motion as m } from "framer-motion";
-import ProjectContext from "../../context/ProjectContext.jsx";
+import { SingleProjectContext } from "../../context/SingleProjectContext.jsx";
 
 const ProjectOverview = () => {
-  const { projectData } = useContext(ProjectContext);
-  const { Overview, Technologies, Heading } = projectData.About;
+  const { singleProjectData } = useContext(SingleProjectContext);
+
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -27,10 +27,10 @@ const ProjectOverview = () => {
           }}
           className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
         >
-          {Heading}
+          {singleProjectData.about.heading}
         </m.h3>
         <p className="mb-2 font-Fira text-sm font-medium leading-6 ">
-          {Overview}
+          {singleProjectData.about.overview}
         </p>
       </div>
       <div className="mb-7 grow">
@@ -44,10 +44,10 @@ const ProjectOverview = () => {
           }}
           className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
         >
-          {Technologies.title}
+          {singleProjectData.about.technologies.title}
         </m.h3>
         <div className="flex w-full flex-row gap-5 text-center font-SourceCodePro text-dark-900 dark:text-dark-100 lg:gap-10">
-          {Technologies.techs.map((tech) => (
+          {singleProjectData.about.technologies.techs.map((tech) => (
             <m.div
               whileHover={{ scale: 1.05, color: "#A38CF3" }}
               transition={{ duration: 0.3 }}

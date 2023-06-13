@@ -1,12 +1,9 @@
 import { useContext } from "react";
 import { motion as m } from "framer-motion";
-import ProjectContext from "../../context/ProjectContext.jsx";
+import { SingleProjectContext } from "../../context/SingleProjectContext.jsx";
 
 const ProjectInfo = () => {
-  const { projectData } = useContext(ProjectContext);
-
-  const { title, tags, date } = projectData.Info;
-
+  const { singleProjectData } = useContext(SingleProjectContext);
   return (
     <m.section
       initial={{ opacity: 0 }}
@@ -29,18 +26,18 @@ const ProjectInfo = () => {
           }}
           className="my-5 border-b-4 border-violet-400 py-5 text-center font-ChillaxBold text-xl font-bold leading-4 tracking-wide text-dark-900 dark:text-dark-100 md:my-10 md:text-2xl"
         >
-          {title}
+          {singleProjectData.info.title}
         </m.h1>
       </div>
       <div className="flex w-full flex-row text-dark-900 dark:text-dark-100">
         <div className="flex basis-1/2 text-left">
           <span className=" font-Fira text-sm tracking-tight lg:text-base">
-            {tags}
+            {singleProjectData.info.tags}
           </span>
         </div>
         <div className="basis-1/2 text-right">
           <span className="font-Fira text-sm tracking-tight lg:text-base">
-            {date}
+            {singleProjectData.info.date}
           </span>
         </div>
       </div>

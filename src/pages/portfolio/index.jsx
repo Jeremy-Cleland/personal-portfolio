@@ -1,7 +1,6 @@
 import { motion as m } from "framer-motion";
 import ScrollProgress from "../../components/reusable/ScrollProgress.jsx";
 import PortfolioGrid from "./PortfolioGrid.jsx";
-import { PortfolioProvider } from "../../context/PortfolioContext.jsx";
 import Header from "../../components/reusable/Header.jsx";
 
 const Portfolio = () => {
@@ -22,10 +21,7 @@ const Portfolio = () => {
         subtitle=" Showcasing my growth as a developer and the Impact of Military
           Precision in Software Development"
       />
-
-      <PortfolioProvider>
-        <PortfolioGrid />
-      </PortfolioProvider>
+      <PortfolioGrid />
     </m.div>
   );
 };
