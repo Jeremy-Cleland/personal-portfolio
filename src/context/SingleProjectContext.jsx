@@ -22,7 +22,7 @@ export const SingleProjectProvider = ({ projectName, children }) => {
   const singleIndex = projectsDataList.findIndex(
     (projectData) => projectData.name === projectName
   );
-  console.log("singleIndex", singleIndex);
+  
 
   const [singleProjectData, setSingleProjectData] = useState(
     projectsDataList[singleIndex]
