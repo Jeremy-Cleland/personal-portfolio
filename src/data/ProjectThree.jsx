@@ -12,7 +12,7 @@ export const ProjectThree = {
   category: "Web Application",
   img: image1,
   info: {
-    title: "Project 2",
+    title: "Expense Tracking App",
     date: "Jan 3, 2023",
     tags: "Web Development",
   },
