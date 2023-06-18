@@ -4,7 +4,7 @@ import { motion as m } from "framer-motion";
 import ProjectGrid from "./ProjectGrid.jsx";
 import ProjectInfo from "./ProjectInfo.jsx";
 import ProjectOverview from "./ProjectOverview.jsx";
-
+import ButtonGroup from "./ButtonGroup.jsx";
 import { SingleProjectProvider } from "../../context/SingleProjectContext.jsx";
 
 const ProjectSingle = () => {
@@ -24,6 +24,7 @@ const ProjectSingle = () => {
         <ProjectInfo />
         <ProjectOverview />
         <ProjectGrid />
+        <ButtonGroup />
       </SingleProjectProvider>
     </m.div>
   );
