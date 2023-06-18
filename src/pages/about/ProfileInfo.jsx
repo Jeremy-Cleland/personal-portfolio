@@ -3,7 +3,7 @@ import { useContext } from "react";
 import SocialMedia from "./SocialMedia.jsx";
 import { slideInVariant } from "../../utils/variants.js";
 import { AboutMeContext } from "../../context/AboutMeContext.jsx";
-import PropTypes from "prop-types";
+
 const ProfileInfo = () => {
   // const { bio } = aboutMeData;
   const { aboutMe } = useContext(AboutMeContext);
