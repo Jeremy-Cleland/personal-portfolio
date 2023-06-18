@@ -83,7 +83,7 @@ const Form = () => {
               value={formData.message}
               onChange={handleInputChange}
               className="w-full rounded-lg border border-gray-300 border-opacity-50 bg-dark-100 px-2 py-2 font-ChillaxLight text-dark-900 shadow-sm dark:border-violet-400 dark:bg-dark-400 dark:text-dark-100 dark:placeholder:text-dark-100/60"
-            ></textarea>
+            />
           </div>
 
           <div className="mx-auto my-6 text-center">

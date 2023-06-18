@@ -9,6 +9,7 @@ import ProjectSingle from "./pages/project/index.jsx";
 import Resume from "./pages/resume/index.jsx";
 import Blog from "./pages/blog/index.jsx";
 import Contact from "./pages/contact/index.jsx";
+import PageNotFound from "./pages/notfound/PageNotFound.jsx";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -23,7 +24,7 @@ function App() {
         </div>
         <main
           className={clsx(
-            "mx-auto w-screen justify-center bg-dark-50 text-dark-900 dark:bg-dark-800 dark:text-dark-100 sm:m-0 sm:p-10",
+            "mx-auto w-screen justify-center bg-dark-50 p-10 text-dark-900 dark:bg-dark-800 dark:text-dark-100 sm:m-0",
             isSidebarOpen ? "md:ml-60" : "md:ml-20"
           )}
         >
@@ -31,14 +32,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/portfolio/project" element={<ProjectSingle />} />
-            <Route
-              path="/portfolio/:id"
-              element={<ProjectSingle projectData={projectData} />}
-            />
+            <Route path="/portfolio/:projectName" element={<ProjectSingle />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </main>
       </div>

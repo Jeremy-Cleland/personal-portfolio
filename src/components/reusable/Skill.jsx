@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion as m } from "framer-motion";
-import Card from "../../components/reusable/Card.jsx";
+import Card from "./Card.jsx";
+import PropTypes from "prop-types";
 
 const Skill = ({ icon, name, delay }) => {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -47,6 +48,10 @@ const Skill = ({ icon, name, delay }) => {
       </Card>
     </m.div>
   );
+};
+
+Skill.propTypes = {
+  name: PropTypes.string.isRequired,
 };
 
 export default Skill;

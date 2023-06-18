@@ -14,6 +14,10 @@ import {
   RiMenu2Line,
   RiCloseCircleLine,
 } from "react-icons/ri";
+import {
+  TbSquareRoundedArrowLeft,
+  TbSquareRoundedArrowRight,
+} from "react-icons/tb";
 import ColorModeToggle from "./ColorModeToggle.jsx";
 import NavItem from "./NavItem.jsx";
 import SocialLink from "./SocialLink.jsx";
@@ -26,13 +30,17 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
 
   const SIDEBAR_WIDTH_OPEN = "md:w-60";
   const SIDEBAR_WIDTH_CLOSED = "md:w-20";
-
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  const SidebarIcon = isSidebarOpen
+    ? TbSquareRoundedArrowLeft
+    : TbSquareRoundedArrowRight;
 
   return (
     <>
@@ -40,17 +48,26 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
         className={clsx(
           "h-screen bg-white text-dark-900 dark:bg-dark-900",
           isSidebarOpen ? SIDEBAR_WIDTH_OPEN : SIDEBAR_WIDTH_CLOSED,
-          " hidden md:flex md:flex-col md:p-3"
+          "hidden md:flex md:flex-col md:p-3"
         )}
       >
         <TrafficLightToggle toggleSidebar={toggleSidebar} />
-        <div className=" flex h-full flex-col justify-between">
-          <div className="pt-16">
+
+        <div className="flex h-full flex-col justify-between">
+          <div className="-mr-2 flex justify-end  py-8">
+            <button
+              className=" p-2 text-dark-900 hover:text-violet-400 focus:outline-none dark:text-dark-100/50 dark:hover:text-violet-400"
+              onClick={toggleSidebar}
+            >
+              <SidebarIcon size={24} />
+            </button>
+          </div>
+          <div className="pt-4">
             <img
               src={image}
               alt="author"
               className={clsx(
-                "mx-auto drop-shadow-sm hover:scale-110",
+                "mx-auto drop-shadow-sm  hover:scale-110",
                 isSidebarOpen ? "w-1/2 max-w-[200px]" : "w-full max-w-[100px]"
               )}
             />

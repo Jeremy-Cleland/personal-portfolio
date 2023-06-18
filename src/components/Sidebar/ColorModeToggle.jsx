@@ -1,4 +1,5 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
+import PropTypes from "prop-types";
 import clsx from "clsx";
 import { RiMoonLine, RiSunLine } from "react-icons/ri";
 
@@ -25,6 +26,7 @@ const ColorModeToggle = ({ colorMode, setColorMode, isSidebarOpen }) => {
       )}
       onClick={toggleColorMode}
       onKeyDown={handleKeyDown}
+      aria-label="Toggle Color Mode"
       tabIndex={0}
       role="button"
     >
@@ -37,6 +39,12 @@ const ColorModeToggle = ({ colorMode, setColorMode, isSidebarOpen }) => {
       </div>
     </div>
   );
+};
+
+ColorModeToggle.propTypes = {
+  colorMode: PropTypes.string.isRequired,
+  setColorMode: PropTypes.func.isRequired,
+  isSidebarOpen: PropTypes.bool.isRequired,
 };
 
 export default ColorModeToggle;

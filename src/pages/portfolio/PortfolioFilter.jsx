@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const filterOptions = [
   "All Projects",
   "Web Application",
@@ -21,6 +23,11 @@ const PortfolioFilter = ({ selectFilterProject, setSelectFilterProject }) => {
       ))}
     </select>
   );
+};
+
+PortfolioFilter.propTypes = {
+  selectFilterProject: PropTypes.string,
+  setSelectFilterProject: PropTypes.func,
 };
 
 export default PortfolioFilter;

@@ -1,16 +1,14 @@
 import { useParams } from "react-router-dom";
+import { motion as m } from "framer-motion";
 
 import ProjectGrid from "./ProjectGrid.jsx";
 import ProjectInfo from "./ProjectInfo.jsx";
 import ProjectOverview from "./ProjectOverview.jsx";
-import { ProjectProvider } from "../../context/ProjectContext.jsx";
-import { motion as m } from "framer-motion";
 
-const ProjectSingle = ({ projectData }) => {
-  const { id } = useParams();
+import { SingleProjectProvider } from "../../context/SingleProjectContext.jsx";
 
-  // Find the project data that matches the ID
-  const project = projectData.find((project) => project.id === parseInt(id));
+const ProjectSingle = () => {
+  let { projectName } = useParams();
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -22,11 +20,11 @@ const ProjectSingle = ({ projectData }) => {
       }}
       className="container mx-auto mt-5 md:mt-10"
     >
-      <ProjectProvider>
+      <SingleProjectProvider projectName={projectName}>
         <ProjectInfo />
         <ProjectOverview />
         <ProjectGrid />
-      </ProjectProvider>
+      </SingleProjectProvider>
     </m.div>
   );
 };

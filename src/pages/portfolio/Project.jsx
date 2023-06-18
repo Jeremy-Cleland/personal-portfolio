@@ -1,7 +1,8 @@
 import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Project = ({ title, category, image }) => {
+const Project = ({ name, title, category, image }) => {
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -14,12 +15,12 @@ const Project = ({ title, category, image }) => {
       className="container mx-auto "
     >
       <Link
-        to="/portfolio/project"
-        aria-label="Indvidual Project"
+        to={`/portfolio/${name}`}
+        aria-label={`${name}`}
         className="mt-10 block"
       >
         <div className="group relative mx-auto mt-10 flex items-center justify-center">
-          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-black to-dark-900 opacity-40 shadow-lg blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-70 dark:group-hover:opacity-100 "></div>
+          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-black to-dark-900 opacity-40 shadow-lg blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-70 dark:group-hover:opacity-100 " />
           <img
             alt={title}
             src={image}
@@ -31,9 +32,9 @@ const Project = ({ title, category, image }) => {
             {title}
           </strong>
 
-          <span className="hidden sm:block sm:h-px sm:w-8 sm:bg-violet-400"></span>
+          <span className="hidden sm:block sm:h-px sm:w-8 sm:bg-violet-400 " />
 
-          <p className="mt-0.5 font-Fira tracking-tight opacity-50 sm:mt-0">
+          <p className="mt-0.5 font-Fira tracking-tight opacity-60 sm:mt-0">
             {category}
           </p>
         </div>
@@ -41,4 +42,12 @@ const Project = ({ title, category, image }) => {
     </m.div>
   );
 };
+
+Project.propTypes = {
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
+
 export default Project;

@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { motion as m } from "framer-motion";
-import ProjectContext from "../../context/ProjectContext.jsx";
+import { SingleProjectContext } from "../../context/SingleProjectContext.jsx";
 
 const ProjectGrid = () => {
-  const { projectData } = useContext(ProjectContext);
+  const { singleProjectData } = useContext(SingleProjectContext);
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -15,7 +15,7 @@ const ProjectGrid = () => {
       }}
       className="grid grid-cols-1 gap-10 md:grid-cols-2"
     >
-      {projectData.Images.map((project) => (
+      {singleProjectData.images.map((project) => (
         <div key={project.id}>
           <m.img
             whileHover={{ scale: 1.05 }}

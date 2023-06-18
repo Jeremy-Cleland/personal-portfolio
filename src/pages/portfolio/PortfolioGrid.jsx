@@ -27,6 +27,8 @@ const PortfolioGrid = () => {
           category={project.category}
           image={project.img}
           key={project.id}
+          id={project.id}
+          name={project.name}
         />
       ));
     }
@@ -37,6 +39,8 @@ const PortfolioGrid = () => {
           category={project.category}
           image={project.img}
           key={project.id}
+          id={project.id}
+          name={project.name}
         />
       ));
     }
@@ -46,6 +50,8 @@ const PortfolioGrid = () => {
         category={project.category}
         image={project.img}
         key={project.id}
+        id={project.id}
+        name={project.name}
       />
     ));
   };

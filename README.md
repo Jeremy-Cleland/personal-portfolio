@@ -4,17 +4,17 @@ A personal portfolio website showcasing Jeremy Cleland's skills, projects, and a
 
 ## Deployed Application
 
-[https://clelandco.com](https://clelandco.com)
+[https://dev.clelandco.com](https://dev.clelandco.com)
 
-
-
-![Screenshot of the portfolio website](./src/assets/img/screenshot.png)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/924d78ba-50d2-4535-a332-e0d4fa60c936/deploy-status)](https://app.netlify.com/sites/jeremy-cleland/deploys)
 
 ## Table of Contents
 
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [License](#license)
+- [More Images](#more-images)
 
 ## Features
 
@@ -62,6 +62,33 @@ Browse the portfolio sections using the sidebar navigation to learn more about J
 
 This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license.
 
+### More Images
 
+#### Home Page
 
+![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio6.jpg)
+
+#### About Page
+
+![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio7.jpg)
+
+#### Portfolio Page
+
+![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio1.jpg)
+
+### Project Page
+
+![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio2.jpg)
+
+#### Resume Page
+
+![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio3.jpg)
+
+#### Contact Page
+
+![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio4.jpg)
+
+#### Light Mode
+
+![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio5.jpg)
   
