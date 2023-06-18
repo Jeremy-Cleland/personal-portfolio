@@ -6,6 +6,8 @@ A personal portfolio website showcasing Jeremy Cleland's skills, projects, and a
 
 [https://dev.clelandco.com](https://dev.clelandco.com)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/924d78ba-50d2-4535-a332-e0d4fa60c936/deploy-status)](https://app.netlify.com/sites/jeremy-cleland/deploys)
+
 ## Table of Contents
 
 - [Features](#features)
