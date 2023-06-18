@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import clsx from "clsx";
 
@@ -19,6 +20,13 @@ const NavItem = ({ isSidebarOpen, icon: Icon, text, path }) => {
       </Link>
     </li>
   );
+};
+
+NavItem.propTypes = {
+  isSidebarOpen: PropTypes.bool.isRequired,
+  icon: PropTypes.elementType.isRequired,
+  text: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 export default NavItem;

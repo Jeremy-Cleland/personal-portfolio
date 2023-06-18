@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 /**
  * TypewriterText - A component to animate text like a typewriter
@@ -44,6 +45,13 @@ const TypewriterText = ({ text, tag = "p", speed = 40, delay = 0 }) => {
     },
     startTyping ? displayText : text
   );
+};
+
+TypewriterText.propTypes = {
+  text: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  speed: PropTypes.number,
+  delay: PropTypes.number,
 };
 
 export default TypewriterText;

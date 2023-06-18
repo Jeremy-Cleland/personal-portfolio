@@ -1,4 +1,5 @@
 import { motion as m } from "framer-motion";
+import PropTypes from "prop-types";
 
 import { cardVariants } from "../../utils/variants.js";
 const Card = ({ children, shadow }) => {
@@ -16,6 +17,11 @@ const Card = ({ children, shadow }) => {
       {children}
     </m.div>
   );
+};
+
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+  shadow: PropTypes.bool,
 };
 
 export default Card;

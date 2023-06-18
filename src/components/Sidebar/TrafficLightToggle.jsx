@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import { Max, Min, Close } from "../../assets/icons/ui";
 
 const TrafficLightToggle = ({ toggleSidebar }) => {
@@ -66,6 +67,10 @@ const TrafficLightToggle = ({ toggleSidebar }) => {
       </div>
     </div>
   );
+};
+
+TrafficLightToggle.propTypes = {
+  toggleSidebar: PropTypes.func.isRequired,
 };
 
 export default TrafficLightToggle;

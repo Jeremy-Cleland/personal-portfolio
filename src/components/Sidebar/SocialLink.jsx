@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
   <a
@@ -17,4 +18,11 @@ const SocialLink = ({ icon: Icon, href, isSidebarOpen }) => (
     </div>
   </a>
 );
+
+SocialLink.propTypes = {
+  icon: PropTypes.elementType.isRequired,
+  href: PropTypes.string.isRequired,
+  isSidebarOpen: PropTypes.bool.isRequired,
+};
+
 export default SocialLink;
