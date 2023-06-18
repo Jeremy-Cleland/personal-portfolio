@@ -1,6 +1,8 @@
 import { useState } from "react";
 import clsx from "clsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import UseScrollToTop from "./hooks/UseScrollToTop.jsx";
+import ScrollToTop from "./components/reusable/ScrollToTop.jsx";
 import Home from "./pages/home/index.jsx";
 import Sidebar from "./components/Sidebar/index.jsx";
 import About from "./pages/about/index.jsx";
@@ -15,6 +17,7 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex min-h-screen">
         <div className="fixed z-10">
           <Sidebar
@@ -38,6 +41,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
+          <UseScrollToTop />
         </main>
       </div>
     </Router>
