@@ -9,6 +9,7 @@ import ProjectSingle from "./pages/project/index.jsx";
 import Resume from "./pages/resume/index.jsx";
 import Blog from "./pages/blog/index.jsx";
 import Contact from "./pages/contact/index.jsx";
+import PageNotFound from "./pages/notfound/PageNotFound.jsx";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -35,6 +36,7 @@ function App() {
             <Route path="/resume" element={<Resume />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </main>
       </div>
