@@ -1,44 +1,45 @@
-import image1 from "../assets/images/portfolio/project-1/1.jpg";
-import image2 from "../assets/images/portfolio/project-1/2.png";
+import image1 from "../assets/images/portfolio/project-2/react-native-todo.png";
+import image2 from "../assets/images/portfolio/project-2/react-native-todo-2.png";
 
-import { SiJavascript, SiReact, SiCss3, SiAxios, SiSass } from "react-icons/si";
+import { SiJavascript, SiExpo } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 
 const iconStyle = "text-4xl mx-auto inline-block";
 
 export const ProjectTwo = {
-  name: "ProjectTwo",
+  name: "React Native Task Manager ",
   id: 1,
-  title: "Project2",
-  category: "Web Application",
+  title: "React Native Task Manager",
+  category: "Mobile Application",
   img: image1,
   info: {
-    title: "Project 2",
+    title: "React Native Task Manager",
     date: "Jul 26, 2023",
     tags: "Web Development",
   },
   images: [
     {
       id: 1,
-      title: "Project 2",
+      title: "React Native Task Manager",
       img: image1,
     },
     {
       id: 2,
-      title: "Project 2",
+      title: "React Native Task Manager",
       img: image2,
     },
   ],
   about: {
     heading: "Overview",
     overview:
-      "Web application to fetch data from an API and display it in a user-friendly way by pretty printing the JSON. The application can perform GET, POST, PUT, and DELETE requests to the API. The application also has a history feature that allows the user to view the history of their requests.",
+      "React Native Task Manager is a mobile application that allows users to create, edit, and delete tasks. The application uses React Native, Expo, and React Navigation. The application also uses AsyncStorage to store the tasks locally on the user's device. React Navigation manages screens, navigation between them, and history as a Stack. The application also used Formik and Yup for form validation. ",
     technologies: {
       title: "Technologies",
       techs: [
         {
           id: 1,
-          name: "ReactJS",
-          icon: <SiReact className={iconStyle} />,
+          name: "React Native",
+          icon: <TbBrandReactNative className={iconStyle} />,
         },
         {
           id: 2,
@@ -47,18 +48,8 @@ export const ProjectTwo = {
         },
         {
           id: 3,
-          name: "Sass",
-          icon: <SiSass className={iconStyle} />,
-        },
-        {
-          id: 4,
-          name: "CSS",
-          icon: <SiCss3 className={iconStyle} />,
-        },
-        {
-          id: 5,
-          name: "Axios",
-          icon: <SiAxios className={iconStyle} />,
+          name: "Expo",
+          icon: <SiExpo className={iconStyle} />,
         },
       ],
     },
@@ -67,12 +58,12 @@ export const ProjectTwo = {
     {
       id: 1,
       title: "Demo",
-      url: "https://cleland-resty.netlify.app/",
+      url: "https://github.com/Jeremy-Cleland/React-Native-Todo-App",
     },
     {
       id: 2,
       title: "Repository",
-      details: "https://github.com/jeremy-cleland/resty",
+      details: "https://github.com/Jeremy-Cleland/React-Native-Todo-App",
     },
   ],
 };

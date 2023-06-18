@@ -1,11 +1,9 @@
 // Import images
 import image1 from "../assets/images/portfolio/project-1/1.jpg";
-import image3 from "../assets/images/portfolio/project-1/2.png";
-import image2 from "../assets/images/portfolio/project-2/1.png";
-import image4 from "../assets/images/portfolio/project-3/expense-tracker1.png";
-import card1 from "../assets/images/portfolio/project-1/card-1.jpg";
-import card2 from "../assets/images/portfolio/project-1/card-2.jpg";
-import card3 from "../assets/images/portfolio/project-2/card-3.jpg";
+// import image3 from "../assets/images/portfolio/project-1/2.png";
+import image2 from "../assets/images/portfolio/project-2/react-native-todo.png";
+import image3 from "../assets/images/portfolio/project-3/expense-tracker1.png";
+
 export const portfolioData = [
   {
     id: 1,
@@ -15,17 +13,15 @@ export const portfolioData = [
     description:
       "Web application to fetch data from an API and display it in a user-friendly way by pretty printing the JSON. The application can perform GET, POST, PUT, and DELETE requests to the API. The application also has a history feature that allows the user to view the history of their requests",
     img: image1,
-    cardimg: card1,
   },
   {
     id: 2,
     name: "ProjectTwo",
-    title: "Horned Beast",
-    category: "Web Application",
+    title: "React Native Task Manager",
+    category: "Mobile Application",
     description:
-      "Web application to fetch data from an API and display it in a user-friendly way by pretty printing the JSON. The application can perform GET, POST, PUT, and DELETE requests to the API. The application also has a history feature that allows the user to view the history of their requests",
+      "React Native Task Manager is a mobile application that allows users to create, edit, and delete tasks. The application uses React Native, Expo, and React Navigation. The application also uses AsyncStorage to store the tasks locally on the user's device. React Navigation manages screens, navigation between them, and history as a Stack. The application also used Formik and Yup for form validation.",
     img: image2,
-    cardimg: card3,
   },
   {
     id: 3,
@@ -34,8 +30,7 @@ export const portfolioData = [
     category: "Web Application",
     description:
       "Web Application that allows users to track their expenses. Users can add, edit, and delete expenses. The app also displays a chart that shows the percentage of expenses for each category.",
-    img: image4,
-    cardimg: card2,
+    img: image3,
   },
   {
     id: 4,
@@ -45,7 +40,6 @@ export const portfolioData = [
     description:
       "Web application to fetch data from an API and display it in a user-friendly way by pretty printing the JSON. The application can perform GET, POST, PUT, and DELETE requests to the API. The application also has a history feature that allows the user to view the history of their requests",
     img: image3,
-    cardimg: card2,
   },
   {
     id: 5,
@@ -55,7 +49,6 @@ export const portfolioData = [
     description:
       "Web application to fetch data from an API and display it in a user-friendly way by pretty printing the JSON. The application can perform GET, POST, PUT, and DELETE requests to the API. The application also has a history feature that allows the user to view the history of their requests",
     img: image3,
-    cardimg: card2,
   },
   {
     id: 6,
@@ -65,6 +58,5 @@ export const portfolioData = [
     description:
       "Web application to fetch data from an API and display it in a user-friendly way by pretty printing the JSON. The application can perform GET, POST, PUT, and DELETE requests to the API. The application also has a history feature that allows the user to view the history of their requests",
     img: image3,
-    cardimg: card2,
   },
 ];

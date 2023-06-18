@@ -40,7 +40,7 @@ const PortfolioSection = () => {
             title={project.title}
             category={project.category}
             description={project.description}
-            image={project.cardimg}
+            image={project.img}
             key={project.id}
           />
         ));
@@ -52,7 +52,7 @@ const PortfolioSection = () => {
           title={project.title}
           category={project.category}
           description={project.description}
-          image={project.cardimg}
+          image={project.img}
           key={project.id}
         />
       ));

@@ -54,9 +54,9 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
         <TrafficLightToggle toggleSidebar={toggleSidebar} />
 
         <div className="flex h-full flex-col justify-between">
-          <div className="flex justify-end py-8">
+          <div className="-mr-2 flex justify-end  py-8">
             <button
-              className="text-dark-900 hover:text-violet-400 focus:outline-none dark:text-dark-100 dark:hover:text-violet-400"
+              className=" p-2 text-dark-900 hover:text-violet-400 focus:outline-none dark:text-dark-100/50 dark:hover:text-violet-400"
               onClick={toggleSidebar}
             >
               <SidebarIcon size={24} />

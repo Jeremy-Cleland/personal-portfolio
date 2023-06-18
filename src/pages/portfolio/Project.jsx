@@ -34,7 +34,7 @@ const Project = ({ name, title, category, image }) => {
 
           <span className="hidden sm:block sm:h-px sm:w-8 sm:bg-violet-400 " />
 
-          <p className="mt-0.5 font-Fira tracking-tight opacity-50 sm:mt-0">
+          <p className="mt-0.5 font-Fira tracking-tight opacity-60 sm:mt-0">
             {category}
           </p>
         </div>
