@@ -14,6 +14,7 @@ const TrafficLightToggle = ({ toggleSidebar }) => {
           onMouseEnter={() => setCloseHover(true)}
           onMouseLeave={() => setCloseHover(false)}
           onClick={toggleSidebar}
+          aria-label="Close"
           role="button"
           onKeyDown={(event) => {
             if (event.key === "Enter") {
@@ -32,6 +33,7 @@ const TrafficLightToggle = ({ toggleSidebar }) => {
           onMouseLeave={() => setMinimizeHover(false)}
           onClick={toggleSidebar}
           role="button"
+          aria-label="Minimize"
           onKeyDown={(event) => {
             if (event.key === "Enter") {
               toggleSidebar();
@@ -48,6 +50,7 @@ const TrafficLightToggle = ({ toggleSidebar }) => {
           onMouseEnter={() => setMaximizeHover(true)}
           onMouseLeave={() => setMaximizeHover(false)}
           onClick={toggleSidebar}
+          aria-label="Maximize"
           role="button"
           onKeyDown={(event) => {
             if (event.key === "Enter") {

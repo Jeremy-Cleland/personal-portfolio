@@ -25,6 +25,7 @@ const ColorModeToggle = ({ colorMode, setColorMode, isSidebarOpen }) => {
       )}
       onClick={toggleColorMode}
       onKeyDown={handleKeyDown}
+      aria-label="Toggle Color Mode"
       tabIndex={0}
       role="button"
     >

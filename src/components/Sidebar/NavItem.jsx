@@ -12,6 +12,7 @@ const NavItem = ({ isSidebarOpen, icon: Icon, text, path }) => {
       <Link
         to={path}
         className="flex items-center justify-center space-x-3 p-4"
+        aria-label={text}
       >
         <Icon className={clsx("h-5 w-5", isSidebarOpen ? "mx-2.5" : "")} />
         {isSidebarOpen ? <span className="ml-2">{text}</span> : ""}
