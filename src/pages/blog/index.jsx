@@ -13,7 +13,7 @@ const Blog = () => {
       }}
       className="container mx-auto"
     >
-      <Header title=" Blog" subtitle="Coming Soon" />
+      <Header title=" Blog" subtitle="Coming Soon!!!" />
     </m.div>
   );
 };
