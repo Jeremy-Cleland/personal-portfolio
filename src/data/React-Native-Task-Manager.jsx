@@ -6,7 +6,7 @@ import { TbBrandReactNative } from "react-icons/tb";
 
 const iconStyle = "text-4xl mx-auto inline-block";
 
-export const ProjectTwo = {
+export const ReactNativeTaskManager = {
   name: "React-Native-Task-Manager ",
   id: 1,
   title: "React Native Task Manager",
