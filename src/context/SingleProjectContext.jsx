@@ -1,16 +1,10 @@
 import { Resty as RestyJson } from "../data/Resty.jsx";
 import { ReactNativeTaskManager as ReactNativeTaskManagerJson } from "../data/React-Native-Task-Manager.jsx";
-import { ProjectThree as ProjectThreeJson } from "../data/ProjectThree.jsx";
-import { ProjectFour as ProjectFourJson } from "../data/ProjectFour.jsx";
-import { ProjectFive as ProjectFiveJson } from "../data/ProjectFive.jsx";
-import { ProjectSix as ProjectSixJson } from "../data/ProjectSix.jsx";
+import { ExpenseTrackingApp as ExpenseTrackingAppJson } from "../data/Expense-Tracking-App.jsx";
 
 const projectsDataList = [
   ReactNativeTaskManagerJson,
-  ProjectThreeJson,
-  ProjectFourJson,
-  ProjectFiveJson,
-  ProjectSixJson,
+  ExpenseTrackingAppJson,
   RestyJson,
 ];
 

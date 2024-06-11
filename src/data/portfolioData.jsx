@@ -16,7 +16,7 @@ export const portfolioData = [
   },
   {
     id: 2,
-    name: "ProjectTwo",
+    name: "React Native Task Manager",
     title: "React Native Task Manager",
     category: "Mobile Application",
     description:
@@ -25,7 +25,7 @@ export const portfolioData = [
   },
   {
     id: 3,
-    name: "ProjectThree",
+    name: "Expense Tracking App",
     title: "Expense Tracking App",
     category: "Web Application",
     description:
