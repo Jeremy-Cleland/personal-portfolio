@@ -29,10 +29,7 @@ import {
   SiScikitlearn,
   SiPandas,
   SiNumpy,
-  SiPGVector,
   SiMilvus,
-  SiPinecone,
-  SiQdrant,
 } from "react-icons/si";
 
 export const resumeData = {
@@ -65,15 +62,12 @@ export const resumeData = {
       { name: "MongoDB", icon: <SiMongodb /> },
       { name: "MySQL", icon: <SiMysql /> },
       { name: "SQL", icon: <SiPostgresql /> },
-      { name: "Pinecone", icon: <SiPinecone /> },
       { name: "TensorFlow", icon: <SiTensorflow /> },
       { name: "PyTorch", icon: <SiPytorch /> },
       { name: "Scikit-learn", icon: <SiScikitlearn /> },
       { name: "Pandas", icon: <SiPandas /> },
       { name: "NumPy", icon: <SiNumpy /> },
-      { name: "Qdrant", icon: <SiQdrant /> },
       { name: "Milvus", icon: <SiMilvus /> },
-      { name: "PGVector", icon: <SiPGVector /> },
       { name: "Firebase", icon: <SiFirebase /> },
       { name: "OpenAI", icon: <SiOpenai /> },
       { name: "Anthropic", icon: <SiAnthropic /> },
