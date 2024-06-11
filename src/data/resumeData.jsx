@@ -11,14 +11,9 @@ import {
   SiRedux,
   SiMongodb,
   SiPostgresql,
-  // SiJson,
   SiAmazonaws,
   SiGit,
   SiGithub,
-  // SiVisualstudiocode,
-  // SiXcode,
-  // SiGoogleanalytics,
-  // SiVirtualbox,
   SiFirebase,
   SiTailwindcss,
   SiOpenai,
@@ -27,26 +22,24 @@ import {
   SiSass,
   SiStyledcomponents,
   SiMysql,
-  // SiPostman,
-  // SiInsomnia,
-  // SiFigma,
-  // SiHeroku,
-  // SiNetlify,
-  // SiRender,
-  // SiGitkraken,
   SiNextdotjs,
+  SiTensorflow,
+  SiPytorch,
+  SiScikitlearn,
+  SiPandas,
+  SiNumpy,
 } from "react-icons/si";
 
 export const resumeData = {
   personalInfo: {
     name: "Jeremy Cleland",
-    title: "Software Developer",
+    title: "Software Developer & AI Specialist",
     location: "Bay City, MI",
     email: "jeremy@clelandco.com",
     phone: "850-502-6273",
     linkedIn: "linkedin.com/in/jeremy-cleland",
     github: "github.com/jeremy-cleland",
-    bio: "Software Developer and Army veteran, with strong technical knowledge in JavaScript developing consumer-facing cross-platform applications. Devoted to producing innovative, client-centered solutions while maximizing efficiency through code. Retired Special Forces Medic with extensive experience in multicultural environments.",
+    bio: "Experienced Software Developer and Army veteran with a unique blend of technical and military expertise. Currently pursuing a Master of Science in Artificial Intelligence with a concentration in Knowledge Management and Reasoning. Proficient in developing cross-platform applications with a focus on innovation and efficiency. As a retired Special Forces Medic, I bring adaptability, problem-solving, and teamwork skills. Passionate about impactful software solutions and committed to excellence.",
   },
 
   technicalSkills: {
@@ -54,7 +47,6 @@ export const resumeData = {
       { name: "JavaScript", icon: <SiJavascript /> },
       { name: "HTML5", icon: <SiHtml5 /> },
       { name: "CSS3", icon: <SiCss3 /> },
-      // Splice Here
       { name: "Python", icon: <SiPython /> },
       { name: "Swift", icon: <SiSwift /> },
       { name: "Bash", icon: <SiGnubash /> },
@@ -78,6 +70,11 @@ export const resumeData = {
       { name: "AWS", icon: <SiAmazonaws /> },
       { name: "Git", icon: <SiGit /> },
       { name: "GitHub", icon: <SiGithub /> },
+      { name: "TensorFlow", icon: <SiTensorflow /> },
+      { name: "PyTorch", icon: <SiPytorch /> },
+      { name: "Scikit-learn", icon: <SiScikitlearn /> },
+      { name: "Pandas", icon: <SiPandas /> },
+      { name: "NumPy", icon: <SiNumpy /> },
     ],
   },
   techSkills: [
@@ -91,36 +88,46 @@ export const resumeData = {
     { name: "PostgreSQL", icon: <SiPostgresql />, delay: 0.1 },
     { name: "MySQL", icon: <SiMysql />, delay: 0.1 },
     { name: "MongoDB", icon: <SiMongodb />, delay: 0.1 },
-    { name: "MySQL", icon: <SiMysql />, delay: 0.1 },
-    { name: "MongoDB", icon: <SiMongodb />, delay: 0.1 },
+    { name: "TensorFlow", icon: <SiTensorflow />, delay: 0.1 },
+    { name: "PyTorch", icon: <SiPytorch />, delay: 0.1 },
   ],
   projects: [
-    {
-      title: "Card Travelers",
-      date: "Jan 2023",
-      url: "github.com/CardTravelers/TravelCardGame",
-      description:
-        "Single-player flash card game that allows users to guess the name of a location from a picture while using hints to track their score.",
-      techStack: ["JavaScript", "CSS", "HTML5"],
-    },
-    {
-      title: "Battle of the Minds",
-      date: "Feb 2023",
-      url: "github.com/Battle-of-the-Minds/Trivia-FE",
-      description:
-        "Single-player trivia game that uses the open trivia database API to ask the user questions and then uses our database to store user results.",
-      techStack: ["React", "MongoDB", "Express"],
-    },
     {
       title: "RESTy",
       date: "Mar 2023",
       url: "github.com/Jeremy-Cleland/resty",
       description:
         "REST application that allows the user to send API requests and receive formatted JSON.",
-      techStack: ["React"],
+      techStack: ["React", "Axios", "Sass"],
+    },
+    {
+      title: "Portfolio",
+      date: "June 2023",
+      url: "dev.clelandco.com",
+      description:
+        "Personal portfolio website showcasing my skills, projects, and accomplishments as a software developer.",
+      techStack: ["React.js", "Tailwind CSS", "Framer Motion", "Vite"],
+    },
+    {
+      title: "React Native To-do App",
+      date: "May 2023",
+      url: "github.com/jeremy-cleland/react-native-todo-app",
+      description:
+        "Task Force, a powerful task management application using React Native providing a simple and intuitive interface for efficient task management.",
+      techStack: ["React Native", "Expo", "Formik"],
     },
   ],
   education: [
+    {
+      institution: "University of Michigan-Dearborn",
+      location: "Dearborn, MI",
+      degree: "Master of Science in Artificial Intelligence (MS/AI)",
+      graduationYear: "Expected 2025",
+      bulletPoints: [
+        "Concentration in Knowledge Management and Reasoning.",
+        "Developing skills in machine learning, deep learning, and natural language processing.",
+      ],
+    },
     {
       institution: "Code Fellows",
       location: "Seattle, WA",
@@ -132,6 +139,7 @@ export const resumeData = {
         "Acquired advanced proficiency in JavaScript, mastering both front-end and back-end development frameworks and tools.",
         "Demonstrated problem-solving skills by identifying and resolving complex technical issues during the development lifecycle.",
         "Developed robust web applications and software solutions using cutting-edge technologies such as Node.js, React, and Express.",
+        "Cumulative GPA: 4.0/4.0",
       ],
     },
     {
@@ -156,19 +164,23 @@ export const resumeData = {
       startDate: "Jul 2014",
       endDate: "Aug 2022",
       description: [
-        "Effectively deployed technology in persistent surveillance, secure tactical communications, and cybersecurity solutions to real-world operations.",
-        "Leader at special assignment duty supporting a classified national mission.",
+        "Led a classified national mission, coordinating cross-functional teams and partner forces, resulting in the capture of an FBI Top 10 Most Wanted high-value target.",
+        "Implemented an automated tracking system, increasing accuracy and efficiency by 20%, saving over 200 hours per month in manual data entry.",
+        "Monitored and analyzed medical trends in South America, improving early detection of illnesses by 40%, leading to more effective treatment for 16 patients.",
+        "Developed and executed medical training programs, including a prolonged field care POI, enhancing proficiency for 12 SF medics and six SFOD-A units.",
+        "Coordinated OEHSA level III base camp studies overseas, ensuring safe living conditions for 150 soldiers, and developed MEDEVAC concepts resulting in successful evacuations.",
+        "Maintained and accounted for over $1.2 million in Detachment medical equipment without loss, ensuring Company readiness.",
       ],
     },
     {
-      position: "Special Forces Training",
+      position: "Special Operations Combat Medic",
       company: "United States Army",
       location: "Fort Bragg, NC",
       startDate: "Jan 2011",
       endDate: "Jul 2014",
       description: [
-        "Accomplished what is considered the most demanding physical and mental training globally, which has less than a 20% success rate among those who are preselected.",
-        "Learned excellent leadership abilities, including honesty and integrity, self-awareness, self-confidence, humility, accountability, delegation, and decision-making under pressure",
+        "Completed demanding training with a high success rate.",
+        "Demonstrated leadership abilities in high-pressure situations.",
       ],
     },
     {
@@ -178,7 +190,9 @@ export const resumeData = {
       startDate: "Sep 2008",
       endDate: "Jan 2011",
       description: [
-        "Effectively led a team to triage and manage medical care in austere environments.",
+        "Developed and implemented a streamlined medical documentation system.",
+        "Led a team in triaging and managing medical care in challenging environments.",
+        "Implemented training programs to enhance medical skills and teamwork.",
       ],
     },
   ],

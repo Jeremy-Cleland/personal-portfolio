@@ -1,10 +1,10 @@
 export const aboutMeData = {
   title: "About Me",
   bio: [
-    "Hi, I'm Jeremy — a seasoned Special Forces Medic turned full-stack JavaScript Developer. I'm based in Michigan and bring a unique blend of disciplined military training, cutting-edge software development expertise, and a global perspective to my work.",
+    "Hi, I'm Jeremy — a seasoned Special Forces Medic turned full-stack JavaScript Developer and AI Specialist. I'm based in Michigan and bring a unique blend of disciplined military training, cutting-edge software development expertise, and a global perspective to my work.",
     "My journey has been both diverse and challenging. I served in the U.S. Army Special Forces, specifically with the 7th Special Forces Group. My service took me from the remote regions of South America to the rugged terrain of Afghanistan, deploying my leadership and adaptability skills in high-stress environments.",
-    "In August 2022, I retired from my military career and set my sights on a new mission in the tech industry. I honed my skills in an  Advanced Software Development in Full-Stack JavaScript through an intensive 6-month bootcamp, applying the same discipline and problem-solving mindset I nurtured on the battlefield to the realm of coding.",
-    "Eager to expand my knowledge further, I graduated from Excelsior University this year, equipping me with the latest academic insights to deliver market-competitive software solutions.",
+    "In August 2022, I retired from my military career and set my sights on a new mission in the tech industry. I honed my skills in Advanced Software Development in Full-Stack JavaScript through an intensive 6-month bootcamp, applying the same discipline and problem-solving mindset I nurtured on the battlefield to the realm of coding.",
+    "Eager to expand my knowledge further, I graduated from Excelsior University with a Bachelor of Science in Liberal Arts, summa cum laude, equipping me with the latest academic insights to deliver market-competitive software solutions. Currently, I am pursuing a Master of Science in Artificial Intelligence at the University of Michigan-Dearborn, focusing on Knowledge Management and Reasoning.",
     "Software development captivates me with its constant innovation, growth, and the opportunity to apply the principles I lived by in the military. Every detail counts, and success depends on each individual's commitment and contribution.",
     "Today, as a developer, I harness my unique background, disciplined training, and academic insights to create innovative software solutions. I'm eager to bring these strengths to a forward-thinking team dedicated to delivering the best for its stakeholders.",
   ],
@@ -27,23 +27,24 @@ export const aboutMeData = {
       id: 3,
       date: "2022",
       title: "Bachelor of Science Liberal Arts",
-      description: "Graduated with a 4.0 GPA",
+      description: "Graduated with a 4.0 GPA, summa cum laude",
     },
     {
       id: 4,
       date: "2023",
       title: "Advanced Software Development in Full-Stack JavaScript",
       description:
-        "6 month program covering full-stack JavaScript development, including HTML, CSS, JavaScript, React, Redux, Node, Express, SQL, and MongoDB",
+        "6-month program covering full-stack JavaScript development, including HTML, CSS, JavaScript, React, Redux, Node, Express, SQL, and MongoDB. Graduated with a 4.0 GPA",
     },
     {
       id: 5,
-      date: "2022",
-      title: "Bachelor of Science Liberal Arts",
-      description: "Graduated with a 4.0 GPA",
+      date: "Expected 2025",
+      title: "Master of Science in Artificial Intelligence",
+      description: "Pursuing MS in AI with a concentration in Knowledge Management and Reasoning",
     },
   ],
 };
+
 // bio: [
 //   "Hi, I'm Jeremy- a seasoned Special Forces Medic turned Full Stack JavaScript Developer. I'm based in Michigan and bring a unique blend of disciplined military training and cutting-edge software development expertise to the table.",
 //   "My journey has been an unconventional one. I spent years as a Medical Sergeant in the U.S. Army Special Forces, where I was constantly put to the test in high-stress environments. In these roles, I developed the tenacity, leadership, and adaptability that has become the cornerstone of my professional persona.",
