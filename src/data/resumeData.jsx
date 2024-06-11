@@ -29,7 +29,6 @@ import {
   SiScikitlearn,
   SiPandas,
   SiNumpy,
-  SiMilvus,
 } from "react-icons/si";
 
 export const resumeData = {
@@ -67,7 +66,6 @@ export const resumeData = {
       { name: "Scikit-learn", icon: <SiScikitlearn /> },
       { name: "Pandas", icon: <SiPandas /> },
       { name: "NumPy", icon: <SiNumpy /> },
-      { name: "Milvus", icon: <SiMilvus /> },
       { name: "Firebase", icon: <SiFirebase /> },
       { name: "OpenAI", icon: <SiOpenai /> },
       { name: "Anthropic", icon: <SiAnthropic /> },
