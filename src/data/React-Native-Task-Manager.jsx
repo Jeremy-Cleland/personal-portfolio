@@ -1,5 +1,5 @@
-import image1 from "../assets/images/portfolio/project-2/react-native-todo.png";
-import image2 from "../assets/images/portfolio/project-2/react-native-todo-2.png";
+import image1 from "../assets/images/portfolio/ReactNativeTaskManager/react-native-todo.png";
+import image2 from "../assets/images/portfolio/ReactNativeTaskManager/react-native-todo-2.png";
 
 import { SiJavascript, SiExpo } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";

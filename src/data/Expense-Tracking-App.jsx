@@ -1,12 +1,12 @@
-import image1 from "../assets/images/portfolio/project-3/expense-tracker1.png";
-import image2 from "../assets/images/portfolio/project-3/expense-tracker2.png";
-import image3 from "../assets/images/portfolio/project-3/expense-tracker3.png";
+import image1 from "../assets/images/portfolio/ExpenseTrackingApp/expense-tracker1.png";
+import image2 from "../assets/images/portfolio/ExpenseTrackingApp/expense-tracker2.png";
+import image3 from "../assets/images/portfolio/ExpenseTrackingApp/expense-tracker3.png";
 import { SiJavascript, SiReact, SiCss3 } from "react-icons/si";
 
 const iconStyle = "text-4xl mx-auto inline-block";
 
 export const ExpenseTrackingApp = {
-  name: "ProjectThree",
+  name: "ExpenseTrackingApp",
   id: 1,
   title: "Expense Tracking App",
   category: "Web Application",

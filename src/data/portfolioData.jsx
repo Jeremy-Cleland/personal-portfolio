@@ -1,8 +1,8 @@
 // Import images
-import image1 from "../assets/images/portfolio/project-1/1.jpg";
+import image1 from "../assets/images/portfolio/Resty/1.jpg";
 // import image3 from "../assets/images/portfolio/project-1/2.png";
-import image2 from "../assets/images/portfolio/project-2/react-native-todo.png";
-import image3 from "../assets/images/portfolio/project-3/expense-tracker1.png";
+import image2 from "../assets/images/portfolio/ReactNativeTaskManager/react-native-todo.png";
+import image3 from "../assets/images/portfolio/ExpenseTrackingApp/expense-tracker1.png";
 
 export const portfolioData = [
   {

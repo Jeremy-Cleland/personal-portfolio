@@ -1,5 +1,5 @@
-import image1 from "../assets/images/portfolio/project-1/1.jpg";
-import image2 from "../assets/images/portfolio/project-1/2.png";
+import image1 from "../assets/images/Resty/project-1/1.jpg";
+import image2 from "../assets/images/Resty/project-1/2.png";
 
 import { SiJavascript, SiReact, SiCss3, SiAxios, SiSass } from "react-icons/si";
 
