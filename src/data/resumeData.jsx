@@ -33,13 +33,13 @@ import {
 export const resumeData = {
   personalInfo: {
     name: "Jeremy Cleland",
-    title: "Software Developer & AI Specialist",
+    title: "Full-Stack Software Developer & AI Specialist",
     location: "Bay City, MI",
     email: "jeremy@clelandco.com",
     phone: "850-502-6273",
     linkedIn: "linkedin.com/in/jeremy-cleland",
     github: "github.com/jeremy-cleland",
-    bio: "Experienced Software Developer and Army veteran with a unique blend of technical and military expertise. Currently pursuing a Master of Science in Artificial Intelligence with a concentration in Knowledge Management and Reasoning. Proficient in developing cross-platform applications with a focus on innovation and efficiency. As a retired Special Forces Medic, I bring adaptability, problem-solving, and teamwork skills. Passionate about impactful software solutions and committed to excellence.",
+    bio: "Jeremy Cleland is a versatile software developer and Army veteran, blending technical prowess with military experience. He is proficient in creating cross-platform applications with JavaScript, Python, and React. Pursuing a Master's in AI, Jeremy specializes in machine learning and data analysis. His military background as a Special Forces Medic enhances his adaptability, problem-solving, and leadership skills. His portfolio reflects his commitment to excellence and impactful software solutions.",
   },
 
   technicalSkills: {
