@@ -15,6 +15,7 @@ A personal portfolio website showcasing Jeremy Cleland's skills, projects, and a
 - [Usage](#usage)
 - [License](#license)
 - [More Images](#more-images)
+- [Blog Setup](#blog-setup)
 
 ## Features
 
@@ -58,6 +59,16 @@ npm run dev
 
 Browse the portfolio sections using the sidebar navigation to learn more about Jeremy's skills, experiences, and projects. Toggle between dark and light modes using the button at the bottom of the sidebar.
 
+## Blog Setup
+
+To set up the blog with WordPress, follow these steps:
+
+1. Install WordPress on your server or use a WordPress hosting provider.
+2. Install and activate the WordPress REST API plugin if it's not already included in your WordPress installation.
+3. Create some blog posts in your WordPress admin panel.
+4. Update the `src/pages/blog/index.jsx` file with your WordPress domain in the `axios.get` URL.
+5. Start the development server and navigate to the `/blog` route to see your blog posts.
+
 ## License
 
 This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license.
@@ -91,4 +102,3 @@ This project is licensed under the terms of the [MIT](https://opensource.org/lic
 #### Light Mode
 
 ![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio5.jpg)
-  
