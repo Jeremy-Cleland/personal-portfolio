@@ -7,7 +7,7 @@ const Blog = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get("https://yourdomain.com/wp-json/wp/v2/posts")
+    axios.get("https://clelandco.com/wp-json/wp/v2/posts")
       .then(response => {
         setPosts(response.data);
       })
