@@ -79,12 +79,12 @@ export const SepsisPredictionPipeline = {
     {
       id: 1,
       title: "Repository",
-      url: "https://github.com/Jeremy-Cleland/sepsis-prediction",
+      url: "https://github.com/Jeremy-Cleland/sepsis-early-detection",
     },
     {
       id: 2,
       title: "Documentation",
-      details: "https://github.com/Jeremy-Cleland/sepsis-prediction#readme",
+      details: "https://github.com/Jeremy-Cleland/sepsis-early-detection",
     },
   ],
 };
