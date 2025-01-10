@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { Max, Min, Close } from "../../assets/icons/ui";
+import { CloseIcon, MaxIcon, MinIcon } from "../../assets/icons/ui";
 
 const TrafficLightToggle = ({ toggleSidebar }) => {
   const [closeHover, setCloseHover] = useState(false);
@@ -25,7 +25,7 @@ const TrafficLightToggle = ({ toggleSidebar }) => {
           tabIndex={0}
         >
           {closeHover && (
-            <Close className="mx-auto h-2.5 w-2.5 items-center p-[0.1em]" />
+            <CloseIcon className="mx-auto h-2.5 w-2.5 items-center p-[0.1em]" />
           )}
         </div>
         <div
@@ -43,7 +43,7 @@ const TrafficLightToggle = ({ toggleSidebar }) => {
           tabIndex={0}
         >
           {minimizeHover && (
-            <Min className="mx-auto h-2.5 w-2.5 items-center p-[0.1em]" />
+            <MinIcon className="mx-auto h-2.5 w-2.5 items-center p-[0.1em]" />
           )}
         </div>
         <div
@@ -61,7 +61,7 @@ const TrafficLightToggle = ({ toggleSidebar }) => {
           tabIndex={0}
         >
           {maximizeHover && (
-            <Max className="mx-auto h-2.5 w-2.5 items-center" />
+            <MaxIcon className="mx-auto h-2.5 w-2.5 items-center" />
           )}
         </div>
       </div>

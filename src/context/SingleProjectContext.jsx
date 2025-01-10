@@ -1,8 +1,10 @@
 import { Resty as RestyJson } from "../data/Resty.jsx";
 import { ReactNativeTaskManager as ReactNativeTaskManagerJson } from "../data/React-Native-Task-Manager.jsx";
 import { ExpenseTrackingApp as ExpenseTrackingAppJson } from "../data/Expense-Tracking-App.jsx";
+import { SepsisPredictionPipeline as SepsisPredictionPipelineJson } from "../data/Sepsis-Prediction-Pipeline.jsx";
 
 const projectsDataList = [
+  SepsisPredictionPipelineJson,
   ReactNativeTaskManagerJson,
   ExpenseTrackingAppJson,
   RestyJson,
@@ -14,11 +16,11 @@ export const SingleProjectContext = createContext();
 
 export const SingleProjectProvider = ({ projectName, children }) => {
   const singleIndex = projectsDataList.findIndex(
-    (projectData) => projectData.name === projectName
+    (projectData) => projectData.name === projectName,
   );
 
   const [singleProjectData, setSingleProjectData] = useState(
-    projectsDataList[singleIndex]
+    projectsDataList[singleIndex],
   );
 
   return (

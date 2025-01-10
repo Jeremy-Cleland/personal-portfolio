@@ -1,4 +1,5 @@
-import { ReactComponent as Max } from "./max.svg";
-import { ReactComponent as Min } from "./min.svg";
-import { ReactComponent as Close } from "./close.svg";
-export { Max, Min, Close };
+import CloseIcon from "./closeIcon.jsx";
+import MaxIcon from "./maxIcon.jsx";
+import MinIcon from "./minIcon.jsx";
+
+export { CloseIcon, MaxIcon, MinIcon };

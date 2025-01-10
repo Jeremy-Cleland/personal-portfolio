@@ -34,7 +34,7 @@ const Home = () => {
           />
         </div>
         <div className="text-left font-ChillaxRegular text-lg tracking-tight text-violet-400 md:text-xl">
-          <TypewriterText text="> Software Developer" tag="h2" delay={1000} />
+          <TypewriterText text="> Graduate AI Engineer" tag="h2" delay={1000} />
         </div>
       </div>
       <AboutMeProvider>
