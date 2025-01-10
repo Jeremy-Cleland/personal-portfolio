@@ -1,13 +1,13 @@
 import image1 from "../assets/images/portfolio/Resty/1.jpg";
 import image2 from "../assets/images/portfolio/Resty/2.png";
 
-import { SiJavascript, SiReact, SiCss3, SiAxios, SiSass } from "react-icons/si";
+import { SiAxios, SiCss3, SiJavascript, SiReact, SiSass } from "react-icons/si";
 
 const iconStyle = "text-4xl mx-auto inline-block";
 
 export const Resty = {
   name: "Resty",
-  id: 1,
+  id: 2,
   title: "RESTy",
   category: "Web Application",
   img: image1,

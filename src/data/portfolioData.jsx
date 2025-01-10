@@ -1,7 +1,7 @@
 // Import images
-import image1 from "../assets/images/portfolio/Resty/1.jpg";
-import image2 from "../assets/images/portfolio/ReactNativeTaskManager/react-native-todo.png";
 import image3 from "../assets/images/portfolio/ExpenseTrackingApp/expense-tracker1.png";
+import image2 from "../assets/images/portfolio/ReactNativeTaskManager/react-native-todo.png";
+import image1 from "../assets/images/portfolio/Resty/1.jpg";
 import sepsisImage from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.png"; // Placeholder or project-related image
 
 export const portfolioData = [
@@ -25,7 +25,7 @@ export const portfolioData = [
   },
   {
     id: 3,
-    name: "React Native Task Manager",
+    name: "React-Native-Task-Manager",
     title: "React Native Task Manager",
     category: "Mobile Application",
     description:
@@ -34,7 +34,7 @@ export const portfolioData = [
   },
   {
     id: 4,
-    name: "Expense Tracking App",
+    name: "Expense-Tracking-App",
     title: "Expense Tracking App",
     category: "Web Application",
     description:
