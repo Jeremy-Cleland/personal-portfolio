@@ -1,7 +1,8 @@
 import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const ProjectCard = ({ title, category, image }) => {
+const ProjectCard = ({ title, category, image, name }) => {
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -13,11 +14,11 @@ const ProjectCard = ({ title, category, image }) => {
       }}
       className="container mx-auto "
     >
-      <Link
-        to="/portfolio/project"
-        aria-label="Indvidual Project"
+        <Link
+        to={`/portfolio/${name}`}
+        aria-label={`${name}`}
         className="mt-10 block"
-      >
+        >
         <div className="group relative mx-auto mt-10 flex items-center justify-center">
           <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-black to-dark-900 opacity-40 shadow-lg blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-70 dark:group-hover:opacity-100 " />
           <img
@@ -41,4 +42,11 @@ const ProjectCard = ({ title, category, image }) => {
     </m.div>
   );
 };
+ProjectCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
+
 export default ProjectCard;
