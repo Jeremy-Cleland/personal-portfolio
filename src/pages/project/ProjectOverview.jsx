@@ -25,12 +25,12 @@ const ProjectOverview = () => {
             duration: 0.6,
             delay: 0.5,
           }}
-          className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
+          className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100"
         >
-          {singleProjectData.about.heading}
+          Overview
         </m.h3>
-        <p className="mb-2 font-Fira text-sm font-medium leading-6 ">
-          {singleProjectData.about.overview}
+        <p className="mb-2 font-Fira text-sm font-medium leading-6">
+          {singleProjectData.details.overview}
         </p>
       </div>
       <div className="mb-7 grow">
@@ -42,12 +42,12 @@ const ProjectOverview = () => {
             duration: 0.6,
             delay: 0.5,
           }}
-          className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100 "
+          className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100"
         >
-          {singleProjectData.about.technologies.title}
+          Technologies
         </m.h3>
         <div className="flex w-full flex-row gap-5 text-center font-SourceCodePro text-dark-900 dark:text-dark-100 lg:gap-10">
-          {singleProjectData.about.technologies.techs.map((tech) => (
+          {singleProjectData.details.technologies.map((tech) => (
             <m.div
               whileHover={{ scale: 1.05, color: "#A38CF3" }}
               transition={{ duration: 0.3 }}

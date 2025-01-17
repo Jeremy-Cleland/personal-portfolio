@@ -4,6 +4,7 @@ import { SingleProjectContext } from "../../context/SingleProjectContext.jsx";
 
 const ProjectInfo = () => {
   const { singleProjectData } = useContext(SingleProjectContext);
+  
   return (
     <m.section
       initial={{ opacity: 0 }}
@@ -13,7 +14,7 @@ const ProjectInfo = () => {
         duration: 0.7,
         delay: 0.15,
       }}
-      className="my-2.5 "
+      className="my-2.5"
     >
       <div>
         <m.h1
@@ -26,13 +27,13 @@ const ProjectInfo = () => {
           }}
           className="my-5 border-b-4 border-violet-400 py-5 text-center font-ChillaxBold text-xl font-bold leading-4 tracking-wide text-dark-900 dark:text-dark-100 md:my-10 md:text-2xl"
         >
-          {singleProjectData.info.title}
+          {singleProjectData.title}
         </m.h1>
       </div>
       <div className="flex w-full flex-row text-dark-900 dark:text-dark-100">
         <div className="flex basis-1/2 text-left">
-          <span className=" font-Fira text-sm tracking-tight lg:text-base">
-            {singleProjectData.info.tags}
+          <span className="font-Fira text-sm tracking-tight lg:text-base">
+            {singleProjectData.info.tags.join(", ")}
           </span>
         </div>
         <div className="basis-1/2 text-right">
