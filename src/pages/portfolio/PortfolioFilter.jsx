@@ -2,9 +2,10 @@ import PropTypes from "prop-types";
 
 const filterOptions = [
   "All Projects",
-  "Web Application",
-  "Mobile Application",
-  "UI/UX Design",
+  "AI/ML Project",
+  "Data Science",
+  "Computer Vision",
+  "Natural Language Processing"
 ];
 
 const PortfolioFilter = ({ selectFilterProject, setSelectFilterProject }) => {
