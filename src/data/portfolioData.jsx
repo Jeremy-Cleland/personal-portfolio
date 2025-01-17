@@ -18,18 +18,24 @@ export const portfolioData = [
     name: "sepsis-prediction-pipeline",
     title: "Sepsis Prediction Pipeline",
     category: "AI/ML Project",
-    description: "An advanced machine learning pipeline designed to predict sepsis onset using patient data.",
+    description: "Advanced machine learning pipeline for early sepsis detection using Random Forest, XGBoost, and Logistic Regression models.",
     img: sepsisImage1,
     info: {
       date: "Oct 15, 2024",
-      tags: ["Machine Learning", "Data Science", "AI"],
+      tags: ["Machine Learning", "Healthcare AI", "Data Science", "Python"],
     },
     images: [
       { id: 1, title: "Pipeline Overview", img: sepsisImage1 },
       { id: 2, title: "Results Dashboard", img: sepsisImage2 }
     ],
     details: {
-      overview: "The Sepsis Prediction Pipeline is a comprehensive AI-driven solution designed to predict the onset of sepsis in patients. This pipeline incorporates data preprocessing, feature engineering, class imbalance handling, and advanced machine learning models like Random Forest, XGBoost, and Logistic Regression.",
+      overview: `A comprehensive machine learning pipeline designed to predict sepsis onset in patients using advanced ML models. Key features include:
+      • Robust data preprocessing with MICE algorithm for missing values
+      • Feature engineering and selection techniques
+      • Class imbalance handling using SMOTEENN
+      • Model ensemble with Random Forest (AUROC: 0.9760), XGBoost (AUROC: 0.9998), and Logistic Regression
+      • Automated model card generation and registry management
+      • Extensive evaluation metrics and visualization suite`,
       technologies: [
         { id: 1, name: "Python", icon: <SiPython className={iconStyle} /> },
         { id: 2, name: "Scikit-learn", icon: <SiScikitlearn className={iconStyle} /> },
@@ -38,9 +44,27 @@ export const portfolioData = [
         { id: 5, name: "NumPy", icon: <SiNumpy className={iconStyle} /> },
         { id: 6, name: "Database Management", icon: <TbDatabase className={iconStyle} /> }
       ],
+      features: [
+        "Patient-level data splitting to prevent leakage",
+        "Hyperparameter optimization with Optuna",
+        "Comprehensive evaluation metrics (AUROC, F1, Precision, Recall)",
+        "Automated model card generation",
+        "Model registry for versioning and deployment",
+        "Extensive visualization suite for model interpretation"
+      ],
+      performance: {
+        randomForest: { auroc: 0.9760, f1: 0.5594, precision: 0.5280, recall: 0.5948 },
+        xgboost: { auroc: 0.9998, f1: 0.9962, precision: 0.9830, recall: 0.9962 },
+        logisticRegression: { auroc: 0.8955, f1: 0.7830, precision: 0.7164, recall: 0.8858 }
+      },
       links: [
         { id: 1, title: "Repository", url: "https://github.com/Jeremy-Cleland/sepsis-early-detection" },
         { id: 2, title: "Documentation", url: "https://github.com/Jeremy-Cleland/sepsis-early-detection" }
+      ],
+      team: [
+        { name: "Jeremy Cleland", role: "Graudate Student" },
+        { name: "Anthony Lewis", role: "Graudate Student" },
+        { name: "Salif Khan", role: "Graudate Student" }
       ]
     }
   }
