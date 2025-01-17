@@ -1,11 +1,9 @@
 export const aboutMeData = {
   title: "About Me",
   bio: [
-    "Hi, I'm Jeremy — a former Special Forces Medic with a decade of leadership experience in high-pressure environments, now forging a path as an AI Engineer. Based in Michigan, I bring a unique combination of problem-solving expertise, disciplined execution, and a deep passion for artificial intelligence to the tech industry.",
-    "My career began in the U.S. Army, where I served as a Special Forces Medical Sergeant in the 7th Special Forces Group. During my service, I honed my ability to lead teams, adapt under pressure, and tackle complex challenges during deployments to South America and Afghanistan.",
-    "After retiring in 2022, I transitioned to the tech world, leveraging my analytical mindset and problem-solving skills to specialize in artificial intelligence. I am currently pursuing a Master of Science in Artificial Intelligence at the University of Michigan-Dearborn, with a concentration in Knowledge Management and Reasoning. My studies focus on applying AI to solve real-world problems and create impactful solutions.",
-    "While gaining a strong foundation in software development during a rigorous 6-month bootcamp, I discovered my passion for back-end development and AI-driven applications. I enjoy working with data pipelines, model optimization, and building scalable AI systems.",
-    "As I look to the future, I aim to bring my unique perspective and expertise to innovative teams dedicated to pushing the boundaries of artificial intelligence. I thrive on solving complex problems, collaborating with forward-thinking professionals, and building systems that make a meaningful impact.",
+    "I’m Jeremy—a former Special Forces Medic turned AI Engineer—combining a decade of leadership in high-stakes environments with a passion for cutting-edge technology. Drawing on my experience in the U.S. Army’s 7th Special Forces Group, I bring adaptability, strategic thinking, and disciplined execution to solve complex challenges in AI.",
+    "Currently pursuing an M.S. in Artificial Intelligence at the University of Michigan-Dearborn, I specialize in Knowledge Management and Reasoning. My work focuses on designing efficient data pipelines, optimizing machine learning models, and building scalable AI systems tailored to real-world needs.",
+    "My foundation in software development, forged through a rigorous coding bootcamp, sparked my drive to create AI-powered applications that deliver tangible impact. Eager to collaborate with forward-thinking teams, I thrive on translating innovative ideas into actionable solutions that advance the boundaries of artificial intelligence across industries."
   ],
   events: [
     {
