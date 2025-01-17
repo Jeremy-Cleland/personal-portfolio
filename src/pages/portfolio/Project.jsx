@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const Project = ({ name, title, category, image }) => {
+  // Convert name to kebab-case to match portfolioData format
+  const projectUrl = name.toLowerCase().replace(/\s+/g, '-');
+  
+  console.log('Project name:', name);
+  console.log('Project URL:', projectUrl);
+
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -15,7 +21,7 @@ const Project = ({ name, title, category, image }) => {
       className="container mx-auto "
     >
       <Link
-        to={`/portfolio/${name}`}
+        to={`/portfolio/${projectUrl}`}
         aria-label={`${name}`}
         className="mt-10 block"
       >

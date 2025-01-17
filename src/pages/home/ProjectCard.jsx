@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const ProjectCard = ({ title, category, image, name }) => {
+  // Convert name to kebab-case to match portfolioData format
+  const projectUrl = name.toLowerCase().replace(/\s+/g, '-');
+
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -12,13 +15,13 @@ const ProjectCard = ({ title, category, image, name }) => {
         duration: 0.7,
         delay: 0.15,
       }}
-      className="container mx-auto "
+      className="container mx-auto"
     >
-        <Link
-        to={`/portfolio/${name}`}
+      <Link
+        to={`/portfolio/${projectUrl}`}
         aria-label={`${name}`}
         className="mt-10 block"
-        >
+      >
         <div className="group relative mx-auto mt-10 flex items-center justify-center">
           <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-black to-dark-900 opacity-40 shadow-lg blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-70 dark:group-hover:opacity-100 " />
           <img
