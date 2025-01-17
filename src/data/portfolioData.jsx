@@ -1,8 +1,16 @@
-// Import images
-import image3 from "../assets/images/portfolio/ExpenseTrackingApp/expense-tracker1.png";
-import image2 from "../assets/images/portfolio/ReactNativeTaskManager/react-native-todo.png";
-import image1 from "../assets/images/portfolio/Resty/1.jpg";
-import sepsisImage from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.png"; // Placeholder or project-related image
+import sepsisImage1 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.png";
+import sepsisImage2 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsisImage2.png";
+
+import {
+  SiPython,
+  SiScikitlearn,
+  SiTensorflow,
+  SiPandas,
+  SiNumpy,
+} from "react-icons/si";
+import { TbDatabase } from "react-icons/tb";
+
+const iconStyle = "text-4xl mx-auto inline-block";
 
 export const portfolioData = [
   {
@@ -10,35 +18,31 @@ export const portfolioData = [
     name: "Sepsis-Prediction-Pipeline",
     title: "Sepsis Prediction Pipeline",
     category: "AI/ML Project",
-    description:
-      "An advanced machine learning pipeline designed to predict sepsis onset using patient data. The pipeline includes data preprocessing, feature engineering, model training with hyperparameter optimization using Optuna, and a comprehensive evaluation framework. Integrated with a model registry for versioning and reproducibility.",
-    img: sepsisImage,
-  },
-  {
-    id: 2,
-    name: "Resty",
-    title: "RESTy",
-    category: "Web Application",
-    description:
-      "Web application to fetch data from an API and display it in a user-friendly way by pretty printing the JSON. The application can perform GET, POST, PUT, and DELETE requests to the API. The application also has a history feature that allows the user to view the history of their requests.",
-    img: image1,
-  },
-  {
-    id: 3,
-    name: "React-Native-Task-Manager",
-    title: "React Native Task Manager",
-    category: "Mobile Application",
-    description:
-      "A mobile application for task management, built using React Native, Expo, and React Navigation. Implements local storage using AsyncStorage, with Formik and Yup for form validation. Features include task creation, editing, and deletion, with navigation and history management.",
-    img: image2,
-  },
-  {
-    id: 4,
-    name: "Expense-Tracking-App",
-    title: "Expense Tracking App",
-    category: "Web Application",
-    description:
-      "A web application enabling users to track expenses, visualize spending patterns via charts, and manage categories efficiently. Users can add, edit, and delete expense records.",
-    img: image3,
-  },
+    description: "An advanced machine learning pipeline designed to predict sepsis onset using patient data.",
+    img: sepsisImage1,
+    info: {
+      date: "Oct 15, 2024",
+      tags: ["Machine Learning", "Data Science", "AI"],
+    },
+    images: [
+      { id: 1, title: "Pipeline Overview", img: sepsisImage1 },
+      { id: 2, title: "Results Dashboard", img: sepsisImage2 }
+    ],
+    details: {
+      overview: "The Sepsis Prediction Pipeline is a comprehensive AI-driven solution designed to predict the onset of sepsis in patients. This pipeline incorporates data preprocessing, feature engineering, class imbalance handling, and advanced machine learning models like Random Forest, XGBoost, and Logistic Regression.",
+      technologies: [
+        { id: 1, name: "Python", icon: <SiPython className={iconStyle} /> },
+        { id: 2, name: "Scikit-learn", icon: <SiScikitlearn className={iconStyle} /> },
+        { id: 3, name: "TensorFlow", icon: <SiTensorflow className={iconStyle} /> },
+        { id: 4, name: "Pandas", icon: <SiPandas className={iconStyle} /> },
+        { id: 5, name: "NumPy", icon: <SiNumpy className={iconStyle} /> },
+        { id: 6, name: "Database Management", icon: <TbDatabase className={iconStyle} /> }
+      ],
+      links: [
+        { id: 1, title: "Repository", url: "https://github.com/Jeremy-Cleland/sepsis-early-detection" },
+        { id: 2, title: "Documentation", url: "https://github.com/Jeremy-Cleland/sepsis-early-detection" }
+      ]
+    }
+  }
+  // Future AI/ML projects can be added here following the same structure
 ];
