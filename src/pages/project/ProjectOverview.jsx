@@ -60,31 +60,67 @@ const ProjectOverview = () => {
         </div>
       )}
 
-      {/* Performance Metrics Section */}
-      {singleProjectData.details.performance && (
+        {/* Performance Metrics Section */}
+        {singleProjectData.details.performance && (
         <div className="mb-7">
           <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
-            Performance Metrics
+          Performance Metrics
           </m.h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {Object.entries(singleProjectData.details.performance).map(([model, metrics]) => (
-              <div key={model} className="p-4 rounded-lg bg-violet-50 dark:bg-dark-800">
-                <h4 className="font-ChillaxBold mb-2 text-center capitalize">{model}</h4>
-                <div className="space-y-1 text-sm">
-                  {Object.entries(metrics).map(([metric, value]) => (
-                    <p key={metric} className="flex justify-between">
-                      <span className="capitalize">{metric}:</span>
-                      <span className="font-medium">{value.toFixed(4)}</span>
-                    </p>
-                  ))}
-                </div>
-              </div>
-            ))}
+          {Object.entries(singleProjectData.details.performance).map(([model, metrics]) => (
+            <div key={model} className="p-4 rounded-lg bg-violet-50 dark:bg-dark-800">
+            <h4 className="font-ChillaxBold mb-2 text-center capitalize">{model}</h4>
+            <div className="space-y-1 text-sm">
+              {Object.entries(metrics).map(([metric, value]) => (
+              <p key={metric} className="flex justify-between">
+                <span className="capitalize">{metric}:</span>
+                <span className="font-medium">{value.toFixed(4)}</span>
+              </p>
+              ))}
+            </div>
+            </div>
+          ))}
           </div>
         </div>
-      )}
+        )}
 
-      {/* Team Section */}
+        {/* Visualizations Section */}
+        {singleProjectData.details.visualizations && (
+        <div className="mb-7">
+          <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
+          Visualizations
+          </m.h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {singleProjectData.details.visualizations.map((viz) => (
+            <div key={viz.id} className="space-y-2">
+            <img 
+              src={viz.img} 
+              alt={viz.title} 
+              className="w-full rounded-lg shadow-md"
+            />
+            <h4 className="font-ChillaxBold text-center">{viz.title}</h4>
+            <p className="text-sm text-center text-violet-600 dark:text-violet-400">{viz.description}</p>
+            </div>
+          ))}
+          </div>
+        </div>
+        )}
+
+        {/* Learnings Section */}
+        {singleProjectData.details.learnings && (
+        <div className="mb-7">
+          <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
+          Key Learnings
+          </m.h3>
+          <ul className="list-disc pl-6 font-Fira text-sm font-medium leading-6">
+          {singleProjectData.details.learnings.map((learning, index) => (
+            <li key={index} className="mb-2">{learning}</li>
+          ))}
+          </ul>
+        </div>
+        )}
+
+        {/* Team Section */}
       {singleProjectData.details.team && (
         <div className="mb-7">
           <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">

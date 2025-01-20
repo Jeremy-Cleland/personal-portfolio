@@ -1,5 +1,9 @@
 import sepsisImage1 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.png";
 import sepsisImage2 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsisImage2.png";
+import xgboostROC from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_(Tuned)_roc_curve.png";
+import rfPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_(tuned)_precision_recall_curve.png";
+import featureImportance from "../assets/images/portfolio/SepsisPredictionPipeline/feature_importance_random_forest.png";
+import temporalPlot from "../assets/images/portfolio/SepsisPredictionPipeline/Random_Forest_(Tuned)_temporal_patient_9513.png";
 
 import {
   SiPython,
@@ -29,13 +33,17 @@ export const portfolioData = [
       { id: 2, title: "Results Dashboard", img: sepsisImage2 }
     ],
     details: {
-      overview: `A comprehensive machine learning pipeline designed to predict sepsis onset in patients using advanced ML models. Key features include:
-      • Robust data preprocessing with MICE algorithm for missing values
-      • Feature engineering and selection techniques
-      • Class imbalance handling using SMOTEENN
-      • Model ensemble with Random Forest (AUROC: 0.9760), XGBoost (AUROC: 0.9998), and Logistic Regression
-      • Automated model card generation and registry management
-      • Extensive evaluation metrics and visualization suite`,
+        overview: `The pipeline involves a meticulous process for detecting sepsis using patient-level data:
+      - **Data Handling:** Missing values handled via the MICE algorithm, with categorical encoding and robust scaling applied.
+      - **Feature Engineering:** Automated column dropping, log transformation, and feature interaction analysis.
+      - **Model Training:** Models include Random Forest, XGBoost, and Logistic Regression, optimized using Optuna.
+      - **Evaluation:** Metrics such as AUROC, Precision, Recall, and F1 Score logged with custom visualization reports.
+      - **Deployment:** Model registry supports versioning and metadata storage, enabling reproducibility.`,
+        learnings: [
+        "Handling class imbalance with advanced techniques like SMOTEENN.",
+        "Optimizing hyperparameters effectively using Optuna.",
+        "Understanding the trade-offs between interpretability and performance in models."
+        ],
       technologies: [
         { id: 1, name: "Python", icon: <SiPython className={iconStyle} /> },
         { id: 2, name: "Scikit-learn", icon: <SiScikitlearn className={iconStyle} /> },
@@ -44,14 +52,40 @@ export const portfolioData = [
         { id: 5, name: "NumPy", icon: <SiNumpy className={iconStyle} /> },
         { id: 6, name: "Database Management", icon: <TbDatabase className={iconStyle} /> }
       ],
-      features: [
-        "Patient-level data splitting to prevent leakage",
-        "Hyperparameter optimization with Optuna",
-        "Comprehensive evaluation metrics (AUROC, F1, Precision, Recall)",
-        "Automated model card generation",
-        "Model registry for versioning and deployment",
-        "Extensive visualization suite for model interpretation"
-      ],
+        features: [
+        "Patient-level data splitting to ensure no data leakage.",
+        "Comprehensive data preprocessing pipeline with iterative imputation (MICE), log transformation, and robust scaling.",
+        "Automated feature engineering with redundant column removal, categorical encoding, and scaling.",
+        "Advanced model evaluation with metrics logging, calibration plots, and feature importance analysis.",
+        "Automated model registry with versioning, hyperparameter tracking, and artifact storage.",
+        "Dynamic report generation with comprehensive visualizations (e.g., ROC, PR curves)."
+        ],
+        visualizations: [
+        {
+          id: 1,
+          title: "ROC Curve - XGBoost",
+          img: xgboostROC,
+          description: "Receiver Operating Characteristic (ROC) curve showing near-perfect separation."
+        },
+        {
+          id: 2,
+          title: "Precision-Recall Curve - Random Forest",
+          img: rfPrecisionRecall,
+          description: "Precision-Recall curve for tuned Random Forest model."
+        },
+        {
+          id: 3,
+          title: "Feature Importance - Random Forest",
+          img: featureImportance,
+          description: "Bar chart showing the most influential features in the Random Forest model."
+        },
+        {
+          id: 4,
+          title: "Temporal Progression Plot",
+          img: temporalPlot,
+          description: "Visualization of patient-level vital signs over time leading to sepsis onset."
+        }
+        ],
       performance: {
         randomForest: { auroc: 0.9760, f1: 0.5594, precision: 0.5280, recall: 0.5948 },
         xgboost: { auroc: 0.9998, f1: 0.9962, precision: 0.9830, recall: 0.9962 },
