@@ -98,18 +98,6 @@ export const portfolioData = [
             title: "Precision-Recall Curve - Logistic Regression",
             img: lrPrecisionRecall,
             description: "Precision-Recall curve for tuned Logistic Regression model."
-          },
-          {
-            id: 7,
-            title: "Sepsis Prediction Overview",
-            img: sepsisImage1,
-            description: "Overview of the Sepsis Prediction Pipeline."
-          },
-          {
-            id: 8,
-            title: "Sepsis Prediction Detailed Flow",
-            img: sepsisImage2,
-            description: "Detailed flowchart of the Sepsis Prediction Pipeline."
           }
         ],
       performance: {
@@ -123,8 +111,8 @@ export const portfolioData = [
       ],
       team: [
         { name: "Jeremy Cleland", role: "Graudate Student" },
-        { name: "Anthony Lewis", role: "Graudate Student" },
-        { name: "Salif Khan", role: "Graudate Student" }
+        // { name: "Anthony Lewis", role: "Graudate Student" },
+        // { name: "Salif Khan", role: "Graudate Student" }
       ]
     }
   }
