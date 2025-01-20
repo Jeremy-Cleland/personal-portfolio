@@ -102,7 +102,7 @@ export const portfolioData = [
         ],
       performance: {
         randomForest: { auroc: 0.9760, f1: 0.5594, precision: 0.5280, recall: 0.5948 },
-        xgboost: { auroc: 0.9998, f1: 0.9962, precision: 0.9830, recall: 0.9962 },
+        xgboost: { auroc: 0.9998, f1: 0.2591, precision: 0.2399, recall: 0.8721 },
         logisticRegression: { auroc: 0.8955, f1: 0.7830, precision: 0.7164, recall: 0.8858 }
       },
       links: [
