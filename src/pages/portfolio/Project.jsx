@@ -25,12 +25,12 @@ const Project = ({ name, title, category, image }) => {
         aria-label={`${name}`}
         className="mt-10 block"
       >
-        <div className="group relative mx-auto mt-10 flex items-center justify-center">
-          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-black to-dark-900 opacity-40 shadow-lg blur transition duration-200 group-hover:opacity-100 group-hover:duration-200 dark:opacity-70 dark:group-hover:opacity-100 " />
+        <div className="group relative mx-auto mt-10 flex transform items-center justify-center transition duration-300 ease-in-out hover:scale-[1.02]">
+          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-violet-500 to-violet-300 opacity-40 blur transition duration-300 group-hover:opacity-70 dark:from-violet-600 dark:to-violet-400" />
           <img
-            alt={title}
-            src={image}
-            className="relative h-52 w-full rounded-lg object-cover sm:h-64 lg:h-96 xl:h-80"
+          alt={title}
+          src={image}
+          className="relative h-64 w-full rounded-lg object-cover shadow-lg transition duration-300 group-hover:shadow-xl sm:h-72 lg:h-96 xl:h-80"
           />
         </div>
         <div className="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
