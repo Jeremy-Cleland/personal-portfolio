@@ -1,9 +1,11 @@
 import sepsisImage1 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.png";
 import sepsisImage2 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsisImage2.png";
 import xgboostROC from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_(Tuned)_roc_curve.png";
+import xgboostPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_(Tuned)_precision_recall_curve.png";
+import rfROC from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_(tuned)_roc_curve.png";
 import rfPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_(tuned)_precision_recall_curve.png";
-import featureImportance from "../assets/images/portfolio/SepsisPredictionPipeline/feature_importance_random_forest.png";
-import temporalPlot from "../assets/images/portfolio/SepsisPredictionPipeline/Random_Forest_(Tuned)_temporal_patient_9513.png";
+import lrROC from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_(Tuned)_roc_curve.png";
+import lrPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_(Tuned)_precision_recall_curve.png";
 
 import {
   SiPython,
@@ -61,30 +63,54 @@ export const portfolioData = [
         "Dynamic report generation with comprehensive visualizations (e.g., ROC, PR curves)."
         ],
         visualizations: [
-        {
-          id: 1,
-          title: "ROC Curve - XGBoost",
-          img: xgboostROC,
-          description: "Receiver Operating Characteristic (ROC) curve showing near-perfect separation."
-        },
-        {
-          id: 2,
-          title: "Precision-Recall Curve - Random Forest",
-          img: rfPrecisionRecall,
-          description: "Precision-Recall curve for tuned Random Forest model."
-        },
-        {
-          id: 3,
-          title: "Feature Importance - Random Forest",
-          img: featureImportance,
-          description: "Bar chart showing the most influential features in the Random Forest model."
-        },
-        {
-          id: 4,
-          title: "Temporal Progression Plot",
-          img: temporalPlot,
-          description: "Visualization of patient-level vital signs over time leading to sepsis onset."
-        }
+          {
+            id: 1,
+            title: "ROC Curve - XGBoost",
+            img: xgboostROC,
+            description: "Receiver Operating Characteristic (ROC) curve showing near-perfect separation."
+          },
+          {
+            id: 2,
+            title: "Precision-Recall Curve - XGBoost",
+            img: xgboostPrecisionRecall,
+            description: "Precision-Recall curve for tuned XGBoost model."
+          },
+          {
+            id: 3,
+            title: "ROC Curve - Random Forest",
+            img: rfROC,
+            description: "Receiver Operating Characteristic (ROC) curve for tuned Random Forest model."
+          },
+          {
+            id: 4,
+            title: "Precision-Recall Curve - Random Forest",
+            img: rfPrecisionRecall,
+            description: "Precision-Recall curve for tuned Random Forest model."
+          },
+          {
+            id: 5,
+            title: "ROC Curve - Logistic Regression",
+            img: lrROC,
+            description: "Receiver Operating Characteristic (ROC) curve for tuned Logistic Regression model."
+          },
+          {
+            id: 6,
+            title: "Precision-Recall Curve - Logistic Regression",
+            img: lrPrecisionRecall,
+            description: "Precision-Recall curve for tuned Logistic Regression model."
+          },
+          {
+            id: 7,
+            title: "Sepsis Prediction Overview",
+            img: sepsisImage1,
+            description: "Overview of the Sepsis Prediction Pipeline."
+          },
+          {
+            id: 8,
+            title: "Sepsis Prediction Detailed Flow",
+            img: sepsisImage2,
+            description: "Detailed flowchart of the Sepsis Prediction Pipeline."
+          }
         ],
       performance: {
         randomForest: { auroc: 0.9760, f1: 0.5594, precision: 0.5280, recall: 0.5948 },
