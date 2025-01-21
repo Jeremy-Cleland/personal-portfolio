@@ -1,6 +1,6 @@
 # Jeremy Cleland's Portfolio
 
-A personal portfolio website showcasing Jeremy Cleland's skills, projects, and accomplishments as a software developer.
+A personal portfolio website showcasing Jeremy Cleland's skills, projects, and accomplishments as a AI engineer.
 
 [![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38b2ac)](https://tailwindcss.com/)

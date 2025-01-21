@@ -4,7 +4,6 @@ import { motion as m } from "framer-motion";
 import ExperienceSection from "./ExperienceSection.jsx";
 import EducationSection from "./EducationSection.jsx";
 import SkillsSection from "./SkillSection.jsx";
-// import ProjectsSection from "./ProjectsSection.jsx";
 import ScrollProgress from "../../components/reusable/ScrollProgress.jsx";
 import Header from "../../components/reusable/Header.jsx";
 
@@ -27,7 +26,6 @@ const Resume = () => {
         <ExperienceSection />
         <EducationSection />
         <SkillsSection />
-        {/* <ProjectsSection /> */}
       </m.div>
     </AboutMeProvider>
   );

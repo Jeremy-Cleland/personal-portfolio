@@ -1,29 +1,37 @@
 import { useParams, Navigate } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import { useContext } from "react";
+
+// Contexts
 import { PortfolioContext } from "../../context/PortfolioContext.jsx";
-import ProjectGrid from "./ProjectGrid.jsx";
+import { SingleProjectProvider } from "../../context/SingleProjectContext.jsx";
+
+// Components
 import ProjectInfo from "./ProjectInfo.jsx";
 import ProjectOverview from "./ProjectOverview.jsx";
 import ButtonGroup from "./ButtonGroup.jsx";
-import { SingleProjectProvider } from "../../context/SingleProjectContext.jsx";
+
+import { fadeIn } from "../../utils/variants.js";
 
 const ProjectSingle = () => {
   const { projectName } = useParams();
   const { portfolioProject } = useContext(PortfolioContext);
-  
+
   // Check if project exists
-  const projectExists = portfolioProject.some(project => project.name === projectName);
-  
-  if (!projectExists) {
+  const project = portfolioProject.find(
+    (project) => project.name === projectName,
+  );
+
+  if (!project) {
     return <Navigate to="/portfolio" replace />;
   }
 
   return (
-    <SingleProjectProvider projectName={projectName}>
+    <SingleProjectProvider projectName={projectName} initialData={project}>
       <m.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, delay: 1 }}
+        variants={fadeIn}
+        initial="hidden"
+        animate="visible"
         transition={{
           ease: "easeInOut",
           duration: 0.7,
@@ -33,7 +41,6 @@ const ProjectSingle = () => {
       >
         <ProjectInfo />
         <ProjectOverview />
-        <ProjectGrid />
         <ButtonGroup />
       </m.div>
     </SingleProjectProvider>

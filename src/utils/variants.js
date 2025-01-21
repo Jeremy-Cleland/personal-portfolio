@@ -101,14 +101,6 @@ slideInVariant.defaultProps = {
   // This variant slides in an element from a specified direction
 };
 
-//! Example usage:
-// <m.div
-//   variants={slideInVariant("right", "tween", 0.3, 0.7)}
-//   initial="hidden"
-//   animate="show"
-//   className="mx-auto max-w-6xl"
-// >
-
 export const rotateInVariant = (delay, duration) => {
   return {
     hidden: {
@@ -309,4 +301,9 @@ staggerContainerVariant.defaultProps = {
 export const imageVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1, transition: { delay: 0.8 } },
+};
+
+export const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };

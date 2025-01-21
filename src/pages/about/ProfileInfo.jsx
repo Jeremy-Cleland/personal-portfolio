@@ -20,7 +20,7 @@ const ProfileInfo = () => {
       </h2>
       <p className="my-2 font-SourceCodePro font-bold text-dark-900 dark:text-dark-100">
         <span className="text-base text-violet-400"> {">"} </span>
-        Full Stack Developer
+        AI Engineer
       </p>
       {aboutMe.bio.map((para, index) => (
         <p

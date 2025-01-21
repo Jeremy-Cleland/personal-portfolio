@@ -21,7 +21,7 @@ const About = () => (
     <ScrollProgress position="top-0 sticky" />
     <Header
       title="About Me"
-      subtitle="A Mission to Innovate: From Green Beret to Software Developer"
+      subtitle="A Mission to Innovate: From Green Beret to AI Engineer"
     />
     <AboutMeProvider>
       <ProfileCard />

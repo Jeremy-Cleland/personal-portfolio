@@ -18,8 +18,8 @@ const Portfolio = () => {
       <ScrollProgress position="top-0 sticky" />
       <Header
         title="Portfolio"
-        subtitle=" Showcasing my growth as a developer and the Impact of Military
-          Precision in Software Development"
+        subtitle=" Showcasing my growth as a AI Specalist and the Impact of Military
+          Precision in the Tech Industry"
       />
       <PortfolioGrid />
     </m.div>
