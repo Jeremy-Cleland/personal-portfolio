@@ -1,58 +1,87 @@
 # Jeremy Cleland's Portfolio
 
-A personal portfolio website showcasing Jeremy Cleland's skills, projects, and accomplishments as a software developer. Built with React.js, Tailwind CSS, Framer Motion and Vite and featuring a responsive, user-friendly design.
+A personal portfolio website showcasing Jeremy Cleland's skills, projects, and accomplishments as a software developer.
 
-## Deployed Application
-
-[https://dev.clelandco.com](https://dev.clelandco.com)
-
+[![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38b2ac)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-4-646cff)](https://vitejs.dev/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-10-ff69b4)](https://www.framer.com/motion/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/924d78ba-50d2-4535-a332-e0d4fa60c936/deploy-status)](https://app.netlify.com/sites/jeremy-cleland/deploys)
+
+🔗 [Live Demo](https://dev.clelandco.com)
 
 ## Table of Contents
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [More Images](#more-images)
+- [Jeremy Cleland's Portfolio](#jeremy-clelands-portfolio)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [Installation](#installation)
+  - [Development](#development)
+  - [Usage](#usage)
+  - [License](#license)
+    - [More Images](#more-images)
+      - [Home Page](#home-page)
+      - [About Page](#about-page)
+      - [Portfolio Page](#portfolio-page)
+    - [Project Page](#project-page)
+      - [Resume Page](#resume-page)
+      - [Contact Page](#contact-page)
+      - [Light Mode](#light-mode)
 
 ## Features
 
-- Responsive design for optimal viewing on various devices.
-- Dark and light mode support for user preference.
-- Sidebar navigation for easy access to different sections.
-- Showcases personal projects with descriptions and live/demo links.
-- Resume and contact information available for potential employers.
+- Modern and clean UI/UX design with smooth animations
+- Responsive design optimized for desktop, tablet, and mobile devices
+- Dark/Light theme switcher with system preference detection
+- Interactive sidebar navigation with smooth scrolling
+- Dynamic project showcase with filtering capabilities
+- Animated page transitions using Framer Motion
+- Contact form with validation and submission handling
+- Optimized performance with lazy loading and code splitting
+- SEO-friendly meta tags and semantic HTML
+
+## Technologies Used
+
+- **Frontend Framework:** React.js 18
+- **Styling:** Tailwind CSS 3
+- **Build Tool:** Vite 4
+- **Animations:** Framer Motion
+- **Deployment:** Netlify
+- **Other Tools:**
+  - TypeScript
+  - React Router
+  - ESLint
+  - Prettier
 
 ## Installation
 
-To run this project locally, follow these steps:
-
-1. Clone the repository:
-
 ```bash
-
+# Clone the repository
 git clone https://github.com/jeremy-cleland/portfolio.git
+
+# Navigate to project directory
 cd portfolio
 
-```
-
-1. Install the dependencies:
-
-```bash
-
+# Install dependencies
 npm install
+
+# Start development server
+npm run dev
 ```
 
-1. Start the development server:
+## Development
 
 ```bash
+# Run linter
+npm run lint
 
-npm run dev
+# Build for production
+npm run build
 
+# Preview production build
+npm run preview
 ```
-
-1. Open your browser and visit `http://localhost:5173` to view the portfolio.
 
 ## Usage
 
@@ -91,4 +120,3 @@ This project is licensed under the terms of the [MIT](https://opensource.org/lic
 #### Light Mode
 
 ![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio5.jpg)
-  
