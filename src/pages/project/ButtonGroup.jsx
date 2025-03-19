@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { RiGithubLine, RiExternalLinkLine } from "react-icons/ri";
+import { RiExternalLinkLine, RiGithubLine } from "react-icons/ri";
 import { SingleProjectContext } from "../../context/SingleProjectContext.jsx";
 
 const ButtonGroup = () => {
@@ -10,9 +10,9 @@ const ButtonGroup = () => {
       {singleProjectData.details.links.map((link) => (
         <a key={link.id} href={link.url} className="inline-block">
           {link.title === "Repository" ? (
-            <RiGithubLine className="mr-2 inline-block hover:text-violet-400" />
+            <RiGithubLine className="mr-2 inline-block hover:text-orange-400" />
           ) : (
-            <RiExternalLinkLine className="mr-2 inline-block hover:text-violet-400" />
+            <RiExternalLinkLine className="mr-2 inline-block hover:text-orange-400" />
           )}
           {link.title}
         </a>

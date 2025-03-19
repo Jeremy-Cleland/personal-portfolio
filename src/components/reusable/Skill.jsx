@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { motion as m } from "framer-motion";
-import Card from "./Card.jsx";
 import PropTypes from "prop-types";
+import { useState } from "react";
+import Card from "./Card.jsx";
 
 const Skill = ({ icon, name, delay }) => {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -33,12 +33,12 @@ const Skill = ({ icon, name, delay }) => {
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
         >
-          <m.div className="my-5 text-4xl duration-200 hover:dark:text-violet-400 ">
+          <m.div className="my-5 text-4xl duration-200 hover:dark:text-orange-400/40 ">
             {icon}
             {showTooltip && (
               <m.p
                 variants={textVariants}
-                className="absolute bottom-full left-1/2 w-24 -translate-x-1/2 transform rounded-lg bg-dark-100 p-2 text-center font-Fira text-sm text-dark-900 shadow-lg dark:bg-violet-400"
+                className="absolute bottom-full left-1/2 w-24 -translate-x-1/2 transform rounded-lg bg-dark-100 p-2 text-center font-Fira text-sm text-dark-900 shadow-lg dark:bg-orange-200"
               >
                 {name}
               </m.p>

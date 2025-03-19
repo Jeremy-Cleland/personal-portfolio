@@ -1,6 +1,6 @@
 // Scroll to top button when user scrolls down
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FiChevronUp } from "react-icons/fi";
 
 const UseScrollToTop = () => {
@@ -32,7 +32,7 @@ const UseScrollToTop = () => {
   return (
     <>
       <FiChevronUp
-        className="fixed bottom-[50px] right-[50px] z-50 h-[45px] w-[45px] rounded-full bg-dark-50 p-3 shadow-xl hover:text-violet-400 dark:bg-dark-900"
+        className="fixed bottom-[50px] right-[50px] z-50 h-[45px] w-[45px] rounded-full bg-dark-50 p-3 shadow-xl hover:text-orange-400 dark:bg-dark-900"
         onClick={backToTop}
         style={{
           display: showScroll ? "flex" : "none",

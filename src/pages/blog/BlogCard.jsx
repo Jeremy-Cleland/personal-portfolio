@@ -16,7 +16,7 @@ const BlogCard = ({ post }) => {
         aria-label={post.title}
         className="block group"
       >
-        <div className="relative mx-auto flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-md dark:border-gray-700 dark:bg-dark-800 md:flex-row">
+        <div className="relative mx-auto flex flex-col overflow-hidden rounded-lg border border-orange-400/30 bg-white transition-all duration-300 dark:border-orange-400/30 dark:bg-dark-800 md:flex-row">
           {/* Image container with overlay */}
           <div className="relative h-52 w-full overflow-hidden md:h-auto md:w-2/5">
             <img
@@ -32,7 +32,7 @@ const BlogCard = ({ post }) => {
                 {post.categories.map((category, index) => (
                   <span
                     key={index}
-                    className="rounded-full bg-violet-600/80 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm"
+                    className="rounded-full bg-orange-400 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm"
                   >
                     {category}
                   </span>
@@ -48,7 +48,7 @@ const BlogCard = ({ post }) => {
               {post.categories.map((category, index) => (
                 <span
                   key={index}
-                  className="rounded-full bg-violet-100 px-2.5 py-1 text-xs font-medium text-violet-800 dark:bg-violet-900/30 dark:text-violet-300"
+                  className="rounded-full bg-orange-400 px-2.5 py-1 text-xs font-medium text-white"
                 >
                   {category}
                 </span>
@@ -56,7 +56,7 @@ const BlogCard = ({ post }) => {
             </div>
 
             {/* Title */}
-            <h2 className="mb-3 font-ChillaxBold text-xl font-bold leading-tight tracking-tight text-dark-900 group-hover:text-violet-600 dark:text-white dark:group-hover:text-violet-400 lg:text-2xl">
+            <h2 className="mb-3 font-ChillaxBold text-xl font-bold leading-tight tracking-tight text-dark-900  dark:text-white  lg:text-2xl">
               {post.title}
             </h2>
 
@@ -78,9 +78,9 @@ const BlogCard = ({ post }) => {
 
             {/* Read more link */}
             <div className="mt-4 text-right">
-              <span className="inline-flex items-center text-sm font-medium text-violet-600 group-hover:text-violet-700 dark:text-violet-400 dark:group-hover:text-violet-300">
+              <span className="inline-flex items-center text-sm font-medium text-orange-400 transition-colors group-hover:text-orange-500 dark:text-orange-400 dark:group-hover:text-orange-300">
                 Read more
-                <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </span>

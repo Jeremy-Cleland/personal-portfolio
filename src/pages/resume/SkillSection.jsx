@@ -1,8 +1,8 @@
-import { staggerContainerVariant } from "../../utils/variants.js";
-import { useContext } from "react";
-import { AboutMeContext } from "../../context/AboutMeContext.jsx";
 import { motion as m } from "framer-motion";
+import { useContext } from "react";
 import Skill from "../../components/reusable/Skill.jsx";
+import { AboutMeContext } from "../../context/AboutMeContext.jsx";
+import { staggerContainerVariant } from "../../utils/variants.js";
 
 const SkillsSection = () => {
   const { resume } = useContext(AboutMeContext);
@@ -10,9 +10,9 @@ const SkillsSection = () => {
   return (
     <div>
       <div className="mx-auto my-10 max-w-7xl">
-        <div className="my-5 border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200">
+        <div className="my-5 border-b-[1px] border-orange-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200">
           <h4 className="text-center font-Fira text-lg tracking-tight md:text-left">
-            <span className="text-base text-violet-400"> {">"} </span> Languages
+            <span className="text-base text-orange-400"> {">"} </span> Languages
           </h4>
         </div>
 
@@ -27,9 +27,9 @@ const SkillsSection = () => {
           ))}
         </m.ul>
 
-        <div className="my-5 border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200">
+        <div className="my-5 border-b-[1px] border-orange-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200">
           <h4 className="text-center font-Fira text-lg tracking-tight md:text-left">
-            <span className="text-base text-violet-400"> {">"} </span> Tools & Frameworks
+            <span className="text-base text-orange-400"> {">"} </span> Tools & Frameworks
           </h4>
         </div>
 

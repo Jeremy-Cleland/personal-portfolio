@@ -32,7 +32,7 @@ const Home = () => {
             speed={35}
           />
         </div>
-        <div className="text-left font-ChillaxRegular text-lg tracking-tight text-violet-400 md:text-xl">
+        <div className="text-left font-ChillaxRegular text-lg tracking-tight text-orange-200 md:text-xl">
           <TypewriterText text="> Graduate AI Engineer" tag="h2" delay={1000} />
         </div>
       </div>

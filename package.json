@@ -6,10 +6,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "build": "node scripts/generate-rss.js && vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-rss": "node scripts/generate-rss.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -1,0 +1,15 @@
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Allow all bots to index all content
+Disallow: /api/
+
+# Crawl delay to avoid overloading the server (in seconds)
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://dev.clelandco.com/sitemap.xml
+
+# RSS feed location
+Sitemap: https://dev.clelandco.com/rss.xml 

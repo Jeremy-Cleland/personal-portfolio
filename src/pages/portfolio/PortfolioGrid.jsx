@@ -67,15 +67,15 @@ const PortfolioGrid = () => {
         animate="show"
         className="my-10 max-w-7xl"
       >
-        <div className="mx-auto my-2 max-w-7xl border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10">
+        <div className="mx-auto my-2 max-w-7xl border-b-[1px] dark:border-orange-400/30 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200 sm:mt-20 md:my-10">
           <h4 className="text-left font-Fira text-sm tracking-tight md:text-lg ">
-            <span className="text-base text-violet-400"> {">"} </span> Explore
+            <span className="text-base text-orange-400"> {">"} </span> Explore
             My Projects
           </h4>
         </div>
 
         <div className="my-2 grid grid-rows-2 justify-between gap-5 sm:my-2.5 md:flex ">
-          <div className=" mx-5 flex w-72 rounded-lg border-[1px] border-gray-200 bg-dark-100 px-5 pl-2 dark:border-violet-400/60 dark:bg-dark-600">
+          <div className=" mx-5 flex w-72 rounded-lg border-[1px] border-orange-400/30 bg-dark-100 px-5 pl-2 dark:border-orange-400/30 dark:bg-dark-600">
             <RiSearch2Line className="my-auto mr-2 h-5 w-5" />
             <input
               onChange={(e) => {

@@ -1,6 +1,6 @@
 # Jeremy Cleland's Portfolio
 
-A personal portfolio website showcasing Jeremy Cleland's skills, projects, and accomplishments as a AI engineer.
+Modern Portfolio and Blog website built with React, Vite, and Tailwind CSS.
 
 [![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38b2ac)](https://tailwindcss.com/)
@@ -17,6 +17,8 @@ A personal portfolio website showcasing Jeremy Cleland's skills, projects, and a
   - [Features](#features)
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation-1)
   - [Development](#development)
   - [Usage](#usage)
   - [License](#license)
@@ -28,18 +30,20 @@ A personal portfolio website showcasing Jeremy Cleland's skills, projects, and a
       - [Resume Page](#resume-page)
       - [Contact Page](#contact-page)
       - [Light Mode](#light-mode)
+  - [SEO Enhancements](#seo-enhancements)
+  - [Adding Blog Posts](#adding-blog-posts)
+  - [Deploy](#deploy)
+  - [Customization](#customization)
 
 ## Features
 
-- Modern and clean UI/UX design with smooth animations
-- Responsive design optimized for desktop, tablet, and mobile devices
-- Dark/Light theme switcher with system preference detection
-- Interactive sidebar navigation with smooth scrolling
-- Dynamic project showcase with filtering capabilities
-- Animated page transitions using Framer Motion
-- Contact form with validation and submission handling
-- Optimized performance with lazy loading and code splitting
-- SEO-friendly meta tags and semantic HTML
+- **Responsive Design**: Looks great on all devices
+- **Dark/Light Mode**: Automatic theme detection with toggle
+- **Blog With Markdown**: Full-featured blog with markdown support
+- **Project Showcase**: Highlight your best work
+- **Contact Form**: Get in touch easily
+- **Performance Optimized**: Fast loading times
+- **SEO Optimized**: Ready for search engines
 
 ## Technologies Used
 
@@ -56,19 +60,43 @@ A personal portfolio website showcasing Jeremy Cleland's skills, projects, and a
 
 ## Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/jeremy-cleland/portfolio.git
+### Prerequisites
 
-# Navigate to project directory
-cd portfolio
+- Node.js (v16 or later recommended)
+- npm or yarn
 
-# Install dependencies
-npm install
+### Installation
 
-# Start development server
-npm run dev
-```
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/yourusername/personal-portfolio.git
+   cd personal-portfolio
+   ```
+
+2. Install dependencies:
+
+   ```
+   npm install
+   # or
+   yarn
+   ```
+
+3. Start the development server:
+
+   ```
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Build for production:
+
+   ```
+   npm run build
+   # or
+   yarn build
+   ```
 
 ## Development
 
@@ -89,7 +117,7 @@ Browse the portfolio sections using the sidebar navigation to learn more about J
 
 ## License
 
-This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ### More Images
 
@@ -120,3 +148,47 @@ This project is licensed under the terms of the [MIT](https://opensource.org/lic
 #### Light Mode
 
 ![Screenshot of the portfolio website](./src/assets/images/portfolio/portfolio/Portfolio5.jpg)
+
+## SEO Enhancements
+
+This project includes several SEO optimizations:
+
+1. **Schema.org Structured Data**
+   - Blog posts use BlogPosting schema
+   - Blog index uses Blog schema
+   - Rich search results support
+
+2. **RSS Feed**
+   - Automatic generation during build
+   - Manual generation with `npm run generate-rss`
+   - Full content included for RSS readers
+
+3. **Sitemap**
+   - XML sitemap with all pages and blog posts
+   - Priority and change frequency settings
+   - Referenced in robots.txt
+
+4. **Meta Tags**
+   - Title, description and keywords
+   - Open Graph and Twitter card support
+
+5. **Robots.txt**
+   - Search engine crawling instructions
+   - Sitemap and RSS feed references
+
+## Adding Blog Posts
+
+See [docs/AddingBlogPosts.md](docs/AddingBlogPosts.md) for detailed instructions on how to add blog posts.
+
+## Deploy
+
+This project can be easily deployed to Vercel, Netlify, or GitHub Pages. See their respective documentation for deployment instructions.
+
+## Customization
+
+Edit the data files in `src/data/` to customize your:
+
+- Personal information
+- Projects
+- Blog posts
+- Skills and services

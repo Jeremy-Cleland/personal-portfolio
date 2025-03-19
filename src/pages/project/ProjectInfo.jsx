@@ -1,5 +1,5 @@
-import { useContext } from "react";
 import { motion as m } from "framer-motion";
+import { useContext } from "react";
 import { SingleProjectContext } from "../../context/SingleProjectContext.jsx";
 
 const ProjectInfo = () => {
@@ -25,7 +25,7 @@ const ProjectInfo = () => {
             delay: 0.2,
             duration: 1,
           }}
-          className="my-5 border-b-4 border-violet-400 py-5 text-center font-ChillaxBold text-xl font-bold leading-4 tracking-wide text-dark-900 dark:text-dark-100 md:my-10 md:text-2xl"
+          className="my-5 border-b-4 border-orange-400 py-5 text-center font-ChillaxBold text-xl font-bold leading-4 tracking-wide text-dark-900 dark:text-dark-100 md:my-10 md:text-2xl"
         >
           {singleProjectData.title}
         </m.h1>

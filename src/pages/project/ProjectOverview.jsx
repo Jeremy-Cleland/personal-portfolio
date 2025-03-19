@@ -19,10 +19,10 @@ const ProjectOverview = () => {
     >
       {/* Overview Section */}
       <div className="mb-7">
-        <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
+        <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
           Overview
         </m.h3>
-        <div className="prose-headings:font-ChillaxBold prose-headings:text-violet-600 dark:prose-headings:text-violet-400 prose-a:text-violet-500 prose-a:no-underline hover:prose-a:underline prose-code:bg-violet-50 dark:prose-code:bg-dark-800 prose-code:p-1 prose-code:rounded">
+        <div className="prose-headings:font-ChillaxBold prose-headings:text-orange-600 dark:prose-headings:text-orange-400 prose-a:text-orange-500 prose-a:no-underline hover:prose-a:underline prose-code:bg-orange-50 dark:prose-code:bg-dark-800 prose-code:p-1 prose-code:rounded">
           <MarkdownRenderer
             content={singleProjectData.details.overview}
             className="mb-2 font-Fira text-sm font-medium leading-6"
@@ -32,7 +32,7 @@ const ProjectOverview = () => {
 
       {/* Technologies Section */}
       <div className="mb-7">
-        <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
+        <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
           Technologies
         </m.h3>
         <div className="flex w-full flex-wrap gap-5 text-center font-SourceCodePro text-dark-900 dark:text-dark-100 lg:gap-10">
@@ -53,7 +53,7 @@ const ProjectOverview = () => {
       {/* Features Section */}
       {singleProjectData.details.features && (
         <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
+          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
             Key Features
           </m.h3>
           {typeof singleProjectData.details.features === 'string' ? (
@@ -78,7 +78,7 @@ const ProjectOverview = () => {
       {/* Performance Metrics Section */}
       {singleProjectData.details.performance && (
         <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
+          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
             Performance Metrics
           </m.h3>
           {typeof singleProjectData.details.performance === 'string' ? (
@@ -92,7 +92,7 @@ const ProjectOverview = () => {
                 ([model, metrics]) => (
                   <div
                     key={model}
-                    className="p-4 rounded-lg bg-violet-50 dark:bg-dark-800"
+                    className="p-4 rounded-lg bg-orange-50 dark:bg-dark-800"
                   >
                     <h4 className="font-ChillaxBold mb-2 text-center capitalize">
                       {model}
@@ -116,7 +116,7 @@ const ProjectOverview = () => {
       {/* Visualizations Section */}
       {singleProjectData.details.visualizations && (
         <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
+          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
             Visualizations
           </m.h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -130,7 +130,7 @@ const ProjectOverview = () => {
                   className="mx-auto h-auto max-w-full rounded-lg lg:max-w-xl"
                 />
                 <h4 className="font-ChillaxBold text-center">{viz.title}</h4>
-                <p className="text-sm text-center text-violet-600 dark:text-violet-400">
+                <p className="text-sm text-center text-orange-600 dark:text-orange-400">
                   {viz.description}
                 </p>
               </div>
@@ -142,7 +142,7 @@ const ProjectOverview = () => {
       {/* Learnings Section */}
       {singleProjectData.details.learnings && (
         <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
+          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
             Key Learnings
           </m.h3>
           {typeof singleProjectData.details.learnings === 'string' ? (
@@ -165,14 +165,14 @@ const ProjectOverview = () => {
       {/* Team Section */}
       {singleProjectData.details.team && (
         <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
+          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
             Team
           </m.h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {singleProjectData.details.team.map((member, index) => (
               <div key={index} className="text-center p-4">
                 <h4 className="font-ChillaxBold mb-1">{member.name}</h4>
-                <p className="text-sm text-violet-600 dark:text-violet-400">
+                <p className="text-sm text-orange-600 dark:text-orange-400">
                   {member.role}
                 </p>
               </div>

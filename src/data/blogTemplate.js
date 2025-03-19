@@ -71,20 +71,6 @@ export const createBlogPost = (blogData) => {
       title: seoTitle,
       description: seoDescription,
       keywords: seoKeywords
-    },
-    // Schema.org structured data for SEO
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": title,
-      "description": description,
-      "image": thumbnailImage,
-      "datePublished": formattedDate,
-      "author": {
-        "@type": "Person",
-        "name": author
-      },
-      "keywords": tags.join(', ')
     }
   };
 };

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import { motion as m } from "framer-motion";
+import React, { useState } from "react";
 import { slideInVariant } from "../../utils/variants.js";
 import SocialMedia from "../about/SocialMedia.jsx";
 
@@ -20,7 +20,7 @@ const Form = () => {
   };
 
   const inputStyles =
-    "mx-auto w-[80vw] sm:w-[60vw] md:w-[50vw] max-w-xl appearance-none justify-center rounded-lg border border-violet-400 bg-dark-100 px-3 py-2 sm:text-base text-dark-900 shadow-inner placeholder:text-dark-400 focus:border-violet-900 focus:outline-none focus:ring-1 focus:ring-violet-400 dark:border-violet-400 dark:bg-dark-300 dark:text-dark-100 dark:placeholder:text-dark-100/60 lg:w-[40vw] max-w-lg font-ChillaxLight";
+    "mx-auto w-[80vw] sm:w-[60vw] md:w-[50vw] max-w-xl appearance-none justify-center rounded-lg border border-orange-400 bg-dark-100 px-3 py-2 sm:text-base text-dark-900 shadow-inner placeholder:text-dark-400 focus:border-orange-900 focus:outline-none focus:ring-1 focus:ring-orange-400 dark:border-orange-400 dark:bg-dark-300 dark:text-dark-100 dark:placeholder:text-dark-100/60 lg:w-[40vw] max-w-lg font-ChillaxLight";
 
   return (
     <m.div
@@ -82,13 +82,13 @@ const Form = () => {
               rows="6"
               value={formData.message}
               onChange={handleInputChange}
-              className="w-full rounded-lg border border-gray-300 border-opacity-50 bg-dark-100 px-2 py-2 font-ChillaxLight text-dark-900 shadow-sm dark:border-violet-400 dark:bg-dark-400 dark:text-dark-100 dark:placeholder:text-dark-100/60"
+              className="w-full rounded-lg border border-orange-400/30 border-opacity-50 bg-dark-100 px-2 py-2 font-ChillaxLight text-dark-900 shadow-sm dark:border-orange-400 dark:bg-dark-400 dark:text-dark-100 dark:placeholder:text-dark-100/60"
             />
           </div>
 
           <div className="mx-auto my-6 text-center">
             <button
-              className="inline-block w-48 rounded-lg bg-gradient-to-r from-violet-900 to-violet-400 p-[1px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
+              className="inline-block w-48 rounded-lg bg-gradient-to-r from-orange-900 to-orange-400 p-[1px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
               type="submit"
               aria-label="Send Message"
             >

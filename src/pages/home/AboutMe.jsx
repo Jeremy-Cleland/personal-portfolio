@@ -1,8 +1,8 @@
-import { useContext } from "react";
 import { motion as m } from "framer-motion";
+import { useContext } from "react";
+import profilePic from "../../assets/images/profilePic.png";
 import Button from "../../components/reusable/Button.jsx";
 import Card from "../../components/reusable/Card.jsx";
-import profilePic from "../../assets/images/profilePic.png";
 import { AboutMeContext } from "../../context/AboutMeContext.jsx";
 import { slideInVariant } from "../../utils/variants.js";
 
@@ -16,9 +16,9 @@ const AboutMe = () => {
         animate="show"
         className="mx-auto max-w-7xl"
       >
-        <div className="my-5 border-b-[1px] border-violet-400/60 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200">
+        <div className="my-5 border-b-[1px] border-orange-200 dark:border-orange-400/30 py-5 text-center font-SourceCodePro text-dark-900 dark:text-gray-200">
           <h4 className="text-left font-Fira text-sm tracking-tight md:text-lg">
-            <span className="text-base text-violet-400"> {">"} </span> About Me
+            <span className="text-base text-orange-200 dark:text-orange-400/70"> {">"} </span> About Me
           </h4>
         </div>
         <img

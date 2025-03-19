@@ -1,28 +1,28 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
 import clsx from "clsx";
-import useColorMode from "../../hooks/useColorMode.js";
+import PropTypes from "prop-types";
+import { useState } from "react";
 import {
   RiBriefcase3Line,
   RiChat3Line,
-  RiHome3Line,
-  RiUser3Line,
+  RiCloseCircleLine,
   RiFilePaper2Line,
-  RiLayout3Line,
   RiGithubLine,
+  RiHome3Line,
+  RiLayout3Line,
   RiLinkedinBoxLine,
   RiMenu2Line,
-  RiCloseCircleLine,
+  RiUser3Line,
 } from "react-icons/ri";
 import {
   TbSquareRoundedArrowLeft,
   TbSquareRoundedArrowRight,
 } from "react-icons/tb";
+import image from "../../assets/images/profilePic.png";
+import useColorMode from "../../hooks/useColorMode.js";
 import ColorModeToggle from "./ColorModeToggle.jsx";
 import NavItem from "./NavItem.jsx";
 import SocialLink from "./SocialLink.jsx";
 import TrafficLightToggle from "./TrafficLightToggle.jsx";
-import image from "../../assets/images/profilePic.png";
 
 const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const [colorMode, setColorMode] = useColorMode();
@@ -56,7 +56,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
         <div className="flex h-full flex-col justify-between">
           <div className="-mr-2 flex justify-end  py-8">
             <button
-              className=" p-2 text-dark-900 hover:text-violet-400 focus:outline-none dark:text-dark-100/50 dark:hover:text-violet-400"
+              className=" p-2 text-dark-900 hover:text-orange-200 focus:outline-none dark:text-orange-400 dark:hover:text-orange-200"
               onClick={toggleSidebar}
             >
               <SidebarIcon size={24} />

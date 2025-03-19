@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import clsx from "clsx";
 
@@ -7,7 +7,7 @@ const NavItem = ({ isSidebarOpen, icon: Icon, text, path }) => {
   return (
     <li
       className={
-        "group mt-8 flex cursor-default rounded-lg font-bold  tracking-widest text-dark-900 transition-all duration-100 hover:bg-dark-50 hover:text-dark-900 hover:shadow-lg active:shadow-lg dark:text-dark-100 hover:dark:bg-dark-800 hover:dark:text-dark-50"
+        "group mt-8 flex cursor-default rounded-lg font-bold  tracking-widest text-dark-900 transition-all duration-100 hover:bg-orange-50 hover:text-dark-900 hover:shadow-lg active:shadow-lg dark:text-dark-100 hover:dark:bg-orange-400/20 hover:dark:text-dark-50"
       }
     >
       <Link

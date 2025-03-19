@@ -1,8 +1,8 @@
 import { motion as m } from "framer-motion";
 import { useContext } from "react";
-import SocialMedia from "./SocialMedia.jsx";
-import { slideInVariant } from "../../utils/variants.js";
 import { AboutMeContext } from "../../context/AboutMeContext.jsx";
+import { slideInVariant } from "../../utils/variants.js";
+import SocialMedia from "./SocialMedia.jsx";
 
 const ProfileInfo = () => {
   // const { bio } = aboutMeData;
@@ -15,11 +15,11 @@ const ProfileInfo = () => {
       animate="show"
       className="mx-auto max-w-6xl"
     >
-      <h2 className="mb-2 font-SourceCodePro text-2xl font-black text-violet-400">
+      <h2 className="mb-2 font-SourceCodePro text-2xl font-black text-orange-400">
         Jeremy Cleland
       </h2>
       <p className="my-2 font-SourceCodePro font-bold text-dark-900 dark:text-dark-100">
-        <span className="text-base text-violet-400"> {">"} </span>
+        <span className="text-base text-orange-400"> {">"} </span>
         AI Engineer
       </p>
       {aboutMe.bio.map((para, index) => (

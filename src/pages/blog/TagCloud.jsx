@@ -34,8 +34,8 @@ const TagCloud = () => {
           variants={item}
           onClick={() => setTagFilter("")}
           className={`rounded-full px-3 py-1 text-sm ${tagFilter === ""
-            ? "bg-violet-600 text-white"
-            : "bg-gray-100 text-gray-800 hover:bg-violet-100 dark:bg-dark-700 dark:text-gray-200 dark:hover:bg-dark-600"
+            ? "bg-orange-400/40 text-white"
+            : "bg-gray-100 text-gray-800 hover:bg-orange-400/20 dark:bg-orange-400/40 dark:text-gray-200 dark:hover:bg-orange-400/20"
             }`}
         >
           All
@@ -47,8 +47,8 @@ const TagCloud = () => {
             variants={item}
             onClick={() => setTagFilter(tag)}
             className={`rounded-full px-3 py-1 text-sm ${tagFilter === tag
-              ? "bg-violet-600 text-white"
-              : "bg-gray-100 text-gray-800 hover:bg-violet-100 dark:bg-dark-700 dark:text-gray-200 dark:hover:bg-dark-600"
+              ? "bg-orange-400/40 text-white"
+              : "bg-gray-100 text-gray-800 hover:bg-orange-400/20 dark:bg-orange-400/40 dark:text-gray-200 dark:hover:bg-orange-400/20"
               }`}
           >
             {tag}

@@ -43,7 +43,7 @@ const ProjectSingle = () => {
         <p className="mb-6">Available projects: {portfolioProject.map(p => p.name).join(', ')}</p>
         <button
           onClick={() => window.history.back()}
-          className="bg-violet-500 hover:bg-violet-600 text-white px-4 py-2 rounded"
+          className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded"
         >
           Go Back
         </button>

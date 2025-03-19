@@ -85,8 +85,56 @@ The blog post content supports full Markdown formatting, allowing you to create 
 - Emphasis (**bold**, *italic*)
 - Lists (ordered and unordered)
 - Links
-- Code blocks (inline and multi-line)
+- Code blocks (inline and multi-line with syntax highlighting)
 - Tables
+
+## Table of Contents
+
+The blog system automatically generates a table of contents based on your H2 and H3 headings. To ensure your headings appear correctly in the TOC:
+
+1. Use `##` for main sections (H2)
+2. Use `###` for subsections (H3)
+3. Keep heading text concise and descriptive
+4. The TOC is automatically displayed both on desktop (as a sticky sidebar) and on mobile (as a collapsible panel)
+
+## Social Sharing
+
+Your blog posts include social sharing functionality:
+
+1. **Built-in Share Button**: Uses the Web Share API when available, with fallback to clipboard copy
+2. **Social Media Links**: Direct links to share on Twitter, LinkedIn, and Facebook
+3. **Desktop vs. Mobile**: Different sharing UIs optimized for each device type
+
+To customize the sharing text:
+
+- The post title and description are used as the default sharing text
+- For custom sharing text, modify the `metaTitle` and `metaDescription` parameters
+
+## RSS Feed
+
+Your blog automatically generates an RSS feed for subscribers:
+
+1. The feed is available at `/rss.xml`
+2. It includes all your blog posts, sorted by date (newest first)
+3. Each entry contains the post title, description, date, and categories
+4. The feed is referenced in your `robots.txt` file for discovery
+
+To update your RSS feed with new posts, the system automatically includes all posts in the `blogData.jsx` file.
+
+## SEO Optimization
+
+Each blog post is automatically optimized for search engines:
+
+1. **Schema.org Markup**: Structured data helps search engines understand your content
+2. **Meta Tags**: Title, description, and keywords are automatically generated
+3. **Sitemap Integration**: New posts are listed in the sitemap.xml file
+4. **Canonical URLs**: Each post has a clean, SEO-friendly URL structure
+
+When adding a new post, remember to:
+
+1. Update the `sitemap.xml` file with the new post URL
+2. Use descriptive, keyword-rich titles and descriptions
+3. Choose relevant categories and tags
 
 ## Important SEO Fields
 
@@ -109,6 +157,8 @@ For the best possible blog posts:
 5. **Keep paragraphs short**: 2-3 sentences per paragraph for readability
 6. **Use images strategically**: Break up text and illustrate concepts
 7. **Conclude with key takeaways**: Summarize what readers should learn
+8. **Structure for TOC**: Organize content with clear H2 and H3 headings
+9. **Optimize for sharing**: Consider how your content will appear when shared
 
 ## Need More Help?
 

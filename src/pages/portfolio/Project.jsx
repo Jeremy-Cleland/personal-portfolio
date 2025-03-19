@@ -30,7 +30,7 @@ const Project = ({ name, title, category, image, info }) => {
       >
         <div className="group relative mx-auto mt-10 flex transform items-center justify-center transition duration-300 ease-in-out hover:scale-[1.02]">
           {/* Gradient background effect */}
-          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-violet-500 to-violet-300 opacity-40 blur transition duration-300 group-hover:opacity-70 dark:from-violet-600 dark:to-violet-400" />
+          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-orange-500 to-orange-300 opacity-40 blur transition duration-300 group-hover:opacity-70 dark:from-orange-600 dark:to-orange-400" />
 
           {/* Project image with overlay */}
           <div className="relative w-full rounded-lg overflow-hidden">
@@ -47,7 +47,7 @@ const Project = ({ name, title, category, image, info }) => {
                 {tags.slice(0, 3).map((tag, index) => (
                   <span
                     key={index}
-                    className="bg-violet-500/40 text-white text-xs px-2 py-1 rounded-full font-SourceCodePro"
+                    className="bg-orange-500/40 text-white text-xs px-2 py-1 rounded-full font-SourceCodePro"
                   >
                     {tag}
                   </span>
@@ -56,7 +56,7 @@ const Project = ({ name, title, category, image, info }) => {
 
               {/* Date */}
               {date && (
-                <p className="text-violet-200 text-xs font-Fira mb-1">
+                <p className="text-orange-200 text-xs font-Fira mb-1">
                   {date}
                 </p>
               )}
@@ -66,11 +66,11 @@ const Project = ({ name, title, category, image, info }) => {
 
         {/* Title and category */}
         <div className="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">
-          <strong className="relative font-SourceCodePro tracking-wide text-dark-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-violet-400 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100 dark:text-dark-50">
+          <strong className="relative font-SourceCodePro tracking-wide text-dark-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-orange-400 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100 dark:text-dark-50">
             {title}
           </strong>
 
-          <span className="hidden sm:block sm:h-px sm:w-8 sm:bg-violet-400" />
+          <span className="hidden sm:block sm:h-px sm:w-8 sm:bg-orange-400" />
 
           <p className="mt-0.5 font-Fira tracking-tight opacity-60 sm:mt-0">
             {category}
