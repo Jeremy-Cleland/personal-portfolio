@@ -14,10 +14,10 @@ const Timeline = () => {
           Education Timeline
         </h4>
       </div>
-      <ul className="mx-auto my-20 max-w-7xl rounded-lg  p-4 font-Fira text-sm dark:bg-dark-900 dark:text-dark-100 lg:p-8">
+      <ul className="mx-auto my-20 max-w-7xl rounded-lg  p-4 font-Fira text-sm  dark:text-dark-100 lg:p-8">
         {aboutMe.events.map((event) => (
           <li key={event.id}>
-            <div className="grid max-w-6xl overflow-hidden rounded-lg p-4 hover:bg-orange-400/20 hover:dark:bg-orange-400/20  md:grid-cols-5 lg:p-6 xl:grid-cols-12">
+            <div className="grid max-w-7xl overflow-hidden rounded-lg p-4 hover:bg-orange-400/20 hover:dark:bg-orange-400/20  md:grid-cols-5 lg:p-6 xl:grid-cols-12">
               <h3 className="my-2  font-SourceCodePro text-sm font-bold underline underline-offset-4 md:col-span-4 md:col-start-2 md:ml-0 xl:col-span-9 xl:col-start-3">
                 {event.title}
               </h3>

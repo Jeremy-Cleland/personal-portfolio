@@ -94,7 +94,7 @@ const PortfolioGrid = () => {
             <PortfolioFilter setSelectFilterProject={setSelectFilterProject} />
           </div>
         </div>
-        <div className="mx-auto grid max-w-6xl auto-cols-max grid-cols-1 gap-10 xl:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl auto-cols-max grid-cols-1 gap-10 xl:grid-cols-2">
           {renderProjects()}
         </div>
       </m.section>

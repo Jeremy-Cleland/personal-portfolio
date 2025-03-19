@@ -128,7 +128,7 @@ const MarkdownRenderer = ({ content, className, enhanceToc }) => {
               </div>
             ) : (
               <code
-                className="px-1.5 py-0.5 rounded-md font-SourceCodePro bg-gray-100 text-orange-700 dark:bg-dark-900 dark:text-orange-400"
+                className="px-1.5 py-0.5 rounded-lg font-SourceCodePro bg-gray-100 text-orange-700 dark:bg-dark-900 dark:text-orange-400"
                 {...props}
               >
                 {children}

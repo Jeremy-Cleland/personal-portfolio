@@ -94,8 +94,8 @@ const Blog = () => {
           <button
             onClick={() => handleTagClick("all")}
             className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${activeTag === "all"
-              ? "bg-orange-600 text-white shadow-md transform scale-105 border-2 border-orange-400"
-              : "bg-orange-50 text-gray-700 hover:bg-gray-200 dark:bg-dark-900 dark:text-gray-300 dark:hover:bg-dark-600"
+              ? "bg-orange-400 text-white shadow-md transform scale-105 border-2 border-orange-400"
+              : "bg-white text-gray-700 border-2 border-orange-400/30 hover:border-orange-400/50 hover:bg-orange-50 dark:bg-dark-800 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700"
               }`}
           >
             All
@@ -105,8 +105,8 @@ const Blog = () => {
               key={tag}
               onClick={() => handleTagClick(tag)}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${activeTag === tag
-                ? "bg-orange-600 text-white shadow-md transform scale-105 border-2 border-orange-400"
-                : "bg-gray-100 text-dark-900 hover:bg-gray-200 dark:bg-dark-900 dark:text-gray-300 dark:hover:bg-dark-600"
+                ? "bg-orange-400 text-white shadow-md transform scale-105 border-2 border-orange-400"
+                : "bg-white text-gray-700 border-2 border-orange-400/30 hover:border-orange-400/50 hover:bg-orange-50 dark:bg-dark-800 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700"
                 }`}
             >
               {tag}
@@ -127,7 +127,7 @@ const Blog = () => {
             </p>
             <button
               onClick={() => handleTagClick("all")}
-              className="mt-4 rounded-md bg-orange-600 px-4 py-2 text-sm font-medium text-orange-600 hover:bg-orange-200 dark:bg-orange-400 dark:text-white dark:hover:bg-orange-500"
+              className="mt-4 rounded-md bg-orange-400 px-4 py-2 text-sm font-medium text-white hover:bg-orange-500 dark:bg-orange-400 dark:text-white dark:hover:bg-orange-500"
             >
               View all posts
             </button>

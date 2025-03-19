@@ -13,7 +13,7 @@ const ProfileInfo = () => {
       variants={slideInVariant("right", "tween", 0.3, 0.7)}
       initial="hidden"
       animate="show"
-      className="mx-auto max-w-6xl"
+      className="mx-auto max-w-7xl"
     >
       <h2 className="mb-2 font-SourceCodePro text-2xl font-black text-orange-400">
         Jeremy Cleland

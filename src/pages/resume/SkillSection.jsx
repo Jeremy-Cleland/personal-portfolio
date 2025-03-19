@@ -20,7 +20,7 @@ const SkillsSection = () => {
           variants={staggerContainerVariant}
           initial="hidden"
           animate="show"
-          className="mx-auto mb-8 grid max-w-6xl grid-cols-2 gap-4 sm:grid-cols-4"
+          className="mx-auto mb-8 grid max-w-7xl grid-cols-2 gap-4 sm:grid-cols-4"
         >
           {resume.technicalSkills.languages.map((skill, index) => (
             <Skill key={index} icon={skill.icon} name={skill.name} />
@@ -37,7 +37,7 @@ const SkillsSection = () => {
           variants={staggerContainerVariant}
           initial="hidden"
           animate="show"
-          className="mx-auto grid max-w-6xl grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6"
+          className="mx-auto grid max-w-7xl grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6"
         >
           {resume.technicalSkills.skillsAndTools.map((skill, index) => (
             <Skill key={index} icon={skill.icon} name={skill.name} />

@@ -30,7 +30,7 @@ const Project = ({ name, title, category, image, info }) => {
       >
         <div className="group relative mx-auto mt-10 flex transform items-center justify-center transition duration-300 ease-in-out hover:scale-[1.02]">
           {/* Gradient background effect */}
-          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-orange-500 to-orange-300 opacity-40 blur transition duration-300 group-hover:opacity-70 dark:from-orange-600 dark:to-orange-400" />
+          <div className="absolute -inset-0.5 animate-tilt rounded-lg bg-gradient-to-t from-orange-400/30 to-orange-400/80 opacity-40 blur transition duration-300 group-hover:opacity-70 dark:from-orange-400/40 dark:to-orange-400" />
 
           {/* Project image with overlay */}
           <div className="relative w-full rounded-lg overflow-hidden">
@@ -41,13 +41,13 @@ const Project = ({ name, title, category, image, info }) => {
             />
 
             {/* Gradient overlay at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-orange-400/10 via-orange-400/10 to-transparent p-4">
               {/* Tag pills */}
               <div className="flex flex-wrap gap-2 mb-2">
                 {tags.slice(0, 3).map((tag, index) => (
                   <span
                     key={index}
-                    className="bg-orange-500/40 text-white text-xs px-2 py-1 rounded-full font-SourceCodePro"
+                    className="bg-orange-400 text-white text-xs px-2 py-1 rounded-full font-SourceCodePro"
                   >
                     {tag}
                   </span>

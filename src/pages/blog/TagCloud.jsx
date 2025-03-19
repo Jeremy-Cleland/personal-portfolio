@@ -21,7 +21,7 @@ const TagCloud = () => {
   };
 
   return (
-    <div className="mx-auto mb-10 max-w-6xl">
+    <div className="mx-auto mb-10 max-w-7xl">
       <h3 className="mb-4 font-ChillaxBold text-lg text-dark-900 dark:text-white">Popular Tags</h3>
 
       <m.div
@@ -34,8 +34,8 @@ const TagCloud = () => {
           variants={item}
           onClick={() => setTagFilter("")}
           className={`rounded-full px-3 py-1 text-sm ${tagFilter === ""
-            ? "bg-orange-400/40 text-white"
-            : "bg-gray-100 text-gray-800 hover:bg-orange-400/20 dark:bg-orange-400/40 dark:text-gray-200 dark:hover:bg-orange-400/20"
+            ? "bg-orange-200 text-white"
+            : "bg-gray-100 text-gray-800 hover:bg-orange-400/20 dark:bg-orange-400 dark:text-gray-200 dark:hover:bg-orange-400/20"
             }`}
         >
           All
@@ -47,8 +47,8 @@ const TagCloud = () => {
             variants={item}
             onClick={() => setTagFilter(tag)}
             className={`rounded-full px-3 py-1 text-sm ${tagFilter === tag
-              ? "bg-orange-400/40 text-white"
-              : "bg-gray-100 text-gray-800 hover:bg-orange-400/20 dark:bg-orange-400/40 dark:text-gray-200 dark:hover:bg-orange-400/20"
+              ? "bg-orange-200 text-white"
+              : "bg-gray-100 text-gray-800 hover:bg-orange-400/20 dark:bg-orange-400 dark:text-gray-200 dark:hover:bg-orange-400/20"
               }`}
           >
             {tag}

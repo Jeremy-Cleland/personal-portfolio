@@ -24,7 +24,7 @@ const BlogHeader = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="mx-auto my-5 grid max-w-6xl grid-rows-2 justify-between gap-5 sm:my-2.5 md:flex"
+        className="mx-auto my-5 grid max-w-7xl grid-rows-2 justify-between gap-5 sm:my-2.5 md:flex"
       >
         {/* Search Input */}
         <div className="group mx-5 flex w-full md:w-72 rounded-lg border-[1px] border-orange-400/30 bg-dark-100 pl-2 dark:border-orange-400/30 dark:bg-dark-600">

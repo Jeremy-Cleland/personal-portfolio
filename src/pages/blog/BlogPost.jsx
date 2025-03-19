@@ -133,7 +133,7 @@ const BlogPost = () => {
         <div className="mx-auto max-w-3xl px-4 lg:px-0">
           <Link
             to="/blog"
-            className="mb-8 inline-flex items-center rounded-md bg-gray-50 px-3 py-2 font-SourceCodePro text-sm text-orange-600 transition-colors hover:bg-orange-50 dark:bg-dark-900 dark:text-orange-200 dark:hover:bg-dark-600"
+            className="mb-8 inline-flex items-center rounded-lg bg-white border-2 border-orange-400/30 px-3 py-2 font-SourceCodePro text-sm text-gray-700 transition-colors hover:border-orange-400/50 hover:bg-orange-50 hover:text-orange-600 dark:bg-dark-800 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700 dark:hover:text-orange-400"
           >
             <FiArrowLeft className="mr-2" />
             Back to all posts
@@ -154,7 +154,7 @@ const BlogPost = () => {
             <div className="mx-auto max-w-3xl">
               <div className="mb-4 flex flex-wrap items-center gap-3">
                 {post.categories.map((category, index) => (
-                  <span key={index} className="rounded-full bg-orange-600/80 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                  <span key={index} className="rounded-full bg-orange-400 border-2 border-orange-400 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
                     {category}
                   </span>
                 ))}
@@ -176,14 +176,14 @@ const BlogPost = () => {
                 <div className="relative">
                   <button
                     onClick={sharePost}
-                    className="flex items-center text-white hover:text-orange-400"
+                    className="flex items-center text-white hover:text-orange-400 transition-colors"
                     aria-label="Share this post"
                   >
                     <FiShare2 className="mr-2" />
                     <span>Share</span>
                   </button>
                   {showShareTooltip && (
-                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 rounded-md bg-dark-700 px-3 py-1 text-xs text-white shadow-lg">
+                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 rounded-md bg-orange-400 px-3 py-1 text-xs text-white shadow-lg border border-orange-500">
                       URL copied!
                     </div>
                   )}
@@ -354,7 +354,7 @@ const BlogPost = () => {
                 <Link
                   key={index}
                   to={`/blog?tag=${tag}`}
-                  className="rounded-full bg-white px-3 py-1 text-sm text-gray-800 shadow-sm transition-colors hover:bg-orange-50 hover:text-orange-600 dark:bg-dark-600 dark:text-gray-200 dark:hover:bg-dark-500 dark:hover:text-orange-400"
+                  className="rounded-full bg-white border-2 border-orange-400/30 px-3 py-1 text-sm text-gray-700 transition-colors hover:border-orange-400/50 hover:bg-orange-50 hover:text-orange-600 dark:bg-dark-800 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700 dark:hover:text-orange-400"
                 >
                   {tag}
                 </Link>
