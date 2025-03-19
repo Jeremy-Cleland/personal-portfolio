@@ -1,17 +1,18 @@
-import { useState } from "react";
 import clsx from "clsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import UseScrollToTop from "./hooks/UseScrollToTop.jsx";
+import { useState } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import ScrollToTop from "./components/reusable/ScrollToTop.jsx";
-import Home from "./pages/home/index.jsx";
 import Sidebar from "./components/Sidebar/index.jsx";
+import UseScrollToTop from "./hooks/UseScrollToTop.jsx";
 import About from "./pages/about/index.jsx";
+import BlogPost from "./pages/blog/BlogPost.jsx";
+import Blog from "./pages/blog/index.jsx";
+import Contact from "./pages/contact/index.jsx";
+import Home from "./pages/home/index.jsx";
+import PageNotFound from "./pages/notfound/PageNotFound.jsx";
 import Portfolio from "./pages/portfolio/index.jsx";
 import ProjectSingle from "./pages/project/index.jsx";
 import Resume from "./pages/resume/index.jsx";
-import Blog from "./pages/blog/index.jsx";
-import Contact from "./pages/contact/index.jsx";
-import PageNotFound from "./pages/notfound/PageNotFound.jsx";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -38,6 +39,7 @@ function App() {
             <Route path="/portfolio/:projectName" element={<ProjectSingle />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>

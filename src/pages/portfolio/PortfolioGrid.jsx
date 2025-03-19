@@ -1,12 +1,12 @@
-import { useContext } from "react";
 import { motion as m } from "framer-motion";
+import { useContext } from "react";
 import { RiSearch2Line } from "react-icons/ri";
 
 import Card from "../../components/reusable/Card.jsx";
-import PortfolioFilter from "./PortfolioFilter.jsx";
-import Project from "./Project.jsx";
 import { PortfolioContext } from "../../context/PortfolioContext.jsx";
 import { fadeInVariant } from "../../utils/variants.js";
+import PortfolioFilter from "./PortfolioFilter.jsx";
+import Project from "./Project.jsx";
 
 const PortfolioGrid = () => {
   const {
@@ -29,6 +29,7 @@ const PortfolioGrid = () => {
           key={project.id}
           id={project.id}
           name={project.name}
+          info={project.info}
         />
       ));
     }
@@ -41,6 +42,7 @@ const PortfolioGrid = () => {
           key={project.id}
           id={project.id}
           name={project.name}
+          info={project.info}
         />
       ));
     }
@@ -52,6 +54,7 @@ const PortfolioGrid = () => {
         key={project.id}
         id={project.id}
         name={project.name}
+        info={project.info}
       />
     ));
   };

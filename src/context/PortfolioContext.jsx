@@ -1,12 +1,18 @@
-import { useState, useMemo, createContext } from "react";
+import { createContext, useEffect, useMemo, useState } from "react";
 import { portfolioData } from "../data/portfolioData.jsx";
 
 export const PortfolioContext = createContext();
 
 export const PortfolioProvider = (props) => {
+  console.log('PortfolioProvider - Initial portfolioData:', portfolioData);
+
   const [portfolioProject, setPortfolioProject] = useState(portfolioData);
   const [searchPortfolioProject, setSearchPortfolioProject] = useState("");
   const [selectFilterProject, setSelectFilterProject] = useState("");
+
+  useEffect(() => {
+    console.log('PortfolioProvider - portfolioProject state:', portfolioProject);
+  }, [portfolioProject]);
 
   const searchPortfolioByTitle = useMemo(() => {
     return portfolioProject.filter((item) => {

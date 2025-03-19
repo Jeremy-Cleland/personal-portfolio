@@ -1,5 +1,6 @@
-import { useContext } from "react";
 import { motion as m } from "framer-motion";
+import { useContext } from "react";
+import MarkdownRenderer from "../../components/reusable/MarkdownRenderer.jsx";
 import { SingleProjectContext } from "../../context/SingleProjectContext.jsx";
 
 const ProjectOverview = () => {
@@ -21,9 +22,12 @@ const ProjectOverview = () => {
         <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
           Overview
         </m.h3>
-        <p className="mb-2 font-Fira text-sm font-medium leading-6 whitespace-pre-line">
-          {singleProjectData.details.overview}
-        </p>
+        <div className="prose-headings:font-ChillaxBold prose-headings:text-violet-600 dark:prose-headings:text-violet-400 prose-a:text-violet-500 prose-a:no-underline hover:prose-a:underline prose-code:bg-violet-50 dark:prose-code:bg-dark-800 prose-code:p-1 prose-code:rounded">
+          <MarkdownRenderer
+            content={singleProjectData.details.overview}
+            className="mb-2 font-Fira text-sm font-medium leading-6"
+          />
+        </div>
       </div>
 
       {/* Technologies Section */}
@@ -52,13 +56,22 @@ const ProjectOverview = () => {
           <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
             Key Features
           </m.h3>
-          <ul className="list-disc pl-6 font-Fira text-sm font-medium leading-6">
-            {singleProjectData.details.features.map((feature, index) => (
-              <li key={index} className="mb-2">
-                {feature}
-              </li>
-            ))}
-          </ul>
+          {typeof singleProjectData.details.features === 'string' ? (
+            <div className="prose-ul:pl-0 prose-li:mb-2">
+              <MarkdownRenderer
+                content={singleProjectData.details.features}
+                className="font-Fira text-sm font-medium leading-6"
+              />
+            </div>
+          ) : (
+            <ul className="list-disc pl-6 font-Fira text-sm font-medium leading-6">
+              {singleProjectData.details.features.map((feature, index) => (
+                <li key={index} className="mb-2">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
 
@@ -68,28 +81,35 @@ const ProjectOverview = () => {
           <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
             Performance Metrics
           </m.h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {Object.entries(singleProjectData.details.performance).map(
-              ([model, metrics]) => (
-                <div
-                  key={model}
-                  className="p-4 rounded-lg bg-violet-50 dark:bg-dark-800"
-                >
-                  <h4 className="font-ChillaxBold mb-2 text-center capitalize">
-                    {model}
-                  </h4>
-                  <div className="space-y-1 text-sm">
-                    {Object.entries(metrics).map(([metric, value]) => (
-                      <p key={metric} className="flex justify-between">
-                        <span className="capitalize">{metric}:</span>
-                        <span className="font-medium">{value.toFixed(4)}</span>
-                      </p>
-                    ))}
+          {typeof singleProjectData.details.performance === 'string' ? (
+            <MarkdownRenderer
+              content={singleProjectData.details.performance}
+              className="font-Fira text-sm font-medium leading-6"
+            />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {Object.entries(singleProjectData.details.performance).map(
+                ([model, metrics]) => (
+                  <div
+                    key={model}
+                    className="p-4 rounded-lg bg-violet-50 dark:bg-dark-800"
+                  >
+                    <h4 className="font-ChillaxBold mb-2 text-center capitalize">
+                      {model}
+                    </h4>
+                    <div className="space-y-1 text-sm">
+                      {Object.entries(metrics).map(([metric, value]) => (
+                        <p key={metric} className="flex justify-between">
+                          <span className="capitalize">{metric}:</span>
+                          <span className="font-medium">{value.toFixed(4)}</span>
+                        </p>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ),
-            )}
-          </div>
+                ),
+              )}
+            </div>
+          )}
         </div>
       )}
 
@@ -125,13 +145,20 @@ const ProjectOverview = () => {
           <m.h3 className="my-5 border-b-2 border-violet-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
             Key Learnings
           </m.h3>
-          <ul className="list-disc pl-6 font-Fira text-sm font-medium leading-6">
-            {singleProjectData.details.learnings.map((learning, index) => (
-              <li key={index} className="mb-2">
-                {learning}
-              </li>
-            ))}
-          </ul>
+          {typeof singleProjectData.details.learnings === 'string' ? (
+            <MarkdownRenderer
+              content={singleProjectData.details.learnings}
+              className="font-Fira text-sm font-medium leading-6"
+            />
+          ) : (
+            <ul className="list-disc pl-6 font-Fira text-sm font-medium leading-6">
+              {singleProjectData.details.learnings.map((learning, index) => (
+                <li key={index} className="mb-2">
+                  {learning}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
 

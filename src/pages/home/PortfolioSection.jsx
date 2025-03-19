@@ -1,11 +1,11 @@
+import { motion as m } from "framer-motion";
 import { useContext } from "react";
 import { RiSearch2Line } from "react-icons/ri";
+import Card from "../../components/reusable/Card.jsx";
 import { PortfolioContext } from "../../context/PortfolioContext.jsx";
+import { fadeInVariant } from "../../utils/variants.js";
 import PortfolioFilter from "../portfolio/PortfolioFilter.jsx";
 import ProjectCard from "./ProjectCard.jsx";
-import { motion as m } from "framer-motion";
-import { fadeInVariant } from "../../utils/variants.js";
-import Card from "../../components/reusable/Card.jsx";
 
 const PortfolioSection = () => {
   const {
@@ -30,6 +30,7 @@ const PortfolioSection = () => {
             image={project.img}
             name={project.name}
             key={project.id}
+            info={project.info}
           />
         ));
     }
@@ -44,6 +45,7 @@ const PortfolioSection = () => {
             image={project.img}
             name={project.name}
             key={project.id}
+            info={project.info}
           />
         ));
     }
@@ -57,6 +59,7 @@ const PortfolioSection = () => {
           image={project.img}
           name={project.name}
           key={project.id}
+          info={project.info}
         />
       ));
   };

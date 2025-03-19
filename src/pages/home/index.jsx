@@ -1,12 +1,11 @@
 import { motion as m } from "framer-motion";
 
-import PortfolioSection from "./PortfolioSection.jsx";
-import SkillCloud from "../../components/reusable/SkillCloud.jsx";
-import { PortfolioProvider } from "../../context/PortfolioContext.jsx";
-import TypewriterText from "../../components/reusable/TypewriterText.jsx";
-import AboutMe from "./AboutMe.jsx";
-import { AboutMeProvider } from "../../context/AboutMeContext.jsx";
 import ScrollProgress from "../../components/reusable/ScrollProgress.jsx";
+import SkillCloud from "../../components/reusable/SkillCloud.jsx";
+import TypewriterText from "../../components/reusable/TypewriterText.jsx";
+import { AboutMeProvider } from "../../context/AboutMeContext.jsx";
+import AboutMe from "./AboutMe.jsx";
+import PortfolioSection from "./PortfolioSection.jsx";
 
 const Home = () => {
   return (
@@ -41,9 +40,7 @@ const Home = () => {
         <AboutMe />
       </AboutMeProvider>
 
-      <PortfolioProvider>
-        <PortfolioSection />
-      </PortfolioProvider>
+      <PortfolioSection />
       <SkillCloud />
     </m.div>
   );
