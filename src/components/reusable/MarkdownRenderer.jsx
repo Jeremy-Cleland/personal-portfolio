@@ -96,7 +96,7 @@ const MarkdownRenderer = ({ content, className, enhanceToc }) => {
           code: ({ node, inline, className, children, ...props }) => {
             const match = /language-(\w+)/.exec(className || '');
             return !inline && match ? (
-              <div className="overflow-hidden rounded-lg my-6 mx-0 bg-dark-800 border border-dark-200">
+              <div className="overflow-hidden rounded-lg my-6 mx-0 bg-dark-600 border border-dark-200">
                 <div className="flex items-center justify-between px-4 py-2 bg-dark-900 border-b border-dark-700">
                   <span className="text-xs font-medium uppercase text-gray-400">{match[1]}</span>
                   <div className="flex space-x-1">
@@ -144,7 +144,7 @@ const MarkdownRenderer = ({ content, className, enhanceToc }) => {
           ),
           blockquote: ({ node, ...props }) => (
             <blockquote 
-              className="border-l-4 border-orange-600 pl-6 py-1 my-6 font-medium italic bg-gray-50 dark:bg-dark-900 rounded-r-lg pr-4 text-gray-700 dark:text-gray-300" 
+              className="border-l-4 border-orange-600 pl-6 py-1 my-6 font-medium italic bg-gray-50 dark:bg-dark-600 rounded-r-lg pr-4 text-gray-700 dark:text-gray-300" 
               {...props} 
             />
           ),

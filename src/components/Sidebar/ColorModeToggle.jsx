@@ -1,6 +1,6 @@
-import { useCallback } from "react";
-import PropTypes from "prop-types";
 import clsx from "clsx";
+import PropTypes from "prop-types";
+import { useCallback } from "react";
 import { RiMoonLine, RiSunLine } from "react-icons/ri";
 
 const ColorModeToggle = ({ colorMode, setColorMode, isSidebarOpen }) => {
@@ -21,7 +21,7 @@ const ColorModeToggle = ({ colorMode, setColorMode, isSidebarOpen }) => {
   return (
     <div
       className={clsx(
-        "group mt-8 flex cursor-default rounded-lg p-4 font-bold tracking-widest text-dark-900 transition-all duration-100 hover:bg-dark-50 hover:shadow-lg active:shadow-lg dark:text-dark-100  hover:dark:bg-dark-800 hover:dark:text-dark-50",
+        "group mt-8 flex cursor-default rounded-lg p-4 font-bold tracking-widest text-dark-900 transition-all duration-100 hover:bg-dark-50 hover:shadow-lg active:shadow-lg dark:text-dark-100  hover:dark:bg-dark-600 hover:dark:text-dark-50",
         isSidebarOpen ? "mx-3 hover:underline" : "mx-auto justify-center"
       )}
       onClick={toggleColorMode}

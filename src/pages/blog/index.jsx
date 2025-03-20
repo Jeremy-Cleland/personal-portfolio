@@ -95,7 +95,7 @@ const Blog = () => {
             onClick={() => handleTagClick("all")}
             className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${activeTag === "all"
               ? "bg-orange-400 text-white shadow-md transform scale-105 border-2 border-orange-400"
-              : "bg-white text-gray-700 border-2 border-orange-400/30 hover:border-orange-400/50 hover:bg-orange-50 dark:bg-dark-800 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700"
+              : "bg-white text-gray-700 border-2 border-orange-400/30 hover:border-orange-400/50 hover:bg-orange-50 dark:bg-dark-600 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700"
               }`}
           >
             All
@@ -106,7 +106,7 @@ const Blog = () => {
               onClick={() => handleTagClick(tag)}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${activeTag === tag
                 ? "bg-orange-400 text-white shadow-md transform scale-105 border-2 border-orange-400"
-                : "bg-white text-gray-700 border-2 border-orange-400/30 hover:border-orange-400/50 hover:bg-orange-50 dark:bg-dark-800 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700"
+                : "bg-white text-gray-700 border-2 border-orange-400/30 hover:border-orange-400/50 hover:bg-orange-50 dark:bg-dark-600 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700"
                 }`}
             >
               {tag}
@@ -120,7 +120,7 @@ const Blog = () => {
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => <BlogCard key={post.id} post={post} />)
         ) : (
-          <div className="mx-auto max-w-md rounded-lg border border-orange-400/30 bg-white p-8 text-center dark:border-orange-600/30 dark:bg-dark-800">
+          <div className="mx-auto max-w-md rounded-lg border border-orange-400/30 bg-white p-8 text-center dark:border-orange-600/30 dark:bg-dark-600">
             <h3 className="mb-2 text-xl font-semibold text-gray-800 dark:text-gray-200">No posts found</h3>
             <p className="text-gray-600 dark:text-gray-400">
               Try adjusting your search or filter to find what you're looking for.

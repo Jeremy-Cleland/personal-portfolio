@@ -111,8 +111,7 @@ export const portfolioData = [
       ],
       team: [
         { name: "Jeremy Cleland", role: "Graudate Student" },
-        // { name: "Anthony Lewis", role: "Graudate Student" },
-        // { name: "Salif Khan", role: "Graudate Student" }
+
       ]
     }
   }

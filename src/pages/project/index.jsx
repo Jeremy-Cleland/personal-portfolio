@@ -11,22 +11,35 @@ import ButtonGroup from "./ButtonGroup.jsx";
 import ProjectInfo from "./ProjectInfo.jsx";
 import ProjectOverview from "./ProjectOverview.jsx";
 
-import { fadeIn } from "../../utils/variants.js";
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+    }
+  }
+};
 
 const ProjectSingle = () => {
   const { projectName } = useParams();
   const { portfolioProject } = useContext(PortfolioContext);
 
   useEffect(() => {
-    console.log('ProjectSingle - URL param:', projectName);
-    console.log('ProjectSingle - Available projects:', portfolioProject.map(p => p.name));
-
     // Check if project exists
     const project = portfolioProject.find(
       (project) => project.name === projectName,
     );
 
-    console.log('ProjectSingle - Found project:', project ? project.title : 'Not found');
+    // Set page title if project exists
+    if (project) {
+      document.title = `${project.title} | Jeremy Cleland`;
+    }
+
+    return () => {
+      document.title = "Jeremy Cleland - Portfolio";
+    };
   }, [projectName, portfolioProject]);
 
   // Check if project exists
@@ -35,38 +48,45 @@ const ProjectSingle = () => {
   );
 
   if (!project) {
-    console.error('Project not found, showing fallback UI');
     return (
-      <div className="container mx-auto mt-10 p-6 text-center">
-        <h2 className="text-2xl font-bold mb-4">Project Not Found</h2>
-        <p className="mb-6">Could not find project with name: "{projectName}"</p>
-        <p className="mb-6">Available projects: {portfolioProject.map(p => p.name).join(', ')}</p>
-        <button
-          onClick={() => window.history.back()}
-          className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded"
-        >
-          Go Back
-        </button>
-      </div>
+      <m.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="container mx-auto mt-10 px-6 py-12"
+      >
+        <div className="mx-auto max-w-lg rounded-lg border border-orange-400/30 bg-white p-8 text-center shadow-md dark:border-orange-600/30 dark:bg-dark-900">
+          <h2 className="mb-4 font-ChillaxBold text-2xl text-dark-900 dark:text-white">Project Not Found</h2>
+          <p className="mb-6 text-gray-600 dark:text-gray-400">Could not find project with name: "{projectName}"</p>
+          <button
+            onClick={() => window.history.back()}
+            className="rounded-md bg-orange-400 px-6 py-3 font-medium text-white transition-colors hover:bg-orange-500 dark:bg-orange-500 dark:hover:bg-orange-600"
+          >
+            Go Back
+          </button>
+        </div>
+      </m.div>
     );
   }
 
   return (
     <SingleProjectProvider projectName={projectName} initialData={project}>
       <m.div
-        variants={fadeIn}
+        variants={container}
         initial="hidden"
         animate="visible"
-        transition={{
-          ease: "easeInOut",
-          duration: 0.7,
-          delay: 0.15,
-        }}
-        className="container mx-auto mt-5 md:mt-10"
+        className="container mx-auto px-4 py-12 md:py-16"
       >
-        <ProjectInfo />
-        <ProjectOverview />
-        <ButtonGroup />
+        <m.div 
+          className="mx-auto max-w-7xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <ProjectInfo />
+          <ProjectOverview />
+          <ButtonGroup />
+        </m.div>
       </m.div>
     </SingleProjectProvider>
   );

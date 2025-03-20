@@ -3,182 +3,276 @@ import { useContext } from "react";
 import MarkdownRenderer from "../../components/reusable/MarkdownRenderer.jsx";
 import { SingleProjectContext } from "../../context/SingleProjectContext.jsx";
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { 
+      duration: 0.6,
+    }
+  }
+};
+
+const headingVariants = {
+  hidden: { opacity: 0, width: "0%" },
+  visible: { 
+    opacity: 1, 
+    width: "100%",
+    transition: { 
+      duration: 0.6,
+      ease: "easeOut",
+    }
+  }
+};
+
+const contentVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { 
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      delay: 0.2 
+    }
+  }
+};
+
+const techVariants = {
+  hidden: { opacity: 0 },
+  visible: { 
+    opacity: 1,
+    transition: { 
+      staggerChildren: 0.1,
+      delayChildren: 0.3
+    }
+  }
+};
+
+const techItemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { 
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
+
+// Section header component for reuse
+const SectionHeader = ({ title }) => (
+  <m.div 
+    className="my-5 border-b-[1px] border-orange-400/60 py-5 text-center font-SourceCodePro"
+    variants={headingVariants}
+  >
+    <h3 className="text-center font-Fira text-lg tracking-tight text-dark-900 dark:text-gray-200 md:text-left">
+      <span className="text-base text-orange-400"> {">"} </span> {title}
+    </h3>
+  </m.div>
+);
+
 const ProjectOverview = () => {
   const { singleProjectData } = useContext(SingleProjectContext);
 
   return (
     <m.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        ease: "easeIn",
-        duration: 1,
-        delay: 0.3,
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: 0.3
+          }
+        }
       }}
-      className="mb-16 flex flex-col gap-0 md:gap-10"
+      className="mb-16 flex flex-col gap-10"
     >
       {/* Overview Section */}
-      <div className="mb-7">
-        <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
-          Overview
-        </m.h3>
-        <div className="prose-headings:font-ChillaxBold prose-headings:text-orange-600 dark:prose-headings:text-orange-400 prose-a:text-orange-500 prose-a:no-underline hover:prose-a:underline prose-code:bg-orange-50 dark:prose-code:bg-dark-800 prose-code:p-1 prose-code:rounded">
+      <m.div variants={sectionVariants}>
+        <SectionHeader title="Overview" />
+        <m.div variants={contentVariants} className="prose-headings:font-ChillaxBold prose-headings:text-orange-600 dark:prose-headings:text-orange-400 prose-a:text-orange-400 prose-a:no-underline hover:prose-a:underline prose-code:bg-orange-50 dark:prose-code:bg-dark-800 prose-code:p-1 prose-code:rounded-xl">
           <MarkdownRenderer
             content={singleProjectData.details.overview}
             className="mb-2 font-Fira text-sm font-medium leading-6"
           />
-        </div>
-      </div>
+        </m.div>
+      </m.div>
 
       {/* Technologies Section */}
-      <div className="mb-7">
-        <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
-          Technologies
-        </m.h3>
-        <div className="flex w-full flex-wrap gap-5 text-center font-SourceCodePro text-dark-900 dark:text-dark-100 lg:gap-10">
+      <m.div variants={sectionVariants}>
+        <SectionHeader title="Technologies" />
+        <m.div 
+          variants={techVariants}
+          className="flex w-full flex-wrap gap-5 justify-center text-center font-SourceCodePro text-dark-900 dark:text-gray-200 lg:gap-6"
+        >
           {singleProjectData.details.technologies.map((tech) => (
             <m.div
-              whileHover={{ scale: 1.05, color: "#A38CF3" }}
-              transition={{ duration: 0.3 }}
-              className="mx-auto flex flex-col items-center justify-center gap-1 text-xs lg:text-sm"
               key={tech.id}
+              variants={techItemVariants}
+              whileHover={{ 
+                scale: 1.1, 
+                color: "#f97316",
+                transition: { duration: 0.2 }
+              }}
+              className="flex flex-col items-center justify-center gap-2 px-4 py-2 text-sm transition-colors lg:text-base"
             >
-              {tech.icon}
-              {tech.name}
+              <span className="text-2xl">{tech.icon}</span>
+              <span>{tech.name}</span>
             </m.div>
           ))}
-        </div>
-      </div>
+        </m.div>
+      </m.div>
 
       {/* Features Section */}
       {singleProjectData.details.features && (
-        <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
-            Key Features
-          </m.h3>
-          {typeof singleProjectData.details.features === 'string' ? (
-            <div className="prose-ul:pl-0 prose-li:mb-2">
-              <MarkdownRenderer
-                content={singleProjectData.details.features}
-                className="font-Fira text-sm font-medium leading-6"
-              />
-            </div>
-          ) : (
-            <ul className="list-disc pl-6 font-Fira text-sm font-medium leading-6">
-              {singleProjectData.details.features.map((feature, index) => (
-                <li key={index} className="mb-2">
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+        <m.div variants={sectionVariants}>
+          <SectionHeader title="Key Features" />
+          <m.div variants={contentVariants}>
+            {typeof singleProjectData.details.features === 'string' ? (
+              <div className="prose-ul:pl-0 prose-li:mb-2">
+                <MarkdownRenderer
+                  content={singleProjectData.details.features}
+                  className="font-Fira text-sm font-medium leading-6"
+                />
+              </div>
+            ) : (
+              <ul className="grid gap-3 md:grid-cols-2">
+                {singleProjectData.details.features.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="mr-2 mt-1 text-orange-500">•</span>
+                    <span className="font-Fira text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </m.div>
+        </m.div>
       )}
 
       {/* Performance Metrics Section */}
       {singleProjectData.details.performance && (
-        <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
-            Performance Metrics
-          </m.h3>
-          {typeof singleProjectData.details.performance === 'string' ? (
-            <MarkdownRenderer
-              content={singleProjectData.details.performance}
-              className="font-Fira text-sm font-medium leading-6"
-            />
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {Object.entries(singleProjectData.details.performance).map(
-                ([model, metrics]) => (
-                  <div
-                    key={model}
-                    className="p-4 rounded-lg bg-orange-50 dark:bg-dark-800"
-                  >
-                    <h4 className="font-ChillaxBold mb-2 text-center capitalize">
-                      {model}
-                    </h4>
-                    <div className="space-y-1 text-sm">
-                      {Object.entries(metrics).map(([metric, value]) => (
-                        <p key={metric} className="flex justify-between">
-                          <span className="capitalize">{metric}:</span>
-                          <span className="font-medium">{value.toFixed(4)}</span>
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                ),
-              )}
-            </div>
-          )}
-        </div>
+        <m.div variants={sectionVariants}>
+          <SectionHeader title="Performance Metrics" />
+          <m.div variants={contentVariants}>
+            {typeof singleProjectData.details.performance === 'string' ? (
+              <MarkdownRenderer
+                content={singleProjectData.details.performance}
+                className="font-Fira text-sm font-medium leading-6"
+              />
+            ) : (
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                {Object.entries(singleProjectData.details.performance).map(
+                  ([model, metrics]) => (
+                    <m.div
+                      key={model}
+                      className="rounded-lg bg-gray-50 p-4 dark:bg-dark-700 dark:border-orange-400/10 border-2 border-orange-400/30"
+                      whileHover={{ 
+                        scale: 1.00,
+                        transition: { duration: 0.2 }
+                      }}
+                    >
+                      <h4 className="mb-2 text-center font-ChillaxBold capitalize text-dark-600 dark:text-dark-100">
+                        {model}
+                      </h4>
+                      <div className="space-y-1 text-sm">
+                        {Object.entries(metrics).map(([metric, value]) => (
+                          <p key={metric} className="flex justify-between">
+                            <span className="capitalize">{metric}:</span>
+                            <span className="font-medium">{value.toFixed(4)}</span>
+                          </p>
+                        ))}
+                      </div>
+                    </m.div>
+                  ),
+                )}
+              </div>
+            )}
+          </m.div>
+        </m.div>
       )}
 
       {/* Visualizations Section */}
       {singleProjectData.details.visualizations && (
-        <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
-            Visualizations
-          </m.h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <m.div variants={sectionVariants}>
+          <SectionHeader title="Visualizations" />
+          <m.div variants={contentVariants} className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {singleProjectData.details.visualizations.map((viz) => (
-              <div key={viz.id} className="space-y-2">
+              <m.div 
+                key={viz.id} 
+                className="overflow-hidden rounded-xl bg-gray-50 p-4 dark:bg-dark-700"
+                whileHover={{ 
+                  scale: 1.0,
+                  transition: { duration: 0.3 }
+                }}
+              >
                 <m.img
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
                   src={viz.img}
                   alt={viz.title}
-                  className="mx-auto h-auto max-w-full rounded-lg lg:max-w-xl"
+                  className="mx-auto h-auto max-w-full rounded-xl object-cover lg:max-w-xl"
+                  whileHover={{ 
+                    scale: 1.06,
+                    transition: { duration: 0.7 }
+                  }}
                 />
-                <h4 className="font-ChillaxBold text-center">{viz.title}</h4>
-                <p className="text-sm text-center text-orange-600 dark:text-orange-400">
+                <h4 className="mt-3 text-center font-ChillaxBold">{viz.title}</h4>
+                <p className="text-center text-sm text-orange-600 dark:text-orange-500">
                   {viz.description}
                 </p>
-              </div>
+              </m.div>
             ))}
-          </div>
-        </div>
+          </m.div>
+        </m.div>
       )}
 
       {/* Learnings Section */}
       {singleProjectData.details.learnings && (
-        <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
-            Key Learnings
-          </m.h3>
-          {typeof singleProjectData.details.learnings === 'string' ? (
-            <MarkdownRenderer
-              content={singleProjectData.details.learnings}
-              className="font-Fira text-sm font-medium leading-6"
-            />
-          ) : (
-            <ul className="list-disc pl-6 font-Fira text-sm font-medium leading-6">
-              {singleProjectData.details.learnings.map((learning, index) => (
-                <li key={index} className="mb-2">
-                  {learning}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+        <m.div variants={sectionVariants}>
+          <SectionHeader title="Key Learnings" />
+          <m.div variants={contentVariants}>
+            {typeof singleProjectData.details.learnings === 'string' ? (
+              <MarkdownRenderer
+                content={singleProjectData.details.learnings}
+                className="font-Fira text-sm font-medium leading-6"
+              />
+            ) : (
+              <ul className="grid gap-3 md:grid-cols-2">
+                {singleProjectData.details.learnings.map((learning, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="mr-2 mt-1 text-orange-500">•</span>
+                    <span className="font-Fira text-sm">{learning}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </m.div>
+        </m.div>
       )}
 
       {/* Team Section */}
       {singleProjectData.details.team && (
-        <div className="mb-7">
-          <m.h3 className="my-5 border-b-2 border-orange-400 py-5 text-center font-SourceCodePro text-sm font-bold leading-4 tracking-wide text-dark-900 dark:border-dark-100 dark:text-dark-100">
-            Team
-          </m.h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <m.div variants={sectionVariants}>
+          <SectionHeader title="Team" />
+          <m.div variants={contentVariants} className="grid grid-cols gap-4 md:grid-cols-2">
             {singleProjectData.details.team.map((member, index) => (
-              <div key={index} className="text-center p-4">
-                <h4 className="font-ChillaxBold mb-1">{member.name}</h4>
-                <p className="text-sm text-orange-600 dark:text-orange-400">
+              <m.div 
+                key={index} 
+                className="rounded-xl bg-gray-50 p-4 text-center dark:bg-dark-900"
+                whileHover={{ 
+                  scale: 1.01,
+                  transition: { duration: 0.2 }
+                }}
+              >
+                <h4 className="mb-1 font-ChillaxBold">{member.name}</h4>
+                <p className="text-sm text-orange-00 dark:text-orange-400">
                   {member.role}
                 </p>
-              </div>
+              </m.div>
             ))}
-          </div>
-        </div>
+          </m.div>
+        </m.div>
       )}
     </m.div>
   );

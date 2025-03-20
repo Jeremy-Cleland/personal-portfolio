@@ -16,7 +16,7 @@ const BlogCard = ({ post }) => {
         aria-label={post.title}
         className="block group"
       >
-        <div className="relative mx-auto flex flex-col overflow-hidden rounded-lg border border-orange-400/30 bg-white transition-all duration-300 dark:border-orange-400/30 dark:bg-dark-800 md:flex-row">
+        <div className="relative mx-auto flex flex-col overflow-hidden rounded-lg border border-orange-400/30 bg-white transition-all duration-300 dark:border-orange-400/30 dark:bg-dark-600 md:flex-row">
           {/* Image container with overlay */}
           <div className="relative h-52 w-full overflow-hidden md:h-auto md:w-2/5">
             <img

@@ -133,7 +133,7 @@ const BlogPost = () => {
         <div className="mx-auto max-w-3xl px-4 lg:px-0">
           <Link
             to="/blog"
-            className="mb-8 inline-flex items-center rounded-lg bg-white border-2 border-orange-400/30 px-3 py-2 font-SourceCodePro text-sm text-gray-700 transition-colors hover:border-orange-400/50 hover:bg-orange-50 hover:text-orange-600 dark:bg-dark-800 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700 dark:hover:text-orange-400"
+            className="mb-8 inline-flex items-center rounded-lg bg-white border-2 border-orange-400/30 px-3 py-2 font-SourceCodePro text-sm text-gray-700 transition-colors hover:border-orange-400/50 hover:bg-orange-50 hover:text-orange-600 dark:bg-dark-600 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700 dark:hover:text-orange-400"
           >
             <FiArrowLeft className="mr-2" />
             Back to all posts
@@ -354,7 +354,7 @@ const BlogPost = () => {
                 <Link
                   key={index}
                   to={`/blog?tag=${tag}`}
-                  className="rounded-full bg-white border-2 border-orange-400/30 px-3 py-1 text-sm text-gray-700 transition-colors hover:border-orange-400/50 hover:bg-orange-50 hover:text-orange-600 dark:bg-dark-800 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700 dark:hover:text-orange-400"
+                  className="rounded-full bg-white border-2 border-orange-400/30 px-3 py-1 text-sm text-gray-700 transition-colors hover:border-orange-400/50 hover:bg-orange-50 hover:text-orange-600 dark:bg-dark-600 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700 dark:hover:text-orange-400"
                 >
                   {tag}
                 </Link>
