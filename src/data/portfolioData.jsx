@@ -1,11 +1,13 @@
-import rfPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_(tuned)_precision_recall_curve.png";
-import rfROC from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_(tuned)_roc_curve.png";
-import lrPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_(Tuned)_precision_recall_curve.png";
-import lrROC from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_(Tuned)_roc_curve.png";
+import rfPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_tuned_precision_recall_curve.png";
+import rfROC from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_tuned_roc_curve.png";
+
+import lrPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_Tuned_precision_recall_curve.png";
+
+import lrROC from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_Tuned_roc_curve.png";
 import sepsisImage1 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.png";
 import sepsisImage2 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsisImage2.png";
-import xgboostPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_(Tuned)_precision_recall_curve.png";
-import xgboostROC from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_(Tuned)_roc_curve.png";
+import xgboostPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_Tuned_precision_recall_curve.png";
+import xgboostROC from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_Tuned_roc_curve.png";
 
 import {
   SiNumpy,
