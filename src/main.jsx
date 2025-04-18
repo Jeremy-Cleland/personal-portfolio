@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { BlogProvider } from "./context/BlogContext.jsx";
 import { PortfolioProvider } from "./context/PortfolioContext.jsx";
 import "./styles/globals.css";
+import { reportWebVitals } from "./utils/webVitals.js";
 
 const tagManagerArgs = {
   gtmId: "GTM-N438XXM",
@@ -21,4 +22,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </PortfolioProvider>
   </React.StrictMode>
 );
+
+// Initialize Web Vitals reporting
+reportWebVitals({
+  reportToConsole: process.env.NODE_ENV !== 'production',
+  reportToAnalytics: true
+});
 

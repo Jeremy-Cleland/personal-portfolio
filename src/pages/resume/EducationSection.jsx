@@ -17,7 +17,7 @@ const EducationSection = () => {
       <ul className="mx-auto my-5 max-w-7xl rounded-xl  p-4 font-Fira text-sm dark:bg-dark-600 dark:text-dark-100 lg:p-8">
         {resume.education.map((school, index) => (
           <li key={index}>
-            <div className="grid max-w-7xl overflow-hidden rounded-lg py-4 hover:bg-orange-400/50 hover:dark:bg-orange-400/20 md:grid-cols-5 lg:p-6 xl:grid-cols-12">
+            <div className="grid max-w-7xl overflow-hidden rounded-lg py-4 md:hover:bg-orange-400/50 md:hover:dark:bg-orange-400/20 md:grid-cols-5 lg:p-6 xl:grid-cols-12">
               <h3 className="my-2 font-SourceCodePro text-sm font-bold underline underline-offset-4 md:col-span-4 md:col-start-2 md:ml-0 xl:col-span-9 xl:col-start-3">
                 {school.institution} - {school.location}
               </h3>

@@ -1,4 +1,64 @@
-    [[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
+# netlify.toml
+
+[build]
+command = "npm run build"
+publish = "dist"
+# only rebuild if src, public, or package.json changed
+ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ./src ./public ./package.json"
+
+# Always serve index.html for client-side routing
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+# 1) Long‑term cache for JS/CSS
+[[headers]]
+for = "/*.(js|mjs|css)"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# 2) Long‑term cache + CORS for fonts
+[[headers]]
+for = "/*.(woff|woff2)"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+Access-Control-Allow-Origin = "*"
+
+# 3) Long‑term cache for modern image formats
+[[headers]]
+for = "/*.(svg|avif|webp)"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# 4) Medium‑term cache for bitmaps
+[[headers]]
+for = "/*.(png|jpg|jpeg|gif)"
+[headers.values]
+Cache-Control = "public, max-age=2592000"
+
+# 5) HTML: no‑cache but revalidate + security
+[[headers]]
+for = "/index.html"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://www.google-analytics.com"
+
+# 6) Preload critical assets (fonts, LCP image, main JS/CSS)
+[[headers]]
+for = "/"
+[headers.values]
+Link = """
+      </assets/fonts/chillax/Chillax-Extralight.woff2>; rel=preload; as=font; type="font/woff2"; crossorigin,
+      </assets/fonts/chillax/Chillax-Light.woff2>;      rel=preload; as=font; type="font/woff2"; crossorigin,
+      </assets/fonts/chillax/Chillax-Regular.woff2>;    rel=preload; as=font; type="font/woff2"; crossorigin,
+      </assets/fonts/chillax/Chillax-Medium.woff2>;     rel=preload; as=font; type="font/woff2"; crossorigin,
+      </assets/fonts/chillax/Chillax-Semibold.woff2>;   rel=preload; as=font; type="font/woff2"; crossorigin,
+      </assets/fonts/chillax/Chillax-Bold.woff2>;       rel=preload; as=font; type="font/woff2"; crossorigin,
+      </assets/images/profilePic.png>;                rel=preload; as=image,
+      </assets/index.css>;                             rel=preload; as=style,
+      </assets/main.js>;                               rel=preload; as=script
+    """
