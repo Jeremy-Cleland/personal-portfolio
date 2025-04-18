@@ -27,17 +27,12 @@ Access-Control-Allow-Origin = "*"
 
 # 3) Long‑term cache for modern image formats
 [[headers]]
-for = "/*.(svg|avif|webp)"
+for = "/*.(svg|avif|webp|png|jpg|jpeg|gif)"
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
 
-# 4) Medium‑term cache for bitmaps
-[[headers]]
-for = "/*.(png|jpg|jpeg|gif)"
-[headers.values]
-Cache-Control = "public, max-age=2592000"
 
-# 5) HTML: no‑cache but revalidate + security
+# 4) HTML: no‑cache but revalidate + security
 [[headers]]
 for = "/index.html"
 [headers.values]
@@ -47,7 +42,7 @@ X-XSS-Protection = "1; mode=block"
 X-Content-Type-Options = "nosniff"
 Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://www.google-analytics.com"
 
-# 6) Preload critical assets (fonts, LCP image, main JS/CSS)
+# 4) Preload critical assets (fonts, LCP image, main JS/CSS)
 [[headers]]
 for = "/"
 [headers.values]
