@@ -4,8 +4,8 @@
  */
 
 // Use require syntax for Node.js environment
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // Import the generateRssFeed function
 // Note: We need to use dynamic import since the module uses ES modules syntax
