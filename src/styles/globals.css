@@ -1,6 +1,8 @@
+/* postcss-import */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: "Chillax-Extralight";
   src: url("../assets/fonts/chillax/Chillax-Extralight.woff2") format("woff2");
