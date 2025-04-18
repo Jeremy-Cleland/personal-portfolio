@@ -16,6 +16,19 @@ import {
 } from "react-icons/si";
 import { TbDatabase } from "react-icons/tb";
 
+import classDistributionPie from "../assets/images/portfolio/plantdoc/class_distribution_pie.png";
+import classificationExamples from "../assets/images/portfolio/plantdoc/classification_examples.png";
+import confidenceDistribution from "../assets/images/portfolio/plantdoc/confidence_distribution.png";
+import confusionMatrix from "../assets/images/portfolio/plantdoc/confusion_matrix.png";
+import gradcamPred from "../assets/images/portfolio/plantdoc/gradcam_pred_1.png";
+import modelEvalDashboard from "../assets/images/portfolio/plantdoc/model_evaluation_dashboard.png";
+import precisionRecallCurves from "../assets/images/portfolio/plantdoc/precision_recall_curves.png";
+import rocCurves from "../assets/images/portfolio/plantdoc/roc_curves.png";
+import trainingHistory from "../assets/images/portfolio/plantdoc/training_history.png";
+
+import { SiOpencv, SiPytorch } from "react-icons/si";
+import { createProject } from "./projectTemplate";
+
 const iconStyle = "text-4xl mx-auto inline-block";
 
 export const portfolioData = [
@@ -114,7 +127,52 @@ export const portfolioData = [
 
       ]
     }
-  }
+  },
+  createProject({
+    title: "PlantDoc: Plant Disease Classification",
+    category: "Computer Vision Project",
+    description: "State-of-the-art plant disease classification with CBAM-augmented ResNet18",
+    mainImage: modelEvalDashboard,
+    date: "Aug 17, 2025",
+    tags: ["Computer Vision", "CNN", "Attention", "PyTorch"],
+    overview: `PlantDoc is a complete implementation of a plant disease classification system using a CBAM (Convolutional Block Attention Module) augmented ResNet18 architecture. Plant diseases cause significant crop losses worldwide, and early, accurate detection is crucial for sustainable agriculture. This project implements a state-of-the-art deep learning approach to identify 39 plant disease classes using dual attention mechanisms for enhanced performance.`,
+    technologies: [
+      { id: 1, name: "Python", icon: <SiPython className={iconStyle} /> },
+      { id: 2, name: "PyTorch", icon: <SiPytorch className={iconStyle} /> },
+      { id: 3, name: "NumPy", icon: <SiNumpy className={iconStyle} /> },
+      { id: 4, name: "Pandas", icon: <SiPandas className={iconStyle} /> },
+      { id: 5, name: "OpenCV", icon: <SiOpencv className={iconStyle} /> }
+    ],
+    features: [
+      "Integration of CBAM attention modules into ResNet18 architecture",
+      "Advanced data augmentation and preprocessing with Albumentations",
+      "Class balancing techniques for improved performance on imbalanced data",
+      "Mixed precision training (FP16) and cosine annealing learning rate scheduling",
+      "Comprehensive model evaluation dashboards with ROC, PR curves, and Grad-CAM visualizations"
+    ],
+    visualizations: [
+      { id: 1, title: "Model Evaluation Dashboard", img: modelEvalDashboard, description: "Dashboard showing classification examples, confidence distributions, and confusion matrix" },
+      { id: 2, title: "Classification Examples", img: classificationExamples, description: "Examples of correct vs incorrect classifications" },
+      { id: 3, title: "Confidence Distribution", img: confidenceDistribution, description: "Prediction confidence histogram for correct and incorrect predictions" },
+      { id: 4, title: "Confusion Matrix", img: confusionMatrix, description: "Confusion matrix across all classes" },
+      { id: 5, title: "Class Distribution", img: classDistributionPie, description: "Dataset class distribution pie chart" },
+      { id: 6, title: "Precision-Recall Curves", img: precisionRecallCurves, description: "Precision-Recall curves for top-performing model" },
+      { id: 7, title: "ROC Curves", img: rocCurves, description: "ROC curves for top-performing model" },
+      { id: 8, title: "Training History", img: trainingHistory, description: "Training confidence and accuracy evolution over epochs" },
+      { id: 9, title: "Grad-CAM Visualization", img: gradcamPred, description: "Grad-CAM heatmap highlighting disease regions" }
+    ],
+    performance: {
+      v1: { accuracy: 0.9746, precision: 0.9921, recall: 0.9917 },
+      v2: { accuracy: 0.9671, precision: 0.9921, recall: 0.9917 }
+    },
+    links: [
+      { id: 1, title: "Repository", url: "https://github.com/Jeremy-Cleland/PlantDoc" },
+      { id: 2, title: "Live Demo", url: "https://jeremy-cleland.github.io/PlantDoc/" }
+    ],
+    team: [
+      { name: "Jeremy Cleland", role: "Researcher" }
+    ]
+  })
 ];
 
 // Template for adding new AI/ML projects:
