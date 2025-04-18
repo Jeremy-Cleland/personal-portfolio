@@ -1,19 +1,4 @@
-/**
- * RSS Feed Generator for Blog
- * This utility creates an RSS feed from blog posts during the build process
- */
-
-// Only import fs when running in Node.js environment (for build script)
-let fs;
-if (typeof window === 'undefined') {
-  try {
-    fs = require('fs');
-  } catch (e) {
-    console.warn('fs module not available, running in browser environment');
-  }
-}
-
-// Import blog data
+import fs from 'fs';
 import { blogData } from '../data/blogData';
 
 /**
@@ -105,11 +90,6 @@ function escapeXml(text) {
  * Only works when running in Node.js environment
  */
 export function writeRssFeed() {
-  if (!fs) {
-    console.error('Cannot write RSS feed: fs module not available (browser environment)');
-    return;
-  }
-  
   try {
     const rss = generateRssFeed();
     fs.writeFileSync('./public/rss.xml', rss);
@@ -122,4 +102,4 @@ export function writeRssFeed() {
 // For use in build scripts
 if (typeof window === 'undefined' && typeof require !== 'undefined' && require.main === module) {
   writeRssFeed();
-} 
+}

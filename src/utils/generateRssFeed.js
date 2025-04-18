@@ -91,4 +91,4 @@ function escapeXml(text) {
  * 
  * // Write to file (during build time)
  * fs.writeFileSync(path.join(process.cwd(), 'public', 'rss.xml'), rssFeed);
- */ 
+ */
