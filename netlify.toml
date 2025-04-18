@@ -58,7 +58,6 @@ Link = """
       </assets/fonts/chillax/Chillax-Medium.woff2>;     rel=preload; as=font; type="font/woff2"; crossorigin,
       </assets/fonts/chillax/Chillax-Semibold.woff2>;   rel=preload; as=font; type="font/woff2"; crossorigin,
       </assets/fonts/chillax/Chillax-Bold.woff2>;       rel=preload; as=font; type="font/woff2"; crossorigin,
-      </assets/images/profilePic.png>;                rel=preload; as=image,
-      </assets/index.css>;                             rel=preload; as=style,
-      </assets/main.js>;                               rel=preload; as=script
+      </assets/images/profilePic.png>;                   rel=preload; as=image,
+      </styles/globals.css>;                            rel=preload; as=style,
     """
