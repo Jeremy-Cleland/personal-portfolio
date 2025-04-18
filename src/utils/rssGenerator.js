@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { blogData } from '../data/blogData';
+import { blogData } from '../data/blogData.js';
 
 /**
  * Generates an RSS 2.0 feed XML file from blog data
