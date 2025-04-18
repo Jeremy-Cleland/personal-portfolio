@@ -170,7 +170,7 @@ export const portfolioData = [
       { id: 2, title: "Live Demo", url: "https://jeremy-cleland.github.io/PlantDoc/" }
     ],
     team: [
-      { name: "Jeremy Cleland", role: "Researcher" }
+      { name: "Jeremy Cleland", role: "Graudate Student" }
     ]
   })
 ];
