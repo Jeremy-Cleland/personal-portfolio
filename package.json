@@ -1,12 +1,12 @@
 {
   "name": "personal-portfolio",
-  "homepage": "https:/dev.clelandco.com/",
+  "homepage": "https://dev.clelandco.com/",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-rss.mjs && vite build",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "preview": "vite preview",
