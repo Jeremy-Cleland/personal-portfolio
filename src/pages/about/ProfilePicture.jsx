@@ -1,5 +1,5 @@
-import profilePic from "../../assets/images/profilePic.png";
 import { motion as m } from "framer-motion";
+import profilePic from "../../assets/images/profilePic.webp";
 
 const ProfilePicture = () => {
   const imageVariants = {

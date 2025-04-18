@@ -38,7 +38,7 @@ export default function BlogIndexSchema({ posts = [], baseUrl = 'https://dev.cle
         'keywords': [...post.categories, ...post.tags].join(','),
         'image': post.thumbnailImage
           ? `${baseUrl}${post.thumbnailImage.src || post.thumbnailImage}`
-          : `${baseUrl}/logo.png`
+          : `${baseUrl}/logo.webp`
       }))
     };
 

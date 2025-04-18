@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 import { useContext } from "react";
-import profilePic from "../../assets/images/profilePic.png";
+import profilePic from "../../assets/images/profilePic.webp";
 import Button from "../../components/reusable/Button.jsx";
 import Card from "../../components/reusable/Card.jsx";
 import { AboutMeContext } from "../../context/AboutMeContext.jsx";

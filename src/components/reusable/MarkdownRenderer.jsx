@@ -1,13 +1,63 @@
+import React, { lazy, Suspense, isValidElement } from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import remarkGfm from 'remark-gfm';
 
-/**
- * Markdown renderer component that converts markdown text to formatted HTML
- * Uses react-markdown with GitHub Flavored Markdown support
- */
+// Lazy-load the Prism highlighter to split code blocks out of the main bundle
+const SyntaxHighlighter = lazy(() =>
+  import('react-syntax-highlighter').then(mod => ({ default: mod.Prism }))
+);
+
+const CodeBlock = ({ inline, className, children, ...props }) => {
+  const match = /language-(\w+)/.exec(className || '');
+  if (!inline && match) {
+    return (
+      <Suspense fallback={<code className="px-1.5 py-0.5 rounded-lg font-SourceCodePro bg-gray-100 text-orange-700 dark:bg-dark-900 dark:text-orange-400">{children}</code>}>
+        <div className="overflow-hidden rounded-lg my-6 mx-0 bg-dark-600 border border-dark-200">
+          <div className="flex items-center justify-between px-4 py-2 bg-dark-900 border-b border-dark-700">
+            <span className="text-xs font-medium uppercase text-gray-400">{match[1]}</span>
+            <div className="flex space-x-1">
+              <div className="w-3 h-3 rounded-full bg-orange-600/60"></div>
+              <div className="w-3 h-3 rounded-full bg-orange-500/60"></div>
+              <div className="w-3 h-3 rounded-full bg-orange-400/60"></div>
+            </div>
+          </div>
+          <SyntaxHighlighter
+            style={oneDark}
+            language={match[1]}
+            PreTag="div"
+            customStyle={{
+              margin: 0,
+              padding: '1rem',
+              borderRadius: 0,
+              fontSize: '0.9rem',
+              lineHeight: 1.5,
+              backgroundColor: 'transparent',
+            }}
+            codeTagProps={{
+              className: 'font-SourceCodePro'
+            }}
+            wrapLines
+            wrapLongLines
+            {...props}
+          >
+            {String(children).replace(/\n$/, '')}
+          </SyntaxHighlighter>
+        </div>
+      </Suspense>
+    );
+  }
+  return (
+    <code
+      className="px-1.5 py-0.5 rounded-lg font-SourceCodePro bg-gray-100 text-orange-700 dark:bg-dark-900 dark:text-orange-400"
+      {...props}
+    >
+      {children}
+    </code>
+  );
+};
+
 const MarkdownRenderer = ({ content, className, enhanceToc }) => {
   return (
     <div className={`
@@ -77,9 +127,20 @@ const MarkdownRenderer = ({ content, className, enhanceToc }) => {
               </h4>
             );
           },
-          p: ({ node, ...props }) => (
-            <p className="my-5 leading-7 text-gray-800 dark:text-gray-200" {...props} />
-          ),
+          p: ({ node, children, ...props }) => {
+            // If this paragraph only contains an image, render it in a lighter wrapper
+            if (
+              (isValidElement(children) && children.type === 'img') ||
+              (Array.isArray(children) && children.length === 1 && isValidElement(children[0]) && children[0].type === 'img')
+            ) {
+              return <div className="my-5 mx-auto">{Array.isArray(children) ? children[0] : children}</div>;
+            }
+            return (
+              <p className="my-5 leading-7 text-gray-800 dark:text-gray-200 lg:max-w-5xl mx-auto" {...props}>
+                {children}
+              </p>
+            );
+          },
           a: ({ node, ...props }) => (
             <a 
               className="text-orange-600 dark:text-orange-400 font-medium no-underline hover:underline" 
@@ -93,48 +154,7 @@ const MarkdownRenderer = ({ content, className, enhanceToc }) => {
             <ol className="my-5 list-decimal pl-5" {...props} />
           ),
           // Syntax highlighting for inline code
-          code: ({ node, inline, className, children, ...props }) => {
-            const match = /language-(\w+)/.exec(className || '');
-            return !inline && match ? (
-              <div className="overflow-hidden rounded-lg my-6 mx-0 bg-dark-600 border border-dark-200">
-                <div className="flex items-center justify-between px-4 py-2 bg-dark-900 border-b border-dark-700">
-                  <span className="text-xs font-medium uppercase text-gray-400">{match[1]}</span>
-                  <div className="flex space-x-1">
-                    <div className="w-3 h-3 rounded-full bg-orange-600/60"></div>
-                    <div className="w-3 h-3 rounded-full bg-orange-500/60"></div>
-                    <div className="w-3 h-3 rounded-full bg-orange-400/60"></div>
-                  </div>
-                </div>
-                <SyntaxHighlighter
-                  style={oneDark}
-                  language={match[1]}
-                  PreTag="div"
-                  customStyle={{
-                    margin: 0,
-                    padding: '1rem',
-                    borderRadius: 0,
-                    fontSize: '0.9rem',
-                    lineHeight: 1.5,
-                    backgroundColor: 'transparent',
-                  }}
-                  codeTagProps={{
-                    className: 'font-SourceCodePro'
-                  }}
-                  wrapLines={true}
-                  wrapLongLines={true}
-                >
-                  {String(children).replace(/\n$/, '')}
-                </SyntaxHighlighter>
-              </div>
-            ) : (
-              <code
-                className="px-1.5 py-0.5 rounded-lg font-SourceCodePro bg-gray-100 text-orange-700 dark:bg-dark-900 dark:text-orange-400"
-                {...props}
-              >
-                {children}
-              </code>
-            );
-          },
+          code: CodeBlock,
           // Removed pre component since SyntaxHighlighter handles it
           img: ({ node, ...props }) => (
             <img 
@@ -185,4 +205,4 @@ MarkdownRenderer.propTypes = {
   enhanceToc: PropTypes.bool
 };
 
-export default MarkdownRenderer; 
+export default MarkdownRenderer;

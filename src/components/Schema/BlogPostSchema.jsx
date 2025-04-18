@@ -12,7 +12,7 @@ export default function BlogPostSchema({ post, baseUrl = 'https://dev.clelandco.
     const authorName = post.author || 'Jeremy Cleland';
     const imageUrl = post.thumbnailImage 
       ? `${baseUrl}${post.thumbnailImage.src || post.thumbnailImage}` 
-      : `${baseUrl}/logo.png`;
+      : `${baseUrl}/logo.webp`;
 
     // Generate the JSON-LD schema
     const schema = {
@@ -35,7 +35,7 @@ export default function BlogPostSchema({ post, baseUrl = 'https://dev.clelandco.
         'name': 'Jeremy Cleland',
         'logo': {
           '@type': 'ImageObject',
-          'url': `${baseUrl}/logo.png`
+          'url': `${baseUrl}/logo.webp`
         }
       },
       'datePublished': publishDate,

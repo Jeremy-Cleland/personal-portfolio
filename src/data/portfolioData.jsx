@@ -1,13 +1,13 @@
-import rfPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_tuned_precision_recall_curve.png";
-import rfROC from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_tuned_roc_curve.png";
+import rfPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_tuned_precision_recall_curve.webp";
+import rfROC from "../assets/images/portfolio/SepsisPredictionPipeline/Final_random_forest_tuned_roc_curve.webp";
 
-import lrPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_Tuned_precision_recall_curve.png";
+import lrPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_Tuned_precision_recall_curve.webp";
 
-import lrROC from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_Tuned_roc_curve.png";
-import sepsisImage1 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.png";
-import sepsisImage2 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsisImage2.png";
-import xgboostPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_Tuned_precision_recall_curve.png";
-import xgboostROC from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_Tuned_roc_curve.png";
+import lrROC from "../assets/images/portfolio/SepsisPredictionPipeline/Logistic_Regression_Tuned_roc_curve.webp";
+import sepsisImage1 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.webp";
+import sepsisImage2 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsisImage2.webp";
+import xgboostPrecisionRecall from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_Tuned_precision_recall_curve.webp";
+import xgboostROC from "../assets/images/portfolio/SepsisPredictionPipeline/XGBoost_Tuned_roc_curve.webp";
 
 import {
   SiNumpy,
@@ -18,15 +18,15 @@ import {
 } from "react-icons/si";
 import { TbDatabase } from "react-icons/tb";
 
-import classDistributionPie from "../assets/images/portfolio/plantdoc/class_distribution_pie.png";
-import classificationExamples from "../assets/images/portfolio/plantdoc/classification_examples.png";
-import confidenceDistribution from "../assets/images/portfolio/plantdoc/confidence_distribution.png";
-import confusionMatrix from "../assets/images/portfolio/plantdoc/confusion_matrix.png";
-import gradcamPred from "../assets/images/portfolio/plantdoc/gradcam_pred_1.png";
-import modelEvalDashboard from "../assets/images/portfolio/plantdoc/model_evaluation_dashboard.png";
-import precisionRecallCurves from "../assets/images/portfolio/plantdoc/precision_recall_curves.png";
-import rocCurves from "../assets/images/portfolio/plantdoc/roc_curves.png";
-import trainingHistory from "../assets/images/portfolio/plantdoc/training_history.png";
+import classDistributionPie from "../assets/images/portfolio/plantdoc/class_distribution_pie.webp";
+import classificationExamples from "../assets/images/portfolio/plantdoc/classification_examples.webp";
+import confidenceDistribution from "../assets/images/portfolio/plantdoc/confidence_distribution.webp";
+import confusionMatrix from "../assets/images/portfolio/plantdoc/confusion_matrix.webp";
+import gradcamPred from "../assets/images/portfolio/plantdoc/gradcam_pred_1.webp";
+import modelEvalDashboard from "../assets/images/portfolio/plantdoc/model_evaluation_dashboard.webp";
+import precisionRecallCurves from "../assets/images/portfolio/plantdoc/precision_recall_curves.webp";
+import rocCurves from "../assets/images/portfolio/plantdoc/roc_curves.webp";
+import trainingHistory from "../assets/images/portfolio/plantdoc/training_history.webp";
 
 import { SiOpencv, SiPytorch } from "react-icons/si";
 import { createProject } from "./projectTemplate";
@@ -185,7 +185,7 @@ export const portfolioData = [
 // OPTION 1: Using the project template helper (recommended)
 //
 // import { createProject } from "./projectTemplate.js";
-// import mainImage from "../assets/images/portfolio/project-name/main.png";
+// import mainImage from "../assets/images/portfolio/project-name/main.webp";
 // import { SiPython, SiReact } from "react-icons/si";
 //
 // const iconStyle = "text-4xl mx-auto inline-block";

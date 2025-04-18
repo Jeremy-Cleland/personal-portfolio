@@ -1,8 +1,8 @@
 import { createBlogPost } from "./blogTemplate.js";
 
 // Temporarily use existing portfolio images until blog-specific images are created
-import placeholderImage1 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.png";
-import placeholderImage2 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsisImage2.png";
+import placeholderImage1 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsis-prediction.webp";
+import placeholderImage2 from "../assets/images/portfolio/SepsisPredictionPipeline/sepsisImage2.webp";
 
 /**
  * Blog data containing all blog posts

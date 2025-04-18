@@ -20,8 +20,8 @@ The easiest way to add a new project is to use the `createProject` helper functi
 ```jsx
 // In src/data/portfolioData.jsx
 import { createProject } from "./projectTemplate.js";
-import mainImage from "../assets/images/portfolio/project-name/main.png";
-import secondImage from "../assets/images/portfolio/project-name/second.png";
+import mainImage from "../assets/images/portfolio/project-name/main.webp";
+import secondImage from "../assets/images/portfolio/project-name/second.webp";
 import { SiPython, SiReact } from "react-icons/si";
 
 const iconStyle = "text-4xl mx-auto inline-block";

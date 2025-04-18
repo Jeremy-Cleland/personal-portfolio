@@ -17,7 +17,7 @@ import {
   TbSquareRoundedArrowLeft,
   TbSquareRoundedArrowRight,
 } from "react-icons/tb";
-import image from "../../assets/images/profilePic.png";
+import image from "../../assets/images/profilePic.webp";
 import useColorMode from "../../hooks/useColorMode.js";
 import ColorModeToggle from "./ColorModeToggle.jsx";
 import NavItem from "./NavItem.jsx";
@@ -68,7 +68,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               alt="author"
               className={clsx(
                 "mx-auto drop-shadow-sm  hover:scale-110",
-                isSidebarOpen ? "w-1/2 max-w-[200px]" : "w-full max-w-[100px]"
+                isSidebarOpen ? "w-1/2 max-w-[108px]" : "w-full max-w-[56px]"
               )}
             />
           </div>

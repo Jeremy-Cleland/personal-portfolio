@@ -2,7 +2,7 @@ import { motion as m } from "framer-motion";
 import { useContext, useEffect, useRef, useState } from "react";
 import { FiArrowLeft, FiCalendar, FiClock, FiFacebook, FiLinkedin, FiList, FiShare2, FiTwitter } from "react-icons/fi";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import profilePic from "../../assets/images/profilePic.png";
+import profilePic from "../../assets/images/profilePic.webp";
 import BlogPostSchema from "../../components/Schema/BlogPostSchema";
 import Card from "../../components/reusable/Card.jsx";
 import MarkdownRenderer from "../../components/reusable/MarkdownRenderer.jsx";

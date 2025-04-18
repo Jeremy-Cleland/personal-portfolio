@@ -131,7 +131,7 @@ export const createProject = (projectData) => {
 /**
  * Example usage:
  * 
- * import mainImage from "../assets/images/portfolio/ProjectName/main.png";
+ * import mainImage from "../assets/images/portfolio/ProjectName/main.webp";
  * import { createProject } from "./projectTemplate";
  * import { SiReact } from "react-icons/si";
  * 
