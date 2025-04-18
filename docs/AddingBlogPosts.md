@@ -10,7 +10,7 @@ This guide explains how to add new blog posts to your website in a way that's op
    - Optimal size for thumbnails is 1200x630px (16:9 ratio)
 
 2. **Edit the Blog Data File**
-   - Open `src/data/blogData.jsx`
+   - Open `src/data/blogData.js`
    - Import your images at the top of the file
    - Use the `createBlogPost` helper function to add a new post
 
@@ -19,7 +19,7 @@ This guide explains how to add new blog posts to your website in a way that's op
 The easiest way to add a new blog post is to use the `createBlogPost` helper function:
 
 ```jsx
-// In src/data/blogData.jsx
+// In src/data/blogData.js
 import { createBlogPost } from "./blogTemplate.js";
 import thumbnailImage from "../assets/images/blog/my-post-image.jpg";
 
@@ -119,7 +119,7 @@ Your blog automatically generates an RSS feed for subscribers:
 3. Each entry contains the post title, description, date, and categories
 4. The feed is referenced in your `robots.txt` file for discovery
 
-To update your RSS feed with new posts, the system automatically includes all posts in the `blogData.jsx` file.
+To update your RSS feed with new posts, the system automatically includes all posts in the `blogData.js` file.
 
 ## SEO Optimization
 

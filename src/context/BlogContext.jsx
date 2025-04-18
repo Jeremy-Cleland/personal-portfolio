@@ -1,5 +1,5 @@
 import { createContext, useMemo, useState } from "react";
-import { blogData } from "../data/blogData.jsx";
+import { blogData } from "../data/blogData.js";
 
 export const BlogContext = createContext();
 
