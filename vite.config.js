@@ -4,6 +4,8 @@ import { defineConfig } from "vite";
 import { compression } from 'vite-plugin-compression2';
 import viteImagemin from 'vite-plugin-imagemin';
 import svgr from "vite-plugin-svgr";
+import htmlMinifier from 'vite-plugin-html-minifier-terser';
+import purgecss from 'vite-plugin-purgecss';
 
 export default defineConfig({
   plugins: [
