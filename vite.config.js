@@ -2,10 +2,11 @@ import react from "@vitejs/plugin-react";
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from "vite";
 import { compression } from 'vite-plugin-compression2';
-import viteImagemin from 'vite-plugin-imagemin';
 import svgr from "vite-plugin-svgr";
 import htmlMinifier from 'vite-plugin-html-minifier-terser';
 import purgecss from 'vite-plugin-purgecss';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+
 
 export default defineConfig({
   plugins: [
@@ -37,9 +38,15 @@ export default defineConfig({
       compressionOptions: { level: 11 },
       skipIfLargerOrEqual: true,
     }),
-    viteImagemin({
-      webp: {
-        quality: 75
+    ViteImageOptimizer({
+      png: { quality: 75 },
+      jpeg: { quality: 75 },
+      webp: { quality: 75 },
+      svg: {
+        plugins: [
+          { name: 'removeViewBox', active: false },
+          { name: 'sortAttrs' }
+        ]
       }
     }),
     purgecss({
