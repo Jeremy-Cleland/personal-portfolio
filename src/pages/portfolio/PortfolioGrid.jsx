@@ -87,7 +87,7 @@ const PortfolioGrid = () => {
               type="search"
               required=""
               placeholder="Search Projects"
-              aria-label="Name"
+              aria-label="Search Projects"
             />
           </div>
           <div>

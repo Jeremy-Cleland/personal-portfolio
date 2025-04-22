@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import TagManager from 'react-gtm-module'
+import TagManager from "@sooro-io/react-gtm-module";
 import App from "./App.jsx";
 import { BlogProvider } from "./context/BlogContext.jsx";
 import { PortfolioProvider } from "./context/PortfolioContext.jsx";

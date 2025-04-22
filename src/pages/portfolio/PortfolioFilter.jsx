@@ -12,6 +12,7 @@ const PortfolioFilter = ({ selectFilterProject, setSelectFilterProject }) => {
   return (
     <select
       value={selectFilterProject}
+      aria-label="Filter Projects"
       onChange={(e) => {
         setSelectFilterProject(
           e.target.value === "All Projects" ? "" : e.target.value
