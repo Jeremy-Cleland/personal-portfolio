@@ -7,10 +7,8 @@ module.exports = {
     fontFamily: {
       SourceCodePro: ["Source Code Pro", "monospace"],
       Fira: ["Fira Code", "monospace"],
-      ChillaxExtraLight: ["Chillax-ExtraLight", "sans-serif"],
       ChillaxLight: ["Chillax-Light", "sans-serif"],
       ChillaxRegular: ["Chillax-Regular", "sans-serif"],
-      ChillaxMedium: ["Chillax-Medium", "sans-serif"],
       ChillaxSemiBold: ["Chillax-SemiBold", "sans-serif"],
       ChillaxBold: ["Chillax-Bold", "sans-serif"],
     },

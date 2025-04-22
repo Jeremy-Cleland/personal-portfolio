@@ -4,8 +4,6 @@ import { defineConfig } from "vite";
 import { compression } from 'vite-plugin-compression2';
 import svgr from "vite-plugin-svgr";
 import htmlMinifier from 'vite-plugin-html-minifier-terser';
-// Commented out PurgeCSS import to disable it
-// import purgecss from 'vite-plugin-purgecss';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 
@@ -47,7 +45,6 @@ export default defineConfig({
       jpeg: { quality: 75 },
       webp: { quality: 75 },
      }),
-    // PurgeCSS plugin removed to test if it's causing the issue
   ],
   build: {
     target: 'esnext',

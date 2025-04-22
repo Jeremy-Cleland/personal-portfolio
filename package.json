@@ -6,11 +6,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run generate-sitemap && npm run generate-rss",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "preview": "vite preview",
-    "generate-rss": "node scripts/generate-rss.js"
+    "generate-sitemap": "node scripts/generate-sitemap.mjs",
+    "generate-rss": "node scripts/generate-rss.mjs"
   },
   "dependencies": {
     "@sooro-io/react-gtm-module": "^3.0.1",
