@@ -8,7 +8,7 @@ import "./styles/globals.css";
 import { reportWebVitals } from "./utils/webVitals.js";
 
 const tagManagerArgs = {
-  gtmId: "GTM-N438XXM",
+  gtmId: "G-R38H459W09", 
 };
 
 TagManager.initialize(tagManagerArgs)
