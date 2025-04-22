@@ -4,8 +4,7 @@ import { defineConfig } from "vite";
 import { compression } from 'vite-plugin-compression2';
 import svgr from "vite-plugin-svgr";
 import htmlMinifier from 'vite-plugin-html-minifier-terser';
-// Commented out PurgeCSS import to disable it
-// import purgecss from 'vite-plugin-purgecss';
+import purgecss from 'vite-plugin-purgecss';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 
@@ -13,27 +12,24 @@ export default defineConfig({
   plugins: [
     react(), 
     svgr(),
-    htmlMinifier({ 
-      collapseWhitespace: true, 
-      removeComments: true,
-      conservativeCollapse: true,
-      preserveLineBreaks: true,
-    }),
+    htmlMinifier({ collapseWhitespace: true, removeComments: true }),
     visualizer({ 
       open: true, 
       filename: 'dist/stats.html',
       gzipSize: true,
       brotliSize: true,
-      template: 'treemap'
+      template: 'treemap' // easier to understand than sunburst
     }),
     compression({
       algorithm: 'gzip',
       ext: '.gz',
+      // only compress files ≥10 KiB
       threshold: 10240,
       include: [/\.(js|mjs|css|html)$/],
       skipIfLargerOrEqual: true,
     }),
 
+    // Brotli for same files
     compression({
       algorithm: 'brotliCompress',
       ext: '.br',
@@ -47,10 +43,13 @@ export default defineConfig({
       jpeg: { quality: 75 },
       webp: { quality: 75 },
      }),
-    // PurgeCSS plugin removed to test if it's causing the issue
+    purgecss({
+      content: ['./src/**/*.jsx','./public/index.html'],
+      safelist: [/^bg-/, /^text-/, /^dark:/],
+    }),
   ],
   build: {
-    target: 'esnext',
+    target: 'esnext', // Modern browsers only
     minify: 'esbuild',
     cssMinify: true,
     sourcemap: process.env.NODE_ENV !== 'production',
@@ -58,13 +57,14 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
+          // Create separate chunks for large libraries
           if (id.includes('node_modules')) {
             if (id.includes('react-icons')) return 'vendor-icons';
             if (id.includes('framer-motion')) return 'vendor-motion';
             if (id.includes('react') || id.includes('react-dom')) return 'vendor-react';
             if (id.includes('three')) return 'vendor-three';
             if (id.includes('markdown') || id.includes('remark') || id.includes('syntax-highlighter')) return 'vendor-markdown';
-            return 'vendor';
+            return 'vendor'; // other dependencies
           }
         },
         
@@ -78,4 +78,4 @@ export default defineConfig({
   preview: {
     port: 8080
   }
-});
+}); 
