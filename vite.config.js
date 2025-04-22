@@ -42,13 +42,7 @@ export default defineConfig({
       png: { quality: 75 },
       jpeg: { quality: 75 },
       webp: { quality: 75 },
-      svg: {
-        plugins: [
-          { name: 'removeViewBox', active: false },
-          { name: 'sortAttrs' }
-        ]
-      }
-    }),
+     }),
     purgecss({
       content: ['./src/**/*.jsx','./public/index.html'],
       safelist: [/^bg-/, /^text-/, /^dark:/],
