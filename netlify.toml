@@ -41,18 +41,3 @@ X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
 X-Content-Type-Options = "nosniff"
 Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://www.google-analytics.com"
-
-# 4) Preload critical assets (fonts, LCP image, main JS/CSS)
-[[headers]]
-for = "/"
-[headers.values]
-Link = """
-      </assets/fonts/chillax/Chillax-Extralight.woff2>; rel=preload; as=font; type="font/woff2"; crossorigin,
-      </assets/fonts/chillax/Chillax-Light.woff2>;      rel=preload; as=font; type="font/woff2"; crossorigin,
-      </assets/fonts/chillax/Chillax-Regular.woff2>;    rel=preload; as=font; type="font/woff2"; crossorigin,
-      </assets/fonts/chillax/Chillax-Medium.woff2>;     rel=preload; as=font; type="font/woff2"; crossorigin,
-      </assets/fonts/chillax/Chillax-Semibold.woff2>;   rel=preload; as=font; type="font/woff2"; crossorigin,
-      </assets/fonts/chillax/Chillax-Bold.woff2>;       rel=preload; as=font; type="font/woff2"; crossorigin,
-      </assets/images/profilePic.webp>;                  rel=preload; as=image,
-      </styles/globals.css>;                            rel=preload; as=style
-    """
