@@ -1,0 +1,115 @@
+{
+  "entries": [
+    {
+      "sys": {
+        "id": "plantdoc-plant-disease-classification",
+        "contentType": { "sys": { "id": "portfolioProject" } }
+      },
+      "fields": {
+        "title":       { "en-US": "PlantDoc: Plant Disease Classification" },
+        "slug":        { "en-US": "plantdoc-plant-disease-classification" },
+        "category":    { "en-US": "Computer Vision Project" },
+        "description": { "en-US": "State-of-the-art plant disease classification with CBAM-augmented ResNet18" },
+        "date":        { "en-US": "2025-08-17T00:00:00Z" },
+
+        "mainImage": {
+          "en-US": {
+            "sys": { "type": "Link", "linkType": "Asset", "id": "77dePmtCQnsvV8Zj2bI7Yf" }
+          }
+        },
+
+        "tags": {
+          "en-US": ["Computer Vision","CNN","Attention","PyTorch"]
+        },
+
+        "overview": {
+          "en-US": "PlantDoc is a complete implementation of a plant disease classification system using a CBAM (Convolutional Block Attention Module) augmented ResNet18 architecture. Plant diseases cause significant crop losses worldwide, and early, accurate detection is crucial for sustainable agriculture. This project implements a state-of-the-art deep learning approach to identify 39 plant disease classes using dual attention mechanisms for enhanced performance."
+        },
+
+        "technologiesUsed": {
+          "en-US": ["Python","PyTorch","NumPy","Pandas","OpenCV"]
+        },
+
+        "features": {
+          "en-US": [
+            "Integration of CBAM attention modules into ResNet18 architecture",
+            "Advanced data augmentation and preprocessing with Albumentations",
+            "Class balancing techniques for improved performance on imbalanced data",
+            "Mixed precision training (FP16) and cosine annealing learning rate scheduling",
+            "Comprehensive model evaluation dashboards with ROC, PR curves, and Grad-CAM visualizations"
+          ]
+        },
+
+        "visualizations": {
+          "en-US": [
+            {
+              "title": "Model Evaluation Dashboard",
+              "img":   { "sys": { "type": "Link", "linkType": "Asset", "id": "697eae89f4913c6bc8e99b9fe822b7d2" } },
+              "description": "Dashboard showing classification examples, confidence distributions, and confusion matrix"
+            },
+            {
+              "title": "Classification Examples",
+              "img":   { "sys": { "type": "Link", "linkType": "Asset", "id": "1Gs6DlPO2KL1Dom3Tf23mZ" } },
+              "description": "Examples of correct vs incorrect classifications"
+            },
+            {
+              "title": "Confidence Distribution",
+              "img":   { "sys": { "type": "Link", "linkType": "Asset", "id": "2FFlFvnqHiIy1p0JiXklUT" } },
+              "description": "Prediction confidence histogram for correct and incorrect predictions"
+            },
+            {
+              "title": "Confusion Matrix",
+              "img":   { "sys": { "type": "Link", "linkType": "Asset", "id": "6LBOTfGqLGUhVYFTIuLkw8" } },
+              "description": "Confusion matrix across all classes"
+            },
+            {
+              "title": "Class Distribution Pie",
+              "img":   { "sys": { "type": "Link", "linkType": "Asset", "id": "424qneb6tGcaOtUiNP1XWS" } },
+              "description": "Dataset class distribution pie chart"
+            },
+            {
+              "title": "Precision-Recall Curves",
+              "img":   { "sys": { "type": "Link", "linkType": "Asset", "id": "6cQX7jAoNLtnqVmh9UCI24" } },
+              "description": "Precision-Recall curves for top-performing model"
+            },
+            {
+              "title": "ROC Curves",
+              "img":   { "sys": { "type": "Link", "linkType": "Asset", "id": "SwBXm8TdViwx8gUenUQX4" } },
+              "description": "ROC curves for top-performing model"
+            },
+            {
+              "title": "Training History",
+              "img":   { "sys": { "type": "Link", "linkType": "Asset", "id": "2r0Ke2MzKT6MlbLuc14p25" } },
+              "description": "Training loss and accuracy over epochs"
+            },
+            {
+              "title": "Grad-CAM Visualization",
+              "img":   { "sys": { "type": "Link", "linkType": "Asset", "id": "1k1jyIgGrcXtYqCuPNaQ09" } },
+              "description": "Grad-CAM heatmap highlighting disease regions"
+            }
+          ]
+        },
+
+        "performance": {
+          "en-US": {
+            "v1": { "accuracy": 0.9746, "precision": 0.9921, "recall": 0.9917 },
+            "v2": { "accuracy": 0.9671, "precision": 0.9921, "recall": 0.9917 }
+          }
+        },
+
+        "links": {
+          "en-US": [
+            { "title": "Repository", "url": "https://github.com/Jeremy-Cleland/PlantDoc" },
+            { "title": "Live Demo",  "url": "https://jeremy-cleland.github.io/PlantDoc/" }
+          ]
+        },
+
+        "team": {
+          "en-US": [
+            { "name": "Jeremy Cleland", "role": "Graduate Student" }
+          ]
+        }
+      }
+    }
+  ]
+}
