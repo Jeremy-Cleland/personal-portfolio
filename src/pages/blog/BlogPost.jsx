@@ -1,3 +1,4 @@
+import { BLOCKS } from "@contentful/rich-text-types";
 import { motion as m } from "framer-motion";
 import { useContext, useEffect, useRef, useState } from "react";
 import { FiArrowLeft, FiCalendar, FiClock, FiFacebook, FiLinkedin, FiList, FiShare2, FiTwitter } from "react-icons/fi";
@@ -6,12 +7,13 @@ import profilePic from "../../assets/images/profilePic.webp";
 import BlogPostSchema from "../../components/Schema/BlogPostSchema";
 import Card from "../../components/reusable/Card.jsx";
 import MarkdownRenderer from "../../components/reusable/MarkdownRenderer.jsx";
+import RichTextRenderer from "../../components/reusable/RichTextRenderer.jsx";
 import { BlogContext } from "../../context/BlogContext.jsx";
 
 const BlogPost = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { getPostBySlug, getRelatedPosts } = useContext(BlogContext);
+  const { getPostBySlug, getRelatedPosts, loading } = useContext(BlogContext);
   const [showToc, setShowToc] = useState(false);
   const [headings, setHeadings] = useState([]);
   const articleRef = useRef(null);
@@ -22,60 +24,95 @@ const BlogPost = () => {
   // Extract headings from content for TOC
   useEffect(() => {
     if (post) {
-      // Use regex to extract all headings (## Heading) from markdown content
-      const headingRegex = /^(#{2,3})\s+(.+)$/gm;
-      const matches = [...post.content.matchAll(headingRegex)];
-      
-      const extractedHeadings = matches.map((match, index) => {
-        const level = match[1].length; // Number of # symbols
-        const text = match[2];
-        const id = text.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-');
+      if (typeof post.content === 'string') {
+        // For markdown content (legacy format)
+        // Use regex to extract all headings (## Heading) from markdown content
+        const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+        const matches = [...post.content.matchAll(headingRegex)];
         
-        return {
-          id,
-          text,
-          level,
-          index
+        const extractedHeadings = matches.map((match, index) => {
+          const level = match[1].length; // Number of # symbols
+          const text = match[2];
+          const id = text.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-');
+          
+          return {
+            id,
+            text,
+            level,
+            index
+          };
+        });
+        
+        setHeadings(extractedHeadings);
+      } else if (post.content && post.content.content) {
+        // For rich text content (Contentful format)
+        // Extract headings from rich text nodes
+        const extractedHeadings = [];
+        let index = 0;
+        
+        const extractHeadingsFromNode = (node) => {
+          if (node.nodeType === BLOCKS.HEADING_2 || node.nodeType === BLOCKS.HEADING_3) {
+            const level = node.nodeType === BLOCKS.HEADING_2 ? 2 : 3;
+            const text = node.content[0].value;
+            const id = text.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-');
+            
+            extractedHeadings.push({
+              id,
+              text,
+              level,
+              index: index++
+            });
+          } else if (node.content) {
+            node.content.forEach(childNode => {
+              extractHeadingsFromNode(childNode);
+            });
+          }
         };
-      });
-      
-      setHeadings(extractedHeadings);
+        
+        post.content.content.forEach(node => {
+          extractHeadingsFromNode(node);
+        });
+        
+        setHeadings(extractedHeadings);
+      }
     }
   }, [post]);
 
   useEffect(() => {
-    // Redirect if post not found
-    if (!post) {
+    // Redirect if post not found and not still loading
+    if (!post && !loading) {
       navigate("/blog", { replace: true });
       return;
     }
 
-    // Inject SEO metadata
-    document.title = post.seo.title;
+    if (post) {
+      // Inject SEO metadata
+      document.title = post.seo.title;
 
-    // Create meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.name = 'description';
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.content = post.seo.description;
+      // Create meta description
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.name = 'description';
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.content = post.seo.description;
 
-    // Create meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.name = 'keywords';
-      document.head.appendChild(metaKeywords);
+      // Create meta keywords
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.name = 'keywords';
+        document.head.appendChild(metaKeywords);
+      }
+      metaKeywords.content = post.seo.keywords;
     }
-    metaKeywords.content = post.seo.keywords;
 
     // Cleanup on unmount
     return () => {
       document.title = "Jeremy Cleland - Portfolio";
     };
-  }, [post, navigate]);
+  }, [post, navigate, loading]);
 
   // Scroll to heading when clicking TOC item
   const scrollToHeading = (id) => {
@@ -84,6 +121,17 @@ const BlogPost = () => {
       headingElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  if (loading) {
+    return (
+      <div className="container mx-auto flex justify-center items-center min-h-[50vh]">
+        <div className="text-center">
+          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-orange-400 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-300">Loading post...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!post) return null;
 
@@ -117,6 +165,9 @@ const BlogPost = () => {
       navigator.clipboard.writeText(window.location.href);
     }
   };
+
+  // Determine if we're dealing with rich text or markdown
+  const isRichText = post.content && typeof post.content === 'object';
 
   return (
     <m.div
@@ -256,164 +307,129 @@ const BlogPost = () => {
               href={shareUrls.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-orange-600 hover:text-white dark:bg-dark-900 dark:text-gray-300 dark:hover:bg-orange-400 dark:hover:text-white"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-orange-600 hover:text-white dark:bg-dark-900 dark:text-gray-300 dark:hover:bg-orange-500 dark:hover:text-white"
               aria-label="Share on Facebook"
             >
               <FiFacebook />
             </a>
           </div>
-
-          {/* Table of Contents - Desktop */}
+          
+          {/* Table of Contents (TOC) button */}
           {headings.length > 0 && (
-            <div className="hidden lg:block sticky top-8 float-right ml-8 w-64 rounded-lg border border-orange-400/30 bg-gray-50 p-4 dark:border-orange-400/30 dark:bg-dark-900">
-              <h4 className="mb-3 flex items-center font-ChillaxBold text-base text-dark-900 dark:text-white">
-                <FiList className="mr-2" />
-                Table of Contents
-              </h4>
-              <nav className="toc-nav">
-                <ul className="space-y-2 text-sm">
-                  {headings.map((heading) => (
-                    <li 
-                      key={heading.id}
-                      style={{ paddingLeft: `${(heading.level - 2) * 0.75}rem` }}
-                    >
-                      <button
-                        onClick={() => scrollToHeading(heading.id)}
-                        className="text-left text-gray-700 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-400"
-                      >
-                        {heading.text}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-          )}
-
-          {/* Table of Contents - Mobile Toggle */}
-          {headings.length > 0 && (
-            <div className="lg:hidden mb-6">
+            <div className="mb-6">
               <button 
                 onClick={() => setShowToc(!showToc)}
-                className="flex w-full items-center justify-between rounded-lg border border-orange-400/30 bg-gray-50 p-4 dark:border-orange-400/30 dark:bg-dark-900"
+                className="flex w-full items-center justify-between rounded-lg border border-orange-400/20 bg-gray-50 p-4 text-gray-700 transition-colors hover:bg-orange-50 dark:border-orange-400/30 dark:bg-dark-900 dark:text-gray-300 dark:hover:bg-dark-850"
               >
-                <span className="flex items-center font-ChillaxBold text-dark-900 dark:text-white">
+                <div className="flex items-center font-Fira">
                   <FiList className="mr-2" />
-                  Table of Contents
-                </span>
-                <svg 
-                  className={`h-5 w-5 transform transition-transform ${showToc ? 'rotate-180' : ''} text-gray-600 dark:text-gray-300`} 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                  <span className="font-medium">Table of Contents</span>
+                </div>
+                <span className="text-sm text-gray-500 dark:text-gray-400">{showToc ? 'Hide' : 'Show'}</span>
               </button>
               
+              {/* TOC content */}
               {showToc && (
-                <div className="mt-2 rounded-lg border border-orange-400/30 bg-gray-50 p-4 dark:border-orange-400/30 dark:bg-dark-900">
-                  <nav className="toc-nav">
-                    <ul className="space-y-2 text-sm">
-                      {headings.map((heading) => (
-                        <li 
-                          key={heading.id}
-                          style={{ paddingLeft: `${(heading.level - 2) * 0.75}rem` }}
+                <div className="mt-4 rounded-lg border border-orange-400/20 bg-gray-50 p-4 dark:border-orange-400/30 dark:bg-dark-900">
+                  <ul className="space-y-2">
+                    {headings.map((heading) => (
+                      <li 
+                        key={heading.index}
+                        className={`${
+                          heading.level === 2 ? 'pl-0' : 'pl-4'
+                        }`}
+                      >
+                        <button
+                          onClick={() => scrollToHeading(heading.id)}
+                          className="hover:text-orange-500 text-gray-700 dark:text-gray-300 dark:hover:text-orange-400 text-left"
                         >
-                          <button
-                            onClick={() => {
-                              scrollToHeading(heading.id);
-                              setShowToc(false);
-                            }}
-                            className="text-left text-gray-700 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-400"
-                          >
-                            {heading.text}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
+                          {heading.text}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
             </div>
           )}
 
-          {/* Main content */}
-          <article ref={articleRef} className="mb-12">
-            <MarkdownRenderer 
-              content={post.content}
-              enhanceToc={true} // Signal to add ids to headings for TOC
-            />
+          {/* Post content */}
+          <article ref={articleRef} className="prose prose-orange mb-8 max-w-none dark:prose-invert lg:prose-lg">
+            {isRichText ? (
+              <RichTextRenderer content={post.content} />
+            ) : (
+              <MarkdownRenderer content={post.content} />
+            )}
           </article>
 
           {/* Tags */}
-          <div className="mb-12 rounded-lg border border-orange-400/30 bg-gray-50 p-6 dark:border-orange-400/30 dark:bg-dark-900">
-            <div className="mb-2 font-ChillaxBold text-lg text-dark-900 dark:text-white">Topics</div>
-            <div className="flex flex-wrap items-center gap-2">
-              {post.tags.map((tag, index) => (
-                <Link
-                  key={index}
-                  to={`/blog?tag=${tag}`}
-                  className="rounded-full bg-white border-2 border-orange-400/30 px-3 py-1 text-sm text-gray-700 transition-colors hover:border-orange-400/50 hover:bg-orange-50 hover:text-orange-600 dark:bg-dark-600 dark:text-gray-300 dark:border-orange-400/30 dark:hover:border-orange-400/50 dark:hover:bg-dark-700 dark:hover:text-orange-400"
-                >
-                  {tag}
-                </Link>
-              ))}
+          {post.tags && post.tags.length > 0 && (
+            <div className="mb-8">
+              <h3 className="mb-3 font-ChillaxMedium text-lg font-medium text-gray-900 dark:text-gray-100">Tags</h3>
+              <div className="flex flex-wrap gap-2">
+                {post.tags.map((tag, index) => (
+                  <Link
+                    key={index}
+                    to={`/blog?tag=${tag}`}
+                    className="rounded-lg bg-gray-100 px-3 py-1 text-sm text-gray-700 hover:bg-orange-100 hover:text-orange-700 dark:bg-dark-800 dark:text-gray-300 dark:hover:bg-orange-900/30 dark:hover:text-orange-400"
+                  >
+                    #{tag}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Author section */}
-          <div className="mb-12 rounded-lg border border-orange-400/30 bg-gray-50 p-6 shadow-sm dark:border-orange-400/30 dark:bg-dark-900">
+          <div className="mb-12 rounded-lg border border-orange-400/20 bg-gray-50 p-6 dark:border-orange-400/30 dark:bg-dark-900">
             <div className="flex items-center">
-              <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-full">
-                <img 
-                  src={profilePic} 
-                  alt={post.author} 
-                  className="h-full w-full object-cover"
-                />
-              </div>
+              <img
+                src={profilePic}
+                alt="Jeremy Cleland"
+                className="h-16 w-16 rounded-full object-cover"
+              />
               <div className="ml-4">
-                <h3 className="font-ChillaxBold text-lg font-semibold text-dark-900 dark:text-white">
+                <h3 className="font-ChillaxMedium text-lg font-medium text-gray-900 dark:text-gray-100">
                   {post.author}
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  AI and Machine Learning Engineer
+                  AI Engineer
                 </p>
               </div>
             </div>
+            <p className="mt-4 text-gray-700 dark:text-gray-300">
+              I research and build AI solutions with a focus on computer vision and NLP. I write about machine learning, software development, and AI ethics.
+            </p>
           </div>
 
           {/* Related posts */}
           {relatedPosts.length > 0 && (
-            <div className="mb-8">
-              <h2 className="mb-6 font-ChillaxBold text-2xl font-bold text-dark-900 dark:text-white">
+            <div className="mb-12">
+              <h3 className="mb-6 font-ChillaxMedium text-xl font-semibold text-gray-900 dark:text-gray-100">
                 Related Posts
-              </h2>
-              <div className="grid gap-6 md:grid-cols-2">
+              </h3>
+              <div className="grid gap-8 sm:grid-cols-2">
                 {relatedPosts.map((relatedPost) => (
                   <Link
-                    key={relatedPost.id}
                     to={`/blog/${relatedPost.slug}`}
-                    className="group flex flex-col overflow-hidden rounded-lg border border-orange-400/30 bg-white shadow-sm transition-all hover:shadow-md dark:border-orange-400/30 dark:bg-dark-900" 
+                    key={relatedPost.id}
+                    className="group rounded-lg border border-gray-200 transition-all hover:border-orange-400/30 hover:shadow-md dark:border-gray-800 dark:hover:border-orange-400/30"
                   >
-                    <div className="relative h-40 overflow-hidden">
+                    <div className="h-48 overflow-hidden rounded-t-lg">
                       <img
                         src={relatedPost.thumbnailImage}
                         alt={relatedPost.title}
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="h-full w-full object-cover transition-transform group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-60"></div>
                     </div>
-                    <div className="flex flex-grow flex-col p-4">
-                      <h3 className="mb-2 font-ChillaxBold text-lg font-semibold text-dark-900 group-hover:text-orange-600 dark:text-white dark:group-hover:text-orange-400">
+                    <div className="p-4">
+                      <h4 className="mb-2 font-ChillaxSemiBold text-lg font-semibold text-gray-900 transition-colors group-hover:text-orange-600 dark:text-gray-100 dark:group-hover:text-orange-400">
                         {relatedPost.title}
-                      </h3>
-                      <p className="mb-4 text-sm text-gray-600 line-clamp-2 dark:text-gray-400">
-                        {relatedPost.description}
+                      </h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {relatedPost.description.substring(0, 120)}
+                        {relatedPost.description.length > 120 ? '...' : ''}
                       </p>
-                      <div className="mt-auto text-sm text-gray-500 dark:text-gray-400">
-                        {relatedPost.date}
-                      </div>
                     </div>
                   </Link>
                 ))}

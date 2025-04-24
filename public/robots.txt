@@ -4,6 +4,7 @@ Allow: /
 
 # Allow all bots to index all content
 Disallow: /api/
+Disallow: /stats
 
 # Crawl delay to avoid overloading the server (in seconds)
 Crawl-delay: 10

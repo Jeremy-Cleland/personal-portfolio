@@ -6,6 +6,12 @@ publish = "dist"
 # only rebuild if src, public, or package.json changed
 ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ./src ./public ./package.json"
 
+# Specific redirect for /stats
+[[redirects]]
+from = "/stats"
+to = "/404.html"
+status = 404
+
 # Always serve index.html for client-side routing
 [[redirects]]
 from = "/*"

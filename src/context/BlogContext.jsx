@@ -1,14 +1,58 @@
-import { createContext, useMemo, useState } from "react";
-import { blogData } from "../data/blogData.js";
+import { createContext, useEffect, useMemo, useState } from "react";
+import client from "../utils/contentful.js";
 
 export const BlogContext = createContext();
 
 export const BlogProvider = ({ children }) => {
   // State for blog data and filters
-  const [posts, setPosts] = useState(blogData);
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("");
   const [tagFilter, setTagFilter] = useState("");
+
+  // Fetch data from Contentful
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        setLoading(true);
+        const response = await client.getEntries({
+          content_type: 'blogPost',
+          order: '-fields.date',
+        });
+        
+        // Transform Contentful data to match your app's format
+        const formattedPosts = response.items.map(item => ({
+          id: item.sys.id,
+          title: item.fields.title,
+          slug: item.fields.slug,
+          description: item.fields.description || "",
+          thumbnailImage: item.fields.featuredImage?.fields.file.url,
+          date: item.fields.date,
+          author: item.fields.author || "Jeremy Cleland",
+          categories: [item.fields.category], // Map the single category to categories array
+          tags: item.fields.tags || [],
+          content: item.fields.content,
+          featured: false, // Default value as it's not in Contentful model
+          seo: {
+            title: item.fields.seoTitle || item.fields.title,
+            description: item.fields.seoDescription || item.fields.description || "",
+            keywords: item.fields.seoKeywords || item.fields.tags?.join(', ') || ""
+          }
+        }));
+        
+        setPosts(formattedPosts);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+        setError("Failed to load blog posts. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
 
   // Filtered posts based on search term
   const searchFilteredPosts = useMemo(() => {
@@ -20,7 +64,7 @@ export const BlogProvider = ({ children }) => {
       return (
         post.title.toLowerCase().includes(lowerSearchTerm) ||
         post.description.toLowerCase().includes(lowerSearchTerm) ||
-        post.content.toLowerCase().includes(lowerSearchTerm) ||
+        (post.content && typeof post.content === 'string' && post.content.toLowerCase().includes(lowerSearchTerm)) ||
         post.tags.some(tag => tag.toLowerCase().includes(lowerSearchTerm)) ||
         post.categories.some(category => category.toLowerCase().includes(lowerSearchTerm))
       );
@@ -32,7 +76,9 @@ export const BlogProvider = ({ children }) => {
     if (!categoryFilter) return searchFilteredPosts;
 
     return searchFilteredPosts.filter((post) =>
-      post.categories.includes(categoryFilter)
+      post.categories.some(category => 
+        category.toLowerCase() === categoryFilter.toLowerCase()
+      )
     );
   }, [searchFilteredPosts, categoryFilter]);
 
@@ -41,7 +87,7 @@ export const BlogProvider = ({ children }) => {
     if (!tagFilter) return categoryFilteredPosts;
 
     return categoryFilteredPosts.filter((post) =>
-      post.tags.includes(tagFilter)
+      post.tags.some(tag => tag.toLowerCase() === tagFilter.toLowerCase())
     );
   }, [categoryFilteredPosts, tagFilter]);
 
@@ -115,27 +161,41 @@ export const BlogProvider = ({ children }) => {
     setCategoryFilter("");
   };
 
+  // Memoize the context value to prevent unnecessary re-renders
+  const contextValue = useMemo(() => ({
+    posts,
+    setPosts,
+    loading,
+    error,
+    searchTerm,
+    setSearchTerm,
+    categoryFilter,
+    setCategoryFilter,
+    tagFilter,
+    setTagFilter,
+    filteredPosts,
+    categories,
+    tags,
+    featuredPosts,
+    getPostBySlug,
+    getRelatedPosts,
+    filterByTag,
+    searchPosts
+  }), [
+    posts,
+    loading,
+    error,
+    searchTerm,
+    categoryFilter,
+    tagFilter,
+    filteredPosts,
+    categories,
+    tags,
+    featuredPosts
+  ]);
+
   return (
-    <BlogContext.Provider
-      value={{
-        posts,
-        setPosts,
-        searchTerm,
-        setSearchTerm,
-        categoryFilter,
-        setCategoryFilter,
-        tagFilter,
-        setTagFilter,
-        filteredPosts,
-        categories,
-        tags,
-        featuredPosts,
-        getPostBySlug,
-        getRelatedPosts,
-        filterByTag,
-        searchPosts
-      }}
-    >
+    <BlogContext.Provider value={contextValue}>
       {children}
     </BlogContext.Provider>
   );

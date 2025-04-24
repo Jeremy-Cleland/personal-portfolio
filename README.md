@@ -1,11 +1,12 @@
 # Jeremy Cleland's Portfolio
 
-Modern Portfolio and Blog website built with React, Vite, and Tailwind CSS.
+Modern Portfolio and Blog website built with React, Vite, Tailwind CSS, and Contentful CMS.
 
 [![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38b2ac)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-4-646cff)](https://vitejs.dev/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-10-ff69b4)](https://www.framer.com/motion/)
+[![Contentful](https://img.shields.io/badge/Contentful-CMS-eb5d6c)](https://www.contentful.com/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/924d78ba-50d2-4535-a332-e0d4fa60c936/deploy-status)](https://app.netlify.com/sites/jeremy-cleland/deploys)
 
 🔗 [Live Demo](https://dev.clelandco.com)
@@ -34,6 +35,9 @@ Modern Portfolio and Blog website built with React, Vite, and Tailwind CSS.
   - [Adding Blog Posts](#adding-blog-posts)
   - [Deploy](#deploy)
   - [Customization](#customization)
+  - [Content Management with Contentful](#content-management-with-contentful)
+    - [Setting Up Contentful](#setting-up-contentful)
+    - [Adding Content](#adding-content)
 
 ## Features
 
@@ -51,6 +55,7 @@ Modern Portfolio and Blog website built with React, Vite, and Tailwind CSS.
 - **Styling:** Tailwind CSS 3
 - **Build Tool:** Vite 4
 - **Animations:** Framer Motion
+- **Content Management:** Contentful CMS
 - **Deployment:** Netlify
 - **Other Tools:**
   - TypeScript
@@ -64,6 +69,7 @@ Modern Portfolio and Blog website built with React, Vite, and Tailwind CSS.
 
 - Node.js (v16 or later recommended)
 - npm or yarn
+- Contentful account
 
 ### Installation
 
@@ -82,7 +88,22 @@ Modern Portfolio and Blog website built with React, Vite, and Tailwind CSS.
    yarn
    ```
 
-3. Start the development server:
+3. Set up Contentful:
+   - Create a `.env` file in the project root
+   - Add your Contentful credentials:
+
+   ```
+   VITE_CONTENTFUL_SPACE_ID=your_space_id_here
+   VITE_CONTENTFUL_ACCESS_TOKEN=your_access_token_here
+   VITE_CONTENTFUL_PREVIEW_ACCESS_TOKEN=your_preview_access_token_here
+   ```
+
+4. Run migrations:
+   - Install Contentful CLI: `npm install -g contentful-cli`
+   - Log in to Contentful: `contentful login`
+   - Run migrations: `contentful space migration --space-id your_space_id migrations/00-blog-post.js` and `contentful space migration --space-id your_space_id migrations/01-portfolio-project.js`
+
+5. Start the development server:
 
    ```
    npm run dev
@@ -192,3 +213,42 @@ Edit the data files in `src/data/` to customize your:
 - Projects
 - Blog posts
 - Skills and services
+
+## Content Management with Contentful
+
+This project uses Contentful as a headless CMS to manage blog posts and portfolio projects.
+
+### Setting Up Contentful
+
+1. **Create a Contentful account** at [contentful.com](https://www.contentful.com/)
+2. **Create a new space** or use an existing one
+3. **Set up content models** by running the migration scripts:
+
+   ```bash
+   contentful space migration --space-id your_space_id migrations/00-blog-post.js
+   contentful space migration --space-id your_space_id migrations/01-portfolio-project.js
+   ```
+
+   Alternatively, you can manually create the content models through the Contentful web interface.
+
+4. **Get API credentials**:
+   - Go to Settings > API Keys
+   - Create a new API key or use the default one
+   - Copy the "Space ID", "Content Delivery API - access token" and "Content Preview API - access token"
+   - Add these to your `.env` file as described in the Installation section
+
+### Adding Content
+
+1. **Blog Posts**:
+   - In Contentful, go to Content
+   - Click "Add Entry" and select "Blog Post"
+   - Fill in all required fields
+   - Publish the entry
+
+2. **Portfolio Projects**:
+   - In Contentful, go to Content
+   - Click "Add Entry" and select "Portfolio Project"
+   - Fill in all required fields
+   - Publish the entry
+
+The content will automatically appear in your website after publishing.
